@@ -1,0 +1,3539 @@
+{
+  "groups": [
+    {
+      "ruleGroupId": "rg-d4kki3ed86bs73bnneig",
+      "ruleGroupName": "node告警",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d4kki3ed86bs73bnneig",
+        "name": "node告警",
+        "number": 6,
+        "description": "服务器基本信息告警"
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkphed86bs73bnnem0",
+          "ruleGroupId": "rg-d4kki3ed86bs73bnneig",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "CPU使用率达到95%",
+          "evalInterval": 10,
+          "evalTimeType": "",
+          "repeatNoticeInterval": 10,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P0",
+          "prometheusConfig": {
+            "promQL": "(1 - avg(irate(node_cpu_seconds_total{mode=\"idle\"}[5m])) by (job,name,group,account)) * 100 ",
+            "annotations": "${labels.account} 同志请注意，当前您负责的 ${labels.job} 中 ${labels.name}服务器CPU使用率达到了 95 %以上，请注意查看。",
+            "rules": [
+              {
+                "forDuration": 180,
+                "severity": "P0",
+                "expr": ">95"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": null,
+            "filterCondition": "",
+            "queryType": "",
+            "queryWildcard": 0,
+            "rawJson": ""
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "default",
+          "updateAt": 1776216971,
+          "updateBy": "sunwanming",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkphed86bs73bnnemg",
+          "ruleGroupId": "rg-d4kki3ed86bs73bnneig",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "磁盘空间使用率达到90%以上",
+          "evalInterval": 60,
+          "evalTimeType": "",
+          "repeatNoticeInterval": 60,
+          "description": "磁盘空间使用率达到90%以上",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P0",
+          "prometheusConfig": {
+            "promQL": "(1 - (node_filesystem_avail_bytes{fstype!~\"tmpfs|overlay\", instance!~\"10.1.4.253:9100\"}\n  / node_filesystem_size_bytes{fstype!~\"tmpfs|overlay\", instance!~\"10.1.4.253:9100\"})) * 100 > 90",
+            "annotations": "\n当前 ${labels.job} 中 ${labels.name}服务器，磁盘挂载点${labels.mountpoint}使用率达到了 90%以上，请注意查看。",
+            "rules": [
+              {
+                "forDuration": 0,
+                "severity": "P0",
+                "expr": ">96"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": null,
+            "filterCondition": "",
+            "queryType": "",
+            "queryWildcard": 0,
+            "rawJson": ""
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "default",
+          "updateAt": 1775789905,
+          "updateBy": "admin",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkphed86bs73bnnen0",
+          "ruleGroupId": "rg-d4kki3ed86bs73bnneig",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "PLM应用磁盘空间剩余小于8G",
+          "evalInterval": 10,
+          "evalTimeType": "",
+          "repeatNoticeInterval": 56,
+          "description": "",
+          "effectiveTime": {
+            "week": [
+              "Sunday",
+              "Saturday",
+              "Friday",
+              "Thursday",
+              "Wednesday",
+              "Tuesday",
+              "Monday"
+            ],
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P0",
+          "prometheusConfig": {
+            "promQL": " (windows_logical_disk_free_bytes{name=\"10.2.1.2\",volume=\"D:\"} / 1024 / 1024 / 1024)",
+            "annotations": "PLM应用 ${labels.name} 磁盘空间 D 盘可用容量小于8G，请赶紧查看相关服务器和业务是否正常。",
+            "rules": [
+              {
+                "forDuration": 0,
+                "severity": "P0",
+                "expr": "<8"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": null,
+            "filterCondition": "",
+            "queryType": "",
+            "queryWildcard": 0,
+            "rawJson": ""
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "default",
+          "updateAt": 1771911603,
+          "updateBy": "sunwanming",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkphed86bs73bnneng",
+          "ruleGroupId": "rg-d4kki3ed86bs73bnneig",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "内存使用率达到95%",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "(1 - avg(node_memory_MemAvailable_bytes{instance!~\"10.1.4.12:9100|10.1.4.23:9100\"} \n         / node_memory_MemTotal_bytes{instance!~\"10.1.4.12:9100|10.1.4.23:9100\"}) \n     by (job, name, group,account)) * 100 >10\n\n",
+            "annotations": "${labels.account} 同志请注意，当前您负责的 ${labels.job} 中 ${labels.name}服务器内存使用率达到了 95 %以上，请注意查看。",
+            "rules": [
+              {
+                "forDuration": 180,
+                "severity": "P0",
+                "expr": ">95"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": ""
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "default",
+          "updateAt": 1776470796,
+          "updateBy": "sunwanming",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkphed86bs73bnneo0",
+          "ruleGroupId": "rg-d4kki3ed86bs73bnneig",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "内存使用率达到97%",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "高使用率服务器专用策略",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "(1 - avg(node_memory_MemAvailable_bytes{instance!~\"10.1.4.11:9100|10.1.4.12:9100|10.1.4.250:9100\"} \n         / node_memory_MemTotal_bytes{instance!~\"10.1.4.11:9100|10.1.4.12:9100|10.1.4.250:9100\"}) \n     by (job, name, group,account)) * 100\n\n",
+            "annotations": "${labels.account} 同志请注意，当前您负责的 ${labels.job} 中 ${labels.name}服务器内存使用率达到了 97 %以上，请注意查看。",
+            "rules": [
+              {
+                "forDuration": 180,
+                "severity": "P0",
+                "expr": ">97"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": ""
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "default",
+          "updateAt": 1776470808,
+          "updateBy": "sunwanming",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkphed86bs73bnneog",
+          "ruleGroupId": "rg-d4kki3ed86bs73bnneig",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "Windows_磁盘空间使用率超过95%",
+          "evalInterval": 30,
+          "evalTimeType": "",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": [
+              "Sunday",
+              "Saturday",
+              "Friday",
+              "Thursday",
+              "Wednesday",
+              "Tuesday",
+              "Monday"
+            ],
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "((1 - (windows_logical_disk_free_bytes{fstype!~\"tmpfs|overlay\", instance!~\"10.2.1.32:9100\"}  / windows_logical_disk_size_bytes{fstype!~\"tmpfs|overlay\", instance!~\"10.2.1.32:9100\"} )) * 100 ) >97\n ",
+            "annotations": "当前 ${labels.group} 中 ${labels.name}服务器  ${labels.volume}  盘 空间使用率已经达到 95%以上，请注意查看。",
+            "rules": [
+              {
+                "forDuration": 0,
+                "severity": "P0",
+                "expr": ">97"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": null,
+            "filterCondition": "",
+            "queryType": "",
+            "queryWildcard": 0,
+            "rawJson": ""
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "default",
+          "updateAt": 1770273336,
+          "updateBy": "changshuai",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "ruleGroupId": "rg-d4kkssud86bs73bnnepg",
+      "ruleGroupName": "协同应用监控告警",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d4kkssud86bs73bnnepg",
+        "name": "协同应用监控告警",
+        "number": 6,
+        "description": ""
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkt86d86bs73bnneqg",
+          "ruleGroupId": "rg-d4kkssud86bs73bnnepg",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "JVM内存使用率大于 80%",
+          "evalInterval": 60,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "(sum by (service_name, instance) (jvm_memory_used_bytes{area=\"heap\"}))\n  / \n(sum by (service_name, instance) (jvm_memory_max_bytes{area=\"heap\"}))\n* 100\n",
+            "annotations": "协同平台，应用 ${labels.service_name}，JVM堆内存使用率>80%，请查看应用状态。",
+            "rules": [
+              {
+                "forDuration": 0,
+                "severity": "P1",
+                "expr": ">90"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d3951u3o8tkc73ek5rd0",
+          "updateAt": 0,
+          "updateBy": "",
+          "enabled": false
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkt86d86bs73bnner0",
+          "ruleGroupId": "rg-d4kkssud86bs73bnnepg",
+          "externalLabels": null,
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "GC吞吐率<90%,程序异常",
+          "evalInterval": 60,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "(1 - sum by (service_name) (rate(jvm_gc_pause_seconds_sum{job=\"协同平台-app\"}[5m]))) * 100",
+            "annotations": "协同平台，应用 ${labels.service_name}，GC吞吐率<90%,程序异常，请查看应用状态。",
+            "rules": [
+              {
+                "forDuration": 0,
+                "severity": "P1",
+                "expr": "<90"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d3951u3o8tkc73ek5rd0",
+          "updateAt": 0,
+          "updateBy": "",
+          "enabled": false
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkt86d86bs73bnnerg",
+          "ruleGroupId": "rg-d4kkssud86bs73bnnepg",
+          "externalLabels": null,
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "5分钟内GC暂停总时长大于1秒",
+          "evalInterval": 60,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "sum by (service_name) (\n  irate(jvm_gc_pause_seconds_count{job=\"协同平台-app\"}[5m])\n)",
+            "annotations": "协同平台，应用 ${labels.service_name}，GC暂停总时长大于1秒，程序异常，请查看应用状态。",
+            "rules": [
+              {
+                "forDuration": 0,
+                "severity": "P1",
+                "expr": ">1"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d3951u3o8tkc73ek5rd0",
+          "updateAt": 0,
+          "updateBy": "",
+          "enabled": false
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkt86d86bs73bnnes0",
+          "ruleGroupId": "rg-d4kkssud86bs73bnnepg",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "业务可用性<95% 告警",
+          "evalInterval": 60,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "(\n  sum by (exported_job) (\n    http_server_request_duration_seconds_count{\n      job=\"otlp\",\n      http_route=\"/actuator/health\",\n      http_response_status_code=~\"2.*\"\n    }\n  )\n  /\n  sum by (exported_job) (\n    http_server_request_duration_seconds_count{\n      job=\"otlp\",\n      http_route=\"/actuator/health\"\n    }\n  )\n) * 100",
+            "annotations": "协同平台，应用 ${labels.exported_job}，业务可用率 <95%,程序异常，请查看应用状态。",
+            "rules": [
+              {
+                "forDuration": 0,
+                "severity": "P1",
+                "expr": "< 95"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d3951u3o8tkc73ek5rd0",
+          "updateAt": 0,
+          "updateBy": "",
+          "enabled": false
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkt86d86bs73bnnesg",
+          "ruleGroupId": "rg-d4kkssud86bs73bnnepg",
+          "externalLabels": null,
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "活跃的守护线程数量 > 500 告警",
+          "evalInterval": 60,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "jvm_threads_daemon_threads{job=\"协同平台-app\"}\n",
+            "annotations": "协同平台，应用 ${labels.service_name}，活跃的守护线程数量 > 500，程序异常，请查看应用状态。",
+            "rules": [
+              {
+                "forDuration": 0,
+                "severity": "P1",
+                "expr": "> 500"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d3951u3o8tkc73ek5rd0",
+          "updateAt": 0,
+          "updateBy": "",
+          "enabled": false
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4kkt86d86bs73bnnet0",
+          "ruleGroupId": "rg-d4kkssud86bs73bnnepg",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "nacos 注册掉线告警",
+          "evalInterval": 60,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "startTime": 0,
+            "endTime": 79200
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "nacos_instance_up",
+            "annotations": "协同平台，服务器${labels.ip} 中，应用 ${labels.service}，已从 nacos 中掉线，请查看应用状态。",
+            "rules": [
+              {
+                "forDuration": 0,
+                "severity": "P0",
+                "expr": "== 0"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d3951u3o8tkc73ek5rd0",
+          "updateAt": 1774514356,
+          "updateBy": "sunwanming",
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "ruleGroupId": "rg-d4rmm2md86bs73bnneu0",
+      "ruleGroupName": "Oracle-数据库状态告警",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d4rmm2md86bs73bnneu0",
+        "name": "Oracle-数据库状态告警",
+        "number": 0,
+        "description": ""
+      },
+      "rules": []
+    },
+    {
+      "ruleGroupId": "rg-d4t81fud86bs73bnnf00",
+      "ruleGroupName": "AI智能标书项目",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d4t81fud86bs73bnnf00",
+        "name": "AI智能标书项目",
+        "number": 5,
+        "description": ""
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4tmiaud86bs73bnnf3g",
+          "ruleGroupId": "rg-d4t81fud86bs73bnnf00",
+          "externalLabels": null,
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-d4t8496d86bs73bnnf10"
+          ],
+          "ruleName": "Kubernetes节点网络不可用",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "kube_node_status_condition{condition=\"NetworkUnavailable\",status=\"true\"}",
+            "annotations": "节点 ${labels.instance}，存在 NetworkUnavailable 情况",
+            "rules": [
+              {
+                "forDuration": 0,
+                "severity": "P0",
+                "expr": "==1"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d4t8d3ed86bs73bnnf20",
+          "updateAt": 1765501227,
+          "updateBy": "admin",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4to27ud86bs73bnnf5g",
+          "ruleGroupId": "rg-d4t81fud86bs73bnnf00",
+          "externalLabels": null,
+          "datasourceType": "KubernetesEvent",
+          "datasourceId": [
+            "ds-d4to1fud86bs73bnnf4g"
+          ],
+          "ruleName": "KubernetesPod不健康",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "",
+            "annotations": "",
+            "rules": null
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "Pods",
+            "reason": "Unhealthy",
+            "value": 1,
+            "filter": null,
+            "scope": 10
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d4t8d3ed86bs73bnnf20",
+          "updateAt": 1765507359,
+          "updateBy": "admin",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4to3qud86bs73bnnf6g",
+          "ruleGroupId": "rg-d4t81fud86bs73bnnf00",
+          "externalLabels": null,
+          "datasourceType": "KubernetesEvent",
+          "datasourceId": [
+            "ds-d4to1fud86bs73bnnf4g"
+          ],
+          "ruleName": "KubernetesNode内存压力过大",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "",
+            "annotations": "",
+            "rules": null
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "Nodes",
+            "reason": "NodeUnderMemoryPressure",
+            "value": 1,
+            "filter": null,
+            "scope": 10
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d4t8d3ed86bs73bnnf20",
+          "updateAt": 1765507563,
+          "updateBy": "admin",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d605camd86bs73digq90",
+          "ruleGroupId": "rg-d4t81fud86bs73bnnf00",
+          "externalLabels": null,
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-d4t8496d86bs73bnnf10"
+          ],
+          "ruleName": "Pod 内存使用率过高",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "round(((avg by (namespace,pod,container) (container_memory_usage_bytes{namespace=\"xxwh-sys\",container!~\"^POD$\"}) / avg by (namespace,pod,container) (container_spec_memory_limit_bytes{namespace=\"xxwh-sys\",container!=\"\"})) * 100) * 100) / 100",
+            "annotations": "Namespace：${labels.namespace}\nPod：${labels.pod}\n内存使用率过高，当前：${labels.value}%",
+            "rules": [
+              {
+                "forDuration": 10,
+                "severity": "P0",
+                "expr": ">96"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d4t8d3ed86bs73bnnf20",
+          "updateAt": 1770018346,
+          "updateBy": "sunwanming",
+          "enabled": false
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d642f5ud86bs73bj3du0",
+          "ruleGroupId": "rg-d4t81fud86bs73bnnf00",
+          "externalLabels": null,
+          "datasourceType": "ClickHouse",
+          "datasourceId": [
+            "ds-d50b6qed86bs73bnnfe0"
+          ],
+          "ruleName": "AI 项目 业务后端不可用",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P0",
+          "prometheusConfig": {
+            "promQL": "",
+            "annotations": "",
+            "rules": null
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": "SELECT\n    domain,\n    COUNT(*) AS cnt_5xx\nFROM nginxlogs.nginx_access\nWHERE\n    timestamp >= now() - INTERVAL 1 MINUTE\n    AND server_ip = '172.30.55.145'\n   AND status BETWEEN 500 AND 599\nGROUP BY domain\nORDER BY cnt_5xx DESC;\n",
+            "valueField": "cnt_5xx",
+            "annotations": "域名 ${labels.domain} 在一分钟内出现了 ${labels.cnt_5xx} 错误，请尽快处理！"
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "> 50",
+          "faultCenterId": "fc-d4t8d3ed86bs73bnnf20",
+          "updateAt": 1770530711,
+          "updateBy": "sunwanming",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "ruleGroupId": "rg-d4vr3red86bs73bnnf7g",
+      "ruleGroupName": "Mysql告警规则",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d4vr3red86bs73bnnf7g",
+        "name": "Mysql告警规则",
+        "number": 1,
+        "description": ""
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4vr4lmd86bs73bnnf8g",
+          "ruleGroupId": "rg-d4vr3red86bs73bnnf7g",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "MySQL宕机",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "mysql_up",
+            "annotations": "MySQL实例：${labels.name}，意外宕机。",
+            "rules": [
+              {
+                "forDuration": 30,
+                "severity": "P0",
+                "expr": "==0"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "default",
+          "updateAt": 1776039652,
+          "updateBy": "sunwanming",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "ruleGroupId": "rg-d4vr4v6d86bs73bnnf9g",
+      "ruleGroupName": "中广控告警",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d4vr4v6d86bs73bnnf9g",
+        "name": "中广控告警",
+        "number": 1,
+        "description": ""
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d4vr5bud86bs73bnnfag",
+          "ruleGroupId": "rg-d4vr4v6d86bs73bnnf9g",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "IDC机房告警详情",
+          "evalInterval": 60,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "alarm_status",
+            "annotations": "三楼机房，${labels.alarm_name}",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": "== 1"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-cvqt5ic0mppc738ta4p0",
+          "updateAt": 1772500992,
+          "updateBy": "admin",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "ruleGroupId": "rg-d50bal6d86bs73bnnfgg",
+      "ruleGroupName": "Nginx告警规则",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d50bal6d86bs73bnnfgg",
+        "name": "Nginx告警规则",
+        "number": 2,
+        "description": ""
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d5128cmd86bs73bfilvg",
+          "ruleGroupId": "rg-d50bal6d86bs73bnnfgg",
+          "externalLabels": {},
+          "datasourceType": "ClickHouse",
+          "datasourceId": [
+            "ds-d50b6qed86bs73bnnfe0"
+          ],
+          "ruleName": "域名三分钟内超过 300次 4xx 错误，请注意相关业务使用状态",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "",
+            "annotations": "",
+            "rules": null
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": "SELECT\n    domain,\n    COUNT(*) AS cnt_4xx\nFROM nginxlogs.nginx_access\nWHERE\n    timestamp >= now() - INTERVAL 3 MINUTE\n    AND server_ip = '10.1.8.3'\n    AND status BETWEEN 400 AND 499\nGROUP BY domain\nORDER BY cnt_4xx DESC;\n",
+            "valueField": "cnt_4xx",
+            "annotations": "域名 ${labels.domain} 在一分钟内出现了 ${labels.cnt_4xx} 错误，请尽快处理！"
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "> 300",
+          "faultCenterId": "fc-d50b9p6d86bs73bnnffg",
+          "updateAt": 1766109386,
+          "updateBy": "admin",
+          "enabled": false
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d512cnmd86bs73bfim0g",
+          "ruleGroupId": "rg-d50bal6d86bs73bnnfgg",
+          "externalLabels": {},
+          "datasourceType": "ClickHouse",
+          "datasourceId": [
+            "ds-d50b6qed86bs73bnnfe0"
+          ],
+          "ruleName": "业务后端不可用",
+          "evalInterval": 50,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P0",
+          "prometheusConfig": {
+            "promQL": "",
+            "annotations": "",
+            "rules": null
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": "SELECT\n    domain,\n    COUNT(*) AS cnt_5xx\nFROM nginxlogs.nginx_access\nWHERE\n    timestamp >= now() - INTERVAL 1 MINUTE\n    AND server_ip = '10.1.8.3'\n    AND status BETWEEN 500 AND 599\nGROUP BY domain\nORDER BY cnt_5xx DESC;\n",
+            "valueField": "cnt_5xx",
+            "annotations": "域名 ${labels.domain} 在一分钟内出现了 ${labels.cnt_5xx} 错误，请尽快处理！"
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "> 100",
+          "faultCenterId": "fc-d50b9p6d86bs73bnnffg",
+          "updateAt": 1773124799,
+          "updateBy": "sunwanming",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "ruleGroupId": "rg-d56b31md86bs739o3c8g",
+      "ruleGroupName": "WMS",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d56b31md86bs739o3c8g",
+        "name": "WMS",
+        "number": 4,
+        "description": ""
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d56esoud86bs73abtj30",
+          "ruleGroupId": "rg-d56b31md86bs739o3c8g",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "WMS业务机器内存使用率",
+          "evalInterval": 30,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "(1 - avg(node_memory_MemAvailable_bytes{group=~\"wms\"} / node_memory_MemTotal_bytes{group=~\"wms\"}) by (job, name, group)) * 100  ",
+            "annotations": "当前 ${labels.job} 中 ${labels.name}服务器内存使用率达到了 90 %以上，请注意查看。",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": ">90"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d56874ed86bs739o3c60",
+          "updateAt": 1768803160,
+          "updateBy": "sunwanming",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d56euqud86bs73abtj40",
+          "ruleGroupId": "rg-d56b31md86bs739o3c8g",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "WMS业务机器CPU使用率",
+          "evalInterval": 30,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "(1 - avg by (job, name, group) (\n  irate(node_cpu_seconds_total{group=~\"wms\", mode=\"idle\"}[5m])\n)) * 100\n",
+            "annotations": "当前 ${labels.job} 中 ${labels.name}服务器CPU使用率达到了 90 %以上，请注意查看。",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": ">90"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d56874ed86bs739o3c60",
+          "updateAt": 1768803165,
+          "updateBy": "sunwanming",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d5mtd2md86bs73c2o8b0",
+          "ruleGroupId": "rg-d56b31md86bs739o3c8g",
+          "externalLabels": {},
+          "datasourceType": "ClickHouse",
+          "datasourceId": [
+            "ds-d50b6qed86bs73bnnfe0"
+          ],
+          "ruleName": "WMS 后端应用 5xx 告警",
+          "evalInterval": 50,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P0",
+          "prometheusConfig": {
+            "promQL": "",
+            "annotations": "",
+            "rules": null
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": "SELECT\n    domain,\n    COUNT(*) AS cnt_backend_unavailable\nFROM nginxlogs.nginx_access\nWHERE\n    timestamp >= now() - INTERVAL 1 MINUTE\n    AND server_ip = '10.1.8.3'\n    AND domain = 'wms.craneweihua.com'\n    AND status BETWEEN 502 AND 504\nGROUP BY domain\nORDER BY cnt_backend_unavailable DESC;\n",
+            "valueField": "cnt_backend_unavailable",
+            "annotations": "域名 ${labels.domain} 在一分钟内出现了 ${labels.cnt_backend_unavailable} 错误，请尽快处理！"
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "> 30",
+          "faultCenterId": "fc-d56874ed86bs739o3c60",
+          "updateAt": 1773125465,
+          "updateBy": "sunwanming",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d5mtm8ud86bs73c2o8d0",
+          "ruleGroupId": "rg-d56b31md86bs739o3c8g",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "WMS 项目 Mysql  宕机",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "mysql_up{group=\"wms\"}",
+            "annotations": "WMS 项目 MySQL实例：${labels.instance}，意外宕机，请尽快处理！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P0",
+                "expr": "== 0"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d56874ed86bs739o3c60",
+          "updateAt": 1768808170,
+          "updateBy": "sunwanming",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "ruleGroupId": "rg-d56b336d86bs739o3c9g",
+      "ruleGroupName": "SRM",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d56b336d86bs739o3c9g",
+        "name": "SRM",
+        "number": 0,
+        "description": ""
+      },
+      "rules": []
+    },
+    {
+      "ruleGroupId": "rg-d56b356d86bs739o3cag",
+      "ruleGroupName": "云盘",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d56b356d86bs739o3cag",
+        "name": "云盘",
+        "number": 0,
+        "description": ""
+      },
+      "rules": []
+    },
+    {
+      "ruleGroupId": "rg-d56b38ed86bs739o3cbg",
+      "ruleGroupName": "百望云数电",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d56b38ed86bs739o3cbg",
+        "name": "百望云数电",
+        "number": 0,
+        "description": ""
+      },
+      "rules": []
+    },
+    {
+      "ruleGroupId": "rg-d62jj3md86bs73863m90",
+      "ruleGroupName": "MES",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d62jj3md86bs73863m90",
+        "name": "MES",
+        "number": 7,
+        "description": ""
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d62p466d86bs73dbkh5g",
+          "ruleGroupId": "rg-d62jj3md86bs73863m90",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "磁盘空间使用率超过97%",
+          "evalInterval": 60,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "windows服务器",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "100 - (windows_logical_disk_free_bytes{job=\"mes\"} / windows_logical_disk_size_bytes{job=\"mes\"}) * 100 ",
+            "annotations": "MES服务器：${labels.name}，磁盘${labels.volume} 使用率 超过 97%，请立即处理！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": ">97"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pgl305cgc73ebtlrg",
+          "updateAt": 1774427004,
+          "updateBy": "admin",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d6t0fbed86bs73fhlbb0",
+          "ruleGroupId": "rg-d62jj3md86bs73863m90",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "内存使用率超过95%",
+          "evalInterval": 30,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "100.0 - 100 * windows_os_physical_memory_free_bytes{job=~\"MES\",instance=~\"$instance\"} / windows_cs_physical_memory_bytes{job=~\"$MES\",instance=~\"$instance\"}",
+            "annotations": "MES服务器：${labels.instance }，内存使用率超过阈值 95%，请立即处理！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": ">95"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pgl305cgc73ebtlrg",
+          "updateAt": 1774427018,
+          "updateBy": "admin",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d6t6lrmd86bs73fhlbe0",
+          "ruleGroupId": "rg-d62jj3md86bs73863m90",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "卫华MES数据库状态监控",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P0",
+          "prometheusConfig": {
+            "promQL": "oracledb_up{oracle_ip=\"192.168.1.177\", oracle_instance=\"orcl\", job=\"oracle\"}",
+            "annotations": "卫华MES数据库：${labels.oracle_instance}，IP：${labels.oracle_ip}，数据库无法连接，请尽快处理！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P0",
+                "expr": "== 0"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pgl305cgc73ebtlrg",
+          "updateAt": 1774427027,
+          "updateBy": "admin",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d6t6n8md86bs73fhlbf0",
+          "ruleGroupId": "rg-d62jj3md86bs73863m90",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "江苏MES数据库状态监控",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P0",
+          "prometheusConfig": {
+            "promQL": "oracledb_up{oracle_ip=\"10.1.4.76\", oracle_instance=\"orcl\"}",
+            "annotations": "江苏MES数据库：${labels.oracle_instance}，IP：${labels.oracle_ip}，意外宕机，请尽快处理！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P0",
+                "expr": "== 0"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pgl305cgc73ebtlrg",
+          "updateAt": 1774427035,
+          "updateBy": "admin",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d6t6ucmd86bs73fhlbg0",
+          "ruleGroupId": "rg-d62jj3md86bs73863m90",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "CPU使用率超过95%",
+          "evalInterval": 9,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "100 - (avg by (instance) (rate(windows_cpu_time_total{job=\"mes\", mode=\"idle\"}[5m])) * 100)",
+            "annotations": "服务器: ${labels.instance}，CPU 使用率 超过 95%，请紧急排查！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": ">95"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pgl305cgc73ebtlrg",
+          "updateAt": 1774427043,
+          "updateBy": "admin",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d6t71aud86bs73fhlbi0",
+          "ruleGroupId": "rg-d62jj3md86bs73863m90",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "卫华MES数据库表空间监控",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "(1-oracledb_tablespace_free{oracle_ip=\"192.168.1.177\",oracle_instance=\"orcl\"}/oracledb_tablespace_bytes{oracle_ip=\"192.168.1.177\",oracle_instance=\"orcl\"})",
+            "annotations": "卫华MES数据库: ${labels.oracle_instance}，IP: ${labels.oracle_ip}，表空间 ${labels.tablespace} 使用率超过 98%，请紧急排查！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": ">98"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pgl305cgc73ebtlrg",
+          "updateAt": 1774427056,
+          "updateBy": "admin",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d6t72led86bs73fhlbqg",
+          "ruleGroupId": "rg-d62jj3md86bs73863m90",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "江苏MES数据库表空间监控",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "(1-oracledb_tablespace_free{oracle_ip=\"10.1.4.76\",oracle_instance=\"orcl\"}/oracledb_tablespace_bytes{oracle_ip=\"10.1.4.76\",oracle_instance=\"orcl\"})",
+            "annotations": "江苏MES数据库: ${labels.oracle_instance}，IP: ${labels.oracle_ip}，表空间 ${labels.tablespace} 使用率超过 98%，请紧急排查！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": ">98"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pgl305cgc73ebtlrg",
+          "updateAt": 1774427064,
+          "updateBy": "admin",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "ruleGroupId": "rg-d6svp16d86bs73fhlb80",
+      "ruleGroupName": "Networker备份",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d6svp16d86bs73fhlb80",
+        "name": "Networker备份",
+        "number": 2,
+        "description": ""
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d6t05mmd86bs73fhlb90",
+          "ruleGroupId": "rg-d6svp16d86bs73fhlb80",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "Networekr备份失败",
+          "evalInterval": 36000,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "Networekr数据库备份告警",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "networker_backup_clients_failed",
+            "annotations": "NetWorker 备份客户端：${labels.instance}，${value} 个客户端备份失败，请尽快处理！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": "!= 0"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pg4b05cgc73ebtlqg",
+          "updateAt": 1776051768,
+          "updateBy": "changshuai",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d6t06o6d86bs73fhlba0",
+          "ruleGroupId": "rg-d6svp16d86bs73fhlb80",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "DD3300存储超过80%告警",
+          "evalInterval": 60,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "DD3300存储容量告警",
+          "effectiveTime": {
+            "week": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "startTime": 28800,
+            "endTime": 29100
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "dd3300_storage_use_percent",
+            "annotations": "DD3300 存储实例：${labels.instance}，使用率 ${value}% 超过阈值 80%，请尽快处理！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": ">80"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pg4b05cgc73ebtlqg",
+          "updateAt": 1776051785,
+          "updateBy": "changshuai",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "ruleGroupId": "rg-d6tk5ced86bs73fhld60",
+      "ruleGroupName": "NC",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d6tk5ced86bs73fhld60",
+        "name": "NC",
+        "number": 2,
+        "description": ""
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d6tluaud86bs73fhld8g",
+          "ruleGroupId": "rg-d6tk5ced86bs73fhld60",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "NC数据库宕机",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P0",
+          "prometheusConfig": {
+            "promQL": "oracledb_up{oracle_ip=\"192.168.1.64\", oracle_instance=\"ncdb2\", job=\"oracle\"}",
+            "annotations": "NC数据库：{{ $labels.oracle_instance }}，IP：{{ $labels.oracle_ip }}，数据库无法连接，请尽快处理！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P0",
+                "expr": "== 0"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pfsb05cgc73ebtlpg",
+          "updateAt": 1776051801,
+          "updateBy": "changshuai",
+          "enabled": true
+        },
+        {
+          "tenantId": "default",
+          "ruleId": "a-d6tlvrud86bs73fhldb0",
+          "ruleGroupId": "rg-d6tk5ced86bs73fhld60",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": [
+            "ds-ctft5d3odaoc73c4vq30"
+          ],
+          "ruleName": "NC数据库表空间超过98%",
+          "evalInterval": 10,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "P1",
+          "prometheusConfig": {
+            "promQL": "(1-oracledb_tablespace_free{oracle_ip=\"192.168.1.64\",oracle_instance=\"ncdb2\"}/oracledb_tablespace_bytes{oracle_ip=\"192.168.1.64\",oracle_instance=\"ncdb2\"})",
+            "annotations": "NC数据库: ${labels.oracle_instance}，IP: ${labels.oracle_ip}，表空间 ${labels.tablespace} 使用率超过 98%，请紧急排查！",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P1",
+                "expr": ">98"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": [
+              {
+                "field": "",
+                "value": ""
+              }
+            ],
+            "filterCondition": "",
+            "queryType": "RawJson",
+            "queryWildcard": 0,
+            "rawJson": "{\"match_all\":{}}"
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d71pfsb05cgc73ebtlpg",
+          "updateAt": 1776051833,
+          "updateBy": "changshuai",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "ruleGroupId": "rg-d7gsi7r0v1ic7389fn6g",
+      "ruleGroupName": "超融合平台告警",
+      "raw": {
+        "tenantId": "default",
+        "id": "rg-d7gsi7r0v1ic7389fn6g",
+        "name": "超融合平台告警",
+        "number": 1,
+        "description": ""
+      },
+      "rules": [
+        {
+          "tenantId": "default",
+          "ruleId": "a-d7gslcb0v1ic7389fn7g",
+          "ruleGroupId": "rg-d7gsi7r0v1ic7389fn6g",
+          "externalLabels": {},
+          "datasourceType": "Prometheus",
+          "datasourceId": null,
+          "ruleName": "超融合平台告警",
+          "evalInterval": 300,
+          "evalTimeType": "second",
+          "repeatNoticeInterval": 0,
+          "description": "",
+          "effectiveTime": {
+            "week": null,
+            "startTime": 0,
+            "endTime": 86340
+          },
+          "severity": "",
+          "prometheusConfig": {
+            "promQL": "sangfor_alarm_detail_info{level=~\"p1|p2\",status=\"open\"}",
+            "annotations": "超融合${if labels.level == \"p1\"}紧急${else}重要${end}告警：资源池${labels.az_name}，对象${labels.object_name}，${labels.description}",
+            "rules": [
+              {
+                "forDuration": 60,
+                "severity": "P0",
+                "expr": "!= 0"
+              }
+            ]
+          },
+          "alicloudSLSConfig": {
+            "project": "",
+            "logstore": null,
+            "logQL": "",
+            "logScope": 0
+          },
+          "lokiConfig": {
+            "logQL": "",
+            "logScope": 0
+          },
+          "victoriaLogsConfig": {
+            "logQL": "",
+            "logScope": 0,
+            "limit": 0
+          },
+          "clickhouseConfig": {
+            "logQL": ""
+          },
+          "jaegerConfig": {
+            "service": "",
+            "scope": 0,
+            "tags": ""
+          },
+          "cloudwatchConfig": {
+            "namespace": "",
+            "metricName": "",
+            "statistic": "",
+            "period": 0,
+            "expr": "",
+            "threshold": 0,
+            "dimension": "",
+            "endpoints": null
+          },
+          "kubernetesConfig": {
+            "resource": "",
+            "reason": "",
+            "value": 0,
+            "filter": null,
+            "scope": 0
+          },
+          "elasticSearchConfig": {
+            "index": "",
+            "scope": 0,
+            "filter": null,
+            "filterCondition": "",
+            "queryType": "",
+            "queryWildcard": 0,
+            "rawJson": ""
+          },
+          "logEvalCondition": "",
+          "faultCenterId": "fc-d1d7er2krans73anv17g",
+          "updateAt": 1776405169,
+          "updateBy": "changshuai",
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}

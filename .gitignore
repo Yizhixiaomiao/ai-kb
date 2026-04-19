@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+
+.env
+.env.*
+*.log
+
+# Local source data may contain ticket PII or temporary troubleshooting notes.
+工单报修历史记录.csv

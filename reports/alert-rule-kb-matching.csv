@@ -1,0 +1,38 @@
+﻿ruleGroupId,ruleGroupName,ruleId,ruleName,matched,topDocId,topTitle,score,ruleScore,vectorScore,reason
+rg-d4kki3ed86bs73bnneig,node告警,a-d4kkphed86bs73bnnem0,CPU使用率达到95%,yes,linux-cpu-high-usage-alert,Linux 服务器 CPU 使用率过高告警处理指南,97,80,0.2188,问题描述关键词:CPU使用率达到95%；问题描述关键词:CPU使用率；问题描述关键词:cpu；问题描述tags:cpu；问题描述标题:CPU；语义相似度:0.22
+rg-d4kki3ed86bs73bnneig,node告警,a-d4kkphed86bs73bnnemg,磁盘空间使用率达到90%以上,yes,linux-disk-space-high-alert,Linux 服务器磁盘空间使用率过高告警处理指南,58,42,0.2057,问题描述关键词:磁盘空间使用率达到90%；问题描述关键词:磁盘空间使用率；语义相似度:0.21
+rg-d4kki3ed86bs73bnneig,node告警,a-d4kkphed86bs73bnnen0,PLM应用磁盘空间剩余小于8G,yes,linux-disk-space-high-alert,Linux 服务器磁盘空间使用率过高告警处理指南,38,22,0.2102,问题描述关键词:磁盘空间剩余小于；语义相似度:0.21
+rg-d4kki3ed86bs73bnneig,node告警,a-d4kkphed86bs73bnneng,内存使用率达到95%,yes,linux-memory-high-usage-alert,Linux 服务器内存使用率过高告警处理指南,56,42,0.1813,问题描述关键词:内存使用率达到95%；问题描述关键词:内存使用率；语义相似度:0.18
+rg-d4kki3ed86bs73bnneig,node告警,a-d4kkphed86bs73bnneo0,内存使用率达到97%,yes,linux-memory-high-usage-alert,Linux 服务器内存使用率过高告警处理指南,57,42,0.1952,问题描述关键词:内存使用率达到97%；问题描述关键词:内存使用率；语义相似度:0.20
+rg-d4kki3ed86bs73bnneig,node告警,a-d4kkphed86bs73bnneog,Windows_磁盘空间使用率超过95%,yes,linux-disk-space-high-alert,Linux 服务器磁盘空间使用率过高告警处理指南,62,42,0.2533,问题描述关键词:Windows_磁盘空间使用率超过95%；问题描述关键词:磁盘空间使用率；语义相似度:0.25
+rg-d4kkssud86bs73bnnepg,协同应用监控告警,a-d4kkt86d86bs73bnneqg,JVM内存使用率大于 80%,yes,jvm-gc-thread-alert,JVM GC、线程数量或 Java 运行时异常告警处理指南,83,72,0.1401,问题描述关键词:jvm；问题描述systems:jvm；问题描述tags:jvm；问题描述标题:JVM；语义相似度:0.14
+rg-d4kkssud86bs73bnnepg,协同应用监控告警,a-d4kkt86d86bs73bnner0,"GC吞吐率<90%,程序异常",yes,jvm-gc-thread-alert,JVM GC、线程数量或 Java 运行时异常告警处理指南,72,60,0.1576,问题描述关键词:GC吞吐率；问题描述关键词:gc；问题描述tags:gc；问题描述标题:GC；语义相似度:0.16
+rg-d4kkssud86bs73bnnepg,协同应用监控告警,a-d4kkt86d86bs73bnnerg,5分钟内GC暂停总时长大于1秒,yes,jvm-gc-thread-alert,JVM GC、线程数量或 Java 运行时异常告警处理指南,93,80,0.1692,问题描述关键词:GC暂停；问题描述关键词:GC暂停总时长；问题描述关键词:gc；问题描述tags:gc；问题描述标题:GC；语义相似度:0.17
+rg-d4kkssud86bs73bnnepg,协同应用监控告警,a-d4kkt86d86bs73bnnes0,业务可用性<95% 告警,yes,windows-system-reinstall-or-cache-reset,Windows 系统异常需重装或清空缓存,8,0,0.1053,语义相似度:0.11
+rg-d4kkssud86bs73bnnepg,协同应用监控告警,a-d4kkt86d86bs73bnnesg,活跃的守护线程数量 > 500 告警,yes,jvm-gc-thread-alert,JVM GC、线程数量或 Java 运行时异常告警处理指南,57,42,0.1939,问题描述关键词:活跃的守护线程数量；问题描述关键词:守护线程；语义相似度:0.19
+rg-d4kkssud86bs73bnnepg,协同应用监控告警,a-d4kkt86d86bs73bnnet0,nacos 注册掉线告警,yes,application-http-5xx-or-unavailable-alert,应用 5xx、4xx 或后端不可用告警处理指南,112,94,0.2339,问题描述关键词:nacos 注册掉线告警；问题描述关键词:nacos；问题描述systems:nacos；问题描述tags:nacos；语义相似度:0.23
+rg-d4t81fud86bs73bnnf00,AI智能标书项目,a-d4tmiaud86bs73bnnf3g,Kubernetes节点网络不可用,yes,kubernetes-ops-guide,Kubernetes 运维完全指南,96,80,0.2002,问题描述关键词:kubernetes；问题描述systems:kubernetes；问题描述tags:kubernetes；问题描述标题:Kubernetes；语义相似度:0.20
+rg-d4t81fud86bs73bnnf00,AI智能标书项目,a-d4to27ud86bs73bnnf5g,KubernetesPod不健康,yes,kubernetes-ops-guide,Kubernetes 运维完全指南,127,112,0.1978,问题描述关键词:kubernetes；问题描述关键词:pod；问题描述systems:kubernetes；问题描述tags:kubernetes；问题描述tags:pod；问题描述标题:Kubernetes；语义相似度:0.20
+rg-d4t81fud86bs73bnnf00,AI智能标书项目,a-d4to3qud86bs73bnnf6g,KubernetesNode内存压力过大,yes,kubernetes-ops-guide,Kubernetes 运维完全指南,96,80,0.2073,问题描述关键词:kubernetes；问题描述systems:kubernetes；问题描述tags:kubernetes；问题描述标题:Kubernetes；语义相似度:0.21
+rg-d4t81fud86bs73bnnf00,AI智能标书项目,a-d605camd86bs73digq90,Pod 内存使用率过高,yes,kubernetes-ops-guide,Kubernetes 运维完全指南,40,34,0.0803,问题描述关键词:pod；问题描述tags:pod；语义相似度:0.08
+rg-d4t81fud86bs73bnnf00,AI智能标书项目,a-d642f5ud86bs73bj3du0,AI 项目 业务后端不可用,yes,application-http-5xx-or-unavailable-alert,应用 5xx、4xx 或后端不可用告警处理指南,36,22,0.1823,问题描述关键词:业务后端不可用；语义相似度:0.18
+rg-d4vr3red86bs73bnnf7g,Mysql告警规则,a-d4vr4lmd86bs73bnnf8g,MySQL宕机,yes,database-status-tablespace-alert,数据库状态、宕机或表空间告警处理指南,130,114,0.202,问题描述关键词:MySQL宕机；问题描述关键词:Mysql 宕机；问题描述关键词:MySQL；问题描述systems:mysql；问题描述tags:mysql；语义相似度:0.20
+rg-d4vr4v6d86bs73bnnf9g,中广控告警,a-d4vr5bud86bs73bnnfag,IDC机房告警详情,yes,oracle-backup-restore-guide,Oracle 数据库备份与恢复完全指南,8,0,0.1121,语义相似度:0.11
+rg-d50bal6d86bs73bnnfgg,Nginx告警规则,a-d5128cmd86bs73bfilvg,域名三分钟内超过 300次 4xx 错误，请注意相关业务使用状态,yes,application-http-5xx-or-unavailable-alert,应用 5xx、4xx 或后端不可用告警处理指南,85,70,0.1916,问题描述关键词:4xx；问题描述关键词:域名三分钟内超过；问题描述tags:xx；问题描述tags:4xx；问题描述标题:4xx；语义相似度:0.19
+rg-d50bal6d86bs73bnnfgg,Nginx告警规则,a-d512cnmd86bs73bfim0g,业务后端不可用,yes,application-http-5xx-or-unavailable-alert,应用 5xx、4xx 或后端不可用告警处理指南,36,22,0.1823,问题描述关键词:业务后端不可用；语义相似度:0.18
+rg-d56b31md86bs739o3c8g,WMS,a-d56esoud86bs73abtj30,WMS业务机器内存使用率,yes,linux-memory-high-usage-alert,Linux 服务器内存使用率过高告警处理指南,58,42,0.2041,问题描述关键词:内存使用率；问题描述关键词:业务机器内存使用率；语义相似度:0.20
+rg-d56b31md86bs739o3c8g,WMS,a-d56euqud86bs73abtj40,WMS业务机器CPU使用率,yes,linux-cpu-high-usage-alert,Linux 服务器 CPU 使用率过高告警处理指南,99,80,0.2415,问题描述关键词:CPU使用率；问题描述关键词:业务机器CPU使用率；问题描述关键词:cpu；问题描述tags:cpu；问题描述标题:CPU；语义相似度:0.24
+rg-d56b31md86bs739o3c8g,WMS,a-d5mtd2md86bs73c2o8b0,WMS 后端应用 5xx 告警,yes,application-http-5xx-or-unavailable-alert,应用 5xx、4xx 或后端不可用告警处理指南,62,50,0.1624,问题描述关键词:5xx；问题描述tags:5xx；问题描述tags:xx；问题描述标题:5xx；语义相似度:0.16
+rg-d56b31md86bs739o3c8g,WMS,a-d5mtm8ud86bs73c2o8d0,WMS 项目 Mysql  宕机,yes,database-status-tablespace-alert,数据库状态、宕机或表空间告警处理指南,130,114,0.202,问题描述关键词:MySQL宕机；问题描述关键词:Mysql 宕机；问题描述关键词:MySQL；问题描述systems:mysql；问题描述tags:mysql；语义相似度:0.20
+rg-d62jj3md86bs73863m90,MES,a-d62p466d86bs73dbkh5g,磁盘空间使用率超过97%,yes,linux-disk-space-high-alert,Linux 服务器磁盘空间使用率过高告警处理指南,61,42,0.2498,问题描述关键词:磁盘空间使用率超过97%；问题描述关键词:磁盘空间使用率；语义相似度:0.25
+rg-d62jj3md86bs73863m90,MES,a-d6t0fbed86bs73fhlbb0,内存使用率超过95%,yes,linux-memory-high-usage-alert,Linux 服务器内存使用率过高告警处理指南,58,42,0.2118,问题描述关键词:内存使用率超过95%；问题描述关键词:内存使用率；语义相似度:0.21
+rg-d62jj3md86bs73863m90,MES,a-d6t6lrmd86bs73fhlbe0,卫华MES数据库状态监控,yes,database-status-tablespace-alert,数据库状态、宕机或表空间告警处理指南,45,28,0.2159,问题描述关键词:数据库状态监控；问题描述标题:数据库状态；语义相似度:0.22
+rg-d62jj3md86bs73863m90,MES,a-d6t6n8md86bs73fhlbf0,江苏MES数据库状态监控,yes,database-status-tablespace-alert,数据库状态、宕机或表空间告警处理指南,45,28,0.2159,问题描述关键词:数据库状态监控；问题描述标题:数据库状态；语义相似度:0.22
+rg-d62jj3md86bs73863m90,MES,a-d6t6ucmd86bs73fhlbg0,CPU使用率超过95%,yes,linux-cpu-high-usage-alert,Linux 服务器 CPU 使用率过高告警处理指南,96,80,0.2088,问题描述关键词:CPU使用率超过95%；问题描述关键词:CPU使用率；问题描述关键词:cpu；问题描述tags:cpu；问题描述标题:CPU；语义相似度:0.21
+rg-d62jj3md86bs73863m90,MES,a-d6t71aud86bs73fhlbi0,卫华MES数据库表空间监控,yes,database-status-tablespace-alert,数据库状态、宕机或表空间告警处理指南,50,34,0.2044,问题描述关键词:数据库表空间监控；问题描述关键词:表空间；语义相似度:0.20
+rg-d62jj3md86bs73863m90,MES,a-d6t72led86bs73fhlbqg,江苏MES数据库表空间监控,yes,database-status-tablespace-alert,数据库状态、宕机或表空间告警处理指南,50,34,0.2044,问题描述关键词:数据库表空间监控；问题描述关键词:表空间；语义相似度:0.20
+rg-d6svp16d86bs73fhlb80,Networker备份,a-d6t05mmd86bs73fhlb90,Networekr备份失败,yes,access-control-offline-or-reboot,门禁离线、反复重启或网络异常,15,0,0.1884,语义相似度:0.19
+rg-d6svp16d86bs73fhlb80,Networker备份,a-d6t06o6d86bs73fhlba0,DD3300存储超过80%告警,yes,kubernetes-ops-guide,Kubernetes 运维完全指南,12,0,0.1566,语义相似度:0.16
+rg-d6tk5ced86bs73fhld60,NC,a-d6tluaud86bs73fhld8g,NC数据库宕机,yes,database-status-tablespace-alert,数据库状态、宕机或表空间告警处理指南,30,22,0.1008,问题描述关键词:数据库宕机；语义相似度:0.10
+rg-d6tk5ced86bs73fhld60,NC,a-d6tlvrud86bs73fhldb0,NC数据库表空间超过98%,yes,database-status-tablespace-alert,数据库状态、宕机或表空间告警处理指南,30,14,0.206,问题描述关键词:表空间；语义相似度:0.21
+rg-d7gsi7r0v1ic7389fn6g,超融合平台告警,a-d7gslcb0v1ic7389fn7g,超融合平台告警,yes,access-control-offline-or-reboot,门禁离线、反复重启或网络异常,8,0,0.1099,语义相似度:0.11

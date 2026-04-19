@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>运维知识库工作台</title>
+    <link rel="stylesheet" href="/ui/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">KB</div>
+          <div>
+            <h1>运维知识库</h1>
+            <p id="healthText">连接中...</p>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active" data-view="browse">知识浏览</button>
+          <button class="nav-item" data-view="recommend">工单推荐</button>
+          <button class="nav-item" data-view="create">新增候选知识</button>
+          <button class="nav-item" data-view="reports">治理视图</button>
+        </nav>
+
+        <section class="panel compact">
+          <h2>分类</h2>
+          <div id="categoryList" class="category-list"></div>
+        </section>
+      </aside>
+
+      <section class="content">
+        <header class="toolbar">
+          <div>
+            <h2 id="viewTitle">知识浏览</h2>
+            <p id="viewHint">按分类、关键词、状态筛选知识。</p>
+          </div>
+          <div class="toolbar-actions">
+            <button id="reloadBtn" class="button secondary">重载索引</button>
+            <button id="refreshBtn" class="button">刷新</button>
+          </div>
+        </header>
+
+        <section id="browseView" class="view active">
+          <div class="filters">
+            <input id="searchInput" class="input" placeholder="搜索标题、标签、系统、步骤、指令" />
+            <select id="statusFilter" class="input select">
+              <option value="">全部状态</option>
+              <option value="candidate">candidate</option>
+              <option value="usable">usable</option>
+              <option value="verified">verified</option>
+              <option value="deprecated">deprecated</option>
+            </select>
+            <select id="riskFilter" class="input select">
+              <option value="">全部风险</option>
+              <option value="high">高风险</option>
+              <option value="normal">普通</option>
+            </select>
+          </div>
+          <div class="layout">
+            <div id="docList" class="list"></div>
+            <article id="docDetail" class="detail empty">选择左侧知识查看步骤、指令和验证方式。</article>
+          </div>
+        </section>
+
+        <section id="recommendView" class="view">
+          <div class="recommend-box">
+            <label>工单标题</label>
+            <input id="ticketTitle" class="input" placeholder="例如：CPU使用率达到95%" />
+            <label>问题描述</label>
+            <textarea id="ticketDesc" class="input textarea" placeholder="粘贴告警内容、用户描述或处理上下文"></textarea>
+            <div class="row">
+              <select id="modeSelect" class="input select">
+                <option value="hybrid">hybrid 混合推荐</option>
+                <option value="rules">rules 规则推荐</option>
+                <option value="vector">vector 向量推荐</option>
+              </select>
+              <button id="recommendBtn" class="button">获取推荐</button>
+            </div>
+          </div>
+          <div id="recommendResults" class="recommend-results"></div>
+        </section>
+
+        <section id="createView" class="view">
+          <form id="createForm" class="create-form">
+            <div class="grid two">
+              <label>标题<input name="title" class="input" required placeholder="Linux 服务器 CPU 使用率过高处理指南" /></label>
+              <label>文件名 slug<input name="slug" class="input" required placeholder="linux-cpu-high-usage" /></label>
+              <label>分类目录<input name="category" class="input" value="server" /></label>
+              <label>状态
+                <select name="status" class="input select">
+                  <option value="candidate">candidate</option>
+                  <option value="usable">usable</option>
+                  <option value="verified">verified</option>
+                </select>
+              </label>
+              <label>资产类型<input name="asset_types" class="input" placeholder="server,database" /></label>
+              <label>系统<input name="systems" class="input" placeholder="linux,mysql" /></label>
+              <label>问题类型<input name="issue_types" class="input" placeholder="cpu-high,performance" /></label>
+              <label>标签<input name="tags" class="input" placeholder="cpu,linux,alert" /></label>
+            </div>
+            <label>适用范围<textarea name="applicability" class="input textarea small"></textarea></label>
+            <label>常见现象<textarea name="symptoms" class="input textarea small"></textarea></label>
+            <label>处理步骤<textarea name="steps" class="input textarea"></textarea></label>
+            <label>常用指令<textarea name="commands" class="input textarea" placeholder="每行一条，例如：top -c -- 实时查看 CPU 占用最高的进程（风险：低）"></textarea></label>
+            <label>验证方式<textarea name="verification" class="input textarea small"></textarea></label>
+            <label>注意事项<textarea name="notes" class="input textarea small"></textarea></label>
+            <div class="row">
+              <button class="button" type="submit">创建候选知识</button>
+              <span id="createResult" class="muted"></span>
+            </div>
+          </form>
+        </section>
+
+        <section id="reportsView" class="view">
+          <div id="statsCards" class="stats"></div>
+          <div class="panel">
+            <h3>建议动作</h3>
+            <ul class="plain">
+              <li>高风险知识必须补齐“处理步骤 / 常用指令 / 验证方式 / 注意事项”。</li>
+              <li>candidate 知识不要高权重发布，先由对应工程师复核。</li>
+              <li>规则推荐命中但反馈无用的知识，优先检查关键词是否过宽。</li>
+              <li>服务器、数据库、网络设备知识应保留风险等级和回退提示。</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/ui/app.js"></script>
+  </body>
+</html>

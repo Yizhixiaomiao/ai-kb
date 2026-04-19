@@ -1,0 +1,5271 @@
+[
+  {
+    "doc_id": "account-login-failed",
+    "title": "账号、密码或权限导致登录失败处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "account",
+      "business-system"
+    ],
+    "systems": [
+      "mes",
+      "oa",
+      "plm",
+      "authentication-client"
+    ],
+    "issue_types": [
+      "login-failed",
+      "permission"
+    ],
+    "tags": [
+      "account",
+      "password",
+      "permission",
+      "login"
+    ],
+    "keywords": [
+      "无法登录",
+      "登录异常",
+      "登录不上",
+      "登不上",
+      "密码错误",
+      "权限不足",
+      "账号问题",
+      "账户问题",
+      "加域",
+      "脱域",
+      "域账户",
+      "重置域账户",
+      "账号、密码或权限导致登录失败处理指南",
+      "account",
+      "password",
+      "permission",
+      "login",
+      "mes",
+      "oa",
+      "plm",
+      "authentication-client",
+      "login-failed",
+      "business-system"
+    ],
+    "path": "docs/candidate/desktop/account-login-failed.md",
+    "content_preview": "账号、密码或权限导致登录失败处理指南 适用范围 适用于内部平台、MES、OA、PLM、认证助手等系统登录异常、密码错误、权限不足、账号异常问题。 常见现象 系统提示登录异常或无法登录。 认证助手密码报错。 内部平台账号问题。 调岗后无法访问原系统或新增系统。 处理步骤 1. 确认用户身份、工号和所属部门。 2. 确认登录系统名称和报错提示。 3. 判断是密码错误、账号锁定、权限缺失还是系统异常。 4. 对密码类问题按账号管理流程重置或指导用户自助处理。 5. 对权限类问题确认审批或权限申请记录。 6. 对单系统异常，联系对应系统管理员确认账号状态。 验证方式 用户能成功登录目标系统。 用户能访",
+    "applicability": [
+      "适用于内部平台、MES、OA、PLM、认证助手等系统登录异常、密码错误、权限不足、账号异常问题。"
+    ],
+    "symptoms": [
+      "系统提示登录异常或无法登录。",
+      "认证助手密码报错。",
+      "内部平台账号问题。",
+      "调岗后无法访问原系统或新增系统。"
+    ],
+    "steps": [
+      "确认用户身份、工号和所属部门。",
+      "确认登录系统名称和报错提示。",
+      "判断是密码错误、账号锁定、权限缺失还是系统异常。",
+      "对密码类问题按账号管理流程重置或指导用户自助处理。",
+      "对权限类问题确认审批或权限申请记录。",
+      "对单系统异常，联系对应系统管理员确认账号状态。"
+    ],
+    "commands": [],
+    "verification": [
+      "用户能成功登录目标系统。",
+      "用户能访问所需功能菜单或业务页面。"
+    ],
+    "notes": [
+      "批量用户无法登录。",
+      "账号状态正常但系统仍拒绝访问。",
+      "涉及生产权限、敏感数据或跨部门授权。"
+    ],
+    "search_text": "账号、密码或权限导致登录失败处理指南 适用范围 适用于内部平台、MES、OA、PLM、认证助手等系统登录异常、密码错误、权限不足、账号异常问题。 常见现象 系统提示登录异常或无法登录。 认证助手密码报错。 内部平台账号问题。 调岗后无法访问原系统或新增系统。 处理步骤 1. 确认用户身份、工号和所属部门。 2. 确认登录系统名称和报错提示。 3. 判断是密码错误、账号锁定、权限缺失还是系统异常。 4. 对密码类问题按账号管理流程重置或指导用户自助处理。 5. 对权限类问题确认审批或权限申请记录。 6. 对单系统异常，联系对应系统管理员确认账号状态。 验证方式 用户能成功登录目标系统。 用户能访问所需功能菜单或业务页面。 风险点 不要绕过权限审批直接授权。 账号处理必须确认用户身份。 升级条件 批量用户无法登录。 账号状态正常但系统仍拒绝访问。 涉及生产权限、敏感数据或跨部门授权。"
+  },
+  {
+    "doc_id": "black-screen-desktop-not-shown",
+    "title": "黑屏但鼠标可见或桌面不显示处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "black-screen"
+    ],
+    "tags": [
+      "windows",
+      "explorer",
+      "black-screen"
+    ],
+    "keywords": [
+      "黑屏",
+      "鼠标光标可见",
+      "桌面不显示",
+      "explorer.exe",
+      "黑屏但鼠标可见或桌面不显示处理指南",
+      "windows",
+      "explorer",
+      "black-screen",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/black-screen-desktop-not-shown.md",
+    "content_preview": "黑屏但鼠标可见或桌面不显示处理指南 适用范围 适用于 Windows 登录后黑屏、只有鼠标光标可见、桌面和任务栏不显示等问题。 常见现象 屏幕黑屏，但鼠标能移动。 桌面、任务栏不显示。 重启后偶发恢复或反复出现。 处理步骤 1. 按 Ctrl + Shift + Esc 打开任务管理器。 2. 选择“运行新任务”。 3. 输入 explorer.exe 并运行。 4. 如果桌面恢复，检查是否存在系统更新、启动项异常或配置过低。 5. 清理不必要启动项和垃圾软件。 6. 如果频繁复现，升级给系统工程师进一步排查用户配置文件或系统组件。 验证方式 桌面和任务栏恢复显示。 注销或重启后能正常进入桌面",
+    "applicability": [
+      "适用于 Windows 登录后黑屏、只有鼠标光标可见、桌面和任务栏不显示等问题。"
+    ],
+    "symptoms": [
+      "屏幕黑屏，但鼠标能移动。",
+      "桌面、任务栏不显示。",
+      "重启后偶发恢复或反复出现。"
+    ],
+    "steps": [
+      "按 Ctrl + Shift + Esc 打开任务管理器。",
+      "选择“运行新任务”。",
+      "输入 explorer.exe 并运行。",
+      "如果桌面恢复，检查是否存在系统更新、启动项异常或配置过低。",
+      "清理不必要启动项和垃圾软件。",
+      "如果频繁复现，升级给系统工程师进一步排查用户配置文件或系统组件。"
+    ],
+    "commands": [
+      {
+        "command": "explorer.exe",
+        "purpose": "重新启动 Windows 桌面外壳，恢复桌面和任务栏。",
+        "risk": "低"
+      },
+      {
+        "command": "taskmgr",
+        "purpose": "打开任务管理器，查看进程和资源占用。",
+        "risk": "低"
+      },
+      {
+        "command": "Ctrl + Shift + Esc",
+        "purpose": "键盘快捷键打开任务管理器。",
+        "risk": "低"
+      },
+      {
+        "command": "eventvwr.msc",
+        "purpose": "打开事件查看器，检查系统、应用和驱动错误。",
+        "risk": "低"
+      },
+      {
+        "command": "devmgmt.msc",
+        "purpose": "打开设备管理器，检查硬件和驱动异常。",
+        "risk": "低"
+      },
+      {
+        "command": "msconfig",
+        "purpose": "查看系统启动配置和服务，排查异常启动项。",
+        "risk": "低"
+      },
+      {
+        "command": "sfc /scannow",
+        "purpose": "扫描并修复 Windows 系统文件。",
+        "risk": "低"
+      },
+      {
+        "command": "dism /online /cleanup-image /restorehealth",
+        "purpose": "修复 Windows 组件存储。",
+        "risk": "低"
+      },
+      {
+        "command": "shutdown /r /t 0",
+        "purpose": "立即重启电脑，用于验证重启后是否恢复。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "桌面和任务栏恢复显示。",
+      "注销或重启后能正常进入桌面。"
+    ],
+    "notes": [
+      "无法打开任务管理器。",
+      "explorer.exe 无法启动。",
+      "多次重启后问题仍复现。"
+    ],
+    "search_text": "黑屏但鼠标可见或桌面不显示处理指南 适用范围 适用于 Windows 登录后黑屏、只有鼠标光标可见、桌面和任务栏不显示等问题。 常见现象 屏幕黑屏，但鼠标能移动。 桌面、任务栏不显示。 重启后偶发恢复或反复出现。 处理步骤 1. 按 Ctrl + Shift + Esc 打开任务管理器。 2. 选择“运行新任务”。 3. 输入 explorer.exe 并运行。 4. 如果桌面恢复，检查是否存在系统更新、启动项异常或配置过低。 5. 清理不必要启动项和垃圾软件。 6. 如果频繁复现，升级给系统工程师进一步排查用户配置文件或系统组件。 验证方式 桌面和任务栏恢复显示。 注销或重启后能正常进入桌面。 风险点 不要直接删除用户配置文件。 涉及重要桌面文件时先确认数据位置。 升级条件 无法打开任务管理器。 explorer.exe 无法启动。 多次重启后问题仍复现。 常用指令 explorer.exe ???? Windows ??????????????????? taskmgr ???????????? explorer.exe ????????????? Ctrl + Shift + Esc ?????????????????? eventvwr.msc ????????????????? devmgmt.msc ????????????????????? msconfig ???????????????? sfc /scannow ??????????????? dism /online /cleanup image /restorehealth ?? Windows ?????????? shutdown /r /t 0 ???????????????????"
+  },
+  {
+    "doc_id": "cloud-drive-install-sync-access",
+    "title": "云盘安装、同步或共享访问异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "storage"
+    ],
+    "systems": [
+      "cloud-drive"
+    ],
+    "issue_types": [
+      "software-install",
+      "file-access",
+      "permission"
+    ],
+    "tags": [
+      "cloud-drive",
+      "shared-folder",
+      "sync"
+    ],
+    "keywords": [
+      "云盘安装",
+      "云盘同步",
+      "云盘扩容",
+      "云盘共享",
+      "投标文件",
+      "云盘安装、同步或共享访问异常",
+      "cloud-drive",
+      "shared-folder",
+      "sync",
+      "software-install",
+      "file-access",
+      "permission",
+      "pc",
+      "storage"
+    ],
+    "path": "docs/candidate/desktop/business-systems/cloud-drive-install-sync-access.md",
+    "content_preview": "云盘安装、同步或共享访问异常 常见现象 需要安装云盘客户端。 云盘共享文件无法访问。 投标文件或共享文件找不到。 云盘需要扩容。 处理步骤 1. 确认用户需要访问的云盘空间或共享目录。 2. 安装或修复云盘客户端。 3. 检查登录账号和共享权限。 4. 检查同步状态和本地缓存。 5. 对文件丢失先查历史版本、回收站或备份。 升级条件 涉及重要文件恢复。 云盘容量扩容。 多人共享权限异常。",
+    "applicability": [],
+    "symptoms": [
+      "需要安装云盘客户端。",
+      "云盘共享文件无法访问。",
+      "投标文件或共享文件找不到。",
+      "云盘需要扩容。"
+    ],
+    "steps": [
+      "确认用户需要访问的云盘空间或共享目录。",
+      "安装或修复云盘客户端。",
+      "检查登录账号和共享权限。",
+      "检查同步状态和本地缓存。",
+      "对文件丢失先查历史版本、回收站或备份。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "涉及重要文件恢复。",
+      "云盘容量扩容。",
+      "多人共享权限异常。"
+    ],
+    "search_text": "云盘安装、同步或共享访问异常 常见现象 需要安装云盘客户端。 云盘共享文件无法访问。 投标文件或共享文件找不到。 云盘需要扩容。 处理步骤 1. 确认用户需要访问的云盘空间或共享目录。 2. 安装或修复云盘客户端。 3. 检查登录账号和共享权限。 4. 检查同步状态和本地缓存。 5. 对文件丢失先查历史版本、回收站或备份。 升级条件 涉及重要文件恢复。 云盘容量扩容。 多人共享权限异常。"
+  },
+  {
+    "doc_id": "kms-windows-office-activation",
+    "title": "Windows 或 Office 激活异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows",
+      "office",
+      "kms"
+    ],
+    "issue_types": [
+      "login-failed",
+      "software-install"
+    ],
+    "tags": [
+      "kms",
+      "activation",
+      "windows",
+      "office"
+    ],
+    "keywords": [
+      "windows系统过期",
+      "windows激活",
+      "office激活",
+      "kms",
+      "重新连接kms",
+      "系统过期",
+      "Windows 或 Office 激活异常",
+      "activation",
+      "windows",
+      "office",
+      "login-failed",
+      "software-install",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/business-systems/kms-windows-office-activation.md",
+    "content_preview": "Windows 或 Office 激活异常 常见现象 Windows 系统提示过期或未激活。 Office 激活异常。 需要重新连接 KMS 服务器激活。 处理步骤 1. 确认电脑是否在公司网络内。 2. 检查系统版本和 Office 版本是否支持公司激活方式。 3. 连接公司网络或 VPN 后重新尝试激活。 4. 使用公司标准 KMS 激活流程处理。 5. 重启 Office 或系统验证激活状态。 升级条件 KMS 服务不可用。 批量电脑激活失败。 软件版本不符合公司授权。",
+    "applicability": [],
+    "symptoms": [
+      "Windows 系统提示过期或未激活。",
+      "Office 激活异常。",
+      "需要重新连接 KMS 服务器激活。"
+    ],
+    "steps": [
+      "确认电脑是否在公司网络内。",
+      "检查系统版本和 Office 版本是否支持公司激活方式。",
+      "连接公司网络或 VPN 后重新尝试激活。",
+      "使用公司标准 KMS 激活流程处理。",
+      "重启 Office 或系统验证激活状态。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "KMS 服务不可用。",
+      "批量电脑激活失败。",
+      "软件版本不符合公司授权。"
+    ],
+    "search_text": "Windows 或 Office 激活异常 常见现象 Windows 系统提示过期或未激活。 Office 激活异常。 需要重新连接 KMS 服务器激活。 处理步骤 1. 确认电脑是否在公司网络内。 2. 检查系统版本和 Office 版本是否支持公司激活方式。 3. 连接公司网络或 VPN 后重新尝试激活。 4. 使用公司标准 KMS 激活流程处理。 5. 重启 Office 或系统验证激活状态。 升级条件 KMS 服务不可用。 批量电脑激活失败。 软件版本不符合公司授权。"
+  },
+  {
+    "doc_id": "mes-login-network-related",
+    "title": "MES 登录失败或疑似网络认证问题",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "network",
+      "business-system"
+    ],
+    "systems": [
+      "mes"
+    ],
+    "issue_types": [
+      "network-unavailable",
+      "login-failed"
+    ],
+    "tags": [
+      "mes",
+      "network",
+      "authentication"
+    ],
+    "keywords": [
+      "mes登不上",
+      "mes无法登录",
+      "mes登录失败",
+      "车间终端",
+      "mes没网",
+      "MES 登录失败或疑似网络认证问题",
+      "mes",
+      "network",
+      "authentication",
+      "network-unavailable",
+      "login-failed",
+      "pc",
+      "business-system"
+    ],
+    "path": "docs/candidate/desktop/business-systems/mes-login-network-related.md",
+    "content_preview": "MES 登录失败或疑似网络认证问题 常见现象 MES 登不上。 车间终端没网。 认证过多或认证客户端异常。 处理步骤 1. 确认同区域其他 MES 终端是否正常。 2. 检查网络认证状态。 3. 检查 MES 访问地址是否正确。 4. 清理浏览器缓存或重新打开 MES。 5. 如同区域多台异常，升级网络或 MES 管理员。 升级条件 车间批量无法访问 MES。 MES 系统本身异常。",
+    "applicability": [],
+    "symptoms": [
+      "MES 登不上。",
+      "车间终端没网。",
+      "认证过多或认证客户端异常。"
+    ],
+    "steps": [
+      "确认同区域其他 MES 终端是否正常。",
+      "检查网络认证状态。",
+      "检查 MES 访问地址是否正确。",
+      "清理浏览器缓存或重新打开 MES。",
+      "如同区域多台异常，升级网络或 MES 管理员。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "车间批量无法访问 MES。",
+      "MES 系统本身异常。"
+    ],
+    "search_text": "MES 登录失败或疑似网络认证问题 常见现象 MES 登不上。 车间终端没网。 认证过多或认证客户端异常。 处理步骤 1. 确认同区域其他 MES 终端是否正常。 2. 检查网络认证状态。 3. 检查 MES 访问地址是否正确。 4. 清理浏览器缓存或重新打开 MES。 5. 如同区域多台异常，升级网络或 MES 管理员。 升级条件 车间批量无法访问 MES。 MES 系统本身异常。"
+  },
+  {
+    "doc_id": "oa-upload-or-print-slow",
+    "title": "OA 附件上传失败或打印发车清单慢",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "business-system"
+    ],
+    "systems": [
+      "oa",
+      "browser"
+    ],
+    "issue_types": [
+      "file-access",
+      "performance-slow"
+    ],
+    "tags": [
+      "oa",
+      "browser",
+      "upload",
+      "print"
+    ],
+    "keywords": [
+      "oa上传",
+      "oa附件",
+      "oa发协同",
+      "oa打印",
+      "发车清单",
+      "浏览器版本",
+      "OA 附件上传失败或打印发车清单慢",
+      "oa",
+      "browser",
+      "upload",
+      "print",
+      "file-access",
+      "performance-slow",
+      "pc",
+      "business-system"
+    ],
+    "path": "docs/candidate/desktop/business-systems/oa-upload-or-print-slow.md",
+    "content_preview": "OA 附件上传失败或打印发车清单慢 常见现象 OA 发协同上传不了附件。 OA 打印发车清单时间较长。 浏览器版本导致打印或上传异常。 处理步骤 1. 确认是否只有 OA 异常。 2. 检查浏览器版本和兼容性设置。 3. 清理浏览器缓存。 4. 检查附件大小、文件名和网络状态。 5. 重新测试上传或打印。 升级条件 多人同时 OA 上传或打印异常。 OA 模块服务异常。",
+    "applicability": [],
+    "symptoms": [
+      "OA 发协同上传不了附件。",
+      "OA 打印发车清单时间较长。",
+      "浏览器版本导致打印或上传异常。"
+    ],
+    "steps": [
+      "确认是否只有 OA 异常。",
+      "检查浏览器版本和兼容性设置。",
+      "清理浏览器缓存。",
+      "检查附件大小、文件名和网络状态。",
+      "重新测试上传或打印。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "多人同时 OA 上传或打印异常。",
+      "OA 模块服务异常。"
+    ],
+    "search_text": "OA 附件上传失败或打印发车清单慢 常见现象 OA 发协同上传不了附件。 OA 打印发车清单时间较长。 浏览器版本导致打印或上传异常。 处理步骤 1. 确认是否只有 OA 异常。 2. 检查浏览器版本和兼容性设置。 3. 清理浏览器缓存。 4. 检查附件大小、文件名和网络状态。 5. 重新测试上传或打印。 升级条件 多人同时 OA 上传或打印异常。 OA 模块服务异常。"
+  },
+  {
+    "doc_id": "plm-client-or-login-failed",
+    "title": "PLM 客户端、登录或接口异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "business-system"
+    ],
+    "systems": [
+      "plm"
+    ],
+    "issue_types": [
+      "login-failed",
+      "software-install"
+    ],
+    "tags": [
+      "plm",
+      "client",
+      "login"
+    ],
+    "keywords": [
+      "plm打不开",
+      "plm无法登录",
+      "plm客户端",
+      "plm卡顿",
+      "plm传图",
+      "PLM 客户端、登录或接口异常",
+      "plm",
+      "client",
+      "login",
+      "login-failed",
+      "software-install",
+      "pc",
+      "business-system"
+    ],
+    "path": "docs/candidate/desktop/business-systems/plm-client-or-login-failed.md",
+    "content_preview": "PLM 客户端、登录或接口异常 常见现象 PLM 无法打开。 PLM 无法登录。 PLM 客户端或接口异常。 与 CAD / SolidWorks 传图失败。 处理步骤 1. 确认 PLM 客户端版本。 2. 检查网络和登录账号状态。 3. 清理客户端缓存。 4. 检查 CAD / SolidWorks 接口插件。 5. 如为系统卡顿或接口异常，升级给 PLM 管理员。 升级条件 多个设计人员同时异常。 接口服务或权限配置异常。",
+    "applicability": [],
+    "symptoms": [
+      "PLM 无法打开。",
+      "PLM 无法登录。",
+      "PLM 客户端或接口异常。",
+      "与 CAD / SolidWorks 传图失败。"
+    ],
+    "steps": [
+      "确认 PLM 客户端版本。",
+      "检查网络和登录账号状态。",
+      "清理客户端缓存。",
+      "检查 CAD / SolidWorks 接口插件。",
+      "如为系统卡顿或接口异常，升级给 PLM 管理员。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "多个设计人员同时异常。",
+      "接口服务或权限配置异常。"
+    ],
+    "search_text": "PLM 客户端、登录或接口异常 常见现象 PLM 无法打开。 PLM 无法登录。 PLM 客户端或接口异常。 与 CAD / SolidWorks 传图失败。 处理步骤 1. 确认 PLM 客户端版本。 2. 检查网络和登录账号状态。 3. 清理客户端缓存。 4. 检查 CAD / SolidWorks 接口插件。 5. 如为系统卡顿或接口异常，升级给 PLM 管理员。 升级条件 多个设计人员同时异常。 接口服务或权限配置异常。"
+  },
+  {
+    "doc_id": "sap-client-login-print-failed",
+    "title": "SAP 客户端登录、版本或打印异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "business-system"
+    ],
+    "systems": [
+      "sap"
+    ],
+    "issue_types": [
+      "login-failed",
+      "printer-not-working",
+      "software-install"
+    ],
+    "tags": [
+      "sap",
+      "client",
+      "login",
+      "print"
+    ],
+    "keywords": [
+      "sap",
+      "sap登录不了",
+      "sap登录不上",
+      "sap异常",
+      "sap打印",
+      "sap无法正常报货",
+      "sap纸张",
+      "zfi039",
+      "SAP 客户端登录、版本或打印异常",
+      "client",
+      "login",
+      "print",
+      "login-failed",
+      "printer-not-working",
+      "software-install",
+      "pc",
+      "business-system"
+    ],
+    "path": "docs/candidate/desktop/business-systems/sap-client-login-print-failed.md",
+    "content_preview": "SAP 客户端登录、版本或打印异常 常见现象 SAP 登录不上。 SAP 客户端版本不兼容。 SAP 界面模糊。 SAP 调用本地打印无响应。 SAP 内没有需要的纸张选项或打印代码异常。 处理步骤 1. 确认 SAP 客户端版本和目标系统。 2. 检查账号、密码和登录配置。 3. 对版本不兼容问题，安装公司指定版本客户端。 4. 检查 SAP 本地打印配置和默认打印机。 5. 检查纸张规格、SAP 打印代码和业务单据模板。 6. 本地打印正常但 SAP 无响应时，升级给 SAP / 应用管理员。 升级条件 多名用户 SAP 登录异常。 SAP 业务单据或打印代码异常。 涉及业务系统配置或权限",
+    "applicability": [],
+    "symptoms": [
+      "SAP 登录不上。",
+      "SAP 客户端版本不兼容。",
+      "SAP 界面模糊。",
+      "SAP 调用本地打印无响应。",
+      "SAP 内没有需要的纸张选项或打印代码异常。"
+    ],
+    "steps": [
+      "确认 SAP 客户端版本和目标系统。",
+      "检查账号、密码和登录配置。",
+      "对版本不兼容问题，安装公司指定版本客户端。",
+      "检查 SAP 本地打印配置和默认打印机。",
+      "检查纸张规格、SAP 打印代码和业务单据模板。",
+      "本地打印正常但 SAP 无响应时，升级给 SAP / 应用管理员。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "多名用户 SAP 登录异常。",
+      "SAP 业务单据或打印代码异常。",
+      "涉及业务系统配置或权限。"
+    ],
+    "search_text": "SAP 客户端登录、版本或打印异常 常见现象 SAP 登录不上。 SAP 客户端版本不兼容。 SAP 界面模糊。 SAP 调用本地打印无响应。 SAP 内没有需要的纸张选项或打印代码异常。 处理步骤 1. 确认 SAP 客户端版本和目标系统。 2. 检查账号、密码和登录配置。 3. 对版本不兼容问题，安装公司指定版本客户端。 4. 检查 SAP 本地打印配置和默认打印机。 5. 检查纸张规格、SAP 打印代码和业务单据模板。 6. 本地打印正常但 SAP 无响应时，升级给 SAP / 应用管理员。 升级条件 多名用户 SAP 登录异常。 SAP 业务单据或打印代码异常。 涉及业务系统配置或权限。"
+  },
+  {
+    "doc_id": "cad-crash-or-hang",
+    "title": "CAD 打开后卡死、崩溃或无响应",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "performance-slow",
+      "software-install"
+    ],
+    "tags": [
+      "cad",
+      "crash",
+      "hang",
+      "authentication-client"
+    ],
+    "keywords": [
+      "cad卡死",
+      "cad崩溃",
+      "cad无响应",
+      "cad打开后卡死",
+      "cad报错",
+      "CAD 打开后卡死、崩溃或无响应",
+      "cad",
+      "crash",
+      "hang",
+      "authentication-client",
+      "windows",
+      "performance-slow",
+      "software-install",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/design-software/cad-crash-or-hang.md",
+    "content_preview": "CAD 打开后卡死、崩溃或无响应 常见现象 CAD 打开后卡死。 打开图纸后无响应。 频繁崩溃。 认证客户端或杀毒软件影响 CAD 程序文件。 处理步骤 1. 确认是打开 CAD 即卡死，还是打开特定图纸卡死。 2. 检查 CPU、内存、磁盘占用。 3. 检查认证客户端、加密客户端或杀毒软件是否拦截 CAD 文件。 4. 安装必要运行库。 5. 禁用异常插件或 Autodesk 相关非必要插件。 6. 必要时卸载重装 CAD。 升级条件 同版本 CAD 多人异常。 与加密客户端或认证客户端版本冲突。",
+    "applicability": [],
+    "symptoms": [
+      "CAD 打开后卡死。",
+      "打开图纸后无响应。",
+      "频繁崩溃。",
+      "认证客户端或杀毒软件影响 CAD 程序文件。"
+    ],
+    "steps": [
+      "确认是打开 CAD 即卡死，还是打开特定图纸卡死。",
+      "检查 CPU、内存、磁盘占用。",
+      "检查认证客户端、加密客户端或杀毒软件是否拦截 CAD 文件。",
+      "安装必要运行库。",
+      "禁用异常插件或 Autodesk 相关非必要插件。",
+      "必要时卸载重装 CAD。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "同版本 CAD 多人异常。",
+      "与加密客户端或认证客户端版本冲突。"
+    ],
+    "search_text": "CAD 打开后卡死、崩溃或无响应 常见现象 CAD 打开后卡死。 打开图纸后无响应。 频繁崩溃。 认证客户端或杀毒软件影响 CAD 程序文件。 处理步骤 1. 确认是打开 CAD 即卡死，还是打开特定图纸卡死。 2. 检查 CPU、内存、磁盘占用。 3. 检查认证客户端、加密客户端或杀毒软件是否拦截 CAD 文件。 4. 安装必要运行库。 5. 禁用异常插件或 Autodesk 相关非必要插件。 6. 必要时卸载重装 CAD。 升级条件 同版本 CAD 多人异常。 与加密客户端或认证客户端版本冲突。"
+  },
+  {
+    "doc_id": "cad-drawing-open-failed-encryption",
+    "title": "CAD 图纸打不开或提示文件损坏",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "file-access"
+    ],
+    "tags": [
+      "cad",
+      "encryption",
+      "drawing",
+      "file-damaged"
+    ],
+    "keywords": [
+      "dwg打不开",
+      "cad图纸打不开",
+      "图纸损坏",
+      "加密图纸",
+      "文件损坏",
+      "CAD 图纸打不开或提示文件损坏",
+      "cad",
+      "encryption",
+      "drawing",
+      "file-damaged",
+      "windows",
+      "file-access",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/design-software/cad-drawing-open-failed-encryption.md",
+    "content_preview": "CAD 图纸打不开或提示文件损坏 常见现象 DWG 图纸打不开。 提示文件损坏。 加密未掉但图纸无法打开。 加密客户端版本相关。 处理步骤 1. 确认单个图纸异常还是多份图纸异常。 2. 复制文件副本后再尝试修复。 3. 检查加密客户端状态和版本。 4. 如历史记录显示版本问题，升级加密客户端。 5. 使用备份文件或历史版本恢复。 风险点 不要直接覆盖原图纸。 重要图纸先备份再处理。",
+    "applicability": [],
+    "symptoms": [
+      "DWG 图纸打不开。",
+      "提示文件损坏。",
+      "加密未掉但图纸无法打开。",
+      "加密客户端版本相关。"
+    ],
+    "steps": [
+      "确认单个图纸异常还是多份图纸异常。",
+      "复制文件副本后再尝试修复。",
+      "检查加密客户端状态和版本。",
+      "如历史记录显示版本问题，升级加密客户端。",
+      "使用备份文件或历史版本恢复。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [],
+    "search_text": "CAD 图纸打不开或提示文件损坏 常见现象 DWG 图纸打不开。 提示文件损坏。 加密未掉但图纸无法打开。 加密客户端版本相关。 处理步骤 1. 确认单个图纸异常还是多份图纸异常。 2. 复制文件副本后再尝试修复。 3. 检查加密客户端状态和版本。 4. 如历史记录显示版本问题，升级加密客户端。 5. 使用备份文件或历史版本恢复。 风险点 不要直接覆盖原图纸。 重要图纸先备份再处理。"
+  },
+  {
+    "doc_id": "cad-install-uninstall-failed",
+    "title": "CAD 安装、卸载或重装失败",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "software-install"
+    ],
+    "tags": [
+      "cad",
+      "autocad",
+      "install",
+      "registry"
+    ],
+    "keywords": [
+      "cad装不上",
+      "cad安装",
+      "cad卸载",
+      "cad重装",
+      "autocad安装",
+      "注册表",
+      "CAD 安装、卸载或重装失败",
+      "cad",
+      "autocad",
+      "install",
+      "registry",
+      "windows",
+      "software-install",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/design-software/cad-install-uninstall-failed.md",
+    "content_preview": "CAD 安装、卸载或重装失败 常见现象 CAD 装不上、卸不掉。 重装 CAD 失败。 注册表残留导致安装失败。 中文语言包或安装组件异常。 处理步骤 1. 确认 CAD 版本和授权方式。 2. 卸载现有 CAD 及相关组件。 3. 清理残留安装目录和注册表项。 4. 使用公司指定安装包重新安装。 5. 完成授权或激活后打开测试图纸。 风险点 清理注册表前需要确认范围。 不要使用未知来源安装包和激活工具。",
+    "applicability": [],
+    "symptoms": [
+      "CAD 装不上、卸不掉。",
+      "重装 CAD 失败。",
+      "注册表残留导致安装失败。",
+      "中文语言包或安装组件异常。"
+    ],
+    "steps": [
+      "确认 CAD 版本和授权方式。",
+      "卸载现有 CAD 及相关组件。",
+      "清理残留安装目录和注册表项。",
+      "使用公司指定安装包重新安装。",
+      "完成授权或激活后打开测试图纸。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [],
+    "search_text": "CAD 安装、卸载或重装失败 常见现象 CAD 装不上、卸不掉。 重装 CAD 失败。 注册表残留导致安装失败。 中文语言包或安装组件异常。 处理步骤 1. 确认 CAD 版本和授权方式。 2. 卸载现有 CAD 及相关组件。 3. 清理残留安装目录和注册表项。 4. 使用公司指定安装包重新安装。 5. 完成授权或激活后打开测试图纸。 风险点 清理注册表前需要确认范围。 不要使用未知来源安装包和激活工具。"
+  },
+  {
+    "doc_id": "cad-plm-interface-failed",
+    "title": "CAD 与 PLM 接口异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "business-system"
+    ],
+    "systems": [
+      "plm"
+    ],
+    "issue_types": [
+      "software-install",
+      "file-access"
+    ],
+    "tags": [
+      "cad",
+      "plm",
+      "interface"
+    ],
+    "keywords": [
+      "cad与plm",
+      "cad保存到管理系统",
+      "plm接口",
+      "无法传图",
+      "传图失败",
+      "CAD 与 PLM 接口异常",
+      "cad",
+      "plm",
+      "interface",
+      "software-install",
+      "file-access",
+      "pc",
+      "business-system"
+    ],
+    "path": "docs/candidate/desktop/design-software/cad-plm-interface-failed.md",
+    "content_preview": "CAD 与 PLM 接口异常 常见现象 CAD 与 PLM 接口安装失败。 CAD 无法保存到管理系统。 PLM 与 CAD / SolidWorks 接口无法传图。 处理步骤 1. 确认 CAD、SolidWorks 和 PLM 客户端版本。 2. 确认接口插件是否安装。 3. 检查用户 PLM 权限和登录状态。 4. 检查接口插件配置和本地缓存。 5. 用测试图纸验证上传或保存。 升级条件 PLM 系统卡顿或接口服务异常。 插件版本不匹配。 涉及批量设计人员无法传图。",
+    "applicability": [],
+    "symptoms": [
+      "CAD 与 PLM 接口安装失败。",
+      "CAD 无法保存到管理系统。",
+      "PLM 与 CAD / SolidWorks 接口无法传图。"
+    ],
+    "steps": [
+      "确认 CAD、SolidWorks 和 PLM 客户端版本。",
+      "确认接口插件是否安装。",
+      "检查用户 PLM 权限和登录状态。",
+      "检查接口插件配置和本地缓存。",
+      "用测试图纸验证上传或保存。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "PLM 系统卡顿或接口服务异常。",
+      "插件版本不匹配。",
+      "涉及批量设计人员无法传图。"
+    ],
+    "search_text": "CAD 与 PLM 接口异常 常见现象 CAD 与 PLM 接口安装失败。 CAD 无法保存到管理系统。 PLM 与 CAD / SolidWorks 接口无法传图。 处理步骤 1. 确认 CAD、SolidWorks 和 PLM 客户端版本。 2. 确认接口插件是否安装。 3. 检查用户 PLM 权限和登录状态。 4. 检查接口插件配置和本地缓存。 5. 用测试图纸验证上传或保存。 升级条件 PLM 系统卡顿或接口服务异常。 插件版本不匹配。 涉及批量设计人员无法传图。"
+  },
+  {
+    "doc_id": "solidworks-install-source-missing",
+    "title": "SolidWorks 安装源缺失或无法重装",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "software-install"
+    ],
+    "tags": [
+      "solidworks",
+      "install",
+      "msi"
+    ],
+    "keywords": [
+      "solidworks.msi",
+      "solidworks无法卸载",
+      "solidworks安装源",
+      "sw无法安装",
+      "solidworks重装",
+      "SolidWorks 安装源缺失或无法重装",
+      "solidworks",
+      "install",
+      "msi",
+      "windows",
+      "software-install",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/design-software/solidworks-install-source-missing.md",
+    "content_preview": "SolidWorks 安装源缺失或无法重装 常见现象 SolidWorks 无法打开或无法卸载安装。 提示找不到 solidworks.msi 。 安装源被删除后插件无法找到。 处理步骤 1. 确认当前 SolidWorks 版本。 2. 找到对应版本的公司标准安装源。 3. 修复安装源路径或执行修复安装。 4. 如无法修复，完整卸载后重新安装。 5. 重新激活并打开测试模型。 升级条件 注册表信息无法更改。 需要重装系统才能恢复安装环境。",
+    "applicability": [],
+    "symptoms": [
+      "SolidWorks 无法打开或无法卸载安装。",
+      "提示找不到 solidworks.msi。",
+      "安装源被删除后插件无法找到。"
+    ],
+    "steps": [
+      "确认当前 SolidWorks 版本。",
+      "找到对应版本的公司标准安装源。",
+      "修复安装源路径或执行修复安装。",
+      "如无法修复，完整卸载后重新安装。",
+      "重新激活并打开测试模型。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "注册表信息无法更改。",
+      "需要重装系统才能恢复安装环境。"
+    ],
+    "search_text": "SolidWorks 安装源缺失或无法重装 常见现象 SolidWorks 无法打开或无法卸载安装。 提示找不到 solidworks.msi 。 安装源被删除后插件无法找到。 处理步骤 1. 确认当前 SolidWorks 版本。 2. 找到对应版本的公司标准安装源。 3. 修复安装源路径或执行修复安装。 4. 如无法修复，完整卸载后重新安装。 5. 重新激活并打开测试模型。 升级条件 注册表信息无法更改。 需要重装系统才能恢复安装环境。"
+  },
+  {
+    "doc_id": "solidworks-license-activation-failed",
+    "title": "SolidWorks 许可或激活异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "software-install",
+      "login-failed"
+    ],
+    "tags": [
+      "solidworks",
+      "license",
+      "activation",
+      "certificate"
+    ],
+    "keywords": [
+      "solidworks许可",
+      "solidworks激活",
+      "无法获得许可",
+      "重新激活",
+      "许可证丢失",
+      "证书丢失",
+      "SolidWorks 许可或激活异常",
+      "solidworks",
+      "license",
+      "activation",
+      "certificate",
+      "windows",
+      "software-install",
+      "login-failed",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/design-software/solidworks-license-activation-failed.md",
+    "content_preview": "SolidWorks 许可或激活异常 常见现象 SolidWorks 提示无法获得许可。 重启后要求重新激活。 激活服务证书或许可证丢失。 杀毒软件拦截激活服务证书。 处理步骤 1. 确认用户是否有 SolidWorks 使用权限。 2. 检查许可证服务或本地激活状态。 3. 检查安全软件是否隔离许可证相关文件。 4. 恢复被隔离文件或重新激活。 5. 打开 SolidWorks 验证。 升级条件 许可证服务器异常。 多名用户同时无法获取许可。 需供应商处理授权。",
+    "applicability": [],
+    "symptoms": [
+      "SolidWorks 提示无法获得许可。",
+      "重启后要求重新激活。",
+      "激活服务证书或许可证丢失。",
+      "杀毒软件拦截激活服务证书。"
+    ],
+    "steps": [
+      "确认用户是否有 SolidWorks 使用权限。",
+      "检查许可证服务或本地激活状态。",
+      "检查安全软件是否隔离许可证相关文件。",
+      "恢复被隔离文件或重新激活。",
+      "打开 SolidWorks 验证。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "许可证服务器异常。",
+      "多名用户同时无法获取许可。",
+      "需供应商处理授权。"
+    ],
+    "search_text": "SolidWorks 许可或激活异常 常见现象 SolidWorks 提示无法获得许可。 重启后要求重新激活。 激活服务证书或许可证丢失。 杀毒软件拦截激活服务证书。 处理步骤 1. 确认用户是否有 SolidWorks 使用权限。 2. 检查许可证服务或本地激活状态。 3. 检查安全软件是否隔离许可证相关文件。 4. 恢复被隔离文件或重新激活。 5. 打开 SolidWorks 验证。 升级条件 许可证服务器异常。 多名用户同时无法获取许可。 需供应商处理授权。"
+  },
+  {
+    "doc_id": "solidworks-ui-layout-missing",
+    "title": "SolidWorks 菜单栏或功能区按钮缺失",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "software-install"
+    ],
+    "tags": [
+      "solidworks",
+      "ui",
+      "layout"
+    ],
+    "keywords": [
+      "solidworks图标缺失",
+      "菜单栏缺失",
+      "功能区按钮",
+      "窗口布局",
+      "SolidWorks 菜单栏或功能区按钮缺失",
+      "solidworks",
+      "ui",
+      "layout",
+      "windows",
+      "software-install",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/design-software/solidworks-ui-layout-missing.md",
+    "content_preview": "SolidWorks 菜单栏或功能区按钮缺失 常见现象 SolidWorks 操作界面图标缺失。 菜单栏或功能区按钮消失。 处理步骤 1. 检查是否切换了视图或工作区。 2. 重置窗口布局。 3. 调整视图选项和功能区按钮。 4. 重启 SolidWorks 验证。 升级条件 配置重置无效。 用户配置文件损坏。",
+    "applicability": [],
+    "symptoms": [
+      "SolidWorks 操作界面图标缺失。",
+      "菜单栏或功能区按钮消失。"
+    ],
+    "steps": [
+      "检查是否切换了视图或工作区。",
+      "重置窗口布局。",
+      "调整视图选项和功能区按钮。",
+      "重启 SolidWorks 验证。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "配置重置无效。",
+      "用户配置文件损坏。"
+    ],
+    "search_text": "SolidWorks 菜单栏或功能区按钮缺失 常见现象 SolidWorks 操作界面图标缺失。 菜单栏或功能区按钮消失。 处理步骤 1. 检查是否切换了视图或工作区。 2. 重置窗口布局。 3. 调整视图选项和功能区按钮。 4. 重启 SolidWorks 验证。 升级条件 配置重置无效。 用户配置文件损坏。"
+  },
+  {
+    "doc_id": "disk-c-drive-full",
+    "title": "C 盘或系统盘空间不足处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "storage"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "disk-full"
+    ],
+    "tags": [
+      "disk",
+      "c-drive",
+      "cleanup",
+      "windows"
+    ],
+    "keywords": [
+      "c盘空间不足",
+      "c盘可用空间过小",
+      "c盘储存满",
+      "c盘满",
+      "c盘爆满",
+      "系统盘满",
+      "磁盘空间不足",
+      "硬盘满",
+      "C 盘或系统盘空间不足处理指南",
+      "disk",
+      "c-drive",
+      "cleanup",
+      "windows",
+      "disk-full",
+      "pc",
+      "storage"
+    ],
+    "path": "docs/candidate/desktop/disk-c-drive-full.md",
+    "content_preview": "C 盘或系统盘空间不足处理指南 适用范围 适用于 Windows 电脑 C 盘空间不足、系统盘爆满、因磁盘空间不足导致软件打不开等问题。 常见现象 C 盘可用空间过小。 Excel、Office 或其他软件无法打开。 系统提示磁盘空间不足。 电脑明显卡顿。 处理步骤 1. 查看 C 盘剩余空间。 2. 使用系统磁盘清理工具清理临时文件、回收站和更新缓存。 3. 检查桌面、下载、微信 / 企业微信 / 浏览器缓存是否占用过大。 4. 将非系统业务文件迁移到其他盘或指定共享位置。 5. 如分区容量确实过小，评估是否扩容 C 盘。 6. 重启电脑后确认软件是否恢复正常。 验证方式 C 盘剩余空间恢复",
+    "applicability": [
+      "适用于 Windows 电脑 C 盘空间不足、系统盘爆满、因磁盘空间不足导致软件打不开等问题。"
+    ],
+    "symptoms": [
+      "C 盘可用空间过小。",
+      "Excel、Office 或其他软件无法打开。",
+      "系统提示磁盘空间不足。",
+      "电脑明显卡顿。"
+    ],
+    "steps": [
+      "查看 C 盘剩余空间。",
+      "使用系统磁盘清理工具清理临时文件、回收站和更新缓存。",
+      "检查桌面、下载、微信 / 企业微信 / 浏览器缓存是否占用过大。",
+      "将非系统业务文件迁移到其他盘或指定共享位置。",
+      "如分区容量确实过小，评估是否扩容 C 盘。",
+      "重启电脑后确认软件是否恢复正常。"
+    ],
+    "commands": [
+      {
+        "command": "cleanmgr",
+        "purpose": "启动磁盘清理工具。",
+        "risk": "低"
+      },
+      {
+        "command": "ms-settings:storagesense",
+        "purpose": "?? Windows ????????????",
+        "risk": "低"
+      },
+      {
+        "command": "%temp%",
+        "purpose": "打开当前用户临时目录，人工清理临时文件。",
+        "risk": "低"
+      },
+      {
+        "command": "prefetch",
+        "purpose": "??????????????????????",
+        "risk": "低"
+      },
+      {
+        "command": "wmic logicaldisk get caption,freespace,size",
+        "purpose": "查询 Windows 系统硬件、磁盘或配置字段。",
+        "risk": "低"
+      },
+      {
+        "command": "powercfg -h off",
+        "purpose": "查看或调整 Windows 电源相关配置。",
+        "risk": "低"
+      },
+      {
+        "command": "dism /online /cleanup-image /startcomponentcleanup",
+        "purpose": "?? Windows ??????????????",
+        "risk": "低"
+      },
+      {
+        "command": "vssadmin list shadowstorage",
+        "purpose": "查看或管理 Windows 卷影副本。",
+        "risk": "低"
+      },
+      {
+        "command": "vssadmin delete shadows /for=C: /oldest",
+        "purpose": "查看或管理 Windows 卷影副本。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "C 盘剩余空间恢复到可接受范围。",
+      "原异常软件能正常打开。"
+    ],
+    "notes": [
+      "硬盘疑似坏道或系统盘损坏。",
+      "无法释放足够空间。",
+      "需要调整分区或更换硬盘。"
+    ],
+    "search_text": "C 盘或系统盘空间不足处理指南 适用范围 适用于 Windows 电脑 C 盘空间不足、系统盘爆满、因磁盘空间不足导致软件打不开等问题。 常见现象 C 盘可用空间过小。 Excel、Office 或其他软件无法打开。 系统提示磁盘空间不足。 电脑明显卡顿。 处理步骤 1. 查看 C 盘剩余空间。 2. 使用系统磁盘清理工具清理临时文件、回收站和更新缓存。 3. 检查桌面、下载、微信 / 企业微信 / 浏览器缓存是否占用过大。 4. 将非系统业务文件迁移到其他盘或指定共享位置。 5. 如分区容量确实过小，评估是否扩容 C 盘。 6. 重启电脑后确认软件是否恢复正常。 验证方式 C 盘剩余空间恢复到可接受范围。 原异常软件能正常打开。 风险点 不要删除用户文件和业务数据。 扩容分区前需确认数据备份。 升级条件 硬盘疑似坏道或系统盘损坏。 无法释放足够空间。 需要调整分区或更换硬盘。 常用指令 cleanmgr ?????????????????????????? ms settings:storagesense ?? Windows ???????????? %temp% ????????????????????? prefetch ?????????????????????? wmic logicaldisk get caption,freespace,size ?????????????????? powercfg h off ??????? hiberfil.sys??????????? dism /online /cleanup image /startcomponentcleanup ?? Windows ?????????????? vssadmin list shadowstorage ???????/???????????? vssadmin delete shadows /for=C: /oldest ????? C ???????????"
+  },
+  {
+    "doc_id": "blue-screen-dump-or-driver",
+    "title": "Windows 蓝屏处理",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "hardware"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "blue-screen"
+    ],
+    "tags": [
+      "blue-screen",
+      "driver",
+      "hardware"
+    ],
+    "keywords": [
+      "蓝屏",
+      "blue screen",
+      "驱动蓝屏",
+      "Windows 蓝屏处理",
+      "blue-screen",
+      "driver",
+      "hardware",
+      "windows",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/hardware/blue-screen-dump-or-driver.md",
+    "content_preview": "Windows 蓝屏处理 常见现象 电脑蓝屏。 重启后偶发恢复。 打印、驱动或硬件异常后蓝屏。 处理步骤 1. 记录蓝屏代码或拍照。 2. 确认最近是否安装驱动、软件或系统更新。 3. 检查内存、硬盘和外设。 4. 卸载近期异常驱动或软件。 5. 如频繁复现，保留转储文件并升级系统工程师。 升级条件 蓝屏频繁复现。 疑似内存、硬盘或主板故障。",
+    "applicability": [],
+    "symptoms": [
+      "电脑蓝屏。",
+      "重启后偶发恢复。",
+      "打印、驱动或硬件异常后蓝屏。"
+    ],
+    "steps": [
+      "记录蓝屏代码或拍照。",
+      "确认最近是否安装驱动、软件或系统更新。",
+      "检查内存、硬盘和外设。",
+      "卸载近期异常驱动或软件。",
+      "如频繁复现，保留转储文件并升级系统工程师。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "蓝屏频繁复现。",
+      "疑似内存、硬盘或主板故障。"
+    ],
+    "search_text": "Windows 蓝屏处理 常见现象 电脑蓝屏。 重启后偶发恢复。 打印、驱动或硬件异常后蓝屏。 处理步骤 1. 记录蓝屏代码或拍照。 2. 确认最近是否安装驱动、软件或系统更新。 3. 检查内存、硬盘和外设。 4. 卸载近期异常驱动或软件。 5. 如频繁复现，保留转储文件并升级系统工程师。 升级条件 蓝屏频繁复现。 疑似内存、硬盘或主板故障。"
+  },
+  {
+    "doc_id": "disk-fault-not-just-c-drive-full",
+    "title": "硬盘故障或读取困难",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "storage",
+      "hardware"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "hardware-fault",
+      "disk-full"
+    ],
+    "tags": [
+      "disk",
+      "hard-drive",
+      "data"
+    ],
+    "keywords": [
+      "硬盘坏",
+      "机械硬盘有坏道",
+      "硬盘有坏道",
+      "磁盘读取",
+      "硬盘故障",
+      "读取困难",
+      "硬盘异响",
+      "硬盘故障或读取困难",
+      "disk",
+      "hard-drive",
+      "data",
+      "windows",
+      "hardware-fault",
+      "disk-full",
+      "pc",
+      "storage",
+      "hardware"
+    ],
+    "path": "docs/candidate/desktop/hardware/disk-fault-not-just-c-drive-full.md",
+    "content_preview": "硬盘故障或读取困难 常见现象 硬盘坏。 磁盘读取困难。 CAD 或系统经常无法运行。 开机后卡死。 处理步骤 1. 询问是否有异响、卡顿、频繁死机。 2. 检查磁盘健康状态。 3. 优先备份重要数据。 4. 避免继续高强度读写。 5. 更换硬盘或交由硬件维护处理。 风险点 硬盘疑似故障时不要先重装系统。",
+    "applicability": [],
+    "symptoms": [
+      "硬盘坏。",
+      "磁盘读取困难。",
+      "CAD 或系统经常无法运行。",
+      "开机后卡死。"
+    ],
+    "steps": [
+      "询问是否有异响、卡顿、频繁死机。",
+      "检查磁盘健康状态。",
+      "优先备份重要数据。",
+      "避免继续高强度读写。",
+      "更换硬盘或交由硬件维护处理。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [],
+    "search_text": "硬盘故障或读取困难 常见现象 硬盘坏。 磁盘读取困难。 CAD 或系统经常无法运行。 开机后卡死。 处理步骤 1. 询问是否有异响、卡顿、频繁死机。 2. 检查磁盘健康状态。 3. 优先备份重要数据。 4. 避免继续高强度读写。 5. 更换硬盘或交由硬件维护处理。 风险点 硬盘疑似故障时不要先重装系统。"
+  },
+  {
+    "doc_id": "keyboard-mouse-usb-peripheral-failed",
+    "title": "键盘、鼠标或 USB 外设异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "hardware"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "hardware-fault"
+    ],
+    "tags": [
+      "keyboard",
+      "mouse",
+      "usb",
+      "peripheral"
+    ],
+    "keywords": [
+      "键盘坏",
+      "鼠标坏",
+      "鼠标断点",
+      "按键失灵",
+      "usb",
+      "usb网卡",
+      "usb无法识别",
+      "外设",
+      "键盘、鼠标或 USB 外设异常",
+      "keyboard",
+      "mouse",
+      "peripheral",
+      "windows",
+      "hardware-fault",
+      "pc",
+      "hardware"
+    ],
+    "path": "docs/candidate/desktop/hardware/keyboard-mouse-usb-peripheral-failed.md",
+    "content_preview": "键盘、鼠标或 USB 外设异常 常见现象 键盘按键失灵。 鼠标断点、左键失灵。 USB 插口损坏或设备无法识别。 插入 USB 有提示音，但设备管理器找不到设备。 处理步骤 1. 重新插拔键盘、鼠标或 USB 设备。 2. 更换 USB 接口测试。 3. 使用其他电脑交叉验证外设是否损坏。 4. 检查设备管理器中是否有异常驱动。 5. 如涉及 USB 网卡或受控设备，检查桌管 / 加密策略是否禁用。 6. 必要时更换外设或维修接口。 升级条件 USB 端口物理损坏。 桌管或加密策略禁用设备。 多台设备同时无法识别同类外设。",
+    "applicability": [],
+    "symptoms": [
+      "键盘按键失灵。",
+      "鼠标断点、左键失灵。",
+      "USB 插口损坏或设备无法识别。",
+      "插入 USB 有提示音，但设备管理器找不到设备。"
+    ],
+    "steps": [
+      "重新插拔键盘、鼠标或 USB 设备。",
+      "更换 USB 接口测试。",
+      "使用其他电脑交叉验证外设是否损坏。",
+      "检查设备管理器中是否有异常驱动。",
+      "如涉及 USB 网卡或受控设备，检查桌管 / 加密策略是否禁用。",
+      "必要时更换外设或维修接口。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "USB 端口物理损坏。",
+      "桌管或加密策略禁用设备。",
+      "多台设备同时无法识别同类外设。"
+    ],
+    "search_text": "键盘、鼠标或 USB 外设异常 常见现象 键盘按键失灵。 鼠标断点、左键失灵。 USB 插口损坏或设备无法识别。 插入 USB 有提示音，但设备管理器找不到设备。 处理步骤 1. 重新插拔键盘、鼠标或 USB 设备。 2. 更换 USB 接口测试。 3. 使用其他电脑交叉验证外设是否损坏。 4. 检查设备管理器中是否有异常驱动。 5. 如涉及 USB 网卡或受控设备，检查桌管 / 加密策略是否禁用。 6. 必要时更换外设或维修接口。 升级条件 USB 端口物理损坏。 桌管或加密策略禁用设备。 多台设备同时无法识别同类外设。"
+  },
+  {
+    "doc_id": "memory-fault-or-insufficient",
+    "title": "内存故障或内存不足",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "hardware"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "performance-slow",
+      "hardware-fault"
+    ],
+    "tags": [
+      "memory",
+      "performance"
+    ],
+    "keywords": [
+      "内存不足",
+      "内存问题",
+      "内存坏",
+      "内存条",
+      "运行内存",
+      "内存报警",
+      "内存缓存",
+      "内存故障或内存不足",
+      "memory",
+      "performance",
+      "windows",
+      "performance-slow",
+      "hardware-fault",
+      "pc",
+      "hardware"
+    ],
+    "path": "docs/candidate/desktop/hardware/memory-fault-or-insufficient.md",
+    "content_preview": "内存故障或内存不足 常见现象 运行内存不够报警。 打开多个表格或设计软件后卡死。 内存条故障。 处理步骤 1. 在任务管理器查看内存占用。 2. 关闭高占用非必要程序。 3. 检查启动项和后台软件。 4. 重新插拔内存条或更换测试。 5. 设备配置长期不足时建议升级内存或更换主机。 升级条件 内存检测异常。 生产或设计终端配置不足影响工作。",
+    "applicability": [],
+    "symptoms": [
+      "运行内存不够报警。",
+      "打开多个表格或设计软件后卡死。",
+      "内存条故障。"
+    ],
+    "steps": [
+      "在任务管理器查看内存占用。",
+      "关闭高占用非必要程序。",
+      "检查启动项和后台软件。",
+      "重新插拔内存条或更换测试。",
+      "设备配置长期不足时建议升级内存或更换主机。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "内存检测异常。",
+      "生产或设计终端配置不足影响工作。"
+    ],
+    "search_text": "内存故障或内存不足 常见现象 运行内存不够报警。 打开多个表格或设计软件后卡死。 内存条故障。 处理步骤 1. 在任务管理器查看内存占用。 2. 关闭高占用非必要程序。 3. 检查启动项和后台软件。 4. 重新插拔内存条或更换测试。 5. 设备配置长期不足时建议升级内存或更换主机。 升级条件 内存检测异常。 生产或设计终端配置不足影响工作。"
+  },
+  {
+    "doc_id": "monitor-no-display-or-flicker",
+    "title": "显示器不亮、花屏或闪屏",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "hardware"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "hardware-fault"
+    ],
+    "tags": [
+      "monitor",
+      "display",
+      "flicker",
+      "cable"
+    ],
+    "keywords": [
+      "屏幕不亮",
+      "显示屏不亮",
+      "显示器不显示",
+      "显示器坏",
+      "显示屏坏",
+      "显示屏损坏",
+      "显示屏花屏",
+      "花屏",
+      "闪屏",
+      "信号线松",
+      "字体模糊",
+      "屏幕打不开",
+      "显示器不亮、花屏或闪屏",
+      "monitor",
+      "display",
+      "flicker",
+      "cable",
+      "windows",
+      "hardware-fault",
+      "pc",
+      "hardware"
+    ],
+    "path": "docs/candidate/desktop/hardware/monitor-no-display-or-flicker.md",
+    "content_preview": "显示器不亮、花屏或闪屏 常见现象 屏幕不亮、显示屏不亮。 主机开机但显示器不显示。 显示器花屏、闪屏、黑条。 字体模糊或分辨率异常。 处理步骤 1. 检查显示器电源、开关和指示灯。 2. 检查 HDMI、VGA、DP 等信号线是否松动。 3. 切换显示器输入源。 4. 替换信号线或显示器交叉验证。 5. 检查显卡接口是否松动或损坏。 6. 如为分辨率异常，调整显示设置或显卡驱动。 升级条件 显示器硬件损坏。 显卡接口损坏。 生产工位屏幕故障影响作业。 常用指令 Win + P ????/??/???????????? desk.cpl ??????????????????????? devmg",
+    "applicability": [],
+    "symptoms": [
+      "屏幕不亮、显示屏不亮。",
+      "主机开机但显示器不显示。",
+      "显示器花屏、闪屏、黑条。",
+      "字体模糊或分辨率异常。"
+    ],
+    "steps": [
+      "检查显示器电源、开关和指示灯。",
+      "检查 HDMI、VGA、DP 等信号线是否松动。",
+      "切换显示器输入源。",
+      "替换信号线或显示器交叉验证。",
+      "检查显卡接口是否松动或损坏。",
+      "如为分辨率异常，调整显示设置或显卡驱动。"
+    ],
+    "commands": [
+      {
+        "command": "Win + P",
+        "purpose": "切换投影、扩展或复制显示模式。",
+        "risk": "低"
+      },
+      {
+        "command": "desk.cpl",
+        "purpose": "打开显示设置，检查分辨率和多屏模式。",
+        "risk": "低"
+      },
+      {
+        "command": "devmgmt.msc",
+        "purpose": "打开设备管理器，检查硬件和驱动异常。",
+        "risk": "低"
+      },
+      {
+        "command": "dxdiag",
+        "purpose": "查看 DirectX 和显卡信息。",
+        "risk": "低"
+      },
+      {
+        "command": "msinfo32",
+        "purpose": "查看系统型号、BIOS、内存和硬件摘要。",
+        "risk": "低"
+      },
+      {
+        "command": "eventvwr.msc",
+        "purpose": "打开事件查看器，检查系统、应用和驱动错误。",
+        "risk": "低"
+      },
+      {
+        "command": "displayswitch.exe",
+        "purpose": "打开显示切换界面。",
+        "risk": "低"
+      },
+      {
+        "command": "shutdown /r /t 0",
+        "purpose": "立即重启电脑，用于验证重启后是否恢复。",
+        "risk": "低"
+      }
+    ],
+    "verification": [],
+    "notes": [
+      "显示器硬件损坏。",
+      "显卡接口损坏。",
+      "生产工位屏幕故障影响作业。"
+    ],
+    "search_text": "显示器不亮、花屏或闪屏 常见现象 屏幕不亮、显示屏不亮。 主机开机但显示器不显示。 显示器花屏、闪屏、黑条。 字体模糊或分辨率异常。 处理步骤 1. 检查显示器电源、开关和指示灯。 2. 检查 HDMI、VGA、DP 等信号线是否松动。 3. 切换显示器输入源。 4. 替换信号线或显示器交叉验证。 5. 检查显卡接口是否松动或损坏。 6. 如为分辨率异常，调整显示设置或显卡驱动。 升级条件 显示器硬件损坏。 显卡接口损坏。 生产工位屏幕故障影响作业。 常用指令 Win + P ????/??/???????????? desk.cpl ??????????????????????? devmgmt.msc ????????????????????? dxdiag ?? DirectX ??????????? msinfo32 ??????????????? eventvwr.msc ??????????????????? displayswitch.exe ?????????????? shutdown /r /t 0 ?????????????????????"
+  },
+  {
+    "doc_id": "meeting-room-display-or-led-screen",
+    "title": "会议室屏幕、大屏或 LED 显示异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "meeting-room-device",
+      "display"
+    ],
+    "systems": [
+      "meeting-room"
+    ],
+    "issue_types": [
+      "hardware-fault"
+    ],
+    "tags": [
+      "meeting-room",
+      "led-screen",
+      "display",
+      "maxhub",
+      "signal"
+    ],
+    "keywords": [
+      "会议室屏幕",
+      "会议室",
+      "大屏",
+      "led大屏",
+      "屏幕闪烁",
+      "屏幕不显示",
+      "maxhub",
+      "apk",
+      "接收卡",
+      "拼接屏",
+      "会议室屏幕、大屏或 LED 显示异常",
+      "meeting-room",
+      "led-screen",
+      "display",
+      "signal",
+      "hardware-fault",
+      "meeting-room-device"
+    ],
+    "path": "docs/candidate/desktop/meeting-room/meeting-room-display-or-led-screen.md",
+    "content_preview": "会议室屏幕、大屏或 LED 显示异常 常见现象 会议室屏幕闪烁、晃眼。 大屏不显示或部分屏幕不亮。 LED 屏不定时黑屏。 显示颜色异常、横纹或接触不良。 MaxHub 或会议大屏无法安装 APK。 处理步骤 1. 确认会议室、屏幕编号和故障区域。 2. 检查大屏电源、信号线、HDMI 输入源和控制设备。 3. 对拼接屏或 LED 屏，检查单块屏幕、接收卡和配置线。 4. 如需调试软件，使用公司指定工具读取和保存配置后再操作。 5. 对 APK 安装问题，确认设备安装权限和软件来源。 6. 硬件损坏或需要拆屏时升级会议设备维护或供应商。 验证方式 大屏显示完整。 投屏、会议画面或演示内容正常。",
+    "applicability": [],
+    "symptoms": [
+      "会议室屏幕闪烁、晃眼。",
+      "大屏不显示或部分屏幕不亮。",
+      "LED 屏不定时黑屏。",
+      "显示颜色异常、横纹或接触不良。",
+      "MaxHub 或会议大屏无法安装 APK。"
+    ],
+    "steps": [
+      "确认会议室、屏幕编号和故障区域。",
+      "检查大屏电源、信号线、HDMI 输入源和控制设备。",
+      "对拼接屏或 LED 屏，检查单块屏幕、接收卡和配置线。",
+      "如需调试软件，使用公司指定工具读取和保存配置后再操作。",
+      "对 APK 安装问题，确认设备安装权限和软件来源。",
+      "硬件损坏或需要拆屏时升级会议设备维护或供应商。"
+    ],
+    "commands": [],
+    "verification": [
+      "大屏显示完整。",
+      "投屏、会议画面或演示内容正常。",
+      "设备重启后配置仍正常。"
+    ],
+    "notes": [
+      "LED 屏、背板、接收卡或控制器损坏。",
+      "涉及拆屏、重新配置屏参。",
+      "会议保障窗口紧急。"
+    ],
+    "search_text": "会议室屏幕、大屏或 LED 显示异常 常见现象 会议室屏幕闪烁、晃眼。 大屏不显示或部分屏幕不亮。 LED 屏不定时黑屏。 显示颜色异常、横纹或接触不良。 MaxHub 或会议大屏无法安装 APK。 处理步骤 1. 确认会议室、屏幕编号和故障区域。 2. 检查大屏电源、信号线、HDMI 输入源和控制设备。 3. 对拼接屏或 LED 屏，检查单块屏幕、接收卡和配置线。 4. 如需调试软件，使用公司指定工具读取和保存配置后再操作。 5. 对 APK 安装问题，确认设备安装权限和软件来源。 6. 硬件损坏或需要拆屏时升级会议设备维护或供应商。 验证方式 大屏显示完整。 投屏、会议画面或演示内容正常。 设备重启后配置仍正常。 升级条件 LED 屏、背板、接收卡或控制器损坏。 涉及拆屏、重新配置屏参。 会议保障窗口紧急。"
+  },
+  {
+    "doc_id": "meeting-room-projection-or-conference-device",
+    "title": "会议室投屏、亿联或腾讯会议设备异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "meeting-room-device",
+      "pc"
+    ],
+    "systems": [
+      "meeting-room"
+    ],
+    "issue_types": [
+      "network-unavailable",
+      "software-install",
+      "hardware-fault"
+    ],
+    "tags": [
+      "projection",
+      "yealink",
+      "tencent-meeting",
+      "wireless",
+      "meeting-room"
+    ],
+    "keywords": [
+      "会议室投屏",
+      "投屏",
+      "腾讯会议投屏",
+      "有线投屏",
+      "无线投屏",
+      "亿联",
+      "会议终端",
+      "存储满",
+      "会议室设备",
+      "会议室投屏、亿联或腾讯会议设备异常",
+      "projection",
+      "yealink",
+      "tencent-meeting",
+      "wireless",
+      "meeting-room",
+      "network-unavailable",
+      "software-install",
+      "hardware-fault",
+      "meeting-room-device",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/meeting-room/meeting-room-projection-or-conference-device.md",
+    "content_preview": "会议室投屏、亿联或腾讯会议设备异常 常见现象 笔记本无法使用会议室腾讯会议投屏。 有线投屏不同步。 平板不能投屏到电视。 亿联设备存储满。 会议室设备需要调整、搬迁或重新配置。 处理步骤 1. 确认会议室、设备型号和投屏方式。 2. 检查有线投屏线缆、网口、无线投屏网络和输入源。 3. 检查终端是否被桌管或安全策略限制无线设备。 4. 对亿联等会议终端，检查存储空间、账号和网络状态。 5. 设备搬迁或调整后，重新测试音视频、投屏、麦克风和网络。 6. 会议前保障时，优先恢复可用方案，再记录根因。 验证方式 笔记本或平板能成功投屏。 腾讯会议音视频正常。 亿联设备无存储或网络告警。 升级条件 桌",
+    "applicability": [],
+    "symptoms": [
+      "笔记本无法使用会议室腾讯会议投屏。",
+      "有线投屏不同步。",
+      "平板不能投屏到电视。",
+      "亿联设备存储满。",
+      "会议室设备需要调整、搬迁或重新配置。"
+    ],
+    "steps": [
+      "确认会议室、设备型号和投屏方式。",
+      "检查有线投屏线缆、网口、无线投屏网络和输入源。",
+      "检查终端是否被桌管或安全策略限制无线设备。",
+      "对亿联等会议终端，检查存储空间、账号和网络状态。",
+      "设备搬迁或调整后，重新测试音视频、投屏、麦克风和网络。",
+      "会议前保障时，优先恢复可用方案，再记录根因。"
+    ],
+    "commands": [],
+    "verification": [
+      "笔记本或平板能成功投屏。",
+      "腾讯会议音视频正常。",
+      "亿联设备无存储或网络告警。"
+    ],
+    "notes": [
+      "桌管策略影响无线投屏。",
+      "会议终端固件、账号或平台异常。",
+      "重要会议保障。"
+    ],
+    "search_text": "会议室投屏、亿联或腾讯会议设备异常 常见现象 笔记本无法使用会议室腾讯会议投屏。 有线投屏不同步。 平板不能投屏到电视。 亿联设备存储满。 会议室设备需要调整、搬迁或重新配置。 处理步骤 1. 确认会议室、设备型号和投屏方式。 2. 检查有线投屏线缆、网口、无线投屏网络和输入源。 3. 检查终端是否被桌管或安全策略限制无线设备。 4. 对亿联等会议终端，检查存储空间、账号和网络状态。 5. 设备搬迁或调整后，重新测试音视频、投屏、麦克风和网络。 6. 会议前保障时，优先恢复可用方案，再记录根因。 验证方式 笔记本或平板能成功投屏。 腾讯会议音视频正常。 亿联设备无存储或网络告警。 升级条件 桌管策略影响无线投屏。 会议终端固件、账号或平台异常。 重要会议保障。"
+  },
+  {
+    "doc_id": "network-authentication-unavailable",
+    "title": "网络认证或 MES 无法访问处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "network"
+    ],
+    "systems": [
+      "windows",
+      "mes",
+      "authentication-client"
+    ],
+    "issue_types": [
+      "network-unavailable",
+      "network-authentication",
+      "login-failed"
+    ],
+    "tags": [
+      "network",
+      "mes",
+      "authentication",
+      "windows"
+    ],
+    "keywords": [
+      "没网",
+      "没有网络",
+      "没有网",
+      "无网络",
+      "连不上网",
+      "无法联网",
+      "网络不通",
+      "连接不上网络",
+      "无法连接网络",
+      "上不上网",
+      "网络认证",
+      "认证问题",
+      "重新认证",
+      "认证过多",
+      "认证助手",
+      "mes登不上",
+      "mes登录不上",
+      "上不去网",
+      "网络认证或 MES 无法访问处理指南",
+      "network",
+      "mes",
+      "authentication",
+      "windows",
+      "authentication-client",
+      "network-unavailable",
+      "network-authentication",
+      "login-failed",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/network-authentication-unavailable.md",
+    "content_preview": "网络认证或 MES 无法访问处理指南 适用范围 适用于办公电脑、车间终端或外网笔记本出现无网络、认证失败、MES 登不上、网页无法访问等问题。 常见现象 显示无网络、网络不通、连不上网。 MES、OA 或内部平台无法打开。 认证助手登录失败、认证过多、绑定设备超出数量。 重启电脑或插拔网线后仍无法恢复。 初步判断 优先区分是单台电脑问题、账号认证问题、网线 / 交换机端口问题，还是业务系统本身异常。 处理步骤 1. 确认同区域其他电脑是否正常上网。 2. 检查网线、网口、无线连接状态。 3. 重新打开认证客户端，确认账号、密码和绑定设备数量。 4. 如果提示认证过多或设备超限，清理旧绑定或联系",
+    "applicability": [
+      "适用于办公电脑、车间终端或外网笔记本出现无网络、认证失败、MES 登不上、网页无法访问等问题。"
+    ],
+    "symptoms": [
+      "显示无网络、网络不通、连不上网。",
+      "MES、OA 或内部平台无法打开。",
+      "认证助手登录失败、认证过多、绑定设备超出数量。",
+      "重启电脑或插拔网线后仍无法恢复。"
+    ],
+    "steps": [
+      "确认同区域其他电脑是否正常上网。",
+      "检查网线、网口、无线连接状态。",
+      "重新打开认证客户端，确认账号、密码和绑定设备数量。",
+      "如果提示认证过多或设备超限，清理旧绑定或联系账号管理员处理。",
+      "如果只有 MES 或内部平台无法访问，确认浏览器收藏地址是否正确。",
+      "必要时重新认证、刷新 DNS 或重启电脑。",
+      "如果同一区域多台设备无网络，升级给网络工程师排查交换机、线路或上级网络。"
+    ],
+    "commands": [],
+    "verification": [
+      "能正常打开内部平台或 MES。",
+      "认证客户端状态正常。",
+      "浏览器能访问常用内外网地址。"
+    ],
+    "notes": [
+      "同一区域多台电脑同时无网络。",
+      "认证平台异常或大量用户无法认证。",
+      "工位网口无链路灯或疑似交换机端口故障。"
+    ],
+    "search_text": "网络认证或 MES 无法访问处理指南 适用范围 适用于办公电脑、车间终端或外网笔记本出现无网络、认证失败、MES 登不上、网页无法访问等问题。 常见现象 显示无网络、网络不通、连不上网。 MES、OA 或内部平台无法打开。 认证助手登录失败、认证过多、绑定设备超出数量。 重启电脑或插拔网线后仍无法恢复。 初步判断 优先区分是单台电脑问题、账号认证问题、网线 / 交换机端口问题，还是业务系统本身异常。 处理步骤 1. 确认同区域其他电脑是否正常上网。 2. 检查网线、网口、无线连接状态。 3. 重新打开认证客户端，确认账号、密码和绑定设备数量。 4. 如果提示认证过多或设备超限，清理旧绑定或联系账号管理员处理。 5. 如果只有 MES 或内部平台无法访问，确认浏览器收藏地址是否正确。 6. 必要时重新认证、刷新 DNS 或重启电脑。 7. 如果同一区域多台设备无网络，升级给网络工程师排查交换机、线路或上级网络。 验证方式 能正常打开内部平台或 MES。 认证客户端状态正常。 浏览器能访问常用内外网地址。 风险点 不要随意更换 IP 或网关，避免造成 IP 冲突。 账号设备绑定清理需要确认用户身份。 升级条件 同一区域多台电脑同时无网络。 认证平台异常或大量用户无法认证。 工位网口无链路灯或疑似交换机端口故障。 工程师复核项 [ ] 补充本公司认证客户端名称和入口。 [ ] 补充 MES / OA / 内部平台正确访问地址。 [ ] 明确设备绑定清理权限归属。"
+  },
+  {
+    "doc_id": "encryption-client-offline",
+    "title": "加密客户端掉线或手动上线失败",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "network-authentication",
+      "file-access"
+    ],
+    "tags": [
+      "encryption-client",
+      "dlp",
+      "network"
+    ],
+    "keywords": [
+      "加密掉线",
+      "加密频繁掉",
+      "没有加密",
+      "加密软件登不上",
+      "手动上线失败",
+      "加密客户端",
+      "加密客户端掉线或手动上线失败",
+      "encryption-client",
+      "dlp",
+      "network",
+      "windows",
+      "network-authentication",
+      "file-access",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/network-security/encryption-client-offline.md",
+    "content_preview": "加密客户端掉线或手动上线失败 常见现象 加密频繁掉线。 加密软件登不上。 手动上线失败。 加密客户端导致 CAD 卡顿或图纸打不开。 处理步骤 1. 检查网络是否正常。 2. 检查加密客户端服务状态。 3. 重新登录或重新上线。 4. 检查客户端版本是否过旧。 5. 如影响 CAD / PLM，记录版本和报错后升级给安全或厂商。 升级条件 批量用户加密客户端离线。 涉及图纸加密、解密或权限策略。",
+    "applicability": [],
+    "symptoms": [
+      "加密频繁掉线。",
+      "加密软件登不上。",
+      "手动上线失败。",
+      "加密客户端导致 CAD 卡顿或图纸打不开。"
+    ],
+    "steps": [
+      "检查网络是否正常。",
+      "检查加密客户端服务状态。",
+      "重新登录或重新上线。",
+      "检查客户端版本是否过旧。",
+      "如影响 CAD / PLM，记录版本和报错后升级给安全或厂商。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "批量用户加密客户端离线。",
+      "涉及图纸加密、解密或权限策略。"
+    ],
+    "search_text": "加密客户端掉线或手动上线失败 常见现象 加密频繁掉线。 加密软件登不上。 手动上线失败。 加密客户端导致 CAD 卡顿或图纸打不开。 处理步骤 1. 检查网络是否正常。 2. 检查加密客户端服务状态。 3. 重新登录或重新上线。 4. 检查客户端版本是否过旧。 5. 如影响 CAD / PLM，记录版本和报错后升级给安全或厂商。 升级条件 批量用户加密客户端离线。 涉及图纸加密、解密或权限策略。"
+  },
+  {
+    "doc_id": "ip-conflict-or-static-ip-error",
+    "title": "IP 冲突或静态地址配置异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "network"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "network-unavailable"
+    ],
+    "tags": [
+      "ip-conflict",
+      "dhcp",
+      "network"
+    ],
+    "keywords": [
+      "ip冲突",
+      "dhcp",
+      "静态ip",
+      "换办公室没网",
+      "ip地址",
+      "IP 冲突或静态地址配置异常",
+      "ip-conflict",
+      "network",
+      "windows",
+      "network-unavailable",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/network-security/ip-conflict-or-static-ip-error.md",
+    "content_preview": "IP 冲突或静态地址配置异常 常见现象 连不上网。 换办公室后无网络。 IP 冲突。 静态地址配置不正确。 处理步骤 1. 确认电脑是否应使用 DHCP。 2. 检查当前 IP、网关、DNS。 3. 如工位应使用 DHCP，改回自动获取。 4. 如需静态地址，确认地址未被占用。 5. 重新认证网络后测试访问。 风险点 不要随意配置未知静态 IP。",
+    "applicability": [],
+    "symptoms": [
+      "连不上网。",
+      "换办公室后无网络。",
+      "IP 冲突。",
+      "静态地址配置不正确。"
+    ],
+    "steps": [
+      "确认电脑是否应使用 DHCP。",
+      "检查当前 IP、网关、DNS。",
+      "如工位应使用 DHCP，改回自动获取。",
+      "如需静态地址，确认地址未被占用。",
+      "重新认证网络后测试访问。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [],
+    "search_text": "IP 冲突或静态地址配置异常 常见现象 连不上网。 换办公室后无网络。 IP 冲突。 静态地址配置不正确。 处理步骤 1. 确认电脑是否应使用 DHCP。 2. 检查当前 IP、网关、DNS。 3. 如工位应使用 DHCP，改回自动获取。 4. 如需静态地址，确认地址未被占用。 5. 重新认证网络后测试访问。 风险点 不要随意配置未知静态 IP。"
+  },
+  {
+    "doc_id": "network-cable-port-switch-fault",
+    "title": "网线、墙插或交换机端口故障",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "network"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "network-unavailable"
+    ],
+    "tags": [
+      "network",
+      "cable",
+      "switch",
+      "port",
+      "wall-jack"
+    ],
+    "keywords": [
+      "网络不通",
+      "网线不通",
+      "网线松动",
+      "网线接触不良",
+      "墙上网口",
+      "墙插模块",
+      "交换机",
+      "以太网打叉",
+      "网口接触不好",
+      "连接网线没有网",
+      "网线、墙插或交换机端口故障",
+      "network",
+      "cable",
+      "switch",
+      "port",
+      "wall-jack",
+      "windows",
+      "network-unavailable",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/network-security/network-cable-port-switch-fault.md",
+    "content_preview": "网线、墙插或交换机端口故障 常见现象 网络不通。 连接不上网络。 网线插上不亮。 以太网打叉。 墙上网口接触不良。 某区域摄像头、门禁或终端不通。 处理步骤 1. 确认是否单台设备异常还是同区域多台异常。 2. 检查网线是否松动、破损。 3. 更换网线或网口交叉验证。 4. 检查墙插模块和交换机端口指示灯。 5. 如同区域多设备异常，检查上联交换机、电源或光纤链路。 6. 记录位置后升级网络工程师。 升级条件 墙插、模块或交换机端口故障。 同区域多台设备网络不通。 涉及摄像头、门禁、道闸等生产或安防设备。 常用指令 ipconfig /all ?? IP????DNS?MAC ? DHCP ?",
+    "applicability": [],
+    "symptoms": [
+      "网络不通。",
+      "连接不上网络。",
+      "网线插上不亮。",
+      "以太网打叉。",
+      "墙上网口接触不良。"
+    ],
+    "steps": [
+      "确认是否单台设备异常还是同区域多台异常。",
+      "检查网线是否松动、破损。",
+      "更换网线或网口交叉验证。",
+      "检查墙插模块和交换机端口指示灯。",
+      "如同区域多设备异常，检查上联交换机、电源或光纤链路。",
+      "记录位置后升级网络工程师。"
+    ],
+    "commands": [
+      {
+        "command": "ipconfig /all",
+        "purpose": "查看 IP、网关、DNS、MAC 和 DHCP 状态。",
+        "risk": "低"
+      },
+      {
+        "command": "ipconfig /release",
+        "purpose": "释放 DHCP 地址。",
+        "risk": "低"
+      },
+      {
+        "command": "ipconfig /renew",
+        "purpose": "重新获取 DHCP 地址。",
+        "risk": "低"
+      },
+      {
+        "command": "ping <gateway-ip>",
+        "purpose": "测试网络连通性。",
+        "risk": "低"
+      },
+      {
+        "command": "ping <dns-ip>",
+        "purpose": "测试网络连通性。",
+        "risk": "低"
+      },
+      {
+        "command": "tracert <target-ip>",
+        "purpose": "查看到目标地址的路由路径。",
+        "risk": "低"
+      },
+      {
+        "command": "route print",
+        "purpose": "查看本机路由表。",
+        "risk": "低"
+      },
+      {
+        "command": "ncpa.cpl",
+        "purpose": "打开网络连接界面，检查网卡状态。",
+        "risk": "低"
+      },
+      {
+        "command": "devmgmt.msc",
+        "purpose": "打开设备管理器，检查硬件和驱动异常。",
+        "risk": "低"
+      },
+      {
+        "command": "netsh interface show interface",
+        "purpose": "查看网卡接口启用状态。",
+        "risk": "低"
+      },
+      {
+        "command": "netsh winsock reset",
+        "purpose": "重置 Winsock，可能影响网络配置，需重启。",
+        "risk": "低"
+      },
+      {
+        "command": "netsh int ip reset",
+        "purpose": "重置 TCP/IP 协议栈，需重启。",
+        "risk": "低"
+      }
+    ],
+    "verification": [],
+    "notes": [
+      "墙插、模块或交换机端口故障。",
+      "同区域多台设备网络不通。",
+      "涉及摄像头、门禁、道闸等生产或安防设备。"
+    ],
+    "search_text": "网线、墙插或交换机端口故障 常见现象 网络不通。 连接不上网络。 网线插上不亮。 以太网打叉。 墙上网口接触不良。 某区域摄像头、门禁或终端不通。 处理步骤 1. 确认是否单台设备异常还是同区域多台异常。 2. 检查网线是否松动、破损。 3. 更换网线或网口交叉验证。 4. 检查墙插模块和交换机端口指示灯。 5. 如同区域多设备异常，检查上联交换机、电源或光纤链路。 6. 记录位置后升级网络工程师。 升级条件 墙插、模块或交换机端口故障。 同区域多台设备网络不通。 涉及摄像头、门禁、道闸等生产或安防设备。 常用指令 ipconfig /all ?? IP????DNS?MAC ? DHCP ???????? ipconfig /release ?? DHCP ???????? ipconfig /renew ???? DHCP ???????? ping <gateway ip ?????????????? ping <dns ip ??? DNS ?????????????? tracert <target ip ?????????????????? route print ????????????? ncpa.cpl ????????????????????? devmgmt.msc ???????????????????? netsh interface show interface ???????????????? netsh winsock reset ?? Winsock??????????????????? netsh int ip reset ?? TCP/IP ?????????????"
+  },
+  {
+    "doc_id": "vpn-or-remote-access-failed",
+    "title": "VPN 或远程访问失败",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "network"
+    ],
+    "systems": [
+      "vpn"
+    ],
+    "issue_types": [
+      "network-unavailable",
+      "login-failed"
+    ],
+    "tags": [
+      "vpn",
+      "remote-access"
+    ],
+    "keywords": [
+      "vpn",
+      "远程访问",
+      "远程进不了",
+      "未连接到互联网",
+      "VPN 或远程访问失败",
+      "remote-access",
+      "network-unavailable",
+      "login-failed",
+      "pc",
+      "network"
+    ],
+    "path": "docs/candidate/desktop/network-security/vpn-or-remote-access-failed.md",
+    "content_preview": "VPN 或远程访问失败 常见现象 OA、WMS 等提示未连接到互联网。 VPN 连接不上。 远程访问进不去。 处理步骤 1. 确认本地网络是否正常。 2. 检查 VPN 客户端登录状态。 3. 确认账号权限和密码是否正常。 4. 重启 VPN 客户端后重试。 5. 如仍失败，记录错误提示并升级网络管理员。 升级条件 多人 VPN 同时不可用。 外部访问策略或账号权限异常。",
+    "applicability": [],
+    "symptoms": [
+      "OA、WMS 等提示未连接到互联网。",
+      "VPN 连接不上。",
+      "远程访问进不去。"
+    ],
+    "steps": [
+      "确认本地网络是否正常。",
+      "检查 VPN 客户端登录状态。",
+      "确认账号权限和密码是否正常。",
+      "重启 VPN 客户端后重试。",
+      "如仍失败，记录错误提示并升级网络管理员。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "多人 VPN 同时不可用。",
+      "外部访问策略或账号权限异常。"
+    ],
+    "search_text": "VPN 或远程访问失败 常见现象 OA、WMS 等提示未连接到互联网。 VPN 连接不上。 远程访问进不去。 处理步骤 1. 确认本地网络是否正常。 2. 检查 VPN 客户端登录状态。 3. 确认账号权限和密码是否正常。 4. 重启 VPN 客户端后重试。 5. 如仍失败，记录错误提示并升级网络管理员。 升级条件 多人 VPN 同时不可用。 外部访问策略或账号权限异常。"
+  },
+  {
+    "doc_id": "browser-compatibility-control-certificate",
+    "title": "浏览器兼容性、控件或证书异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "browser",
+      "oa"
+    ],
+    "issue_types": [
+      "login-failed",
+      "file-access"
+    ],
+    "tags": [
+      "browser",
+      "compatibility",
+      "control",
+      "certificate"
+    ],
+    "keywords": [
+      "浏览器兼容",
+      "ie兼容",
+      "兼容性视图",
+      "控件",
+      "证书到期",
+      "网址运行不了",
+      "浏览器兼容性、控件或证书异常",
+      "browser",
+      "compatibility",
+      "control",
+      "certificate",
+      "oa",
+      "login-failed",
+      "file-access",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/office/browser-compatibility-control-certificate.md",
+    "content_preview": "浏览器兼容性、控件或证书异常 常见现象 业务网站运行不了。 IE 兼容性视图需要调整。 控件异常。 证书到期导致页面或软件打不开。 处理步骤 1. 确认业务系统要求的浏览器版本。 2. 设置兼容性视图或可信站点。 3. 安装或修复必要控件。 4. 检查证书是否过期或被安全软件拦截。 5. 重新打开页面验证。 升级条件 证书更新涉及服务器或系统侧。 多名用户同一业务页面异常。",
+    "applicability": [],
+    "symptoms": [
+      "业务网站运行不了。",
+      "IE 兼容性视图需要调整。",
+      "控件异常。",
+      "证书到期导致页面或软件打不开。"
+    ],
+    "steps": [
+      "确认业务系统要求的浏览器版本。",
+      "设置兼容性视图或可信站点。",
+      "安装或修复必要控件。",
+      "检查证书是否过期或被安全软件拦截。",
+      "重新打开页面验证。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "证书更新涉及服务器或系统侧。",
+      "多名用户同一业务页面异常。"
+    ],
+    "search_text": "浏览器兼容性、控件或证书异常 常见现象 业务网站运行不了。 IE 兼容性视图需要调整。 控件异常。 证书到期导致页面或软件打不开。 处理步骤 1. 确认业务系统要求的浏览器版本。 2. 设置兼容性视图或可信站点。 3. 安装或修复必要控件。 4. 检查证书是否过期或被安全软件拦截。 5. 重新打开页面验证。 升级条件 证书更新涉及服务器或系统侧。 多名用户同一业务页面异常。"
+  },
+  {
+    "doc_id": "pdf-reader-open-print-failed",
+    "title": "PDF 无法打开、闪退或打印异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "office-software"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "file-access",
+      "printer-not-working"
+    ],
+    "tags": [
+      "pdf",
+      "reader",
+      "print",
+      "default-app"
+    ],
+    "keywords": [
+      "pdf",
+      "pdf打不开",
+      "pdf文件不能打开",
+      "pdf阅读器",
+      "搜狗pdf",
+      "adobe",
+      "并行配置不正确",
+      "扁平化",
+      "pdf打印",
+      "PDF 无法打开、闪退或打印异常",
+      "reader",
+      "print",
+      "default-app",
+      "windows",
+      "file-access",
+      "printer-not-working",
+      "pc",
+      "office-software"
+    ],
+    "path": "docs/candidate/desktop/office/pdf-reader-open-print-failed.md",
+    "content_preview": "PDF 无法打开、闪退或打印异常 常见现象 PDF 文件打不开。 提示应用程序并行配置不正确。 PDF 阅读器闪退或弹出检测错误。 PDF 打印很慢，提示扁平化处理。 其他文件能打印，只有 PDF 不能打印。 处理步骤 1. 确认是单个 PDF 异常还是所有 PDF 异常。 2. 修改 PDF 默认打开方式。 3. 修复或重装 PDF 阅读器。 4. 检查安全软件是否隔离 PDF 阅读器依赖文件。 5. 如 PDF 打印慢，检查是否勾选“作为图像打印”等设置。 6. 用测试 PDF 打开和打印验证。 风险点 重要 PDF 文件先复制备份再处理。 升级条件 PDF 文件疑似损坏且无备份。 批量用",
+    "applicability": [],
+    "symptoms": [
+      "PDF 文件打不开。",
+      "提示应用程序并行配置不正确。",
+      "PDF 阅读器闪退或弹出检测错误。",
+      "PDF 打印很慢，提示扁平化处理。",
+      "其他文件能打印，只有 PDF 不能打印。"
+    ],
+    "steps": [
+      "确认是单个 PDF 异常还是所有 PDF 异常。",
+      "修改 PDF 默认打开方式。",
+      "修复或重装 PDF 阅读器。",
+      "检查安全软件是否隔离 PDF 阅读器依赖文件。",
+      "如 PDF 打印慢，检查是否勾选“作为图像打印”等设置。",
+      "用测试 PDF 打开和打印验证。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "PDF 文件疑似损坏且无备份。",
+      "批量用户 PDF 打印异常。"
+    ],
+    "search_text": "PDF 无法打开、闪退或打印异常 常见现象 PDF 文件打不开。 提示应用程序并行配置不正确。 PDF 阅读器闪退或弹出检测错误。 PDF 打印很慢，提示扁平化处理。 其他文件能打印，只有 PDF 不能打印。 处理步骤 1. 确认是单个 PDF 异常还是所有 PDF 异常。 2. 修改 PDF 默认打开方式。 3. 修复或重装 PDF 阅读器。 4. 检查安全软件是否隔离 PDF 阅读器依赖文件。 5. 如 PDF 打印慢，检查是否勾选“作为图像打印”等设置。 6. 用测试 PDF 打开和打印验证。 风险点 重要 PDF 文件先复制备份再处理。 升级条件 PDF 文件疑似损坏且无备份。 批量用户 PDF 打印异常。"
+  },
+  {
+    "doc_id": "wps-feature-missing-or-calculation-slow",
+    "title": "WPS 功能缺失或表格计算慢",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "office-software"
+    ],
+    "systems": [
+      "wps"
+    ],
+    "issue_types": [
+      "software-install",
+      "performance-slow"
+    ],
+    "tags": [
+      "wps",
+      "excel",
+      "performance"
+    ],
+    "keywords": [
+      "wps功能缺失",
+      "wps计算慢",
+      "表格计算",
+      "wps线程",
+      "WPS 功能缺失或表格计算慢",
+      "wps",
+      "excel",
+      "performance",
+      "software-install",
+      "performance-slow",
+      "pc",
+      "office-software"
+    ],
+    "path": "docs/candidate/desktop/office/wps-feature-missing-or-calculation-slow.md",
+    "content_preview": "WPS 功能缺失或表格计算慢 常见现象 WPS 基本功能缺失。 WPS 表格线程无法计算。 打开多个表格后电脑卡死。 处理步骤 1. 确认是 WPS 问题还是电脑性能问题。 2. 修复或重装 WPS。 3. 检查插件、宏和表格大小。 4. 查看 CPU、内存占用。 5. 用测试表格验证。 升级条件 关键业务表格无法计算。 文件疑似损坏。",
+    "applicability": [],
+    "symptoms": [
+      "WPS 基本功能缺失。",
+      "WPS 表格线程无法计算。",
+      "打开多个表格后电脑卡死。"
+    ],
+    "steps": [
+      "确认是 WPS 问题还是电脑性能问题。",
+      "修复或重装 WPS。",
+      "检查插件、宏和表格大小。",
+      "查看 CPU、内存占用。",
+      "用测试表格验证。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "关键业务表格无法计算。",
+      "文件疑似损坏。"
+    ],
+    "search_text": "WPS 功能缺失或表格计算慢 常见现象 WPS 基本功能缺失。 WPS 表格线程无法计算。 打开多个表格后电脑卡死。 处理步骤 1. 确认是 WPS 问题还是电脑性能问题。 2. 修复或重装 WPS。 3. 检查插件、宏和表格大小。 4. 查看 CPU、内存占用。 5. 用测试表格验证。 升级条件 关键业务表格无法计算。 文件疑似损坏。"
+  },
+  {
+    "doc_id": "office-wps-document-open-failed",
+    "title": "Office 或 WPS 文档无法打开处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "office-software"
+    ],
+    "systems": [
+      "windows",
+      "office",
+      "wps"
+    ],
+    "issue_types": [
+      "software-install",
+      "file-access"
+    ],
+    "tags": [
+      "office",
+      "wps",
+      "document",
+      "excel",
+      "ppt"
+    ],
+    "keywords": [
+      "word打不开",
+      "excel打不开",
+      "ppt打不开",
+      "office打不开",
+      "wps打不开",
+      "文档打不开",
+      "文件打不开",
+      "文件损坏",
+      "Office 或 WPS 文档无法打开处理指南",
+      "office",
+      "wps",
+      "document",
+      "excel",
+      "ppt",
+      "windows",
+      "software-install",
+      "file-access",
+      "pc",
+      "office-software"
+    ],
+    "path": "docs/candidate/desktop/office-wps-document-open-failed.md",
+    "content_preview": "Office 或 WPS 文档无法打开处理指南 适用范围 适用于 Word、Excel、PPT、WPS 文档打不开、打开后自动关闭、文件格式或扩展名异常等问题。 常见现象 文档打开后程序自动关闭。 PPT 打不开。 Excel 文件提示格式或扩展名无效。 打开多个表格时电脑卡死。 处理步骤 1. 确认是单个文件异常还是所有文档都无法打开。 2. 检查 C 盘空间是否不足。 3. 尝试用 Office / WPS 的修复功能修复软件。 4. 检查是否存在 Office 更新或组件异常。 5. 对单个文件异常，先复制备份，再尝试修复或使用备份版本。 6. 如果与性能有关，按电脑卡顿处理流程排查 C",
+    "applicability": [
+      "适用于 Word、Excel、PPT、WPS 文档打不开、打开后自动关闭、文件格式或扩展名异常等问题。"
+    ],
+    "symptoms": [
+      "文档打开后程序自动关闭。",
+      "PPT 打不开。",
+      "Excel 文件提示格式或扩展名无效。",
+      "打开多个表格时电脑卡死。"
+    ],
+    "steps": [
+      "确认是单个文件异常还是所有文档都无法打开。",
+      "检查 C 盘空间是否不足。",
+      "尝试用 Office / WPS 的修复功能修复软件。",
+      "检查是否存在 Office 更新或组件异常。",
+      "对单个文件异常，先复制备份，再尝试修复或使用备份版本。",
+      "如果与性能有关，按电脑卡顿处理流程排查 CPU、内存和磁盘占用。"
+    ],
+    "commands": [],
+    "verification": [
+      "常用 Office / WPS 文档能正常打开和保存。",
+      "原问题文件能打开，或确认文件本身损坏并完成备份处理。"
+    ],
+    "notes": [
+      "重要文件损坏，需要数据恢复。",
+      "Office / WPS 大面积异常。",
+      "修复或重装后仍无法打开。"
+    ],
+    "search_text": "Office 或 WPS 文档无法打开处理指南 适用范围 适用于 Word、Excel、PPT、WPS 文档打不开、打开后自动关闭、文件格式或扩展名异常等问题。 常见现象 文档打开后程序自动关闭。 PPT 打不开。 Excel 文件提示格式或扩展名无效。 打开多个表格时电脑卡死。 处理步骤 1. 确认是单个文件异常还是所有文档都无法打开。 2. 检查 C 盘空间是否不足。 3. 尝试用 Office / WPS 的修复功能修复软件。 4. 检查是否存在 Office 更新或组件异常。 5. 对单个文件异常，先复制备份，再尝试修复或使用备份版本。 6. 如果与性能有关，按电脑卡顿处理流程排查 CPU、内存和磁盘占用。 验证方式 常用 Office / WPS 文档能正常打开和保存。 原问题文件能打开，或确认文件本身损坏并完成备份处理。 风险点 不要直接覆盖或删除原文件。 修复前先备份重要文档。 升级条件 重要文件损坏，需要数据恢复。 Office / WPS 大面积异常。 修复或重装后仍无法打开。"
+  },
+  {
+    "doc_id": "pc-boot-failed",
+    "title": "电脑无法开机或不通电处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "hardware"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "boot-failed",
+      "hardware-fault"
+    ],
+    "tags": [
+      "boot",
+      "power",
+      "motherboard",
+      "memory",
+      "disk"
+    ],
+    "keywords": [
+      "无法开机",
+      "开不了机",
+      "打不开机",
+      "不开机",
+      "不通电",
+      "主机开不开机",
+      "电脑无法开机或不通电处理指南",
+      "boot",
+      "power",
+      "motherboard",
+      "memory",
+      "disk",
+      "windows",
+      "boot-failed",
+      "hardware-fault",
+      "pc",
+      "hardware"
+    ],
+    "path": "docs/candidate/desktop/pc-boot-failed.md",
+    "content_preview": "电脑无法开机或不通电处理指南 适用范围 适用于台式机、工位机、办公电脑无法开机、不开机、不通电、启动失败等问题。 常见现象 按电源键无反应。 主机通电但屏幕无显示。 开机后无法进入系统。 重启后仍无法恢复。 初步判断 无法开机可能是电源、显示器、内存、硬盘、系统盘、主板或外设导致。不要直接重装系统，先做硬件和供电基础检查。 处理步骤 1. 检查插座、电源线、插排和主机电源开关。 2. 检查显示器电源、信号线和输入源。 3. 拔掉非必要外设后重新开机。 4. 如果主机有风扇或指示灯，观察是否有报警音或异常响声。 5. 重新插拔内存条、硬盘线缆等基础硬件。 6. 如怀疑显示器损坏，替换显示器或连接",
+    "applicability": [
+      "适用于台式机、工位机、办公电脑无法开机、不开机、不通电、启动失败等问题。"
+    ],
+    "symptoms": [
+      "按电源键无反应。",
+      "主机通电但屏幕无显示。",
+      "开机后无法进入系统。",
+      "重启后仍无法恢复。"
+    ],
+    "steps": [
+      "检查插座、电源线、插排和主机电源开关。",
+      "检查显示器电源、信号线和输入源。",
+      "拔掉非必要外设后重新开机。",
+      "如果主机有风扇或指示灯，观察是否有报警音或异常响声。",
+      "重新插拔内存条、硬盘线缆等基础硬件。",
+      "如怀疑显示器损坏，替换显示器或连接线验证。",
+      "如怀疑硬盘或系统盘损坏，交由硬件 / 系统工程师处理。"
+    ],
+    "commands": [
+      {
+        "command": "shutdown /r /t 0",
+        "purpose": "立即重启电脑，用于验证重启后是否恢复。",
+        "risk": "低"
+      },
+      {
+        "command": "eventvwr.msc",
+        "purpose": "打开事件查看器，检查系统、应用和驱动错误。",
+        "risk": "低"
+      },
+      {
+        "command": "devmgmt.msc",
+        "purpose": "打开设备管理器，检查硬件和驱动异常。",
+        "risk": "低"
+      },
+      {
+        "command": "msinfo32",
+        "purpose": "查看系统型号、BIOS、内存和硬件摘要。",
+        "risk": "低"
+      },
+      {
+        "command": "diskmgmt.msc",
+        "purpose": "打开磁盘管理，检查硬盘和分区是否识别。",
+        "risk": "低"
+      },
+      {
+        "command": "chkdsk C: /scan",
+        "purpose": "在线扫描 C 盘文件系统错误，不立即修复。",
+        "risk": "低"
+      },
+      {
+        "command": "sfc /scannow",
+        "purpose": "扫描并修复 Windows 系统文件。",
+        "risk": "低"
+      },
+      {
+        "command": "dism /online /cleanup-image /restorehealth",
+        "purpose": "修复 Windows 组件存储。",
+        "risk": "低"
+      },
+      {
+        "command": "bcdedit",
+        "purpose": "查看启动配置，排查引导项异常。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "电脑能正常进入 Windows 桌面。",
+      "重启一次后仍能正常启动。"
+    ],
+    "notes": [
+      "主板、电源、硬盘、内存疑似损坏。",
+      "设备属于生产工位机且影响业务。",
+      "涉及重要数据恢复。"
+    ],
+    "search_text": "电脑无法开机或不通电处理指南 适用范围 适用于台式机、工位机、办公电脑无法开机、不开机、不通电、启动失败等问题。 常见现象 按电源键无反应。 主机通电但屏幕无显示。 开机后无法进入系统。 重启后仍无法恢复。 初步判断 无法开机可能是电源、显示器、内存、硬盘、系统盘、主板或外设导致。不要直接重装系统，先做硬件和供电基础检查。 处理步骤 1. 检查插座、电源线、插排和主机电源开关。 2. 检查显示器电源、信号线和输入源。 3. 拔掉非必要外设后重新开机。 4. 如果主机有风扇或指示灯，观察是否有报警音或异常响声。 5. 重新插拔内存条、硬盘线缆等基础硬件。 6. 如怀疑显示器损坏，替换显示器或连接线验证。 7. 如怀疑硬盘或系统盘损坏，交由硬件 / 系统工程师处理。 验证方式 电脑能正常进入 Windows 桌面。 重启一次后仍能正常启动。 风险点 拆机前需断电。 不要在未备份数据前重装系统或更换硬盘。 升级条件 主板、电源、硬盘、内存疑似损坏。 设备属于生产工位机且影响业务。 涉及重要数据恢复。 常用指令 shutdown /r /t 0 ???????????????????????????????? eventvwr.msc ??????????????????????????????? devmgmt.msc ??????????????????????? msinfo32 ???????BIOS?????????????? diskmgmt.msc ???????????????????????? chkdsk C: /scan ???? C ??????????????????? sfc /scannow ????? Windows ?????????? dism /online /cleanup image /restorehealth ?? Windows ???????????????????? bcdedit ????????????????????"
+  },
+  {
+    "doc_id": "pc-performance-slow",
+    "title": "电脑卡顿或反应慢处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "performance-slow"
+    ],
+    "tags": [
+      "performance",
+      "cpu",
+      "memory",
+      "startup",
+      "cleanup"
+    ],
+    "keywords": [
+      "电脑卡顿",
+      "电脑卡",
+      "电脑很慢",
+      "反应慢",
+      "卡顿",
+      "卡死",
+      "配置低",
+      "cpu占用",
+      "电脑卡顿或反应慢处理指南",
+      "performance",
+      "cpu",
+      "memory",
+      "startup",
+      "cleanup",
+      "windows",
+      "performance-slow",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/pc-performance-slow.md",
+    "content_preview": "电脑卡顿或反应慢处理指南 适用范围 适用于办公电脑运行慢、卡顿、打开多个表格死机、CPU 或内存占用过高等问题。 常见现象 打开 Office / WPS 文档后卡死。 CPU 或内存占用过高。 电脑启动慢、切换程序慢。 设备配置较低，长期使用后明显变慢。 处理步骤 1. 打开任务管理器，查看 CPU、内存、磁盘占用。 2. 关闭异常占用较高的非必要程序。 3. 清理缓存、临时文件和系统更新残留。 4. 检查是否有垃圾软件或异常启动项。 5. 重启电脑后再次观察资源占用。 6. 如果设备配置长期不足，记录现象并建议升级或更换设备。 验证方式 CPU、内存、磁盘占用回到正常范围。 用户能正常打开",
+    "applicability": [
+      "适用于办公电脑运行慢、卡顿、打开多个表格死机、CPU 或内存占用过高等问题。"
+    ],
+    "symptoms": [
+      "打开 Office / WPS 文档后卡死。",
+      "CPU 或内存占用过高。",
+      "电脑启动慢、切换程序慢。",
+      "设备配置较低，长期使用后明显变慢。"
+    ],
+    "steps": [
+      "打开任务管理器，查看 CPU、内存、磁盘占用。",
+      "关闭异常占用较高的非必要程序。",
+      "清理缓存、临时文件和系统更新残留。",
+      "检查是否有垃圾软件或异常启动项。",
+      "重启电脑后再次观察资源占用。",
+      "如果设备配置长期不足，记录现象并建议升级或更换设备。"
+    ],
+    "commands": [
+      {
+        "command": "taskmgr",
+        "purpose": "打开任务管理器，查看进程和资源占用。",
+        "risk": "低"
+      },
+      {
+        "command": "resmon",
+        "purpose": "打开资源监视器，查看进程级 CPU、磁盘、网络占用。",
+        "risk": "低"
+      },
+      {
+        "command": "perfmon",
+        "purpose": "打开性能监视器，做较长时间性能观察。",
+        "risk": "低"
+      },
+      {
+        "command": "msconfig",
+        "purpose": "查看系统启动配置和服务，排查异常启动项。",
+        "risk": "低"
+      },
+      {
+        "command": "appwiz.cpl",
+        "purpose": "打开程序和功能，卸载异常或无用软件。",
+        "risk": "低"
+      },
+      {
+        "command": "cleanmgr",
+        "purpose": "启动磁盘清理工具。",
+        "risk": "低"
+      },
+      {
+        "command": "%temp%",
+        "purpose": "打开当前用户临时目录，人工清理临时文件。",
+        "risk": "低"
+      },
+      {
+        "command": "wmic logicaldisk get caption,freespace,size",
+        "purpose": "查询 Windows 系统硬件、磁盘或配置字段。",
+        "risk": "低"
+      },
+      {
+        "command": "wmic cpu get name",
+        "purpose": "查询 Windows 系统硬件、磁盘或配置字段。",
+        "risk": "低"
+      },
+      {
+        "command": "wmic memorychip get capacity,speed",
+        "purpose": "查询 Windows 系统硬件、磁盘或配置字段。",
+        "risk": "低"
+      },
+      {
+        "command": "sfc /scannow",
+        "purpose": "扫描并修复 Windows 系统文件。",
+        "risk": "低"
+      },
+      {
+        "command": "dism /online /cleanup-image /restorehealth",
+        "purpose": "修复 Windows 组件存储。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "CPU、内存、磁盘占用回到正常范围。",
+      "用户能正常打开常用办公软件。"
+    ],
+    "notes": [
+      "硬盘疑似故障。",
+      "内存不足频繁复现。",
+      "生产业务终端卡顿影响作业。"
+    ],
+    "search_text": "电脑卡顿或反应慢处理指南 适用范围 适用于办公电脑运行慢、卡顿、打开多个表格死机、CPU 或内存占用过高等问题。 常见现象 打开 Office / WPS 文档后卡死。 CPU 或内存占用过高。 电脑启动慢、切换程序慢。 设备配置较低，长期使用后明显变慢。 处理步骤 1. 打开任务管理器，查看 CPU、内存、磁盘占用。 2. 关闭异常占用较高的非必要程序。 3. 清理缓存、临时文件和系统更新残留。 4. 检查是否有垃圾软件或异常启动项。 5. 重启电脑后再次观察资源占用。 6. 如果设备配置长期不足，记录现象并建议升级或更换设备。 验证方式 CPU、内存、磁盘占用回到正常范围。 用户能正常打开常用办公软件。 风险点 不要删除用户业务文件。 不要结束不认识的安全、加密或业务客户端进程。 升级条件 硬盘疑似故障。 内存不足频繁复现。 生产业务终端卡顿影响作业。 常用指令 taskmgr ?????????? CPU???????????????? resmon ????????????? CPU?????????????? perfmon ??????????????????????? msconfig ????????????????????????? appwiz.cpl ??????????????????????? cleanmgr ?????????????????????????? %temp% ????????????????????????? wmic logicaldisk get caption,freespace,size ?????????????????? wmic cpu get name ?? CPU ???????? wmic memorychip get capacity,speed ??????????????? sfc /scannow ??????????????? dism /online /cleanup image /restorehealth ?? Windows ??????????"
+  },
+  {
+    "doc_id": "label-printer-paper-recognition",
+    "title": "标签打印机纸张识别或连续出空白",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "printer"
+    ],
+    "systems": [
+      "wms"
+    ],
+    "issue_types": [
+      "printer-not-working"
+    ],
+    "tags": [
+      "label-printer",
+      "barcode",
+      "wms",
+      "paper"
+    ],
+    "keywords": [
+      "标签机",
+      "标签打印",
+      "库位码",
+      "标识卡",
+      "条码",
+      "纸张不识别",
+      "空白标签",
+      "标签打印机纸张识别或连续出空白",
+      "label-printer",
+      "barcode",
+      "wms",
+      "paper",
+      "printer-not-working",
+      "printer"
+    ],
+    "path": "docs/candidate/desktop/printer/label-printer-paper-recognition.md",
+    "content_preview": "标签打印机纸张识别或连续出空白 常见现象 标签机换纸后不识别纸张。 打一个标签出来多张空白。 库位码、标签、标识卡无法打印。 纸张规格不匹配。 处理步骤 1. 确认标签纸规格和装纸方向。 2. 检查打印机纸张传感器。 3. 重新校准标签纸。 4. 检查 WMS 或标签打印插件配置。 5. 重新连接标签打印机并测试打印。 升级条件 传感器无法识别纸张。 WMS 打印组件异常。 涉及生产标签，影响发货或入库。",
+    "applicability": [],
+    "symptoms": [
+      "标签机换纸后不识别纸张。",
+      "打一个标签出来多张空白。",
+      "库位码、标签、标识卡无法打印。",
+      "纸张规格不匹配。"
+    ],
+    "steps": [
+      "确认标签纸规格和装纸方向。",
+      "检查打印机纸张传感器。",
+      "重新校准标签纸。",
+      "检查 WMS 或标签打印插件配置。",
+      "重新连接标签打印机并测试打印。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "传感器无法识别纸张。",
+      "WMS 打印组件异常。",
+      "涉及生产标签，影响发货或入库。"
+    ],
+    "search_text": "标签打印机纸张识别或连续出空白 常见现象 标签机换纸后不识别纸张。 打一个标签出来多张空白。 库位码、标签、标识卡无法打印。 纸张规格不匹配。 处理步骤 1. 确认标签纸规格和装纸方向。 2. 检查打印机纸张传感器。 3. 重新校准标签纸。 4. 检查 WMS 或标签打印插件配置。 5. 重新连接标签打印机并测试打印。 升级条件 传感器无法识别纸张。 WMS 打印组件异常。 涉及生产标签，影响发货或入库。"
+  },
+  {
+    "doc_id": "print-port-deleted-by-security-software",
+    "title": "安全软件删除打印端口导致无法打印",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "printer"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "printer-not-working"
+    ],
+    "tags": [
+      "printer",
+      "port",
+      "security-software",
+      "360"
+    ],
+    "keywords": [
+      "打印端口",
+      "端口被删除",
+      "360删除打印端口",
+      "安全软件打印",
+      "安全软件删除打印端口导致无法打印",
+      "printer",
+      "port",
+      "security-software",
+      "360",
+      "windows",
+      "printer-not-working",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/printer/print-port-deleted-by-security-software.md",
+    "content_preview": "安全软件删除打印端口导致无法打印 常见现象 打印机突然无法使用。 打印端口被删除。 安装 360 或安全软件后打印异常。 处理步骤 1. 确认打印机端口是否存在。 2. 检查近期是否安装或清理过安全软件。 3. 恢复或重新创建打印端口。 4. 必要时卸载冲突安全软件。 5. 重新安装打印机驱动并打印测试页。 风险点 卸载安全软件前需确认公司终端安全策略。",
+    "applicability": [],
+    "symptoms": [
+      "打印机突然无法使用。",
+      "打印端口被删除。",
+      "安装 360 或安全软件后打印异常。"
+    ],
+    "steps": [
+      "确认打印机端口是否存在。",
+      "检查近期是否安装或清理过安全软件。",
+      "恢复或重新创建打印端口。",
+      "必要时卸载冲突安全软件。",
+      "重新安装打印机驱动并打印测试页。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [],
+    "search_text": "安全软件删除打印端口导致无法打印 常见现象 打印机突然无法使用。 打印端口被删除。 安装 360 或安全软件后打印异常。 处理步骤 1. 确认打印机端口是否存在。 2. 检查近期是否安装或清理过安全软件。 3. 恢复或重新创建打印端口。 4. 必要时卸载冲突安全软件。 5. 重新安装打印机驱动并打印测试页。 风险点 卸载安全软件前需确认公司终端安全策略。"
+  },
+  {
+    "doc_id": "print-quality-faded-streaks-head-wear",
+    "title": "打印不清楚、横纹、黑印或打印头磨损",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "printer"
+    ],
+    "systems": [],
+    "issue_types": [
+      "printer-not-working",
+      "hardware-fault"
+    ],
+    "tags": [
+      "printer",
+      "print-quality",
+      "toner",
+      "print-head",
+      "streaks"
+    ],
+    "keywords": [
+      "打印不清楚",
+      "打印机打印不清楚",
+      "打印头磨损",
+      "打印头",
+      "针头磨损",
+      "针头坏",
+      "打印有空白间隔",
+      "跑空白",
+      "黑印",
+      "横纹",
+      "断续横纹",
+      "硒鼓",
+      "粉盒",
+      "定影膜",
+      "打印字体",
+      "打印不清楚、横纹、黑印或打印头磨损",
+      "printer",
+      "print-quality",
+      "toner",
+      "print-head",
+      "streaks",
+      "printer-not-working",
+      "hardware-fault"
+    ],
+    "path": "docs/candidate/desktop/printer/print-quality-faded-streaks-head-wear.md",
+    "content_preview": "打印不清楚、横纹、黑印或打印头磨损 常见现象 打印不清楚。 字体断断续续、局部空白。 打印照片出现断续横纹。 纸张两边有黑印。 标签连续出空白或跑空白。 针式打印机针头、标签打印机打印头磨损。 处理步骤 1. 确认打印机类型：激光、针式、标签机或照片打印机。 2. 打印测试页，判断是所有内容异常还是特定文件异常。 3. 对激光打印机，检查粉盒、硒鼓和定影组件。 4. 对针式打印机，检查色带、针头和打印头磨损。 5. 对标签机，检查打印头、纸张传感器和标签纸校准。 6. 对 PDF 或图片打印异常，先排除软件打印设置。 7. 硬件磨损时记录型号并申请耗材或维修。 验证方式 测试页清晰，无横纹、黑",
+    "applicability": [],
+    "symptoms": [
+      "打印不清楚。",
+      "字体断断续续、局部空白。",
+      "打印照片出现断续横纹。",
+      "纸张两边有黑印。",
+      "标签连续出空白或跑空白。"
+    ],
+    "steps": [
+      "确认打印机类型：激光、针式、标签机或照片打印机。",
+      "打印测试页，判断是所有内容异常还是特定文件异常。",
+      "对激光打印机，检查粉盒、硒鼓和定影组件。",
+      "对针式打印机，检查色带、针头和打印头磨损。",
+      "对标签机，检查打印头、纸张传感器和标签纸校准。",
+      "对 PDF 或图片打印异常，先排除软件打印设置。",
+      "硬件磨损时记录型号并申请耗材或维修。"
+    ],
+    "commands": [],
+    "verification": [
+      "测试页清晰，无横纹、黑印、空白间隔。",
+      "业务标签、单据或照片打印正常。"
+    ],
+    "notes": [
+      "打印头、针头、定影膜、硒鼓或粉盒需要更换。",
+      "生产标签或业务单据打印质量影响作业。"
+    ],
+    "search_text": "打印不清楚、横纹、黑印或打印头磨损 常见现象 打印不清楚。 字体断断续续、局部空白。 打印照片出现断续横纹。 纸张两边有黑印。 标签连续出空白或跑空白。 针式打印机针头、标签打印机打印头磨损。 处理步骤 1. 确认打印机类型：激光、针式、标签机或照片打印机。 2. 打印测试页，判断是所有内容异常还是特定文件异常。 3. 对激光打印机，检查粉盒、硒鼓和定影组件。 4. 对针式打印机，检查色带、针头和打印头磨损。 5. 对标签机，检查打印头、纸张传感器和标签纸校准。 6. 对 PDF 或图片打印异常，先排除软件打印设置。 7. 硬件磨损时记录型号并申请耗材或维修。 验证方式 测试页清晰，无横纹、黑印、空白间隔。 业务标签、单据或照片打印正常。 升级条件 打印头、针头、定影膜、硒鼓或粉盒需要更换。 生产标签或业务单据打印质量影响作业。"
+  },
+  {
+    "doc_id": "print-template-or-paper-size-error",
+    "title": "打印模板或纸张规格错误",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "printer"
+    ],
+    "systems": [
+      "windows",
+      "oa",
+      "wms"
+    ],
+    "issue_types": [
+      "printer-not-working"
+    ],
+    "tags": [
+      "printer",
+      "template",
+      "paper-size"
+    ],
+    "keywords": [
+      "打印模板",
+      "纸张规格",
+      "三联纸",
+      "a4纸",
+      "sap纸张",
+      "发车清单",
+      "打印格式",
+      "打印模板或纸张规格错误",
+      "printer",
+      "template",
+      "paper-size",
+      "windows",
+      "oa",
+      "wms",
+      "printer-not-working",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/printer/print-template-or-paper-size-error.md",
+    "content_preview": "打印模板或纸张规格错误 常见现象 英文版标识卡无法打印。 三联纸只能按 A4 打印。 发车清单、库位码或业务单据打印格式异常。 处理步骤 1. 确认业务系统、单据类型和打印模板。 2. 检查打印机纸张规格设置。 3. 检查业务系统或浏览器打印设置。 4. 重新设置模板或打印插件。 5. 用测试单据验证。 升级条件 模板由业务系统控制。 WMS、OA 或其他业务插件异常。",
+    "applicability": [],
+    "symptoms": [
+      "英文版标识卡无法打印。",
+      "三联纸只能按 A4 打印。",
+      "发车清单、库位码或业务单据打印格式异常。"
+    ],
+    "steps": [
+      "确认业务系统、单据类型和打印模板。",
+      "检查打印机纸张规格设置。",
+      "检查业务系统或浏览器打印设置。",
+      "重新设置模板或打印插件。",
+      "用测试单据验证。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "模板由业务系统控制。",
+      "WMS、OA 或其他业务插件异常。"
+    ],
+    "search_text": "打印模板或纸张规格错误 常见现象 英文版标识卡无法打印。 三联纸只能按 A4 打印。 发车清单、库位码或业务单据打印格式异常。 处理步骤 1. 确认业务系统、单据类型和打印模板。 2. 检查打印机纸张规格设置。 3. 检查业务系统或浏览器打印设置。 4. 重新设置模板或打印插件。 5. 用测试单据验证。 升级条件 模板由业务系统控制。 WMS、OA 或其他业务插件异常。"
+  },
+  {
+    "doc_id": "printer-driver-install-failed",
+    "title": "打印机驱动安装失败或驱动丢失",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "printer"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "printer-not-working",
+      "software-install"
+    ],
+    "tags": [
+      "printer",
+      "driver"
+    ],
+    "keywords": [
+      "打印机驱动",
+      "驱动故障",
+      "驱动丢失",
+      "安装驱动",
+      "找不到驱动",
+      "打印机驱动安装失败或驱动丢失",
+      "printer",
+      "driver",
+      "windows",
+      "printer-not-working",
+      "software-install",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/printer/printer-driver-install-failed.md",
+    "content_preview": "打印机驱动安装失败或驱动丢失 常见现象 打印机驱动故障。 误删除打印机后无法重新安装。 找不到对应型号驱动。 安装错误驱动后无法打印。 处理步骤 1. 确认打印机型号和连接方式。 2. 卸载错误或残留驱动。 3. 从公司指定驱动库或打印服务器安装正确驱动。 4. 重新添加打印机。 5. 打印测试页。 风险点 不要从非可信网站下载驱动。 不要误删其他正常打印机驱动。 常用指令 control printers ?????????????????????????? printmanagement.msc ?????????????????????? devmgmt.msc ?????????? U",
+    "applicability": [],
+    "symptoms": [
+      "打印机驱动故障。",
+      "误删除打印机后无法重新安装。",
+      "找不到对应型号驱动。",
+      "安装错误驱动后无法打印。"
+    ],
+    "steps": [
+      "确认打印机型号和连接方式。",
+      "卸载错误或残留驱动。",
+      "从公司指定驱动库或打印服务器安装正确驱动。",
+      "重新添加打印机。",
+      "打印测试页。"
+    ],
+    "commands": [
+      {
+        "command": "control printers",
+        "purpose": "打开 Windows 打印机列表。",
+        "risk": "低"
+      },
+      {
+        "command": "printmanagement.msc",
+        "purpose": "打开打印管理，查看驱动、端口和队列。",
+        "risk": "低"
+      },
+      {
+        "command": "devmgmt.msc",
+        "purpose": "打开设备管理器，检查硬件和驱动异常。",
+        "risk": "低"
+      },
+      {
+        "command": "services.msc",
+        "purpose": "打开 Windows 服务管理器。",
+        "risk": "低"
+      },
+      {
+        "command": "rundll32 printui.dll,PrintUIEntry /s",
+        "purpose": "打开 Windows 打印机管理相关界面。",
+        "risk": "低"
+      },
+      {
+        "command": "rundll32 printui.dll,PrintUIEntry /il",
+        "purpose": "打开 Windows 打印机管理相关界面。",
+        "risk": "低"
+      },
+      {
+        "command": "pnputil /enum-drivers",
+        "purpose": "枚举 Windows 驱动包。",
+        "risk": "低"
+      },
+      {
+        "command": "pnputil /delete-driver <oemXX.inf> /uninstall /force",
+        "purpose": "卸载指定 Windows 驱动包，需确认驱动归属。",
+        "risk": "低"
+      },
+      {
+        "command": "net stop spooler",
+        "purpose": "停止打印后台处理服务，常用于清理队列前置操作。",
+        "risk": "低"
+      },
+      {
+        "command": "net start spooler",
+        "purpose": "启动打印后台处理服务。",
+        "risk": "低"
+      }
+    ],
+    "verification": [],
+    "notes": [],
+    "search_text": "打印机驱动安装失败或驱动丢失 常见现象 打印机驱动故障。 误删除打印机后无法重新安装。 找不到对应型号驱动。 安装错误驱动后无法打印。 处理步骤 1. 确认打印机型号和连接方式。 2. 卸载错误或残留驱动。 3. 从公司指定驱动库或打印服务器安装正确驱动。 4. 重新添加打印机。 5. 打印测试页。 风险点 不要从非可信网站下载驱动。 不要误删其他正常打印机驱动。 常用指令 control printers ?????????????????????????? printmanagement.msc ?????????????????????? devmgmt.msc ?????????? USB/?????????????? services.msc ?? Print Spooler ?????????? rundll32 printui.dll,PrintUIEntry /s ???????????????????? rundll32 printui.dll,PrintUIEntry /il ??????????????? pnputil /enum drivers ??????????????? inf?????? pnputil /delete driver <oemXX.inf /uninstall /force ??????????????????????? net stop spooler ??????????????????????? net start spooler ????????????"
+  },
+  {
+    "doc_id": "printer-offline-or-paused",
+    "title": "打印机脱机、暂停或接收任务但不打印",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "printer"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "printer-not-working"
+    ],
+    "tags": [
+      "printer",
+      "offline",
+      "queue"
+    ],
+    "keywords": [
+      "打印机脱机",
+      "显示脱机",
+      "打印机暂停",
+      "打印机不打印",
+      "队列",
+      "接收到打印任务但是不打印",
+      "打印机脱机、暂停或接收任务但不打印",
+      "printer",
+      "offline",
+      "queue",
+      "windows",
+      "printer-not-working",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/printer/printer-offline-or-paused.md",
+    "content_preview": "打印机脱机、暂停或接收任务但不打印 常见现象 打印机显示脱机。 打印机收到任务但不打印。 打印队列堆积。 打印不全。 处理步骤 1. 检查打印机是否开机、联机、无报错。 2. 检查本机打印机状态是否为脱机或暂停。 3. 清理打印队列。 4. 重新连接打印机或重启打印服务。 5. 如仍不打印，重新安装驱动。 升级条件 同一打印机多台电脑均脱机。 打印机面板报硬件错误。 常用指令 control printers ?????????/????????????? services.msc ?????????? Print Spooler ???????? printmanagement.msc ??",
+    "applicability": [],
+    "symptoms": [
+      "打印机显示脱机。",
+      "打印机收到任务但不打印。",
+      "打印队列堆积。",
+      "打印不全。"
+    ],
+    "steps": [
+      "检查打印机是否开机、联机、无报错。",
+      "检查本机打印机状态是否为脱机或暂停。",
+      "清理打印队列。",
+      "重新连接打印机或重启打印服务。",
+      "如仍不打印，重新安装驱动。"
+    ],
+    "commands": [
+      {
+        "command": "control printers",
+        "purpose": "打开 Windows 打印机列表。",
+        "risk": "低"
+      },
+      {
+        "command": "services.msc",
+        "purpose": "打开 Windows 服务管理器。",
+        "risk": "低"
+      },
+      {
+        "command": "printmanagement.msc",
+        "purpose": "打开打印管理，查看驱动、端口和队列。",
+        "risk": "低"
+      },
+      {
+        "command": "net stop spooler",
+        "purpose": "停止打印后台处理服务，常用于清理队列前置操作。",
+        "risk": "低"
+      },
+      {
+        "command": "net start spooler",
+        "purpose": "启动打印后台处理服务。",
+        "risk": "低"
+      },
+      {
+        "command": "rundll32 printui.dll,PrintUIEntry /s",
+        "purpose": "打开 Windows 打印机管理相关界面。",
+        "risk": "低"
+      },
+      {
+        "command": "rundll32 printui.dll,PrintUIEntry /il",
+        "purpose": "打开 Windows 打印机管理相关界面。",
+        "risk": "低"
+      },
+      {
+        "command": "Get-Printer",
+        "purpose": "PowerShell 查看本机打印机列表。",
+        "risk": "低"
+      },
+      {
+        "command": "Get-PrintJob -PrinterName \"<printer-name>\"",
+        "purpose": "PowerShell ?????????????????",
+        "risk": "低"
+      }
+    ],
+    "verification": [],
+    "notes": [
+      "同一打印机多台电脑均脱机。",
+      "打印机面板报硬件错误。"
+    ],
+    "search_text": "打印机脱机、暂停或接收任务但不打印 常见现象 打印机显示脱机。 打印机收到任务但不打印。 打印队列堆积。 打印不全。 处理步骤 1. 检查打印机是否开机、联机、无报错。 2. 检查本机打印机状态是否为脱机或暂停。 3. 清理打印队列。 4. 重新连接打印机或重启打印服务。 5. 如仍不打印，重新安装驱动。 升级条件 同一打印机多台电脑均脱机。 打印机面板报硬件错误。 常用指令 control printers ?????????/????????????? services.msc ?????????? Print Spooler ???????? printmanagement.msc ??????????????????????? net stop spooler ??????????????????????????? net start spooler ???????????????? rundll32 printui.dll,PrintUIEntry /s ??????????????????????? rundll32 printui.dll,PrintUIEntry /il ??????????????? Get Printer PowerShell ??????????????? Get PrintJob PrinterName \"<printer name \" PowerShell ?????????????????"
+  },
+  {
+    "doc_id": "printer-paper-jam-feed-failed",
+    "title": "打印机卡纸或进纸失败",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "printer"
+    ],
+    "systems": [],
+    "issue_types": [
+      "printer-paper-jam"
+    ],
+    "tags": [
+      "printer",
+      "paper-jam",
+      "feed"
+    ],
+    "keywords": [
+      "卡纸",
+      "进纸失败",
+      "不出纸",
+      "搓纸轮",
+      "定影卡纸",
+      "碎纸片",
+      "打印机卡纸或进纸失败",
+      "printer",
+      "paper-jam",
+      "feed",
+      "printer-paper-jam"
+    ],
+    "path": "docs/candidate/desktop/printer/printer-paper-jam-feed-failed.md",
+    "content_preview": "打印机卡纸或进纸失败 常见现象 打印机提示卡纸。 卡纸取不出来。 不出纸或进纸失败。 纸张卡在进纸口、出纸槽或定影位置。 处理步骤 1. 暂停打印任务并关闭电源。 2. 按设备指引打开进纸口、出纸口或后盖。 3. 沿出纸方向慢慢取出卡纸。 4. 检查是否有碎纸残留。 5. 检查纸张规格、受潮和摆放位置。 6. 打印测试页。 升级条件 搓纸轮磨损。 定影膜、传感器、继电器等硬件疑似故障。",
+    "applicability": [],
+    "symptoms": [
+      "打印机提示卡纸。",
+      "卡纸取不出来。",
+      "不出纸或进纸失败。",
+      "纸张卡在进纸口、出纸槽或定影位置。"
+    ],
+    "steps": [
+      "暂停打印任务并关闭电源。",
+      "按设备指引打开进纸口、出纸口或后盖。",
+      "沿出纸方向慢慢取出卡纸。",
+      "检查是否有碎纸残留。",
+      "检查纸张规格、受潮和摆放位置。",
+      "打印测试页。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "搓纸轮磨损。",
+      "定影膜、传感器、继电器等硬件疑似故障。"
+    ],
+    "search_text": "打印机卡纸或进纸失败 常见现象 打印机提示卡纸。 卡纸取不出来。 不出纸或进纸失败。 纸张卡在进纸口、出纸槽或定影位置。 处理步骤 1. 暂停打印任务并关闭电源。 2. 按设备指引打开进纸口、出纸口或后盖。 3. 沿出纸方向慢慢取出卡纸。 4. 检查是否有碎纸残留。 5. 检查纸张规格、受潮和摆放位置。 6. 打印测试页。 升级条件 搓纸轮磨损。 定影膜、传感器、继电器等硬件疑似故障。"
+  },
+  {
+    "doc_id": "scanner-preview-failed",
+    "title": "扫描后无法预览或下载文件异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "printer"
+    ],
+    "systems": [
+      "windows",
+      "browser"
+    ],
+    "issue_types": [
+      "file-access"
+    ],
+    "tags": [
+      "scanner",
+      "preview",
+      "browser",
+      "region"
+    ],
+    "keywords": [
+      "扫描",
+      "扫描后无法预览",
+      "扫描件无法预览",
+      "扫描仪驱动",
+      "扫描后无法预览或下载文件异常",
+      "scanner",
+      "preview",
+      "browser",
+      "region",
+      "windows",
+      "file-access",
+      "pc",
+      "printer"
+    ],
+    "path": "docs/candidate/desktop/printer/scanner-preview-failed.md",
+    "content_preview": "扫描后无法预览或下载文件异常 常见现象 扫描后无法预览文件。 扫描件下载后无法窗格预览。 扫描仪驱动安装失败。 处理步骤 1. 确认扫描仪或一体机是否在线。 2. 检查扫描驱动是否安装正确。 3. 检查浏览器安全设置和下载设置。 4. 如与系统更新有关，检查区域信息和默认应用。 5. 使用测试扫描确认恢复。 升级条件 多台电脑无法扫描。 扫描服务或共享目录异常。",
+    "applicability": [],
+    "symptoms": [
+      "扫描后无法预览文件。",
+      "扫描件下载后无法窗格预览。",
+      "扫描仪驱动安装失败。"
+    ],
+    "steps": [
+      "确认扫描仪或一体机是否在线。",
+      "检查扫描驱动是否安装正确。",
+      "检查浏览器安全设置和下载设置。",
+      "如与系统更新有关，检查区域信息和默认应用。",
+      "使用测试扫描确认恢复。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "多台电脑无法扫描。",
+      "扫描服务或共享目录异常。"
+    ],
+    "search_text": "扫描后无法预览或下载文件异常 常见现象 扫描后无法预览文件。 扫描件下载后无法窗格预览。 扫描仪驱动安装失败。 处理步骤 1. 确认扫描仪或一体机是否在线。 2. 检查扫描驱动是否安装正确。 3. 检查浏览器安全设置和下载设置。 4. 如与系统更新有关，检查区域信息和默认应用。 5. 使用测试扫描确认恢复。 升级条件 多台电脑无法扫描。 扫描服务或共享目录异常。"
+  },
+  {
+    "doc_id": "shared-printer-connect-failed",
+    "title": "共享打印机连接失败",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "printer"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "printer-not-working"
+    ],
+    "tags": [
+      "printer",
+      "shared-printer",
+      "windows"
+    ],
+    "keywords": [
+      "共享打印机",
+      "连接不上打印机",
+      "无法连接打印机",
+      "重新连接打印机",
+      "连接打印机",
+      "共享路径不通",
+      "换办公室打印",
+      "共享打印机连接失败",
+      "printer",
+      "shared-printer",
+      "windows",
+      "printer-not-working",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/printer/shared-printer-connect-failed.md",
+    "content_preview": "共享打印机连接失败 常见现象 连接不上打印机。 换办公室、换电脑或人员调动后无法打印。 系统更新后共享路径不通。 处理步骤 1. 确认用户所在办公室和需要连接的打印机。 2. 确认同办公室其他电脑是否能打印。 3. 删除本机失效的旧打印机连接。 4. 使用正确共享路径或打印服务器地址重新连接。 5. 如系统更新导致共享路径异常，改用新的共享连接方式。 6. 打印测试页。 升级条件 多台电脑无法连接同一台共享打印机。 打印服务器无法访问。 需要新增共享或调整打印服务器配置。",
+    "applicability": [],
+    "symptoms": [
+      "连接不上打印机。",
+      "换办公室、换电脑或人员调动后无法打印。",
+      "系统更新后共享路径不通。"
+    ],
+    "steps": [
+      "确认用户所在办公室和需要连接的打印机。",
+      "确认同办公室其他电脑是否能打印。",
+      "删除本机失效的旧打印机连接。",
+      "使用正确共享路径或打印服务器地址重新连接。",
+      "如系统更新导致共享路径异常，改用新的共享连接方式。",
+      "打印测试页。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "多台电脑无法连接同一台共享打印机。",
+      "打印服务器无法访问。",
+      "需要新增共享或调整打印服务器配置。"
+    ],
+    "search_text": "共享打印机连接失败 常见现象 连接不上打印机。 换办公室、换电脑或人员调动后无法打印。 系统更新后共享路径不通。 处理步骤 1. 确认用户所在办公室和需要连接的打印机。 2. 确认同办公室其他电脑是否能打印。 3. 删除本机失效的旧打印机连接。 4. 使用正确共享路径或打印服务器地址重新连接。 5. 如系统更新导致共享路径异常，改用新的共享连接方式。 6. 打印测试页。 升级条件 多台电脑无法连接同一台共享打印机。 打印服务器无法访问。 需要新增共享或调整打印服务器配置。"
+  },
+  {
+    "doc_id": "printer-not-working",
+    "title": "打印机无法打印或连接失败处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "printer"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "printer-not-working"
+    ],
+    "tags": [
+      "printer",
+      "driver",
+      "print-spooler",
+      "windows"
+    ],
+    "keywords": [
+      "无法打印",
+      "打印不了",
+      "无法正常打印",
+      "连接不上打印机",
+      "无法连接打印机",
+      "打印机连接不上",
+      "打印机没反应",
+      "打印机无法打印或连接失败处理指南",
+      "printer",
+      "driver",
+      "print-spooler",
+      "windows",
+      "printer-not-working",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/printer-not-working.md",
+    "content_preview": "打印机无法打印或连接失败处理指南 适用范围 适用于 Windows 办公电脑无法打印、连接不上打印机、打印驱动异常、共享打印机不可用等问题。 常见现象 打印任务无反应。 连接不上共享打印机。 打印机驱动故障。 更换工位或人员调动后无法打印。 打印模板或纸张规格不正确。 初步判断 先确认打印机本体是否正常，再判断是电脑驱动、共享地址、权限、网络还是模板问题。 处理步骤 1. 确认打印机电源、网线和面板状态正常。 2. 检查是否只有单台电脑无法打印。 3. 清空本机打印队列。 4. 重新连接正确的共享打印机或打印服务器地址。 5. 必要时卸载旧驱动后重新安装驱动。 6. 如果是模板、纸张规格或标识",
+    "applicability": [
+      "适用于 Windows 办公电脑无法打印、连接不上打印机、打印驱动异常、共享打印机不可用等问题。"
+    ],
+    "symptoms": [
+      "打印任务无反应。",
+      "连接不上共享打印机。",
+      "打印机驱动故障。",
+      "更换工位或人员调动后无法打印。",
+      "打印模板或纸张规格不正确。"
+    ],
+    "steps": [
+      "确认打印机电源、网线和面板状态正常。",
+      "检查是否只有单台电脑无法打印。",
+      "清空本机打印队列。",
+      "重新连接正确的共享打印机或打印服务器地址。",
+      "必要时卸载旧驱动后重新安装驱动。",
+      "如果是模板、纸张规格或标识卡打印问题，检查应用模板和纸张设置。",
+      "打印测试页确认恢复。"
+    ],
+    "commands": [],
+    "verification": [
+      "本机能成功打印测试页。",
+      "业务系统或办公软件能正常输出正式文档。"
+    ],
+    "notes": [
+      "多台电脑无法连接同一打印机。",
+      "打印机面板报硬件故障。",
+      "打印服务器不可访问。"
+    ],
+    "search_text": "打印机无法打印或连接失败处理指南 适用范围 适用于 Windows 办公电脑无法打印、连接不上打印机、打印驱动异常、共享打印机不可用等问题。 常见现象 打印任务无反应。 连接不上共享打印机。 打印机驱动故障。 更换工位或人员调动后无法打印。 打印模板或纸张规格不正确。 初步判断 先确认打印机本体是否正常，再判断是电脑驱动、共享地址、权限、网络还是模板问题。 处理步骤 1. 确认打印机电源、网线和面板状态正常。 2. 检查是否只有单台电脑无法打印。 3. 清空本机打印队列。 4. 重新连接正确的共享打印机或打印服务器地址。 5. 必要时卸载旧驱动后重新安装驱动。 6. 如果是模板、纸张规格或标识卡打印问题，检查应用模板和纸张设置。 7. 打印测试页确认恢复。 验证方式 本机能成功打印测试页。 业务系统或办公软件能正常输出正式文档。 风险点 不要删除其他用户正在使用的共享打印机配置。 修改打印服务器地址前需要确认正确地址。 升级条件 多台电脑无法连接同一打印机。 打印机面板报硬件故障。 打印服务器不可访问。 工程师复核项 [ ] 补充打印服务器地址规范。 [ ] 补充常见打印机型号驱动位置。 [ ] 补充 Print Spooler 服务处理方式。"
+  },
+  {
+    "doc_id": "printer-paper-jam",
+    "title": "打印机卡纸处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "printer"
+    ],
+    "systems": [],
+    "issue_types": [
+      "printer-paper-jam"
+    ],
+    "tags": [
+      "printer",
+      "paper-jam",
+      "hardware"
+    ],
+    "keywords": [
+      "打印机卡纸",
+      "卡纸",
+      "取不出来",
+      "进纸口卡纸",
+      "打印机卡纸处理指南",
+      "printer",
+      "paper-jam",
+      "hardware",
+      "printer-paper-jam"
+    ],
+    "path": "docs/candidate/desktop/printer-paper-jam.md",
+    "content_preview": "打印机卡纸处理指南 适用范围 适用于打印机提示卡纸、进纸异常、纸张规格不匹配等问题。 常见现象 打印机提示卡纸。 纸张卡在进纸口或出纸口。 使用新纸张后频繁卡纸。 搓纸轮磨损导致进纸失败。 处理步骤 1. 暂停打印任务，关闭打印机电源。 2. 按设备指示打开进纸口、出纸口或后盖。 3. 沿出纸方向缓慢取出卡纸，避免撕裂残留。 4. 检查纸张规格、厚度、受潮情况。 5. 重新放纸，确认纸张导轨位置正确。 6. 开机后打印测试页。 7. 如果持续卡纸，检查搓纸轮或联系硬件维护。 验证方式 连续打印测试页无卡纸。 正式打印任务能正常完成。 风险点 不要用尖锐工具强行撬纸。 取纸前应先断电，避免夹伤或",
+    "applicability": [
+      "适用于打印机提示卡纸、进纸异常、纸张规格不匹配等问题。"
+    ],
+    "symptoms": [
+      "打印机提示卡纸。",
+      "纸张卡在进纸口或出纸口。",
+      "使用新纸张后频繁卡纸。",
+      "搓纸轮磨损导致进纸失败。"
+    ],
+    "steps": [
+      "暂停打印任务，关闭打印机电源。",
+      "按设备指示打开进纸口、出纸口或后盖。",
+      "沿出纸方向缓慢取出卡纸，避免撕裂残留。",
+      "检查纸张规格、厚度、受潮情况。",
+      "重新放纸，确认纸张导轨位置正确。",
+      "开机后打印测试页。",
+      "如果持续卡纸，检查搓纸轮或联系硬件维护。"
+    ],
+    "commands": [],
+    "verification": [
+      "连续打印测试页无卡纸。",
+      "正式打印任务能正常完成。"
+    ],
+    "notes": [
+      "卡纸频繁复现。",
+      "搓纸轮明显磨损。",
+      "打印机内部有残纸无法取出。"
+    ],
+    "search_text": "打印机卡纸处理指南 适用范围 适用于打印机提示卡纸、进纸异常、纸张规格不匹配等问题。 常见现象 打印机提示卡纸。 纸张卡在进纸口或出纸口。 使用新纸张后频繁卡纸。 搓纸轮磨损导致进纸失败。 处理步骤 1. 暂停打印任务，关闭打印机电源。 2. 按设备指示打开进纸口、出纸口或后盖。 3. 沿出纸方向缓慢取出卡纸，避免撕裂残留。 4. 检查纸张规格、厚度、受潮情况。 5. 重新放纸，确认纸张导轨位置正确。 6. 开机后打印测试页。 7. 如果持续卡纸，检查搓纸轮或联系硬件维护。 验证方式 连续打印测试页无卡纸。 正式打印任务能正常完成。 风险点 不要用尖锐工具强行撬纸。 取纸前应先断电，避免夹伤或损坏组件。 升级条件 卡纸频繁复现。 搓纸轮明显磨损。 打印机内部有残纸无法取出。"
+  },
+  {
+    "doc_id": "access-control-offline-or-reboot",
+    "title": "门禁离线、反复重启或网络异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "security-device",
+      "network"
+    ],
+    "systems": [
+      "access-control"
+    ],
+    "issue_types": [
+      "network-unavailable",
+      "hardware-fault"
+    ],
+    "tags": [
+      "access-control",
+      "door",
+      "ap",
+      "power",
+      "offline"
+    ],
+    "keywords": [
+      "门禁",
+      "门禁系统",
+      "门禁离线",
+      "门禁总是重启",
+      "门禁一体机",
+      "ap离线",
+      "访客认证",
+      "环保门禁",
+      "门禁离线、反复重启或网络异常",
+      "access-control",
+      "door",
+      "ap",
+      "power",
+      "offline",
+      "network-unavailable",
+      "hardware-fault",
+      "security-device",
+      "network"
+    ],
+    "path": "docs/candidate/desktop/security/access-control-offline-or-reboot.md",
+    "content_preview": "门禁离线、反复重启或网络异常 常见现象 门禁一体机反复重启。 门禁系统离线。 门禁处 AP 离线或无线网络不通。 后台提示认证或网络异常。 处理步骤 1. 确认门禁位置和影响范围。 2. 检查门禁设备供电和电源适配器。 3. 长 ping 门禁设备，观察是否间歇性中断。 4. 检查门禁使用的网络、AP、交换机和认证状态。 5. 检查后台平台是否能看到设备在线。 6. 如电源、AP 或设备硬件异常，记录现象并升级维护。 验证方式 门禁设备稳定在线。 刷卡、人脸或访客认证功能正常。 后台无离线告警。 升级条件 门禁电源、AP 或一体机损坏。 门禁影响生产、环保或安全通行。 多个门禁点位同时异常。",
+    "applicability": [],
+    "symptoms": [
+      "门禁一体机反复重启。",
+      "门禁系统离线。",
+      "门禁处 AP 离线或无线网络不通。",
+      "后台提示认证或网络异常。"
+    ],
+    "steps": [
+      "确认门禁位置和影响范围。",
+      "检查门禁设备供电和电源适配器。",
+      "长 ping 门禁设备，观察是否间歇性中断。",
+      "检查门禁使用的网络、AP、交换机和认证状态。",
+      "检查后台平台是否能看到设备在线。",
+      "如电源、AP 或设备硬件异常，记录现象并升级维护。"
+    ],
+    "commands": [],
+    "verification": [
+      "门禁设备稳定在线。",
+      "刷卡、人脸或访客认证功能正常。",
+      "后台无离线告警。"
+    ],
+    "notes": [
+      "门禁电源、AP 或一体机损坏。",
+      "门禁影响生产、环保或安全通行。",
+      "多个门禁点位同时异常。"
+    ],
+    "search_text": "门禁离线、反复重启或网络异常 常见现象 门禁一体机反复重启。 门禁系统离线。 门禁处 AP 离线或无线网络不通。 后台提示认证或网络异常。 处理步骤 1. 确认门禁位置和影响范围。 2. 检查门禁设备供电和电源适配器。 3. 长 ping 门禁设备，观察是否间歇性中断。 4. 检查门禁使用的网络、AP、交换机和认证状态。 5. 检查后台平台是否能看到设备在线。 6. 如电源、AP 或设备硬件异常，记录现象并升级维护。 验证方式 门禁设备稳定在线。 刷卡、人脸或访客认证功能正常。 后台无离线告警。 升级条件 门禁电源、AP 或一体机损坏。 门禁影响生产、环保或安全通行。 多个门禁点位同时异常。"
+  },
+  {
+    "doc_id": "barrier-gate-abnormal",
+    "title": "道闸无法关闭、自动开闭或离线",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "security-device"
+    ],
+    "systems": [
+      "barrier-gate"
+    ],
+    "issue_types": [
+      "hardware-fault",
+      "network-unavailable"
+    ],
+    "tags": [
+      "barrier-gate",
+      "motor",
+      "infrared",
+      "limit",
+      "power"
+    ],
+    "keywords": [
+      "道闸",
+      "道闸维修",
+      "无法关闭",
+      "自动开闭",
+      "落杆不到位",
+      "车辆道闸",
+      "非固定车辆禁止放行",
+      "摆闸",
+      "红外",
+      "限位",
+      "道闸无法关闭、自动开闭或离线",
+      "barrier-gate",
+      "motor",
+      "infrared",
+      "limit",
+      "power",
+      "hardware-fault",
+      "network-unavailable",
+      "security-device"
+    ],
+    "path": "docs/candidate/desktop/security/barrier-gate-abnormal.md",
+    "content_preview": "道闸无法关闭、自动开闭或离线 常见现象 道闸打开后无法关闭。 道闸不会回位，处于常开状态。 道闸自动开闭或落杆不到位。 道闸提示离线，车辆无法放行。 数码管报错、电机无法运行。 处理步骤 1. 确认故障道闸位置、方向和通道编号。 2. 检查供电、接地和设备电源状态。 3. 检查红外对射、限位、弹簧、主板和电机状态。 4. 检查设备与平台通讯是否正常。 5. 清理红外灰尘或重新固定红外对射。 6. 需要更换主板、电机或道闸主机时，记录型号并升级维护。 7. 修复后测试进出方向开关、落杆、反弹和平台记录。 验证方式 道闸能正常开关。 车辆通行记录能同步到平台。 离线告警消失。 升级条件 电机、主板",
+    "applicability": [],
+    "symptoms": [
+      "道闸打开后无法关闭。",
+      "道闸不会回位，处于常开状态。",
+      "道闸自动开闭或落杆不到位。",
+      "道闸提示离线，车辆无法放行。",
+      "数码管报错、电机无法运行。"
+    ],
+    "steps": [
+      "确认故障道闸位置、方向和通道编号。",
+      "检查供电、接地和设备电源状态。",
+      "检查红外对射、限位、弹簧、主板和电机状态。",
+      "检查设备与平台通讯是否正常。",
+      "清理红外灰尘或重新固定红外对射。",
+      "需要更换主板、电机或道闸主机时，记录型号并升级维护。",
+      "修复后测试进出方向开关、落杆、反弹和平台记录。"
+    ],
+    "commands": [],
+    "verification": [
+      "道闸能正常开关。",
+      "车辆通行记录能同步到平台。",
+      "离线告警消失。"
+    ],
+    "notes": [
+      "电机、主板、限位或道闸主机损坏。",
+      "涉及车辆通行、门岗或收费系统。",
+      "需要供应商重新配置程序。"
+    ],
+    "search_text": "道闸无法关闭、自动开闭或离线 常见现象 道闸打开后无法关闭。 道闸不会回位，处于常开状态。 道闸自动开闭或落杆不到位。 道闸提示离线，车辆无法放行。 数码管报错、电机无法运行。 处理步骤 1. 确认故障道闸位置、方向和通道编号。 2. 检查供电、接地和设备电源状态。 3. 检查红外对射、限位、弹簧、主板和电机状态。 4. 检查设备与平台通讯是否正常。 5. 清理红外灰尘或重新固定红外对射。 6. 需要更换主板、电机或道闸主机时，记录型号并升级维护。 7. 修复后测试进出方向开关、落杆、反弹和平台记录。 验证方式 道闸能正常开关。 车辆通行记录能同步到平台。 离线告警消失。 升级条件 电机、主板、限位或道闸主机损坏。 涉及车辆通行、门岗或收费系统。 需要供应商重新配置程序。"
+  },
+  {
+    "doc_id": "camera-no-signal-or-offline",
+    "title": "摄像头无信号、离线或画面异常",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "security-device",
+      "network"
+    ],
+    "systems": [
+      "camera",
+      "monitoring"
+    ],
+    "issue_types": [
+      "network-unavailable",
+      "hardware-fault"
+    ],
+    "tags": [
+      "camera",
+      "cctv",
+      "no-signal",
+      "offline",
+      "power",
+      "switch"
+    ],
+    "keywords": [
+      "摄像头",
+      "摄像头不通",
+      "摄像头无信号",
+      "摄像头不亮",
+      "无视频信号",
+      "监控不通",
+      "监控掉线",
+      "监控办公楼",
+      "监控画面",
+      "光衰",
+      "保密区域",
+      "摄像头无信号、离线或画面异常",
+      "camera",
+      "cctv",
+      "no-signal",
+      "offline",
+      "power",
+      "switch",
+      "monitoring",
+      "network-unavailable",
+      "hardware-fault",
+      "security-device",
+      "network"
+    ],
+    "path": "docs/candidate/desktop/security/camera-no-signal-or-offline.md",
+    "content_preview": "摄像头无信号、离线或画面异常 常见现象 摄像头不通、无视频信号。 多个摄像头同时不亮。 监控画面掉线。 摄像头位置偏移、画面角度异常。 下雨、施工、供电或交换机异常后摄像头离线。 处理步骤 1. 确认是单个摄像头异常还是同区域多个摄像头异常。 2. 检查摄像头供电、电源适配器、插排和 PoE 交换机状态。 3. 检查网线、光纤、交换机端口和链路指示灯。 4. 在监控平台查看设备在线状态、码流和最近离线时间。 5. 对单个摄像头，现场检查设备、镜头、支架和接线。 6. 对施工导致角度偏移的摄像头，重新调整角度并确认覆盖范围。 7. 涉及光纤、交换机或设备损坏时升级网络或安防维护。 验证方式 监控",
+    "applicability": [],
+    "symptoms": [
+      "摄像头不通、无视频信号。",
+      "多个摄像头同时不亮。",
+      "监控画面掉线。",
+      "摄像头位置偏移、画面角度异常。",
+      "下雨、施工、供电或交换机异常后摄像头离线。"
+    ],
+    "steps": [
+      "确认是单个摄像头异常还是同区域多个摄像头异常。",
+      "检查摄像头供电、电源适配器、插排和 PoE 交换机状态。",
+      "检查网线、光纤、交换机端口和链路指示灯。",
+      "在监控平台查看设备在线状态、码流和最近离线时间。",
+      "对单个摄像头，现场检查设备、镜头、支架和接线。",
+      "对施工导致角度偏移的摄像头，重新调整角度并确认覆盖范围。",
+      "涉及光纤、交换机或设备损坏时升级网络或安防维护。"
+    ],
+    "commands": [],
+    "verification": [
+      "监控平台显示设备在线。",
+      "实时画面正常。",
+      "录像回放正常。"
+    ],
+    "notes": [
+      "同区域多个摄像头同时离线。",
+      "摄像头、交换机、光纤或供电设备损坏。",
+      "涉及保密区域、门岗、围墙等关键点位。"
+    ],
+    "search_text": "摄像头无信号、离线或画面异常 常见现象 摄像头不通、无视频信号。 多个摄像头同时不亮。 监控画面掉线。 摄像头位置偏移、画面角度异常。 下雨、施工、供电或交换机异常后摄像头离线。 处理步骤 1. 确认是单个摄像头异常还是同区域多个摄像头异常。 2. 检查摄像头供电、电源适配器、插排和 PoE 交换机状态。 3. 检查网线、光纤、交换机端口和链路指示灯。 4. 在监控平台查看设备在线状态、码流和最近离线时间。 5. 对单个摄像头，现场检查设备、镜头、支架和接线。 6. 对施工导致角度偏移的摄像头，重新调整角度并确认覆盖范围。 7. 涉及光纤、交换机或设备损坏时升级网络或安防维护。 验证方式 监控平台显示设备在线。 实时画面正常。 录像回放正常。 升级条件 同区域多个摄像头同时离线。 摄像头、交换机、光纤或供电设备损坏。 涉及保密区域、门岗、围墙等关键点位。"
+  },
+  {
+    "doc_id": "shared-file-cloud-drive-access",
+    "title": "共享文件或云盘访问异常处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc",
+      "storage"
+    ],
+    "systems": [
+      "windows",
+      "cloud-drive",
+      "oa"
+    ],
+    "issue_types": [
+      "file-access",
+      "permission",
+      "network-unavailable"
+    ],
+    "tags": [
+      "shared-folder",
+      "cloud-drive",
+      "upload",
+      "permission"
+    ],
+    "keywords": [
+      "共享文件",
+      "共享文件夹",
+      "云盘",
+      "上传不了",
+      "下载不了",
+      "文件找不到",
+      "共享文件或云盘访问异常处理指南",
+      "shared-folder",
+      "cloud-drive",
+      "upload",
+      "permission",
+      "windows",
+      "oa",
+      "file-access",
+      "network-unavailable",
+      "pc",
+      "storage"
+    ],
+    "path": "docs/candidate/desktop/shared-file-cloud-drive-access.md",
+    "content_preview": "共享文件或云盘访问异常处理指南 适用范围 适用于共享文件夹、云盘、OA 附件上传下载、文件访问权限异常等问题。 常见现象 共享文件夹无法访问。 云盘客户端缺失或无法连接。 OA 发协同上传不了附件。 文件丢失或找不到。 初步判断 先判断是网络问题、权限问题、客户端问题，还是文件本身被移动、删除或损坏。 处理步骤 1. 确认网络是否正常。 2. 确认共享路径、云盘地址或 OA 页面是否正确。 3. 检查用户是否具备访问权限。 4. 对云盘问题，检查客户端是否安装、登录和同步正常。 5. 对上传下载问题，检查浏览器、控件、缓存和文件大小限制。 6. 对文件丢失问题，确认是否有备份、历史版本或回收站",
+    "applicability": [
+      "适用于共享文件夹、云盘、OA 附件上传下载、文件访问权限异常等问题。"
+    ],
+    "symptoms": [
+      "共享文件夹无法访问。",
+      "云盘客户端缺失或无法连接。",
+      "OA 发协同上传不了附件。",
+      "文件丢失或找不到。"
+    ],
+    "steps": [
+      "确认网络是否正常。",
+      "确认共享路径、云盘地址或 OA 页面是否正确。",
+      "检查用户是否具备访问权限。",
+      "对云盘问题，检查客户端是否安装、登录和同步正常。",
+      "对上传下载问题，检查浏览器、控件、缓存和文件大小限制。",
+      "对文件丢失问题，确认是否有备份、历史版本或回收站。"
+    ],
+    "commands": [],
+    "verification": [
+      "用户能打开目标共享路径或云盘目录。",
+      "能正常上传、下载或保存文件。"
+    ],
+    "notes": [
+      "共享服务器或云盘服务异常。",
+      "多人同时无法访问。",
+      "涉及重要文件恢复或权限审批。"
+    ],
+    "search_text": "共享文件或云盘访问异常处理指南 适用范围 适用于共享文件夹、云盘、OA 附件上传下载、文件访问权限异常等问题。 常见现象 共享文件夹无法访问。 云盘客户端缺失或无法连接。 OA 发协同上传不了附件。 文件丢失或找不到。 初步判断 先判断是网络问题、权限问题、客户端问题，还是文件本身被移动、删除或损坏。 处理步骤 1. 确认网络是否正常。 2. 确认共享路径、云盘地址或 OA 页面是否正确。 3. 检查用户是否具备访问权限。 4. 对云盘问题，检查客户端是否安装、登录和同步正常。 5. 对上传下载问题，检查浏览器、控件、缓存和文件大小限制。 6. 对文件丢失问题，确认是否有备份、历史版本或回收站。 验证方式 用户能打开目标共享路径或云盘目录。 能正常上传、下载或保存文件。 风险点 不要随意扩大共享权限。 文件恢复前不要覆盖原目录。 升级条件 共享服务器或云盘服务异常。 多人同时无法访问。 涉及重要文件恢复或权限审批。"
+  },
+  {
+    "doc_id": "software-client-installation",
+    "title": "软件或客户端安装处理指南",
+    "status": "usable",
+    "type": "sop",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows",
+      "cloud-drive",
+      "browser"
+    ],
+    "issue_types": [
+      "software-install"
+    ],
+    "tags": [
+      "software",
+      "installation",
+      "client"
+    ],
+    "keywords": [
+      "安装软件",
+      "安装客户端",
+      "需要安装",
+      "已安装",
+      "重装软件",
+      "重新安装",
+      "软件安装",
+      "软件或客户端安装处理指南",
+      "software",
+      "installation",
+      "client",
+      "windows",
+      "cloud-drive",
+      "browser",
+      "software-install",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/software-client-installation.md",
+    "content_preview": "软件或客户端安装处理指南 适用范围 适用于办公电脑安装云盘客户端、业务系统客户端、浏览器控件、打印相关组件等常见软件安装需求。 常见现象 新电脑缺少常用客户端。 用户需要安装云盘或业务系统组件。 OA、PLM、MES 等页面需要浏览器控件或客户端。 打印机驱动或客户端缺失。 处理步骤 1. 确认软件名称、用途和用户所属部门。 2. 确认安装包来源是否为公司指定位置。 3. 检查电脑系统版本和权限是否满足安装要求。 4. 安装客户端或驱动。 5. 按业务要求配置服务器地址、共享目录或登录参数。 6. 使用用户账号登录或打开业务页面验证。 验证方式 软件能正常启动。 用户能完成登录或业务操作。 风",
+    "applicability": [
+      "适用于办公电脑安装云盘客户端、业务系统客户端、浏览器控件、打印相关组件等常见软件安装需求。"
+    ],
+    "symptoms": [
+      "新电脑缺少常用客户端。",
+      "用户需要安装云盘或业务系统组件。",
+      "OA、PLM、MES 等页面需要浏览器控件或客户端。",
+      "打印机驱动或客户端缺失。"
+    ],
+    "steps": [
+      "确认软件名称、用途和用户所属部门。",
+      "确认安装包来源是否为公司指定位置。",
+      "检查电脑系统版本和权限是否满足安装要求。",
+      "安装客户端或驱动。",
+      "按业务要求配置服务器地址、共享目录或登录参数。",
+      "使用用户账号登录或打开业务页面验证。"
+    ],
+    "commands": [],
+    "verification": [
+      "软件能正常启动。",
+      "用户能完成登录或业务操作。"
+    ],
+    "notes": [
+      "安装包缺失或版本不明确。",
+      "安装后无法连接服务器。",
+      "涉及授权、加密或安全软件异常。"
+    ],
+    "search_text": "软件或客户端安装处理指南 适用范围 适用于办公电脑安装云盘客户端、业务系统客户端、浏览器控件、打印相关组件等常见软件安装需求。 常见现象 新电脑缺少常用客户端。 用户需要安装云盘或业务系统组件。 OA、PLM、MES 等页面需要浏览器控件或客户端。 打印机驱动或客户端缺失。 处理步骤 1. 确认软件名称、用途和用户所属部门。 2. 确认安装包来源是否为公司指定位置。 3. 检查电脑系统版本和权限是否满足安装要求。 4. 安装客户端或驱动。 5. 按业务要求配置服务器地址、共享目录或登录参数。 6. 使用用户账号登录或打开业务页面验证。 验证方式 软件能正常启动。 用户能完成登录或业务操作。 风险点 不要从非官方来源下载安装包。 涉及授权软件时需确认许可。 管理员权限使用后应退出或恢复普通权限。 升级条件 安装包缺失或版本不明确。 安装后无法连接服务器。 涉及授权、加密或安全软件异常。"
+  },
+  {
+    "doc_id": "windows-system-reinstall-or-cache-reset",
+    "title": "Windows 系统异常需重装或清空缓存",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "pc"
+    ],
+    "systems": [
+      "windows"
+    ],
+    "issue_types": [
+      "software-install",
+      "boot-failed",
+      "performance-slow"
+    ],
+    "tags": [
+      "windows",
+      "reinstall",
+      "cache",
+      "system-corruption"
+    ],
+    "keywords": [
+      "重装系统",
+      "需要重装系统",
+      "系统崩溃",
+      "无法启动",
+      "垃圾软件太多",
+      "清空缓存",
+      "缓存没清空",
+      "系统问题",
+      "系统更新问题",
+      "软件闪退",
+      "Windows 系统异常需重装或清空缓存",
+      "windows",
+      "reinstall",
+      "cache",
+      "system-corruption",
+      "software-install",
+      "boot-failed",
+      "performance-slow",
+      "pc"
+    ],
+    "path": "docs/candidate/desktop/windows-system-reinstall-or-cache-reset.md",
+    "content_preview": "Windows 系统异常需重装或清空缓存 常见现象 系统崩溃或无法启动。 垃圾软件太多，反复弹窗。 常用软件闪退，需要重装系统。 清空缓存后恢复。 处理步骤 1. 判断是否可以通过清理缓存、修复系统或卸载异常软件恢复。 2. 备份用户桌面、文档和业务数据。 3. 记录需要恢复的软件、打印机、共享盘和业务客户端。 4. 按公司标准镜像或流程重装系统。 5. 恢复用户数据和常用软件。 6. 验证网络、打印、办公软件和业务系统。 风险点 未备份数据前不要重装系统。 涉及授权软件时需确认授权方式。 升级条件 系统盘或硬盘疑似故障。 重要数据需要恢复。",
+    "applicability": [],
+    "symptoms": [
+      "系统崩溃或无法启动。",
+      "垃圾软件太多，反复弹窗。",
+      "常用软件闪退，需要重装系统。",
+      "清空缓存后恢复。"
+    ],
+    "steps": [
+      "判断是否可以通过清理缓存、修复系统或卸载异常软件恢复。",
+      "备份用户桌面、文档和业务数据。",
+      "记录需要恢复的软件、打印机、共享盘和业务客户端。",
+      "按公司标准镜像或流程重装系统。",
+      "恢复用户数据和常用软件。",
+      "验证网络、打印、办公软件和业务系统。"
+    ],
+    "commands": [],
+    "verification": [],
+    "notes": [
+      "系统盘或硬盘疑似故障。",
+      "重要数据需要恢复。"
+    ],
+    "search_text": "Windows 系统异常需重装或清空缓存 常见现象 系统崩溃或无法启动。 垃圾软件太多，反复弹窗。 常用软件闪退，需要重装系统。 清空缓存后恢复。 处理步骤 1. 判断是否可以通过清理缓存、修复系统或卸载异常软件恢复。 2. 备份用户桌面、文档和业务数据。 3. 记录需要恢复的软件、打印机、共享盘和业务客户端。 4. 按公司标准镜像或流程重装系统。 5. 恢复用户数据和常用软件。 6. 验证网络、打印、办公软件和业务系统。 风险点 未备份数据前不要重装系统。 涉及授权软件时需确认授权方式。 升级条件 系统盘或硬盘疑似故障。 重要数据需要恢复。"
+  },
+  {
+    "doc_id": "application-http-5xx-or-unavailable-alert",
+    "title": "应用 5xx、4xx 或后端不可用告警处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "server",
+      "business-system"
+    ],
+    "systems": [
+      "application",
+      "nginx",
+      "gateway",
+      "nacos"
+    ],
+    "issue_types": [
+      "service-unavailable",
+      "http-error"
+    ],
+    "tags": [
+      "5xx",
+      "4xx",
+      "backend",
+      "application",
+      "nacos",
+      "gateway"
+    ],
+    "keywords": [
+      "5xx",
+      "4xx",
+      "业务后端不可用",
+      "后端应用 5xx 告警",
+      "域名三分钟内超过",
+      "服务不可用",
+      "http error",
+      "接口错误",
+      "应用宕机",
+      "nacos 注册掉线告警",
+      "nacos",
+      "应用 5xx、4xx 或后端不可用告警处理指南",
+      "backend",
+      "application",
+      "gateway",
+      "nginx",
+      "service-unavailable",
+      "http-error",
+      "server",
+      "business-system"
+    ],
+    "path": "docs/candidate/server/application/application-http-5xx-or-unavailable-alert.md",
+    "content_preview": "应用 5xx、4xx 或后端不可用告警处理指南 适用范围 适用于业务后端不可用、HTTP 5xx/4xx 错误突增、域名错误率超阈值、Nacos 注册掉线等应用可用性告警。 适用于规则名称包含“业务后端不可用”“5xx 告警”“4xx 错误”“nacos 注册掉线”等场景。 常见现象 网关、Nginx、Ingress 或应用监控出现 5xx/4xx 告警。 用户访问失败、接口超时或业务后端不可用。 服务实例从注册中心掉线。 判断依据 区分客户端请求错误、网关错误、后端应用错误和依赖服务异常。 结合错误率、请求量、发布变更、实例健康和日志判断。 处理步骤 1. 确认告警域名、接口、业务系统、错误",
+    "applicability": [
+      "适用于业务后端不可用、HTTP 5xx/4xx 错误突增、域名错误率超阈值、Nacos 注册掉线等应用可用性告警。",
+      "适用于规则名称包含“业务后端不可用”“5xx 告警”“4xx 错误”“nacos 注册掉线”等场景。"
+    ],
+    "symptoms": [
+      "网关、Nginx、Ingress 或应用监控出现 5xx/4xx 告警。",
+      "用户访问失败、接口超时或业务后端不可用。",
+      "服务实例从注册中心掉线。"
+    ],
+    "steps": [
+      "确认告警域名、接口、业务系统、错误码、时间窗口和影响范围。",
+      "查看网关或入口层状态、后端实例健康、注册中心实例数和最近发布记录。",
+      "查看应用日志、错误堆栈、依赖数据库/缓存/第三方接口状态。",
+      "如果是发布后异常，按预案回滚或切换流量。",
+      "如果是单实例异常，优先摘除异常实例或重启实例，并保留日志供分析。",
+      "如果是流量突增，按限流、扩容或降级预案处理。",
+      "记录错误码、影响接口、根因、恢复动作和是否需要补充业务知识。"
+    ],
+    "commands": [
+      {
+        "command": "curl -I https://<domain>/<path>",
+        "purpose": "发起 HTTP 请求，验证状态码、响应头或耗时。",
+        "risk": "低"
+      },
+      {
+        "command": "curl -s -o /dev/null -w \"%{http_code} %{time_total}\\n\" https://<domain>/<path>",
+        "purpose": "发起 HTTP 请求，验证状态码、响应头或耗时。",
+        "risk": "低"
+      },
+      {
+        "command": "tail -n 200 /var/log/nginx/error.log",
+        "purpose": "查看日志文件末尾内容。",
+        "risk": "低"
+      },
+      {
+        "command": "tail -n 200 /var/log/nginx/access.log",
+        "purpose": "查看日志文件末尾内容。",
+        "risk": "低"
+      },
+      {
+        "command": "grep \" 5[0-9][0-9] \" /var/log/nginx/access.log | tail -50",
+        "purpose": "筛选日志或文本中的关键错误。",
+        "risk": "低"
+      },
+      {
+        "command": "systemctl status nginx",
+        "purpose": "查看指定 Linux 服务状态。",
+        "risk": "低"
+      },
+      {
+        "command": "systemctl status <app-service>",
+        "purpose": "查看指定 Linux 服务状态。",
+        "risk": "低"
+      },
+      {
+        "command": "journalctl -u <app-service> --since \"30 min ago\"",
+        "purpose": "查看 systemd 日志，按服务或时间窗口定位异常。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl get pod -n <namespace> -o wide",
+        "purpose": "查看业务 Pod 状态、IP 和所在节点。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl describe ingress <ingress-name> -n <namespace>",
+        "purpose": "查看 Kubernetes 资源详情、事件和配置。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl logs <pod-name> -n <namespace> --tail=200",
+        "purpose": "查看 Kubernetes Pod 日志。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl rollout history deployment/<deployment-name> -n <namespace>",
+        "purpose": "查看或确认 Kubernetes 发布状态和历史。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "5xx/4xx 错误率回落到正常范围。",
+      "业务接口健康检查和用户访问恢复。",
+      "注册中心实例数、网关后端状态和应用日志正常。"
+    ],
+    "notes": [
+      "不要只看错误码，必须结合请求量和影响范围判断严重程度。",
+      "重启、回滚、限流、扩容属于生产变更，应按业务预案执行。",
+      "涉及数据一致性问题时应升级给业务系统负责人和数据库工程师。"
+    ],
+    "search_text": "应用 5xx、4xx 或后端不可用告警处理指南 适用范围 适用于业务后端不可用、HTTP 5xx/4xx 错误突增、域名错误率超阈值、Nacos 注册掉线等应用可用性告警。 适用于规则名称包含“业务后端不可用”“5xx 告警”“4xx 错误”“nacos 注册掉线”等场景。 常见现象 网关、Nginx、Ingress 或应用监控出现 5xx/4xx 告警。 用户访问失败、接口超时或业务后端不可用。 服务实例从注册中心掉线。 判断依据 区分客户端请求错误、网关错误、后端应用错误和依赖服务异常。 结合错误率、请求量、发布变更、实例健康和日志判断。 处理步骤 1. 确认告警域名、接口、业务系统、错误码、时间窗口和影响范围。 2. 查看网关或入口层状态、后端实例健康、注册中心实例数和最近发布记录。 3. 查看应用日志、错误堆栈、依赖数据库/缓存/第三方接口状态。 4. 如果是发布后异常，按预案回滚或切换流量。 5. 如果是单实例异常，优先摘除异常实例或重启实例，并保留日志供分析。 6. 如果是流量突增，按限流、扩容或降级预案处理。 7. 记录错误码、影响接口、根因、恢复动作和是否需要补充业务知识。 常用指令 curl I https://<domain /<path ?????? HTTP ????????????? curl s o /dev/null w \"%{http code} %{time total} n\" https://<domain /<path ???????????????? tail n 200 /var/log/nginx/error.log ?? Nginx ???????????? tail n 200 /var/log/nginx/access.log ?? Nginx ???????????? grep \" 5[0 9][0 9] \" /var/log/nginx/access.log tail 50 ???? 5xx ???????? systemctl status nginx ?? Nginx ?????????? systemctl status <app service ?????????????? journalctl u <app service since \"30 min ago\" ???????????????? kubectl get pod n <namespace o wide ???? Pod ????????????? kubectl describe ingress <ingress name n <namespace ?? Ingress ??????????? kubectl logs <pod name n <namespace tail=200 ???? Pod ?????????? kubectl rollout history deployment/<deployment name n <namespace ????????????????????????? 验证方式 5xx/4xx 错误率回落到正常范围。 业务接口健康检查和用户访问恢复。 注册中心实例数、网关后端状态和应用日志正常。 注意事项 不要只看错误码，必须结合请求量和影响范围判断严重程度。 重启、回滚、限流、扩容属于生产变更，应按业务预案执行。 涉及数据一致性问题时应升级给业务系统负责人和数据库工程师。"
+  },
+  {
+    "doc_id": "jvm-gc-thread-alert",
+    "title": "JVM GC、线程数量或 Java 运行时异常告警处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "server",
+      "business-system"
+    ],
+    "systems": [
+      "java",
+      "jvm"
+    ],
+    "issue_types": [
+      "jvm-gc",
+      "thread-high",
+      "performance"
+    ],
+    "tags": [
+      "jvm",
+      "gc",
+      "java",
+      "thread",
+      "heap",
+      "performance"
+    ],
+    "keywords": [
+      "GC吞吐率",
+      "GC暂停",
+      "GC暂停总时长",
+      "活跃的守护线程数量",
+      "守护线程",
+      "jvm",
+      "java",
+      "gc",
+      "daemon thread",
+      "JVM GC、线程数量或 Java 运行时异常告警处理指南",
+      "thread",
+      "heap",
+      "performance",
+      "jvm-gc",
+      "thread-high",
+      "server",
+      "business-system"
+    ],
+    "path": "docs/candidate/server/application/jvm-gc-thread-alert.md",
+    "content_preview": "JVM GC、线程数量或 Java 运行时异常告警处理指南 适用范围 适用于 GC 吞吐率低、GC 暂停时间过长、活跃守护线程数过多等 Java 应用运行时告警。 适用于规则名称包含“GC吞吐率”“GC暂停总时长”“守护线程数量”等场景。 常见现象 GC 频繁或暂停时间变长。 应用响应慢、接口超时或实例重启。 线程数异常增长，可能伴随连接池、任务线程或死循环问题。 判断依据 结合 JVM 指标、应用日志、发布变更、流量变化和依赖状态判断。 区分短时流量高峰、内存泄漏、线程泄漏和外部依赖阻塞。 处理步骤 1. 确认应用、实例、告警指标、持续时间和业务影响。 2. 查看 JVM heap、GC 次",
+    "applicability": [
+      "适用于 GC 吞吐率低、GC 暂停时间过长、活跃守护线程数过多等 Java 应用运行时告警。",
+      "适用于规则名称包含“GC吞吐率”“GC暂停总时长”“守护线程数量”等场景。"
+    ],
+    "symptoms": [
+      "GC 频繁或暂停时间变长。",
+      "应用响应慢、接口超时或实例重启。",
+      "线程数异常增长，可能伴随连接池、任务线程或死循环问题。"
+    ],
+    "steps": [
+      "确认应用、实例、告警指标、持续时间和业务影响。",
+      "查看 JVM heap、GC 次数、GC 暂停、线程数、CPU、内存和应用日志。",
+      "对比告警前后的发布、配置、流量和依赖服务状态。",
+      "如果影响业务，按预案扩容、摘除异常实例、重启实例或回滚发布。",
+      "保留 GC 日志、线程栈、堆信息和应用错误日志，交由应用负责人分析根因。",
+      "记录处理动作、恢复时间和是否需要优化 JVM 参数或代码。"
+    ],
+    "commands": [
+      {
+        "command": "jps -lv",
+        "purpose": "列出 Java 进程及启动参数。",
+        "risk": "低"
+      },
+      {
+        "command": "jstat -gcutil <pid> 1000 10",
+        "purpose": "采样 JVM GC 使用率和频率。",
+        "risk": "低"
+      },
+      {
+        "command": "jcmd <pid> VM.flags",
+        "purpose": "查看 JVM 启动参数。",
+        "risk": "低"
+      },
+      {
+        "command": "jcmd <pid> GC.heap_info",
+        "purpose": "查看 JVM 堆内存信息。",
+        "risk": "低"
+      },
+      {
+        "command": "jcmd <pid> Thread.print > thread-dump-$(date +%F-%H%M%S).txt",
+        "purpose": "?????????????????????",
+        "risk": "低"
+      },
+      {
+        "command": "jstack <pid> > jstack-$(date +%F-%H%M%S).txt",
+        "purpose": "?? Java ?????????",
+        "risk": "低"
+      },
+      {
+        "command": "top -H -p <pid>",
+        "purpose": "查看指定进程内线程 CPU 占用。",
+        "risk": "低"
+      },
+      {
+        "command": "ps -L -p <pid> -o pid,tid,pcpu,pmem,comm",
+        "purpose": "??????????????????",
+        "risk": "低"
+      },
+      {
+        "command": "grep -i -E \"Full GC|OutOfMemory|GC overhead\" <app-log-file> | tail -50",
+        "purpose": "筛选日志或文本中的关键错误。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl logs <pod-name> -n <namespace> --tail=300",
+        "purpose": "查看 Kubernetes Pod 日志。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "GC 指标、线程数和接口耗时恢复正常。",
+      "应用实例健康检查通过。",
+      "告警不再持续触发。"
+    ],
+    "notes": [
+      "不要在没有保留现场信息的情况下直接重启所有实例。",
+      "采集 heap dump、线程栈等操作可能影响性能，应在授权和维护窗口内执行。",
+      "JVM 参数调整应经过测试验证，不应临时猜测修改。"
+    ],
+    "search_text": "JVM GC、线程数量或 Java 运行时异常告警处理指南 适用范围 适用于 GC 吞吐率低、GC 暂停时间过长、活跃守护线程数过多等 Java 应用运行时告警。 适用于规则名称包含“GC吞吐率”“GC暂停总时长”“守护线程数量”等场景。 常见现象 GC 频繁或暂停时间变长。 应用响应慢、接口超时或实例重启。 线程数异常增长，可能伴随连接池、任务线程或死循环问题。 判断依据 结合 JVM 指标、应用日志、发布变更、流量变化和依赖状态判断。 区分短时流量高峰、内存泄漏、线程泄漏和外部依赖阻塞。 处理步骤 1. 确认应用、实例、告警指标、持续时间和业务影响。 2. 查看 JVM heap、GC 次数、GC 暂停、线程数、CPU、内存和应用日志。 3. 对比告警前后的发布、配置、流量和依赖服务状态。 4. 如果影响业务，按预案扩容、摘除异常实例、重启实例或回滚发布。 5. 保留 GC 日志、线程栈、堆信息和应用错误日志，交由应用负责人分析根因。 6. 记录处理动作、恢复时间和是否需要优化 JVM 参数或代码。 常用指令 jps lv ?? Java ????????????? jstat gcutil <pid 1000 10 ?? JVM GC ???????????? jcmd <pid VM.flags ?? JVM ?????????? jcmd <pid GC.heap info ????????????? jcmd <pid Thread.print thread dump $(date +%F %H%M%S).txt ????????????????????? jstack <pid jstack $(date +%F %H%M%S).txt ?? Java ????????? top H p <pid ?? Java ????? CPU ???????? ps L p <pid o pid,tid,pcpu,pmem,comm ?????????????????? grep i E \"Full GC OutOfMemory GC overhead\" <app log file tail 50 ???????? GC ? OOM ???????? kubectl logs <pod name n <namespace tail=300 ?? Java ?? Pod ?????????? 验证方式 GC 指标、线程数和接口耗时恢复正常。 应用实例健康检查通过。 告警不再持续触发。 注意事项 不要在没有保留现场信息的情况下直接重启所有实例。 采集 heap dump、线程栈等操作可能影响性能，应在授权和维护窗口内执行。 JVM 参数调整应经过测试验证，不应临时猜测修改。"
+  },
+  {
+    "doc_id": "docker-ops-guide",
+    "title": "Docker 运维完全指南",
+    "status": "usable",
+    "type": "reference",
+    "asset_types": [
+      "server",
+      "container"
+    ],
+    "systems": [
+      "docker",
+      "linux"
+    ],
+    "issue_types": [
+      "container-runtime",
+      "deployment",
+      "troubleshooting"
+    ],
+    "tags": [
+      "docker",
+      "container",
+      "image",
+      "compose",
+      "registry",
+      "network"
+    ],
+    "keywords": [
+      "Docker 运维完全指南",
+      "docker",
+      "container",
+      "image",
+      "compose",
+      "registry",
+      "network",
+      "linux",
+      "container-runtime",
+      "deployment",
+      "troubleshooting",
+      "server"
+    ],
+    "path": "docs/candidate/server/container/docker-ops-guide.md",
+    "content_preview": "﻿ Docker 运维参考手册 适用范围 适用于 Docker Engine、Docker Compose、镜像构建、容器运行、网络、存储、私有仓库和常见故障排查。 适合作为服务器容器运行环境维护、部署检查和问题定位参考。 常见现象 容器启动失败、异常退出或无法访问。 镜像构建失败、拉取失败或版本不一致。 容器网络、端口映射、卷挂载或日志异常。 Docker 服务启动失败或资源占用异常。 处理步骤 1. 确认变更对象、影响范围、维护窗口和回退方案。 2. 先查看 Docker 服务状态、容器状态、镜像版本、端口映射、日志和资源占用。 3. 按故障现象选择原始手册中的安装配置、镜像构建、Comp",
+    "applicability": [
+      "适用于 Docker Engine、Docker Compose、镜像构建、容器运行、网络、存储、私有仓库和常见故障排查。",
+      "适合作为服务器容器运行环境维护、部署检查和问题定位参考。"
+    ],
+    "symptoms": [
+      "容器启动失败、异常退出或无法访问。",
+      "镜像构建失败、拉取失败或版本不一致。",
+      "容器网络、端口映射、卷挂载或日志异常。",
+      "Docker 服务启动失败或资源占用异常。"
+    ],
+    "steps": [
+      "确认变更对象、影响范围、维护窗口和回退方案。",
+      "先查看 Docker 服务状态、容器状态、镜像版本、端口映射、日志和资源占用。",
+      "按故障现象选择原始手册中的安装配置、镜像构建、Compose、网络、存储、安全或故障案例章节。",
+      "涉及删除容器、清理镜像、修改 daemon.json、开放远程 API 或重建服务前，必须确认备份和回滚路径。",
+      "处理后记录实际命令、影响容器、验证结果和是否需要沉淀为更细知识。"
+    ],
+    "commands": [
+      {
+        "command": "systemctl status docker",
+        "purpose": "查看指定 Linux 服务状态。",
+        "risk": "低"
+      },
+      {
+        "command": "journalctl -u docker --since \"30 min ago\"",
+        "purpose": "查看 systemd 日志，按服务或时间窗口定位异常。",
+        "risk": "低"
+      },
+      {
+        "command": "docker ps -a",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "docker logs <container-name> --tail=200",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "docker inspect <container-name>",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "docker stats --no-stream",
+        "purpose": "查看容器 CPU 和内存占用快照。",
+        "risk": "低"
+      },
+      {
+        "command": "docker images",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "docker system df",
+        "purpose": "查看 Docker 镜像、容器、卷占用。",
+        "risk": "低"
+      },
+      {
+        "command": "docker network ls",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "docker volume ls",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "docker compose ps",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "docker compose logs --tail=200",
+        "purpose": "",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "Docker 服务状态正常。",
+      "目标容器处于期望状态，业务端口和日志正常。",
+      "重启 Docker 或容器后配置仍符合预期。"
+    ],
+    "notes": [
+      "本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。",
+      "本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。",
+      "涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。",
+      "手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。"
+    ],
+    "search_text": "﻿ Docker 运维参考手册 适用范围 适用于 Docker Engine、Docker Compose、镜像构建、容器运行、网络、存储、私有仓库和常见故障排查。 适合作为服务器容器运行环境维护、部署检查和问题定位参考。 常见现象 容器启动失败、异常退出或无法访问。 镜像构建失败、拉取失败或版本不一致。 容器网络、端口映射、卷挂载或日志异常。 Docker 服务启动失败或资源占用异常。 处理步骤 1. 确认变更对象、影响范围、维护窗口和回退方案。 2. 先查看 Docker 服务状态、容器状态、镜像版本、端口映射、日志和资源占用。 3. 按故障现象选择原始手册中的安装配置、镜像构建、Compose、网络、存储、安全或故障案例章节。 4. 涉及删除容器、清理镜像、修改 daemon.json、开放远程 API 或重建服务前，必须确认备份和回滚路径。 5. 处理后记录实际命令、影响容器、验证结果和是否需要沉淀为更细知识。 验证方式 Docker 服务状态正常。 目标容器处于期望状态，业务端口和日志正常。 重启 Docker 或容器后配置仍符合预期。 注意事项 本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。 本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。 涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。 手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。 原始手册 以下内容为导入的原始手册正文，供工程师查阅细节。 Docker 运维完全指南 📝 版本：Docker 24+ / Docker Engine 2026 ⚠️ 生产环境操作前请先在测试环境验证！ 📚 目录 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 1. Docker 架构概览 1.1 核心组件 组件 作用 说明 Docker Daemon 守护进程 监听 API 请求，管理镜像/容器/网络/卷 Docker Client 命令行工具 用户与 Docker 交互的 CLI Docker Registry 镜像仓库 存储和分发镜像（Docker Hub/私有仓库） Containerd 容器运行时 管理容器生命周期（Docker 底层） runc 低级运行时 实际创建和运行容器 1.2 核心概念 概念 说明 类比 镜像（Image） 只读模板，包含应用和依赖 光盘镜像 容器（Container） 镜像的运行实例 运行中的虚拟机 仓库（Registry） 存放镜像的地方 应用商店 数据卷（Volume） 持久化存储 共享文件夹 网络（Network） 容器间通信 虚拟交换机 1.3 架构图 2. 安装与配置 2.1 Ubuntu/Debian 安装 2.2 CentOS/RHEL 安装 2.3 配置镜像加速器 2.4 配置非 root 用户 2.5 配置远程访问 3. 镜像管理 3.1 拉取镜像 3.2 构建镜像 3.3 查看镜像 3.4 镜像操作 3.5 多阶段构建示例 3.6 镜像优化技巧 4. 容器管理 4.1 创建和启动容器 4.2 查看容器 4.3 容器操作 4.4 批量操作 5. 数据卷管理 5.1 数据卷类型 类型 命令 存储位置 用途 命名卷 v myvol:/data /var/lib/docker/volumes/ 持久化数据 匿名卷 v /data /var/lib/docker/volumes/ 临时数据 绑定挂载 v /host/path:/data 主机任意位置 共享主机文件 tmpfs tmpfs /data 内存 敏感临时数据 5.2 创建和管理卷 5.3 绑定挂载 5.4 数据持久化最佳实践 6. 网络管理 6.1 网络类型 类型 命令 说明 bridge 默认 容器间通过网桥通信 host network host 使用主机网络（无隔离） none network none 无网络 overlay Docker Swarm 跨主机网络 macvlan 高级 直接连接物理网络 6.2 创建和管理网络 6.3 容器间通信 6.4 端口映射 6.5 网络故障排查 7. Docker Compose 7.1 安装 7.2 基础使用 7.3 Compose 文件示例 7.4 多环境配置 7.5 环境变量管理 8. Dockerfile 编写 8.1 指令说明 指令 作用 示例 FROM 基础镜像 FROM ubuntu:22.04 RUN 执行命令 RUN apt get update CMD 默认命令 CMD [\"nginx"
+  },
+  {
+    "doc_id": "kubernetes-ops-guide",
+    "title": "Kubernetes 运维完全指南",
+    "status": "usable",
+    "type": "reference",
+    "asset_types": [
+      "server",
+      "container",
+      "cluster"
+    ],
+    "systems": [
+      "kubernetes",
+      "containerd",
+      "linux"
+    ],
+    "issue_types": [
+      "cluster-ops",
+      "pod-failed",
+      "deployment",
+      "troubleshooting"
+    ],
+    "tags": [
+      "kubernetes",
+      "k8s",
+      "pod",
+      "deployment",
+      "service",
+      "ingress",
+      "helm"
+    ],
+    "keywords": [
+      "Kubernetes 运维完全指南",
+      "kubernetes",
+      "k8s",
+      "pod",
+      "deployment",
+      "service",
+      "ingress",
+      "helm",
+      "containerd",
+      "linux",
+      "cluster-ops",
+      "pod-failed",
+      "troubleshooting",
+      "server",
+      "container",
+      "cluster"
+    ],
+    "path": "docs/candidate/server/container/kubernetes-ops-guide.md",
+    "content_preview": "﻿ Kubernetes 运维参考手册 适用范围 适用于 Kubernetes 集群部署、节点维护、Pod/Deployment/Service/Ingress/Helm 等资源运维和常见故障排查。 适合作为集群级问题定位和变更前检查参考。 常见现象 Pod Pending、CrashLoopBackOff、ImagePullBackOff 或调度失败。 Service、Ingress、DNS、存储或网络访问异常。 节点 NotReady、资源不足、证书或权限异常。 Helm 发布失败或回滚异常。 处理步骤 1. 确认集群、命名空间、业务影响范围和操作权限。 2. 优先执行只读检查：查看节点、",
+    "applicability": [
+      "适用于 Kubernetes 集群部署、节点维护、Pod/Deployment/Service/Ingress/Helm 等资源运维和常见故障排查。",
+      "适合作为集群级问题定位和变更前检查参考。"
+    ],
+    "symptoms": [
+      "Pod Pending、CrashLoopBackOff、ImagePullBackOff 或调度失败。",
+      "Service、Ingress、DNS、存储或网络访问异常。",
+      "节点 NotReady、资源不足、证书或权限异常。",
+      "Helm 发布失败或回滚异常。"
+    ],
+    "steps": [
+      "确认集群、命名空间、业务影响范围和操作权限。",
+      "优先执行只读检查：查看节点、Pod、事件、日志、资源配额和最近变更。",
+      "按故障类型进入原始手册中的资源管理、网络、存储、配置、Helm 或故障排查章节。",
+      "涉及重启组件、删除资源、扩缩容、升级、证书和 etcd 操作前，必须先备份并在维护窗口执行。",
+      "记录命名空间、资源名、关键事件、处理动作和验证结果。"
+    ],
+    "commands": [
+      {
+        "command": "kubectl get node -o wide",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl describe node <node-name>",
+        "purpose": "查看 Kubernetes 资源详情、事件和配置。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl get pod -A -o wide",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl describe pod <pod-name> -n <namespace>",
+        "purpose": "查看 Kubernetes 资源详情、事件和配置。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl logs <pod-name> -n <namespace> --tail=200",
+        "purpose": "查看 Kubernetes Pod 日志。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl get events -A --sort-by=.lastTimestamp",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl top node",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl top pod -A",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl get svc,ingress -A",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl rollout status deployment/<deployment-name> -n <namespace>",
+        "purpose": "查看或确认 Kubernetes 发布状态和历史。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl rollout history deployment/<deployment-name> -n <namespace>",
+        "purpose": "查看或确认 Kubernetes 发布状态和历史。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "目标 Pod、Deployment、Service 或 Ingress 状态恢复。",
+      "业务健康检查、日志和访问路径正常。",
+      "集群节点和关键系统组件无新增异常事件。"
+    ],
+    "notes": [
+      "本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。",
+      "本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。",
+      "涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。",
+      "手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。"
+    ],
+    "search_text": "﻿ Kubernetes 运维参考手册 适用范围 适用于 Kubernetes 集群部署、节点维护、Pod/Deployment/Service/Ingress/Helm 等资源运维和常见故障排查。 适合作为集群级问题定位和变更前检查参考。 常见现象 Pod Pending、CrashLoopBackOff、ImagePullBackOff 或调度失败。 Service、Ingress、DNS、存储或网络访问异常。 节点 NotReady、资源不足、证书或权限异常。 Helm 发布失败或回滚异常。 处理步骤 1. 确认集群、命名空间、业务影响范围和操作权限。 2. 优先执行只读检查：查看节点、Pod、事件、日志、资源配额和最近变更。 3. 按故障类型进入原始手册中的资源管理、网络、存储、配置、Helm 或故障排查章节。 4. 涉及重启组件、删除资源、扩缩容、升级、证书和 etcd 操作前，必须先备份并在维护窗口执行。 5. 记录命名空间、资源名、关键事件、处理动作和验证结果。 验证方式 目标 Pod、Deployment、Service 或 Ingress 状态恢复。 业务健康检查、日志和访问路径正常。 集群节点和关键系统组件无新增异常事件。 注意事项 本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。 本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。 涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。 手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。 原始手册 以下内容为导入的原始手册正文，供工程师查阅细节。 Kubernetes 运维完全指南 📝 版本：Kubernetes 1.28+ ⚠️ 生产环境操作前请先在测试环境验证！ 📚 目录 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 1. Kubernetes 架构概览 1.1 核心组件 组件 作用 端口 kube apiserver API 入口，所有请求的网关 6443 etcd 分布式键值存储，保存集群状态 2379 2380 kube scheduler 调度 Pod 到节点 kube controller manager 运行各种控制器 kubelet 节点代理，管理 Pod 生命周期 10250 kube proxy 网络代理，实现 Service coredns 集群内部 DNS 服务 53 1.2 核心资源 资源类型 作用 示例 Pod 最小调度单元 一个或多个容器 Deployment 无状态应用部署 Web 服务、API StatefulSet 有状态应用部署 数据库、缓存 DaemonSet 每个节点运行一个 Pod 日志收集、监控 Service 服务发现与负载均衡 ClusterIP、NodePort Ingress 七层路由 HTTP/HTTPS 路由 ConfigMap 配置管理 环境变量、配置文件 Secret 敏感信息管理 密码、证书、Token PV/PVC 持久化存储 数据卷 Namespace 资源隔离 开发、测试、生产 1.3 网络模型 2. 集群部署（手动） 2.1 环境准备 2.2 安装 Kubernetes 组件 2.3 初始化 Master 节点 2.4 安装网络插件（Calico） 2.5 加入 Worker 节点 3. 集群部署（kubeadm） 3.1 快速部署脚本 3.2 高可用集群部署 3.3 验证集群状态 4. kubectl 基础命令 4.1 配置管理 4.2 资源查看 4.3 资源操作 4.4 调试命令 5. 工作负载管理 5.1 Deployment（无状态应用） 5.2 StatefulSet（有状态应用） 5.3 DaemonSet（节点级应用） 5.4 Job/CronJob（批处理任务） 6. 网络与服务 6.1 Service 类型 6.2 Headless Service 6.3 Ingress 配置 6.4 Network Policy 6.5 网络故障排查 7. 存储管理 7.1 PV/PVC 7.2 动态存储（NFS） 7.3 ConfigMap 和 Secret 8. Helm 包管理 8.1 Helm 安装与配置 8.2 安装应用 8.3 管理 Release 8.4 创建自定义 Chart 8.5 常用 Helm Charts 9. 监控与日志 9.1 Prometheus + Grafana 9.2 自定义监控规则 9.3 日志收集（EFK/ELK） 9.4 常用监控命令 "
+  },
+  {
+    "doc_id": "database-status-tablespace-alert",
+    "title": "数据库状态、宕机或表空间告警处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "database",
+      "server"
+    ],
+    "systems": [
+      "mysql",
+      "oracle"
+    ],
+    "issue_types": [
+      "database-down",
+      "tablespace",
+      "connection-failed"
+    ],
+    "tags": [
+      "database",
+      "mysql",
+      "oracle",
+      "tablespace",
+      "availability"
+    ],
+    "keywords": [
+      "卫华MES数据库状态监控",
+      "江苏MES数据库状态监控",
+      "卫华MES数据库表空间监控",
+      "江苏MES数据库表空间监控",
+      "NC数据库宕机",
+      "NC数据库表空间超过98%",
+      "数据库状态监控",
+      "数据库表空间监控",
+      "表空间",
+      "tablespace",
+      "数据库宕机",
+      "MySQL宕机",
+      "Mysql 宕机",
+      "Oracle",
+      "MySQL",
+      "数据库连接",
+      "数据库状态、宕机或表空间告警处理指南",
+      "database",
+      "availability",
+      "database-down",
+      "connection-failed",
+      "server"
+    ],
+    "path": "docs/candidate/server/database/database-status-tablespace-alert.md",
+    "content_preview": "数据库状态、宕机或表空间告警处理指南 适用范围 适用于 MySQL 宕机、Oracle 数据库状态监控、数据库连接异常、表空间监控等告警。 适用于规则名称包含“数据库状态监控”“数据库表空间监控”“MySQL宕机”“Mysql 宕机”等场景。 常见现象 数据库实例不可连接或连接数异常。 数据库状态监控失败。 Oracle 表空间使用率过高。 应用报数据库连接失败、查询超时或写入失败。 判断依据 先区分数据库实例宕机、网络不可达、账号权限、连接池耗尽、磁盘空间或表空间问题。 MySQL 备份恢复参考 MySQL 和 XtraBackup 手册；Oracle 备份恢复参考 Oracle 手册。 处",
+    "applicability": [
+      "适用于 MySQL 宕机、Oracle 数据库状态监控、数据库连接异常、表空间监控等告警。",
+      "适用于规则名称包含“数据库状态监控”“数据库表空间监控”“MySQL宕机”“Mysql 宕机”等场景。"
+    ],
+    "symptoms": [
+      "数据库实例不可连接或连接数异常。",
+      "数据库状态监控失败。",
+      "Oracle 表空间使用率过高。",
+      "应用报数据库连接失败、查询超时或写入失败。"
+    ],
+    "steps": [
+      "确认数据库类型、实例、业务系统、告警指标和影响范围。",
+      "查看数据库进程、端口、连接状态、错误日志、磁盘空间和最近变更。",
+      "Oracle 表空间告警需确认表空间使用率、数据文件自动扩展、剩余磁盘和增长趋势。",
+      "MySQL 宕机需确认服务状态、错误日志、磁盘、内存和是否存在崩溃恢复。",
+      "涉及重启、扩容、恢复、删除数据文件、调整表空间前，必须确认备份和业务窗口。",
+      "如涉及数据恢复，按对应数据库备份恢复手册执行，并先在测试环境验证。",
+      "记录实例、根因、处理动作、恢复时间和后续容量或高可用优化建议。"
+    ],
+    "commands": [
+      {
+        "command": "systemctl status mysqld",
+        "purpose": "查看 MySQL 服务状态。",
+        "risk": "低"
+      },
+      {
+        "command": "systemctl status mysql",
+        "purpose": "查看 MySQL 服务状态，适用于部分发行版服务名。",
+        "risk": "低"
+      },
+      {
+        "command": "mysqladmin ping -h <host> -P <port> -u <user> -p",
+        "purpose": "测试 MySQL 实例是否可连接。",
+        "risk": "低"
+      },
+      {
+        "command": "mysql -h <host> -P <port> -u <user> -p -e \"show processlist;\"",
+        "purpose": "连接 MySQL 执行检查 SQL。",
+        "risk": "低"
+      },
+      {
+        "command": "tail -n 200 /var/log/mysqld.log",
+        "purpose": "查看日志文件末尾内容。",
+        "risk": "低"
+      },
+      {
+        "command": "lsnrctl status",
+        "purpose": "查看 Oracle 监听状态。",
+        "risk": "低"
+      },
+      {
+        "command": "sqlplus / as sysdba",
+        "purpose": "本机以 SYSDBA 登录 Oracle，需授权。",
+        "risk": "低"
+      },
+      {
+        "command": "select status from v$instance;",
+        "purpose": "查看 Oracle 实例状态。",
+        "risk": "低"
+      },
+      {
+        "command": "select tablespace_name, round(used_percent,2) used_percent from dba_tablespace_usage_metrics order by used_percent desc;",
+        "purpose": "?? Oracle ????????????",
+        "risk": "低"
+      },
+      {
+        "command": "df -hT",
+        "purpose": "查看各挂载点容量、使用率和文件系统类型。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "数据库实例状态正常，应用可连接。",
+      "表空间、磁盘、连接数和错误日志恢复正常。",
+      "关键业务 SQL 或应用健康检查通过。"
+    ],
+    "notes": [
+      "数据库操作属于高风险操作，不允许直接照抄命令执行。",
+      "涉及数据文件、恢复、重启和扩容必须走审批、备份和回退流程。",
+      "表空间告警不能只扩容，还应分析增长来源和保留策略。"
+    ],
+    "search_text": "数据库状态、宕机或表空间告警处理指南 适用范围 适用于 MySQL 宕机、Oracle 数据库状态监控、数据库连接异常、表空间监控等告警。 适用于规则名称包含“数据库状态监控”“数据库表空间监控”“MySQL宕机”“Mysql 宕机”等场景。 常见现象 数据库实例不可连接或连接数异常。 数据库状态监控失败。 Oracle 表空间使用率过高。 应用报数据库连接失败、查询超时或写入失败。 判断依据 先区分数据库实例宕机、网络不可达、账号权限、连接池耗尽、磁盘空间或表空间问题。 MySQL 备份恢复参考 MySQL 和 XtraBackup 手册；Oracle 备份恢复参考 Oracle 手册。 处理步骤 1. 确认数据库类型、实例、业务系统、告警指标和影响范围。 2. 查看数据库进程、端口、连接状态、错误日志、磁盘空间和最近变更。 3. Oracle 表空间告警需确认表空间使用率、数据文件自动扩展、剩余磁盘和增长趋势。 4. MySQL 宕机需确认服务状态、错误日志、磁盘、内存和是否存在崩溃恢复。 5. 涉及重启、扩容、恢复、删除数据文件、调整表空间前，必须确认备份和业务窗口。 6. 如涉及数据恢复，按对应数据库备份恢复手册执行，并先在测试环境验证。 7. 记录实例、根因、处理动作、恢复时间和后续容量或高可用优化建议。 常用指令 systemctl status mysqld ?? MySQL ?????????? systemctl status mysql ?? MySQL ?????????????????????? mysqladmin ping h <host P <port u <user p ?? MySQL ????????????? mysql h <host P <port u <user p e \"show processlist;\" ?? MySQL ????????? SQL?????? tail n 200 /var/log/mysqld.log ?? MySQL ???????????? lsnrctl status ?? Oracle ?????????? sqlplus / as sysdba ??? SYSDBA ?? Oracle?????????? select status from v$instance; ?? Oracle ?????????? select tablespace name, round(used percent,2) used percent from dba tablespace usage metrics order by used percent desc; ?? Oracle ???????????? df hT ???????????????????? 验证方式 数据库实例状态正常，应用可连接。 表空间、磁盘、连接数和错误日志恢复正常。 关键业务 SQL 或应用健康检查通过。 注意事项 数据库操作属于高风险操作，不允许直接照抄命令执行。 涉及数据文件、恢复、重启和扩容必须走审批、备份和回退流程。 表空间告警不能只扩容，还应分析增长来源和保留策略。"
+  },
+  {
+    "doc_id": "mysql-backup-restore-guide",
+    "title": "MySQL 备份与恢复完全指南",
+    "status": "usable",
+    "type": "reference",
+    "asset_types": [
+      "database",
+      "server"
+    ],
+    "systems": [
+      "mysql"
+    ],
+    "issue_types": [
+      "backup",
+      "restore",
+      "data-recovery"
+    ],
+    "tags": [
+      "mysql",
+      "mysqldump",
+      "backup",
+      "restore",
+      "binlog"
+    ],
+    "keywords": [
+      "MySQL 备份与恢复完全指南",
+      "mysql",
+      "mysqldump",
+      "backup",
+      "restore",
+      "binlog",
+      "data-recovery",
+      "database",
+      "server"
+    ],
+    "path": "docs/candidate/server/database/mysql-backup-restore-guide.md",
+    "content_preview": "﻿ MySQL 备份与恢复参考手册 适用范围 适用于 MySQL 逻辑备份、恢复、压缩、加密、定时备份和常见恢复问题。 适合作为数据库备份恢复操作前的流程检查参考。 常见现象 需要备份单库、多库、全库或单表。 需要从 SQL、压缩备份或历史备份恢复数据。 备份失败、恢复失败、权限不足或字符集异常。 处理步骤 1. 确认数据库实例、库表范围、备份时间点、保留策略和恢复目标。 2. 恢复前必须确认现有数据备份、业务停机窗口和回退方案。 3. 按场景参考原始手册中的 mysqldump、mysql 恢复、压缩加密、自动备份或常见错误章节。 4. 恢复操作优先在测试环境验证，再进入生产维护窗口。 5.",
+    "applicability": [
+      "适用于 MySQL 逻辑备份、恢复、压缩、加密、定时备份和常见恢复问题。",
+      "适合作为数据库备份恢复操作前的流程检查参考。"
+    ],
+    "symptoms": [
+      "需要备份单库、多库、全库或单表。",
+      "需要从 SQL、压缩备份或历史备份恢复数据。",
+      "备份失败、恢复失败、权限不足或字符集异常。"
+    ],
+    "steps": [
+      "确认数据库实例、库表范围、备份时间点、保留策略和恢复目标。",
+      "恢复前必须确认现有数据备份、业务停机窗口和回退方案。",
+      "按场景参考原始手册中的 mysqldump、mysql 恢复、压缩加密、自动备份或常见错误章节。",
+      "恢复操作优先在测试环境验证，再进入生产维护窗口。",
+      "记录备份文件路径、校验结果、恢复命令、耗时和验证结果。"
+    ],
+    "commands": [
+      {
+        "command": "mysqldump -h <host> -P <port> -u <user> -p --single-transaction --routines --triggers --events <database> > <database>.sql",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "mysql -h <host> -P <port> -u <user> -p <database> < <database>.sql",
+        "purpose": "连接 MySQL 执行检查 SQL。",
+        "risk": "低"
+      },
+      {
+        "command": "mysqladmin ping -h <host> -P <port> -u <user> -p",
+        "purpose": "测试 MySQL 实例是否可连接。",
+        "risk": "低"
+      },
+      {
+        "command": "mysql -h <host> -P <port> -u <user> -p -e \"show databases;\"",
+        "purpose": "连接 MySQL 执行检查 SQL。",
+        "risk": "低"
+      },
+      {
+        "command": "mysql -h <host> -P <port> -u <user> -p -e \"show processlist;\"",
+        "purpose": "连接 MySQL 执行检查 SQL。",
+        "risk": "低"
+      },
+      {
+        "command": "gzip <database>.sql",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "gunzip <database>.sql.gz",
+        "purpose": "",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "备份文件存在且可读，大小和校验结果符合预期。",
+      "恢复后目标库表、行数、关键业务查询和应用连接正常。",
+      "备份任务后续调度和告警正常。"
+    ],
+    "notes": [
+      "本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。",
+      "本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。",
+      "涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。",
+      "手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。"
+    ],
+    "search_text": "﻿ MySQL 备份与恢复参考手册 适用范围 适用于 MySQL 逻辑备份、恢复、压缩、加密、定时备份和常见恢复问题。 适合作为数据库备份恢复操作前的流程检查参考。 常见现象 需要备份单库、多库、全库或单表。 需要从 SQL、压缩备份或历史备份恢复数据。 备份失败、恢复失败、权限不足或字符集异常。 处理步骤 1. 确认数据库实例、库表范围、备份时间点、保留策略和恢复目标。 2. 恢复前必须确认现有数据备份、业务停机窗口和回退方案。 3. 按场景参考原始手册中的 mysqldump、mysql 恢复、压缩加密、自动备份或常见错误章节。 4. 恢复操作优先在测试环境验证，再进入生产维护窗口。 5. 记录备份文件路径、校验结果、恢复命令、耗时和验证结果。 验证方式 备份文件存在且可读，大小和校验结果符合预期。 恢复后目标库表、行数、关键业务查询和应用连接正常。 备份任务后续调度和告警正常。 注意事项 本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。 本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。 涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。 手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。 原始手册 以下内容为导入的原始手册正文，供工程师查阅细节。 MySQL 备份与恢复完全指南 📝 版本：MySQL 8.0+ ⚠️ 生产环境操作前请先测试！ 📚 目录 1. 2. 3. 4. 5. 6. 7. 8. 1. 备份方式概览 方式 工具 优点 缺点 适用场景 逻辑备份 mysqldump 灵活、可读、跨版本 慢、大库耗时 小中型数据库 物理备份 xtrabackup / cp 快、支持增量 占用空间、版本依赖 大型数据库 二进制日志 mysqlbinlog 支持时间点恢复 配置复杂 精确恢复 云厂商快照 控制台 一键操作 厂商锁定 云数据库 2. mysqldump 逻辑备份 2.1 基本语法 2.2 常用备份场景 🔹 备份单个数据库 🔹 备份多个数据库 🔹 备份所有数据库 🔹 备份单张表 🔹 备份多张表 🔹 只备份表结构（无数据） 🔹 只备份数据（无结构） 🔹 备份存储过程和函数 🔹 备份事件（Event） 2.3 推荐的生产环境备份参数 参数说明： 参数 作用 single transaction InnoDB 一致性快照，不锁表 quick 逐行读取，不缓存全部结果 lock tables=false 不锁定表（配合 single transaction） routines 包含存储过程和函数 triggers 包含触发器 events 包含事件调度器 set gtid purged=OFF 不写入 GTID 信息（避免恢复时冲突） 2.4 压缩备份（节省空间） 2.5 加密备份（敏感数据） 3. mysql 命令恢复 3.1 基本恢复 3.2 恢复压缩备份 3.3 恢复时跳过错误 3.4 恢复前清空数据库 3.5 使用 source 命令在 MySQL 内恢复 4. 物理备份 4.1 直接复制数据文件（需停服） ⚠️ 注意： 必须停止 MySQL 服务 需要复制整个 /var/lib/mysql 目录 恢复时也需要停服 4.2 使用 XtraBackup（热备份） 5. 增量备份 5.1 启用二进制日志 编辑 /etc/mysql/mysql.conf.d/mysqld.cnf ： 重启 MySQL： 5.2 全量 + 增量备份策略 5.3 使用 binlog 恢复 6. 定时备份脚本 6.1 完整备份脚本 6.2 添加定时任务 6.3 备份到远程服务器 7. 常见错误与解决方案 ❌ 错误 1：Access denied 原因： 用户名或密码错误 解决： ❌ 错误 2：Got error: 2006: MySQL server has gone away 原因： 数据包太大或超时 解决： ❌ 错误 3：Got error: 1044: Access denied when using LOCK TABLES 原因： 用户没有 LOCK TABLES 权限 解决： ❌ 错误 4：Unknown table 'COLUMN STATISTICS' 原因： MySQL 8.0.21+ 的默认行为与旧版本不兼容 解决： ❌ 错误 5：Duplicate entry when restoring 原因： 数据库中已有相同数据 解决： ❌ 错误 6：Character set mismatch 原因： 字符集不匹配 解决： ❌ 错误 7：Backup fi"
+  },
+  {
+    "doc_id": "oracle-backup-restore-guide",
+    "title": "Oracle 数据库备份与恢复完全指南",
+    "status": "usable",
+    "type": "reference",
+    "asset_types": [
+      "database",
+      "server"
+    ],
+    "systems": [
+      "oracle",
+      "rman"
+    ],
+    "issue_types": [
+      "backup",
+      "restore",
+      "data-recovery"
+    ],
+    "tags": [
+      "oracle",
+      "rman",
+      "expdp",
+      "impdp",
+      "backup",
+      "restore"
+    ],
+    "keywords": [
+      "Oracle 数据库备份与恢复完全指南",
+      "oracle",
+      "rman",
+      "expdp",
+      "impdp",
+      "backup",
+      "restore",
+      "data-recovery",
+      "database",
+      "server"
+    ],
+    "path": "docs/candidate/server/database/oracle-backup-restore-guide.md",
+    "content_preview": "﻿ Oracle 数据库备份与恢复参考手册 适用范围 适用于 Oracle RMAN、Data Pump、冷备、恢复验证和常见错误处理。 适合作为 Oracle 备份恢复、迁移和对象级恢复前的操作参考。 常见现象 需要执行全量、增量、归档日志或对象级备份。 需要恢复数据库、表空间、Schema、表或导入导出数据。 RMAN、expdp、impdp 或归档日志相关错误。 处理步骤 1. 确认数据库版本、实例名、归档模式、备份策略、恢复目标和停机窗口。 2. 恢复前检查数据库状态、备份可用性、归档完整性和剩余空间。 3. 按场景参考原始手册中的 RMAN、Data Pump、冷备、恢复和常见错误章",
+    "applicability": [
+      "适用于 Oracle RMAN、Data Pump、冷备、恢复验证和常见错误处理。",
+      "适合作为 Oracle 备份恢复、迁移和对象级恢复前的操作参考。"
+    ],
+    "symptoms": [
+      "需要执行全量、增量、归档日志或对象级备份。",
+      "需要恢复数据库、表空间、Schema、表或导入导出数据。",
+      "RMAN、expdp、impdp 或归档日志相关错误。"
+    ],
+    "steps": [
+      "确认数据库版本、实例名、归档模式、备份策略、恢复目标和停机窗口。",
+      "恢复前检查数据库状态、备份可用性、归档完整性和剩余空间。",
+      "按场景参考原始手册中的 RMAN、Data Pump、冷备、恢复和常见错误章节。",
+      "生产恢复必须先在测试环境验证，涉及覆盖数据前必须取得业务确认。",
+      "记录备份片、SCN/时间点、恢复命令、日志和验证结果。"
+    ],
+    "commands": [
+      {
+        "command": "rman target /",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "list backup summary;",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "crosscheck backup;",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "report obsolete;",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "backup database plus archivelog;",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "restore database;",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "recover database;",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "expdp system/<password> FULL=Y DIRECTORY=<dir> DUMPFILE=<file>.dmp LOGFILE=<file>.log",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "impdp system/<password> FULL=Y DIRECTORY=<dir> DUMPFILE=<file>.dmp LOGFILE=<file>.log",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "sqlplus / as sysdba",
+        "purpose": "本机以 SYSDBA 登录 Oracle，需授权。",
+        "risk": "低"
+      },
+      {
+        "command": "select status from v$instance;",
+        "purpose": "查看 Oracle 实例状态。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "RMAN validate 或恢复验证通过。",
+      "目标对象、表空间或数据库状态正常。",
+      "应用连接和关键业务 SQL 验证正常。"
+    ],
+    "notes": [
+      "本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。",
+      "本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。",
+      "涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。",
+      "手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。"
+    ],
+    "search_text": "﻿ Oracle 数据库备份与恢复参考手册 适用范围 适用于 Oracle RMAN、Data Pump、冷备、恢复验证和常见错误处理。 适合作为 Oracle 备份恢复、迁移和对象级恢复前的操作参考。 常见现象 需要执行全量、增量、归档日志或对象级备份。 需要恢复数据库、表空间、Schema、表或导入导出数据。 RMAN、expdp、impdp 或归档日志相关错误。 处理步骤 1. 确认数据库版本、实例名、归档模式、备份策略、恢复目标和停机窗口。 2. 恢复前检查数据库状态、备份可用性、归档完整性和剩余空间。 3. 按场景参考原始手册中的 RMAN、Data Pump、冷备、恢复和常见错误章节。 4. 生产恢复必须先在测试环境验证，涉及覆盖数据前必须取得业务确认。 5. 记录备份片、SCN/时间点、恢复命令、日志和验证结果。 验证方式 RMAN validate 或恢复验证通过。 目标对象、表空间或数据库状态正常。 应用连接和关键业务 SQL 验证正常。 注意事项 本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。 本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。 涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。 手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。 原始手册 以下内容为导入的原始手册正文，供工程师查阅细节。 Oracle 数据库备份与恢复完全指南 📝 版本：Oracle 12c/18c/19c/21c ⚠️ 生产环境操作前请先在测试环境验证！ 📚 目录 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 1. 备份方式概览 方式 工具 优点 缺点 适用场景 RMAN rman 增量、并行、自动管理 需要学习 生产环境首选 数据泵 expdp/impdp 灵活、可跨平台 逻辑备份、慢 迁移、部分导出 传统导出 exp/imp 兼容旧版本 已淘汰 老系统维护 冷备份 cp/os 命令 简单可靠 需停机 小库、维护窗口 热备份 ALTER TABLESPACE 不停机 复杂、需归档 7x24 系统 闪回 FLASHBACK 秒级恢复 有限制 误操作恢复 2. RMAN 备份（推荐） 2.1 连接 RMAN 2.2 查看数据库信息 2.3 全量备份 2.4 增量备份 2.5 备份特定对象 2.6 配置保留策略 2.7 配置归档日志删除策略 2.8 备份验证 3. RMAN 恢复 3.1 恢复前准备 3.2 完全恢复（数据库关闭） 3.3 完全恢复（表空间级别） 3.4 不完全恢复（时间点恢复） ⚠️ 注意： RESETLOGS 会重置日志序列，之后需要重新做全量备份！ 3.5 恢复控制文件 3.6 恢复 SPFILE 3.7 恢复单个数据文件 3.8 块级别恢复（最小化停机） 4. 数据泵 expdp/impdp 4.1 创建目录对象 4.2 导出（expdp） 4.3 导入（impdp） 4.4 网络导入导出（不生成文件） 4.5 查看作业状态 5. 传统导出导入 exp/imp ⚠️ 注意： 已淘汰，仅用于兼容旧版本 6. 冷备份（脱机备份） 6.1 备份步骤 6.2 恢复步骤 7. 热备份（联机备份） ⚠️ 前提： 数据库必须处于归档模式 7.1 检查归档模式 7.2 启用归档模式 7.3 表空间级别热备份 7.4 数据库级别热备份（10g+） 7.5 热备份恢复 8. Flashback 闪回技术 8.1 启用闪回 8.2 闪回查询 8.3 闪回表 8.4 闪回数据库 8.5 创建还原点 9. 定时备份脚本 9.1 RMAN 全备脚本 9.2 数据泵备份脚本 9.3 添加定时任务 10. 常见错误与解决方案 ❌ 错误 1：ORA 01034: ORACLE not available 原因： 数据库未启动或环境变量错误 解决： ❌ 错误 2：ORA 01555: snapshot too old 原因： 回滚段太小，长时间查询被覆盖 解决： ❌ 错误 3：ORA 00257: Archiver error 原因： 归档日志满了 解决： ❌ 错误 4：ORA 19504: failed to create file 原因： 备份文件已存在或目录权限问题 解决： ❌ 错误 5：ORA 01157: cannot identify/lock data file 原因： 数据文件丢失或损坏 解决： ❌ 错误 6：ORA 00205: error in identifying control file 原因： 控制文件损坏或"
+  },
+  {
+    "doc_id": "xtrabackup-guide",
+    "title": "Percona XtraBackup 完全指南",
+    "status": "usable",
+    "type": "reference",
+    "asset_types": [
+      "database",
+      "server"
+    ],
+    "systems": [
+      "mysql",
+      "percona-xtrabackup"
+    ],
+    "issue_types": [
+      "backup",
+      "restore",
+      "data-recovery"
+    ],
+    "tags": [
+      "xtrabackup",
+      "mysql",
+      "physical-backup",
+      "incremental-backup",
+      "restore"
+    ],
+    "keywords": [
+      "Percona XtraBackup 完全指南",
+      "xtrabackup",
+      "mysql",
+      "physical-backup",
+      "incremental-backup",
+      "restore",
+      "percona-xtrabackup",
+      "backup",
+      "data-recovery",
+      "database",
+      "server"
+    ],
+    "path": "docs/candidate/server/database/xtrabackup-guide.md",
+    "content_preview": "﻿ Percona XtraBackup 备份恢复参考手册 适用范围 适用于 MySQL/Percona 使用 XtraBackup 执行物理热备、增量备份、压缩加密、恢复和验证。 适合作为较大数据库备份恢复和备份自动化参考。 常见现象 需要执行全量或增量物理备份。 需要准备备份、恢复数据目录或验证备份可恢复性。 XtraBackup 权限、版本、redo 日志或恢复过程异常。 处理步骤 1. 确认 MySQL 版本、XtraBackup 版本、备份用户权限、备份目录和磁盘空间。 2. 备份前确认业务影响、保留策略、加密方式和监控告警。 3. 按场景参考原始手册中的全量备份、增量备份、prep",
+    "applicability": [
+      "适用于 MySQL/Percona 使用 XtraBackup 执行物理热备、增量备份、压缩加密、恢复和验证。",
+      "适合作为较大数据库备份恢复和备份自动化参考。"
+    ],
+    "symptoms": [
+      "需要执行全量或增量物理备份。",
+      "需要准备备份、恢复数据目录或验证备份可恢复性。",
+      "XtraBackup 权限、版本、redo 日志或恢复过程异常。"
+    ],
+    "steps": [
+      "确认 MySQL 版本、XtraBackup 版本、备份用户权限、备份目录和磁盘空间。",
+      "备份前确认业务影响、保留策略、加密方式和监控告警。",
+      "按场景参考原始手册中的全量备份、增量备份、prepare、恢复、验证和常见错误章节。",
+      "恢复前必须停止目标实例、备份原数据目录，并优先在测试环境验证。",
+      "记录备份链、LSN、prepare 日志、恢复命令和业务验证结果。"
+    ],
+    "commands": [
+      {
+        "command": "xtrabackup --backup --target-dir=/backup/full --user=<user> --password=<password>",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "xtrabackup --prepare --target-dir=/backup/full",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "systemctl stop mysqld",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "xtrabackup --copy-back --target-dir=/backup/full",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "chown -R mysql:mysql /var/lib/mysql",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "systemctl start mysqld",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "xtrabackup --backup --target-dir=/backup/inc1 --incremental-basedir=/backup/full --user=<user> --password=<password>",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "cat /backup/full/xtrabackup_checkpoints",
+        "purpose": "",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "xtrabackup prepare 成功，无关键错误。",
+      "恢复后 MySQL 可正常启动。",
+      "关键库表、主从状态或业务查询正常。"
+    ],
+    "notes": [
+      "本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。",
+      "本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。",
+      "涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。",
+      "手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。"
+    ],
+    "search_text": "﻿ Percona XtraBackup 备份恢复参考手册 适用范围 适用于 MySQL/Percona 使用 XtraBackup 执行物理热备、增量备份、压缩加密、恢复和验证。 适合作为较大数据库备份恢复和备份自动化参考。 常见现象 需要执行全量或增量物理备份。 需要准备备份、恢复数据目录或验证备份可恢复性。 XtraBackup 权限、版本、redo 日志或恢复过程异常。 处理步骤 1. 确认 MySQL 版本、XtraBackup 版本、备份用户权限、备份目录和磁盘空间。 2. 备份前确认业务影响、保留策略、加密方式和监控告警。 3. 按场景参考原始手册中的全量备份、增量备份、prepare、恢复、验证和常见错误章节。 4. 恢复前必须停止目标实例、备份原数据目录，并优先在测试环境验证。 5. 记录备份链、LSN、prepare 日志、恢复命令和业务验证结果。 验证方式 xtrabackup prepare 成功，无关键错误。 恢复后 MySQL 可正常启动。 关键库表、主从状态或业务查询正常。 注意事项 本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。 本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。 涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。 手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。 原始手册 以下内容为导入的原始手册正文，供工程师查阅细节。 Percona XtraBackup 完全指南 📝 版本：XtraBackup 8.0 (MySQL 8.0) / XtraBackup 2.4 (MySQL 5.7) ⚠️ 生产环境操作前请先在测试环境验证！ 📚 目录 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 1. XtraBackup 简介 1.1 什么是 XtraBackup？ Percona XtraBackup 是 开源的 MySQL 热备份工具 ，支持： ✅ InnoDB 引擎（主要支持） ✅ XtraDB 引擎 ✅ MyISAM 引擎（有限支持） ✅ 热备份 （不停机） ✅ 增量备份 ✅ 压缩备份 ✅ 流式备份 1.2 版本对应关系 XtraBackup 版本 MySQL 版本 XtraBackup 8.0 MySQL 8.0 XtraBackup 2.4 MySQL 5.7 / 5.6 XtraBackup 2.3 MySQL 5.6 / 5.5 1.3 核心概念 术语 说明 全量备份 备份所有数据文件 增量备份 只备份自上次备份后变化的数据（基于 LSN） 差异备份 只备份自上次全量备份后变化的数据 Prepare 应用日志使备份一致（必须步骤） LSN Log Sequence Number，日志序列号 2. 安装与配置 2.1 Ubuntu/Debian 安装 2.2 CentOS/RHEL 安装 2.3 创建备份用户 2.4 MySQL 配置要求 编辑 /etc/mysql/mysql.conf.d/mysqld.cnf ： 重启 MySQL： 2.5 创建备份目录 3. 全量备份 3.1 基本全量备份 3.2 全量备份（推荐参数） 参数说明： 参数 作用 parallel 并行线程数 compress 启用压缩 compress threads 压缩线程数 checksum 校验和检查 safe slave backup 确保从库安全 3.3 全量备份（流式输出） 3.4 全量备份（加密） 3.5 查看备份信息 4. 增量备份 4.1 增量备份原理 XtraBackup 通过比较 LSN（Log Sequence Number） 来实现增量备份： 全量备份后记录 LSN 增量备份只复制 LSN 之后的变化数据 基于 xtrabackup checkpoints 文件 4.2 创建增量备份链 4.3 增量备份策略（推荐） 4.4 查看增量备份信息 5. 差异备份 5.1 差异备份 vs 增量备份 类型 基于 大小 恢复速度 增量备份 上次备份（全量或增量） 小 慢（需要应用所有增量） 差异备份 上次全量备份 较大 快（只需全量 + 最后一次差异） 5.2 创建差异备份 5.3 差异备份策略 6. 备份恢复 6.1 Prepare 备份（必须步骤） ⚠️ 重要： 恢复前必须先 Prepare，使备份数据一致！ 6.2 Prepare 差异备份 6.3 恢复备份（停机恢复） 6.4 恢复到新位置（不停机） 6.5 使用 xbstream 恢复 6.6 使用压缩备份恢复 6.7"
+  },
+  {
+    "doc_id": "huawei-switch-config-guide",
+    "title": "华为交换机配置完全指南",
+    "status": "usable",
+    "type": "reference",
+    "asset_types": [
+      "network-device",
+      "switch"
+    ],
+    "systems": [
+      "huawei-vrp",
+      "switch"
+    ],
+    "issue_types": [
+      "network-unavailable",
+      "switch-config",
+      "port-down"
+    ],
+    "tags": [
+      "huawei",
+      "switch",
+      "vrp",
+      "vlan",
+      "stp",
+      "acl",
+      "ssh"
+    ],
+    "keywords": [
+      "华为交换机配置完全指南",
+      "huawei",
+      "switch",
+      "vrp",
+      "vlan",
+      "stp",
+      "acl",
+      "ssh",
+      "huawei-vrp",
+      "network-unavailable",
+      "switch-config",
+      "port-down",
+      "network-device"
+    ],
+    "path": "docs/candidate/server/network/huawei-switch-config-guide.md",
+    "content_preview": "﻿ 华为交换机配置与排障参考手册 适用范围 适用于华为交换机基础配置、VLAN、接口、路由、ACL、安全、监控维护和常见故障排查。 适合作为网络工程师变更前核对和故障定位参考。 常见现象 交换机端口 Down、VLAN 不通或网关不可达。 SSH/Telnet 登录、管理 IP、NTP、日志或配置保存异常。 ACL、路由、DHCP、STP、链路聚合或镜像配置异常。 处理步骤 1. 确认设备型号、VRP 版本、变更目标、影响范围和回退配置。 2. 优先执行只读检查：display current configuration、display interface、display vlan、displ",
+    "applicability": [
+      "适用于华为交换机基础配置、VLAN、接口、路由、ACL、安全、监控维护和常见故障排查。",
+      "适合作为网络工程师变更前核对和故障定位参考。"
+    ],
+    "symptoms": [
+      "交换机端口 Down、VLAN 不通或网关不可达。",
+      "SSH/Telnet 登录、管理 IP、NTP、日志或配置保存异常。",
+      "ACL、路由、DHCP、STP、链路聚合或镜像配置异常。"
+    ],
+    "steps": [
+      "确认设备型号、VRP 版本、变更目标、影响范围和回退配置。",
+      "优先执行只读检查：display current-configuration、display interface、display vlan、display ip routing-table、display logbuffer 等。",
+      "按问题类型参考原始手册中的基础配置、VLAN、路由、ACL、安全或监控维护章节。",
+      "涉及接口关闭、路由变更、ACL 变更、配置恢复和重启前，必须备份当前配置并在维护窗口操作。",
+      "处理后保存配置，并记录变更前后关键状态。"
+    ],
+    "commands": [
+      {
+        "command": "display current-configuration",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "display interface brief",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "display interface GigabitEthernet 0/0/1",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "display vlan",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "display ip interface brief",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "display ip routing-table",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "display logbuffer",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "display stp brief",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "display mac-address",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "display arp",
+        "purpose": "",
+        "risk": "低"
+      },
+      {
+        "command": "ping <target-ip>",
+        "purpose": "测试网络连通性。",
+        "risk": "低"
+      },
+      {
+        "command": "tracert <target-ip>",
+        "purpose": "查看到目标地址的路由路径。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "目标端口、VLAN、路由或管理访问恢复。",
+      "业务连通性测试正常。",
+      "配置保存成功，重启风险和回退方案已确认。"
+    ],
+    "notes": [
+      "本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。",
+      "本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。",
+      "涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。",
+      "手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。"
+    ],
+    "search_text": "﻿ 华为交换机配置与排障参考手册 适用范围 适用于华为交换机基础配置、VLAN、接口、路由、ACL、安全、监控维护和常见故障排查。 适合作为网络工程师变更前核对和故障定位参考。 常见现象 交换机端口 Down、VLAN 不通或网关不可达。 SSH/Telnet 登录、管理 IP、NTP、日志或配置保存异常。 ACL、路由、DHCP、STP、链路聚合或镜像配置异常。 处理步骤 1. 确认设备型号、VRP 版本、变更目标、影响范围和回退配置。 2. 优先执行只读检查：display current configuration、display interface、display vlan、display ip routing table、display logbuffer 等。 3. 按问题类型参考原始手册中的基础配置、VLAN、路由、ACL、安全或监控维护章节。 4. 涉及接口关闭、路由变更、ACL 变更、配置恢复和重启前，必须备份当前配置并在维护窗口操作。 5. 处理后保存配置，并记录变更前后关键状态。 验证方式 目标端口、VLAN、路由或管理访问恢复。 业务连通性测试正常。 配置保存成功，重启风险和回退方案已确认。 注意事项 本文属于服务器、数据库或网络设备高风险运维参考，生产环境操作前必须完成审批、备份、维护窗口和回退方案确认。 本文中的命令和参数来自通用手册，执行前必须替换为本公司实际环境，并先在测试环境验证。 涉及删除、覆盖、重启、恢复、扩缩容、路由/ACL 变更、证书/密钥、数据库恢复等动作时，不允许直接照抄执行。 手册中的示例密码、Token 和密钥已做脱敏处理；不得在知识库中保存真实凭据。 原始手册 以下内容为导入的原始手册正文，供工程师查阅细节。 华为交换机配置完全指南 📝 版本：VRP 5.x / VRP 8.x ⚠️ 生产环境操作前请先在测试环境验证！ 📚 目录 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 1. 华为交换机系列与版本 1.1 主要系列 系列 定位 典型型号 S1700 入门级 S1700 8G, S1700 24G S2700 二层接入 S2700 26TP, S2700 52P S3700 三层接入 S3700 28TP, S3700 52P S5700 企业接入/汇聚 S5700 28X, S5700 52X S6700 万兆汇聚 S6700 24X, S6700 48X S7700 核心交换机 S7703, S7706, S7712 S9700 数据中心核心 S9703, S9706, S9712 S12700 敏捷交换机 S12704, S12708, S12712 1.2 VRP 版本区别 VRP 版本 对应系统 特点 VRP 5.x V200R001 V200R011 传统命令行，配置方式较老 VRP 8.x V200R019+ 新命令行，支持 Python 自动化，配置更灵活 1.3 VRP 5.x vs VRP 8.x 命令差异 功能 VRP 5.x VRP 8.x 进入系统视图 system view system view 查看配置 display current configuration display current configuration 保存配置 save save VLAN 批量创建 vlan batch 10 20 30 vlan batch 10 to 30 接口描述 description xxx description xxx SSH 开启 stelnet server enable ssh server enable 2. 基础配置 2.1 首次登录 2.2 SSH 配置（推荐） 2.3 接口基础配置 2.4 管理 IP 配置 2.5 保存与恢复 2.6 系统时间配置 3. VLAN 配置 3.1 创建 VLAN 3.2 Access 端口配置 3.3 Trunk 端口配置 3.4 Hybrid 端口配置 3.5 VLAN 间路由 3.6 Super VLAN 4. 链路聚合 4.1 手工负载分担 4.2 LACP 模式 4.3 跨设备链路聚合（M LAG） 5. 生成树协议 5.1 STP 基础配置 5.2 RSTP 配置 5.3 MSTP 配置 5.4 STP 优化 6. 路由配置 6.1 静态路由 6.2 OSPF 配置 6.3 OSPF 多区域 6.4 BGP 配置 7. ACL 与安全 7.1 基本 ACL（2000 2999） 7.2 高级 ACL（3000 3999） 7.3 二层 ACL（4000 4999） 7.4 端口安全 7.5 DHCP Snooping 7.6 IP Source Guar"
+  },
+  {
+    "doc_id": "linux-cpu-high-usage-alert",
+    "title": "Linux 服务器 CPU 使用率过高告警处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "server"
+    ],
+    "systems": [
+      "linux"
+    ],
+    "issue_types": [
+      "cpu-high",
+      "performance"
+    ],
+    "tags": [
+      "cpu",
+      "linux",
+      "server",
+      "load",
+      "process"
+    ],
+    "keywords": [
+      "CPU使用率达到95%",
+      "CPU使用率超过95%",
+      "CPU使用率",
+      "CPU过高",
+      "cpu high",
+      "node告警",
+      "业务机器CPU使用率",
+      "服务器CPU",
+      "load average",
+      "top",
+      "pidstat",
+      "Linux 服务器 CPU 使用率过高告警处理指南",
+      "cpu",
+      "linux",
+      "server",
+      "load",
+      "process",
+      "cpu-high",
+      "performance"
+    ],
+    "path": "docs/candidate/server/os/linux-cpu-high-usage-alert.md",
+    "content_preview": "Linux 服务器 CPU 使用率过高告警处理指南 适用范围 适用于服务器、业务机器、Node 节点出现 CPU 使用率达到或超过 90%/95% 的告警。 适用于规则名称包含“CPU使用率达到95%”“CPU使用率超过95%”“业务机器CPU使用率”等场景。 常见现象 CPU 使用率持续高于告警阈值。 业务响应变慢、接口超时或应用日志出现大量慢请求。 某个进程、容器或 Pod 长时间占用 CPU。 判断依据 先确认是单台主机、容器、Pod 还是整个业务集群 CPU 升高。 区分短时尖峰和持续高负载。 如果告警来自 Kubernetes 节点或 Pod，应优先结合 Kubernetes 运维手",
+    "applicability": [
+      "适用于服务器、业务机器、Node 节点出现 CPU 使用率达到或超过 90%/95% 的告警。",
+      "适用于规则名称包含“CPU使用率达到95%”“CPU使用率超过95%”“业务机器CPU使用率”等场景。"
+    ],
+    "symptoms": [
+      "CPU 使用率持续高于告警阈值。",
+      "业务响应变慢、接口超时或应用日志出现大量慢请求。",
+      "某个进程、容器或 Pod 长时间占用 CPU。"
+    ],
+    "steps": [
+      "确认告警主机、业务系统、发生时间、持续时长和影响范围。",
+      "查看 CPU 总体占用、负载、进程排名和最近变更记录。",
+      "定位高 CPU 来源：应用进程、数据库进程、容器、批处理任务、备份任务或异常循环。",
+      "对应用进程优先查看应用日志、接口流量、线程状态和发布变更。",
+      "对容器或 Kubernetes 场景，查看容器资源限制、Pod 状态、事件和重启次数。",
+      "如果业务受影响，按预案执行扩容、限流、重启实例、回滚发布或转交对应系统负责人。",
+      "记录高 CPU 进程、处理动作、业务影响、恢复时间和是否需要优化阈值。"
+    ],
+    "commands": [
+      {
+        "command": "uptime",
+        "purpose": "查看系统运行时间和平均负载，判断 CPU 压力是否持续。",
+        "risk": "低"
+      },
+      {
+        "command": "top -c",
+        "purpose": "实时查看 CPU、内存占用最高的进程及完整命令行。",
+        "risk": "低"
+      },
+      {
+        "command": "ps -eo pid,ppid,user,stat,pcpu,pmem,comm,args --sort=-pcpu | head -20",
+        "purpose": "按指定字段列出进程并排序，用于定位资源占用最高的进程。",
+        "risk": "低"
+      },
+      {
+        "command": "pidstat -u 1 5",
+        "purpose": "按进程采样 CPU 使用率，观察是否持续占用。",
+        "risk": "低"
+      },
+      {
+        "command": "vmstat 1 5",
+        "purpose": "查看 CPU、内存、运行队列、IO 和系统整体压力。",
+        "risk": "低"
+      },
+      {
+        "command": "mpstat -P ALL 1 5",
+        "purpose": "查看各 CPU 核心使用率，判断是否单核打满。",
+        "risk": "低"
+      },
+      {
+        "command": "systemctl status <service-name>",
+        "purpose": "查看指定 Linux 服务状态。",
+        "risk": "低"
+      },
+      {
+        "command": "journalctl -u <service-name> --since \"30 min ago\"",
+        "purpose": "查看 systemd 日志，按服务或时间窗口定位异常。",
+        "risk": "低"
+      },
+      {
+        "command": "docker stats --no-stream",
+        "purpose": "查看容器 CPU 和内存占用快照。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl top pod -A --sort-by=cpu",
+        "purpose": "查看 Kubernetes Pod CPU 占用排序。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl describe pod <pod-name> -n <namespace>",
+        "purpose": "查看 Kubernetes 资源详情、事件和配置。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl logs <pod-name> -n <namespace> --tail=200",
+        "purpose": "查看 Kubernetes Pod 日志。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "CPU 使用率回落到告警阈值以下并保持稳定。",
+      "业务接口、应用日志和监控指标恢复正常。",
+      "告警恢复或不再持续触发。"
+    ],
+    "notes": [
+      "不要直接 kill 进程或重启服务，必须先确认业务影响和回退方案。",
+      "涉及生产业务扩缩容、重启、回滚时应按变更流程执行。",
+      "如果 CPU 告警频繁但业务无异常，应复核告警阈值、采集周期和排除短时尖峰。"
+    ],
+    "search_text": "Linux 服务器 CPU 使用率过高告警处理指南 适用范围 适用于服务器、业务机器、Node 节点出现 CPU 使用率达到或超过 90%/95% 的告警。 适用于规则名称包含“CPU使用率达到95%”“CPU使用率超过95%”“业务机器CPU使用率”等场景。 常见现象 CPU 使用率持续高于告警阈值。 业务响应变慢、接口超时或应用日志出现大量慢请求。 某个进程、容器或 Pod 长时间占用 CPU。 判断依据 先确认是单台主机、容器、Pod 还是整个业务集群 CPU 升高。 区分短时尖峰和持续高负载。 如果告警来自 Kubernetes 节点或 Pod，应优先结合 Kubernetes 运维手册查看资源对象。 处理步骤 1. 确认告警主机、业务系统、发生时间、持续时长和影响范围。 2. 查看 CPU 总体占用、负载、进程排名和最近变更记录。 3. 定位高 CPU 来源：应用进程、数据库进程、容器、批处理任务、备份任务或异常循环。 4. 对应用进程优先查看应用日志、接口流量、线程状态和发布变更。 5. 对容器或 Kubernetes 场景，查看容器资源限制、Pod 状态、事件和重启次数。 6. 如果业务受影响，按预案执行扩容、限流、重启实例、回滚发布或转交对应系统负责人。 7. 记录高 CPU 进程、处理动作、业务影响、恢复时间和是否需要优化阈值。 常用指令 uptime ????????? load average??? CPU ???????????? top c ???? CPU ??????????????????? ps eo pid,ppid,user,stat,pcpu,pmem,comm,args sort= pcpu head 20 ? CPU ??????? 20 ????????? pidstat u 1 5 ????? CPU ?????????????????? vmstat 1 5 ?? CPU???????????????????????? mpstat P ALL 1 5 ??? CPU ???????????????????? systemctl status <service name ?????????????????????????? journalctl u <service name since \"30 min ago\" ???????????????? docker stats no stream ???? CPU ????????????? kubectl top pod A sort by=cpu ?? Kubernetes Pod CPU ?????????? kubectl describe pod <pod name n <namespace ?? Pod ?????????????????? kubectl logs <pod name n <namespace tail=200 ?? Pod ?????????? 验证方式 CPU 使用率回落到告警阈值以下并保持稳定。 业务接口、应用日志和监控指标恢复正常。 告警恢复或不再持续触发。 注意事项 不要直接 kill 进程或重启服务，必须先确认业务影响和回退方案。 涉及生产业务扩缩容、重启、回滚时应按变更流程执行。 如果 CPU 告警频繁但业务无异常，应复核告警阈值、采集周期和排除短时尖峰。"
+  },
+  {
+    "doc_id": "linux-disk-space-high-alert",
+    "title": "Linux 服务器磁盘空间使用率过高告警处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "server",
+      "storage"
+    ],
+    "systems": [
+      "linux"
+    ],
+    "issue_types": [
+      "disk-full",
+      "capacity"
+    ],
+    "tags": [
+      "disk",
+      "filesystem",
+      "linux",
+      "inode",
+      "cleanup"
+    ],
+    "keywords": [
+      "PLM应用磁盘空间剩余小于8G",
+      "Windows_磁盘空间使用率超过95%",
+      "磁盘空间使用率超过97%",
+      "磁盘空间使用率达到90%",
+      "磁盘空间使用率",
+      "磁盘空间剩余小于",
+      "磁盘满",
+      "磁盘空间不足",
+      "df -h",
+      "du -sh",
+      "inode",
+      "Linux 服务器磁盘空间使用率过高告警处理指南",
+      "disk",
+      "filesystem",
+      "linux",
+      "cleanup",
+      "disk-full",
+      "capacity",
+      "server",
+      "storage"
+    ],
+    "path": "docs/candidate/server/os/linux-disk-space-high-alert.md",
+    "content_preview": "Linux 服务器磁盘空间使用率过高告警处理指南 适用范围 适用于服务器磁盘空间使用率超过 90%/95%/97%、磁盘剩余空间小于阈值的告警。 适用于规则名称包含“磁盘空间使用率”“磁盘空间剩余小于”等场景。 常见现象 文件系统使用率过高。 日志、备份、临时文件、容器镜像或数据库文件占用空间。 应用写入失败、数据库异常或系统服务异常。 判断依据 区分磁盘容量不足、inode 耗尽和挂载点异常。 先确认告警挂载点，不要只看根目录。 处理步骤 1. 确认告警主机、挂载点、阈值、使用率和业务影响。 2. 查看文件系统容量、inode、目录占用和近期增长最快的目录。 3. 判断占用来源：应用日志、数",
+    "applicability": [
+      "适用于服务器磁盘空间使用率超过 90%/95%/97%、磁盘剩余空间小于阈值的告警。",
+      "适用于规则名称包含“磁盘空间使用率”“磁盘空间剩余小于”等场景。"
+    ],
+    "symptoms": [
+      "文件系统使用率过高。",
+      "日志、备份、临时文件、容器镜像或数据库文件占用空间。",
+      "应用写入失败、数据库异常或系统服务异常。"
+    ],
+    "steps": [
+      "确认告警主机、挂载点、阈值、使用率和业务影响。",
+      "查看文件系统容量、inode、目录占用和近期增长最快的目录。",
+      "判断占用来源：应用日志、数据库文件、备份文件、容器镜像、临时文件或异常 core dump。",
+      "清理前确认文件归属、保留策略、备份要求和是否允许删除。",
+      "对日志类文件优先采用归档、压缩、日志轮转或调整保留策略。",
+      "对数据库、容器和业务目录，必须联系对应负责人确认后处理。",
+      "必要时扩容磁盘或调整挂载，记录处理动作和容量变化。"
+    ],
+    "commands": [
+      {
+        "command": "df -hT",
+        "purpose": "查看各挂载点容量、使用率和文件系统类型。",
+        "risk": "低"
+      },
+      {
+        "command": "df -ih",
+        "purpose": "查看 inode 使用率，排查小文件过多。",
+        "risk": "低"
+      },
+      {
+        "command": "lsblk -f",
+        "purpose": "查看磁盘、分区、挂载点和文件系统。",
+        "risk": "低"
+      },
+      {
+        "command": "mount | column -t",
+        "purpose": "查看当前挂载信息。",
+        "risk": "低"
+      },
+      {
+        "command": "du -xh --max-depth=1 / | sort -h",
+        "purpose": "统计目录空间占用，用于定位大目录。",
+        "risk": "低"
+      },
+      {
+        "command": "du -xh --max-depth=1 /var | sort -h",
+        "purpose": "统计目录空间占用，用于定位大目录。",
+        "risk": "低"
+      },
+      {
+        "command": "find /var/log -type f -size +100M -printf \"%s %p\\n\" | sort -nr | head",
+        "purpose": "按条件查找文件，用于定位大文件、日志或异常文件。",
+        "risk": "低"
+      },
+      {
+        "command": "lsof +L1",
+        "purpose": "查找已删除但仍被进程占用的文件。",
+        "risk": "低"
+      },
+      {
+        "command": "journalctl --disk-usage",
+        "purpose": "查看 systemd journal 日志占用。",
+        "risk": "低"
+      },
+      {
+        "command": "docker system df",
+        "purpose": "查看 Docker 镜像、容器、卷占用。",
+        "risk": "低"
+      },
+      {
+        "command": "docker image prune -a --dry-run",
+        "purpose": "预览 Docker 镜像清理影响，不实际删除。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl get pvc -A",
+        "purpose": "查看 Kubernetes PVC 列表和容量。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "告警挂载点使用率低于阈值。",
+      "inode 使用率正常。",
+      "应用写入、数据库状态和业务访问正常。"
+    ],
+    "notes": [
+      "不要删除不明文件、数据库文件、正在写入的日志或备份链。",
+      "清理生产文件前必须确认业务归属和回退方案。",
+      "频繁磁盘告警应推动日志轮转、备份保留和容量规划优化。"
+    ],
+    "search_text": "Linux 服务器磁盘空间使用率过高告警处理指南 适用范围 适用于服务器磁盘空间使用率超过 90%/95%/97%、磁盘剩余空间小于阈值的告警。 适用于规则名称包含“磁盘空间使用率”“磁盘空间剩余小于”等场景。 常见现象 文件系统使用率过高。 日志、备份、临时文件、容器镜像或数据库文件占用空间。 应用写入失败、数据库异常或系统服务异常。 判断依据 区分磁盘容量不足、inode 耗尽和挂载点异常。 先确认告警挂载点，不要只看根目录。 处理步骤 1. 确认告警主机、挂载点、阈值、使用率和业务影响。 2. 查看文件系统容量、inode、目录占用和近期增长最快的目录。 3. 判断占用来源：应用日志、数据库文件、备份文件、容器镜像、临时文件或异常 core dump。 4. 清理前确认文件归属、保留策略、备份要求和是否允许删除。 5. 对日志类文件优先采用归档、压缩、日志轮转或调整保留策略。 6. 对数据库、容器和业务目录，必须联系对应负责人确认后处理。 7. 必要时扩容磁盘或调整挂载，记录处理动作和容量变化。 常用指令 df hT ????????????????????????? df ih ?? inode ????????????????? lsblk f ?????????????????????? mount column t ?????????????? du xh max depth=1 / sort h ??????????????????????????? du xh max depth=1 /var sort h ?? /var ?????????????????? find /var/log type f size +100M printf \"%s %p n\" sort nr head ????????????? lsof +L1 ????????????????????? journalctl disk usage ?? systemd journal ?????????? docker system df ?? Docker ??????????????? docker image prune a dry run ?? Docker ?????????????????? kubectl get pvc A ?? Kubernetes PVC ??????????? 验证方式 告警挂载点使用率低于阈值。 inode 使用率正常。 应用写入、数据库状态和业务访问正常。 注意事项 不要删除不明文件、数据库文件、正在写入的日志或备份链。 清理生产文件前必须确认业务归属和回退方案。 频繁磁盘告警应推动日志轮转、备份保留和容量规划优化。"
+  },
+  {
+    "doc_id": "linux-memory-high-usage-alert",
+    "title": "Linux 服务器内存使用率过高告警处理指南",
+    "status": "usable",
+    "type": "troubleshooting",
+    "asset_types": [
+      "server"
+    ],
+    "systems": [
+      "linux"
+    ],
+    "issue_types": [
+      "memory-high",
+      "performance"
+    ],
+    "tags": [
+      "memory",
+      "linux",
+      "server",
+      "oom",
+      "process"
+    ],
+    "keywords": [
+      "WMS业务机器内存使用率",
+      "内存使用率超过95%",
+      "内存使用率达到97%",
+      "内存使用率达到95%",
+      "内存使用率",
+      "内存压力过大",
+      "memory pressure",
+      "oom",
+      "free -h",
+      "vmstat",
+      "业务机器内存使用率",
+      "Linux 服务器内存使用率过高告警处理指南",
+      "memory",
+      "linux",
+      "server",
+      "process",
+      "memory-high",
+      "performance"
+    ],
+    "path": "docs/candidate/server/os/linux-memory-high-usage-alert.md",
+    "content_preview": "Linux 服务器内存使用率过高告警处理指南 适用范围 适用于服务器、业务机器、Kubernetes 节点内存使用率超过 90%/95%/97% 的告警。 适用于规则名称包含“内存使用率超过95%”“内存使用率达到97%”“内存压力过大”等场景。 常见现象 内存使用率持续高于阈值。 系统出现 OOM、进程被杀、服务响应慢或容器重启。 Kubernetes 节点出现 MemoryPressure。 判断依据 区分 Linux 缓存占用和真实应用内存压力。 结合 swap、OOM 日志、进程 RSS、容器限制和业务日志判断。 处理步骤 1. 确认告警对象、业务系统、持续时间和是否伴随 OOM 或服",
+    "applicability": [
+      "适用于服务器、业务机器、Kubernetes 节点内存使用率超过 90%/95%/97% 的告警。",
+      "适用于规则名称包含“内存使用率超过95%”“内存使用率达到97%”“内存压力过大”等场景。"
+    ],
+    "symptoms": [
+      "内存使用率持续高于阈值。",
+      "系统出现 OOM、进程被杀、服务响应慢或容器重启。",
+      "Kubernetes 节点出现 MemoryPressure。"
+    ],
+    "steps": [
+      "确认告警对象、业务系统、持续时间和是否伴随 OOM 或服务重启。",
+      "查看内存、swap、进程占用、容器占用和系统日志。",
+      "判断是缓存、正常业务峰值、内存泄漏、批处理任务还是资源限制过低。",
+      "Kubernetes 场景下查看 Pod requests/limits、节点资源、事件和重启次数。",
+      "如确认业务异常，按预案扩容、重启异常实例、回滚发布或转应用负责人分析内存泄漏。",
+      "记录高内存进程、处理动作、是否 OOM、恢复时间和后续优化建议。"
+    ],
+    "commands": [
+      {
+        "command": "free -h",
+        "purpose": "查看内存、缓存和 swap 使用情况。",
+        "risk": "低"
+      },
+      {
+        "command": "vmstat 1 5",
+        "purpose": "查看 CPU、内存、运行队列、IO 和系统整体压力。",
+        "risk": "低"
+      },
+      {
+        "command": "ps -eo pid,ppid,user,stat,rss,vsz,pmem,comm,args --sort=-rss | head -20",
+        "purpose": "按指定字段列出进程并排序，用于定位资源占用最高的进程。",
+        "risk": "低"
+      },
+      {
+        "command": "top -o %MEM",
+        "purpose": "实时查看内存占用最高的进程。",
+        "risk": "低"
+      },
+      {
+        "command": "dmesg -T | grep -i -E \"oom|killed process\"",
+        "purpose": "查看内核日志，常用于排查 OOM、磁盘、驱动等系统级异常。",
+        "risk": "低"
+      },
+      {
+        "command": "journalctl --since \"1 hour ago\" | grep -i -E \"oom|killed process\"",
+        "purpose": "查看 systemd 日志，按服务或时间窗口定位异常。",
+        "risk": "低"
+      },
+      {
+        "command": "swapon --show",
+        "purpose": "查看 swap 是否启用及使用情况。",
+        "risk": "低"
+      },
+      {
+        "command": "docker stats --no-stream",
+        "purpose": "查看容器 CPU 和内存占用快照。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl top pod -A --sort-by=memory",
+        "purpose": "查看 Kubernetes Pod 内存占用排序。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl describe node <node-name>",
+        "purpose": "查看 Kubernetes 资源详情、事件和配置。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl describe pod <pod-name> -n <namespace>",
+        "purpose": "查看 Kubernetes 资源详情、事件和配置。",
+        "risk": "低"
+      },
+      {
+        "command": "kubectl logs <pod-name> -n <namespace> --tail=200",
+        "purpose": "查看 Kubernetes Pod 日志。",
+        "risk": "低"
+      }
+    ],
+    "verification": [
+      "内存使用率回落并稳定。",
+      "OOM 或重启不再发生。",
+      "业务访问、日志和监控恢复正常。"
+    ],
+    "notes": [
+      "不要把 Linux buff/cache 简单等同于内存泄漏。",
+      "不要直接清缓存或重启服务作为长期方案。",
+      "涉及生产服务重启、扩容和参数变更时必须确认审批和回退。"
+    ],
+    "search_text": "Linux 服务器内存使用率过高告警处理指南 适用范围 适用于服务器、业务机器、Kubernetes 节点内存使用率超过 90%/95%/97% 的告警。 适用于规则名称包含“内存使用率超过95%”“内存使用率达到97%”“内存压力过大”等场景。 常见现象 内存使用率持续高于阈值。 系统出现 OOM、进程被杀、服务响应慢或容器重启。 Kubernetes 节点出现 MemoryPressure。 判断依据 区分 Linux 缓存占用和真实应用内存压力。 结合 swap、OOM 日志、进程 RSS、容器限制和业务日志判断。 处理步骤 1. 确认告警对象、业务系统、持续时间和是否伴随 OOM 或服务重启。 2. 查看内存、swap、进程占用、容器占用和系统日志。 3. 判断是缓存、正常业务峰值、内存泄漏、批处理任务还是资源限制过低。 4. Kubernetes 场景下查看 Pod requests/limits、节点资源、事件和重启次数。 5. 如确认业务异常，按预案扩容、重启异常实例、回滚发布或转应用负责人分析内存泄漏。 6. 记录高内存进程、处理动作、是否 OOM、恢复时间和后续优化建议。 常用指令 free h ???????? swap ?????????? vmstat 1 5 ?????swap?IO ????????????? ps eo pid,ppid,user,stat,rss,vsz,pmem,comm,args sort= rss head 20 ????? RSS ????? 20 ????????? top o %MEM ??????????????????? dmesg T grep i E \"oom killed process\" ???????? OOM Kill?????? journalctl since \"1 hour ago\" grep i E \"oom killed process\" ????????????? OOM ???????? swapon show ?? swap ??????????????? docker stats no stream ???????????????? kubectl top pod A sort by=memory ?? Kubernetes Pod ???????????? kubectl describe node <node name ?????????????????????? kubectl describe pod <pod name n <namespace ?? Pod ?????????????????? kubectl logs <pod name n <namespace tail=200 ?? Pod ?????????? 验证方式 内存使用率回落并稳定。 OOM 或重启不再发生。 业务访问、日志和监控恢复正常。 注意事项 不要把 Linux buff/cache 简单等同于内存泄漏。 不要直接清缓存或重启服务作为长期方案。 涉及生产服务重启、扩容和参数变更时必须确认审批和回退。"
+  }
+]
