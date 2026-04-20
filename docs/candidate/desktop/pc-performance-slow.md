@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [pc]
 systems: [windows]
 issue_types: [performance-slow]
-tags: [performance, cpu, memory, startup, cleanup]
+tags: [performance, cpu, memory, startup, cleanup, 清灰, 除尘, 清理灰尘, 主机发热, 电脑发热, 打开软件死机, 软件死机]
 source: ticket-history
 evidence_count: 218
 owner: ""

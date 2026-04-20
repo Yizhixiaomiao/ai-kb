@@ -8,7 +8,7 @@ review_required: true
 asset_types: [server, business-system]
 systems: [application, nginx, gateway, nacos]
 issue_types: [service-unavailable, http-error]
-tags: [5xx, 4xx, backend, application, nacos, gateway]
+tags: [5xx, 4xx, backend, application, nacos, gateway, 业务可用性, 可用性告警, 业务不可用, 后端不可用]
 ```
 
 ## 适用范围

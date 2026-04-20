@@ -5,5 +5,9 @@ __pycache__/
 .env.*
 *.log
 
+data/real-ticket-list*.json
+reports/real-ticket-eval*.json
+reports/real-ticket-eval*.md
+
 # Local source data may contain ticket PII or temporary troubleshooting notes.
 工单报修历史记录.csv

@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [pc, network]
 systems: [windows]
 issue_types: [network-unavailable]
-tags: [network, cable, switch, port, wall-jack]
+tags: [network, cable, switch, port, wall-jack, 无网, 无网络, 联不上网, 网线不够长, 网线不通, 网口面板, 墙上网口]
 source: ticket-history
 ```
 

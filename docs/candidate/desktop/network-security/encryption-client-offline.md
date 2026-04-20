@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [pc]
 systems: [windows]
 issue_types: [network-authentication, file-access]
-tags: [encryption-client, dlp, network]
+tags: [encryption-client, dlp, network, 加密, 掉加密, 文件掉加密, 加密策略, 文件打不开]
 source: ticket-history
 ```
 
@@ -29,5 +29,4 @@ source: ticket-history
 
 - 批量用户加密客户端离线。
 - 涉及图纸加密、解密或权限策略。
-
 

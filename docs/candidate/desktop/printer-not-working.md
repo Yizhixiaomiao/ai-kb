@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [pc, printer]
 systems: [windows]
 issue_types: [printer-not-working]
-tags: [printer, driver, print-spooler, windows]
+tags: [printer, driver, print-spooler, windows, 打印机不能使用, 打印机无法使用, 打印机不打印, 打印机不能打印, 连接失败]
 source: ticket-history
 evidence_count: 458
 owner: ""
@@ -45,6 +45,15 @@ updated_at: 2026-04-17
 - 本机能成功打印测试页。
 - 业务系统或办公软件能正常输出正式文档。
 
+## 常用指令
+
+- `control printers`：打开 Windows 打印机列表，用于检查默认打印机、打印队列和脱机状态。
+- `printmanagement.msc`：打开打印管理，查看打印驱动、端口、队列和打印服务器连接。
+- `services.msc`：打开服务管理器，检查 Print Spooler 打印后台处理服务是否运行。
+- `net stop spooler`：停止打印后台处理服务，常用于清理卡住的打印队列前置操作。
+- `net start spooler`：启动打印后台处理服务，清理队列或重装驱动后用于恢复打印。
+- `Get-Printer`：PowerShell 查看本机打印机列表和状态。
+
 ## 风险点
 
 - 不要删除其他用户正在使用的共享打印机配置。
@@ -61,5 +70,3 @@ updated_at: 2026-04-17
 - [ ] 补充打印服务器地址规范。
 - [ ] 补充常见打印机型号驱动位置。
 - [ ] 补充 Print Spooler 服务处理方式。
-
-

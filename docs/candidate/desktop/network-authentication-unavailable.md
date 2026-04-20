@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [pc, network]
 systems: [windows, mes, authentication-client]
 issue_types: [network-unavailable, network-authentication, login-failed]
-tags: [network, mes, authentication, windows, 网络认证, 认证客户端, 认证助手, 没网, 无法联网]
+tags: [network, mes, authentication, windows, 网络认证, 认证客户端, 认证助手, 没网, 无网, 无网络, 无法联网, 联不上网, 连不上网]
 source: ticket-history
 evidence_count: 601
 owner: ""

@@ -5,6 +5,7 @@ import csv
 import json
 import re
 from collections import Counter, defaultdict
+from functools import lru_cache
 from pathlib import Path
 
 from vector_model import build_vector_records, vector_search
@@ -15,6 +16,7 @@ DEFAULT_INDEX = ROOT / "data" / "kb-index.json"
 DEFAULT_TICKETS = ROOT / "工单报修历史记录.csv"
 DEFAULT_OUTPUT = ROOT / "reports" / "recommendation-dry-run.csv"
 DEFAULT_SUMMARY = ROOT / "reports" / "recommendation-summary.md"
+DEFAULT_SYNONYMS = ROOT / "taxonomy" / "query-synonyms.json"
 
 
 STOP_WORDS = {
@@ -38,6 +40,54 @@ def normalize(text: str) -> str:
 
 def compact(text: str) -> str:
     return re.sub(r"[\s,，。.!！?？:：;；、/\\|_-]+", "", normalize(text))
+
+
+@lru_cache(maxsize=1)
+def load_query_synonyms(path: str = str(DEFAULT_SYNONYMS)) -> tuple[tuple[str, ...], ...]:
+    source = Path(path)
+    if not source.exists():
+        return ()
+    groups = json.loads(source.read_text(encoding="utf-8"))
+    result = []
+    for group in groups:
+        terms = [group.get("canonical", "")]
+        terms.extend(group.get("aliases", []))
+        cleaned = []
+        seen = set()
+        for term in terms:
+            term = normalize(str(term))
+            key = compact(term)
+            if not term or not key or key in seen:
+                continue
+            seen.add(key)
+            cleaned.append(term)
+        if cleaned:
+            result.append(tuple(cleaned))
+    return tuple(result)
+
+
+def expand_query_terms(text: str) -> str:
+    text = text or ""
+    text_norm = normalize(text)
+    text_compact = compact(text)
+    additions = []
+    seen = set()
+    for terms in load_query_synonyms():
+        matched = False
+        for term in terms:
+            if keyword_hit(term, text_norm, text_compact):
+                matched = True
+                break
+        if not matched:
+            continue
+        for term in terms:
+            key = compact(term)
+            if key and key not in seen and key not in text_compact:
+                seen.add(key)
+                additions.append(term)
+    if not additions:
+        return text
+    return text + "\n" + " ".join(additions)
 
 
 def split_terms(values) -> list[str]:
@@ -72,7 +122,10 @@ def keyword_hit(keyword: str, text_norm: str, text_compact: str) -> bool:
     return len(key_compact) >= 2 and key_compact in text_compact
 
 
-def score_doc(doc: dict, description: str, resolution: str = "") -> tuple[int, list[str]]:
+def score_doc(doc: dict, description: str, resolution: str = "", expand: bool = True) -> tuple[int, list[str]]:
+    if expand:
+        description = expand_query_terms(description)
+        resolution = expand_query_terms(resolution)
     desc_norm = normalize(description)
     desc_compact = compact(description)
     text_norm = normalize(f"{description}\n{resolution}")
@@ -146,9 +199,11 @@ def recommendation_payload(doc: dict, score: int, reasons: list[str], vector_sco
 
 
 def recommend_rules(index: list[dict], description: str, resolution: str = "", top_k: int = 3) -> list[dict]:
+    expanded_description = expand_query_terms(description)
+    expanded_resolution = expand_query_terms(resolution)
     scored = []
     for doc in index:
-        score, reasons = score_doc(doc, description, resolution)
+        score, reasons = score_doc(doc, expanded_description, expanded_resolution, expand=False)
         if score > 0 and reasons:
             scored.append(recommendation_payload(doc, score, reasons))
     scored.sort(key=lambda item: (-item["score"], item["title"]))
@@ -169,9 +224,11 @@ def recommend(
 
     by_doc_id = {doc["doc_id"]: doc for doc in index}
     scored: dict[str, dict] = {}
+    expanded_description = expand_query_terms(description)
+    expanded_resolution = expand_query_terms(resolution)
 
     for doc in index:
-        rule_score, reasons = score_doc(doc, description, resolution)
+        rule_score, reasons = score_doc(doc, expanded_description, expanded_resolution, expand=False)
         if rule_score > 0 and reasons:
             scored[doc["doc_id"]] = recommendation_payload(doc, rule_score, reasons)
 

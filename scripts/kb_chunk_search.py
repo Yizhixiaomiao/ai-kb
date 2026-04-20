@@ -1,8 +1,9 @@
 from __future__ import annotations
 
+import re
 from collections import defaultdict
 
-from recommend_from_ticket import keyword_hit, normalize, compact, score_doc, split_terms
+from recommend_from_ticket import keyword_hit, normalize, compact, score_doc, split_terms, expand_query_terms
 from vector_model import DEFAULT_DIMENSIONS, cosine_similarity, vectorize_text
 
 
@@ -16,7 +17,22 @@ TYPE_WEIGHTS = {
 }
 
 
-def score_chunk(chunk: dict, query: str) -> tuple[int, list[str]]:
+def is_software_catalog_chunk(chunk: dict) -> bool:
+    return chunk.get("type") == "software-catalog" or "software-catalog" in chunk.get("tags", [])
+
+
+def is_software_lookup_query(query: str) -> bool:
+    return bool(
+        re.search(
+            r"下载|安装包|软件库|驱动.*(下载|路径|在哪)|客户端.*(下载|安装|升级)|升级.*客户端|重装.*客户端",
+            query,
+            re.I,
+        )
+    )
+
+
+def score_chunk(chunk: dict, query: str, original_query: str | None = None) -> tuple[int, list[str]]:
+    software_intent_query = original_query or query
     query_norm = normalize(query)
     query_compact = compact(query)
     score = 0
@@ -53,6 +69,10 @@ def score_chunk(chunk: dict, query: str) -> tuple[int, list[str]]:
 
     if score > 0:
         score += TYPE_WEIGHTS.get(chunk.get("type"), 0)
+        if is_software_catalog_chunk(chunk) and not is_software_lookup_query(software_intent_query):
+            score -= 60
+        elif is_software_catalog_chunk(chunk) and is_software_lookup_query(software_intent_query):
+            score += 60
         if chunk.get("status") == "verified":
             score += 3
         elif chunk.get("status") == "usable":
@@ -74,10 +94,11 @@ def search_chunks(
     mode = (mode or "hybrid").lower()
     top_k = max(1, min(int(top_k or 8), 30))
     scored: dict[str, dict] = {}
+    expanded_query = expand_query_terms(query)
 
     if mode in {"rules", "hybrid"}:
         for chunk in chunks:
-            rule_score, reasons = score_chunk(chunk, query)
+            rule_score, reasons = score_chunk(chunk, expanded_query, original_query=query)
             if rule_score > 0 and reasons:
                 scored[chunk["chunk_id"]] = {
                     **chunk,

@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [pc, printer]
 systems: [windows]
 issue_types: [printer-not-working]
-tags: [printer, shared-printer, windows]
+tags: [printer, shared-printer, windows, 共享打印机, 打印机换电脑, 换连接电脑, 更换连接电脑, 连接不上打印机, 共享打印机重连, USB打印机]
 source: ticket-history
 ```
 
@@ -30,5 +30,4 @@ source: ticket-history
 - 多台电脑无法连接同一台共享打印机。
 - 打印服务器无法访问。
 - 需要新增共享或调整打印服务器配置。
-
 

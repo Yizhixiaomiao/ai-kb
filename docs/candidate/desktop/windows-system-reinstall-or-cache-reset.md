@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [pc]
 systems: [windows]
 issue_types: [software-install, boot-failed, performance-slow]
-tags: [windows, reinstall, cache, system-corruption]
+tags: [windows, reinstall, cache, system-corruption, 重装系统, 重做系统, 做系统, 格式化硬盘, 系统重装, 重新安装系统, 清空缓存]
 source: ticket-history
 ```
 
@@ -35,4 +35,3 @@ source: ticket-history
 
 - 系统盘或硬盘疑似故障。
 - 重要数据需要恢复。
-
