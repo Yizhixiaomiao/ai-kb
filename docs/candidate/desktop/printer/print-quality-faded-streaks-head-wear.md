@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [printer]
 systems: []
 issue_types: [printer-not-working, hardware-fault]
-tags: [printer, print-quality, toner, print-head, streaks]
+tags: [printer, print-quality, toner, print-head, streaks, 打印不清楚, 字迹模糊, 横纹, 黑印, 打印头磨损]
 source: ticket-history
 ```
 
@@ -34,8 +34,16 @@ source: ticket-history
 - 测试页清晰，无横纹、黑印、空白间隔。
 - 业务标签、单据或照片打印正常。
 
+## 常用指令
+
+- `control printers`：打开 Windows 打印机列表，用于进入打印首选项、打印测试页或检查默认打印机。
+- `printmanagement.msc`：打开打印管理，查看打印驱动、端口和队列，适用于驱动或端口异常排查。
+- `services.msc`：打开服务管理器，检查 Print Spooler 服务状态。
+- `net stop spooler`：停止打印后台处理服务，常用于清理异常打印队列前置操作。
+- `net start spooler`：启动打印后台处理服务，清理队列或重装驱动后用于恢复打印服务。
+- `Get-Printer`：PowerShell 查看本机打印机列表，确认打印机名称、状态和驱动信息。
+
 ## 升级条件
 
 - 打印头、针头、定影膜、硒鼓或粉盒需要更换。
 - 生产标签或业务单据打印质量影响作业。
-

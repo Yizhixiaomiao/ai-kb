@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [security-device]
 systems: [barrier-gate]
 issue_types: [hardware-fault, network-unavailable]
-tags: [barrier-gate, motor, infrared, limit, power]
+tags: [barrier-gate, motor, infrared, limit, power, 道闸, 抬杆, 落杆, 车辆通行, 离线]
 source: ticket-history
 ```
 
@@ -39,4 +39,3 @@ source: ticket-history
 - 电机、主板、限位或道闸主机损坏。
 - 涉及车辆通行、门岗或收费系统。
 - 需要供应商重新配置程序。
-

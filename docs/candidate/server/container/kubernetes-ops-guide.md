@@ -10,7 +10,7 @@ source_path: D:/Work/工作文档/知识库构建/服务器运维相关/kubernet
 asset_types: [server, container, cluster]
 systems: [kubernetes, containerd, linux]
 issue_types: [cluster-ops, pod-failed, deployment, troubleshooting]
-tags: [kubernetes, k8s, pod, deployment, service, ingress, helm]
+tags: [kubernetes, k8s, pod, deployment, service, ingress, helm, KubernetesPod不健康, Pod不健康, CrashLoopBackOff, ImagePullBackOff, NotReady]
 ```
 
 ## 适用范围

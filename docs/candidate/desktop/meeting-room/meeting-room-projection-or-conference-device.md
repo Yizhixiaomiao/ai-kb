@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [meeting-room-device, pc]
 systems: [meeting-room]
 issue_types: [network-unavailable, software-install, hardware-fault]
-tags: [projection, yealink, tencent-meeting, wireless, meeting-room]
+tags: [projection, yealink, tencent-meeting, wireless, meeting-room, 会议室, 投屏, 会议摄像头, 麦克风, 腾讯会议]
 source: ticket-history
 ```
 
@@ -33,9 +33,17 @@ source: ticket-history
 - 腾讯会议音视频正常。
 - 亿联设备无存储或网络告警。
 
+## 常用指令
+
+- `mmsys.cpl`：打开 Windows 声音设置，检查默认麦克风和扬声器设备。
+- `desk.cpl`：打开显示设置，检查投影、复制、扩展和分辨率配置。
+- `displayswitch.exe`：打开投影切换界面，用于快速切换复制、扩展或仅第二屏。
+- `devmgmt.msc`：打开设备管理器，检查摄像头、麦克风、声卡和 USB 设备是否异常。
+- `ncpa.cpl`：打开网络连接界面，检查会议终端或无线投屏网络连接状态。
+- `ping <会议终端地址或网关>`：验证会议终端到网络的基础连通性。
+
 ## 升级条件
 
 - 桌管策略影响无线投屏。
 - 会议终端固件、账号或平台异常。
 - 重要会议保障。
-

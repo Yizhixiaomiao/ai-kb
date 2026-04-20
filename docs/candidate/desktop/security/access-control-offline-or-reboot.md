@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [security-device, network]
 systems: [access-control]
 issue_types: [network-unavailable, hardware-fault]
-tags: [access-control, door, ap, power, offline]
+tags: [access-control, door, ap, power, offline, 门禁, 刷卡, 人脸识别, 认证异常, 门禁离线]
 source: ticket-history
 ```
 
@@ -37,4 +37,3 @@ source: ticket-history
 - 门禁电源、AP 或一体机损坏。
 - 门禁影响生产、环保或安全通行。
 - 多个门禁点位同时异常。
-

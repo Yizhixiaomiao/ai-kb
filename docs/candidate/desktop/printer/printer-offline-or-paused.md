@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [pc, printer]
 systems: [windows]
 issue_types: [printer-not-working]
-tags: [printer, offline, queue]
+tags: [printer, offline, queue, 打印机脱机, 显示脱机, 打印队列, 无法打印, 打印任务]
 source: ticket-history
 ```
 

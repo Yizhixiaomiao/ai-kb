@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [security-device, network]
 systems: [camera, monitoring]
 issue_types: [network-unavailable, hardware-fault]
-tags: [camera, cctv, no-signal, offline, power, switch]
+tags: [camera, cctv, no-signal, offline, power, switch, 摄像头, 监控, 视频信号, 黑屏, 画面异常]
 source: ticket-history
 ```
 
@@ -39,4 +39,3 @@ source: ticket-history
 - 同区域多个摄像头同时离线。
 - 摄像头、交换机、光纤或供电设备损坏。
 - 涉及保密区域、门岗、围墙等关键点位。
-

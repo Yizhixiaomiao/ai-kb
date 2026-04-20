@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [pc, network]
 systems: [windows, mes, authentication-client]
 issue_types: [network-unavailable, network-authentication, login-failed]
-tags: [network, mes, authentication, windows]
+tags: [network, mes, authentication, windows, 网络认证, 认证客户端, 认证助手, 没网, 无法联网]
 source: ticket-history
 evidence_count: 601
 owner: ""
@@ -45,6 +45,17 @@ updated_at: 2026-04-17
 - 认证客户端状态正常。
 - 浏览器能访问常用内外网地址。
 
+## 常用指令
+
+- `ipconfig /all`：查看当前 IP、网关、DNS、DHCP 和网卡状态，用于判断是否获取到正确网络配置。
+- `ipconfig /release`：释放 DHCP 地址，适用于怀疑地址租约异常时，执行前确认不是固定 IP 终端。
+- `ipconfig /renew`：重新获取 DHCP 地址，通常与释放地址配合使用。
+- `ipconfig /flushdns`：清理本机 DNS 缓存，适用于域名解析异常或内部平台地址变更后仍访问旧地址。
+- `ping <网关或内部系统地址>`：测试到网关或内部系统的连通性，区分本机、网关和业务系统问题。
+- `tracert <内部系统地址>`：查看访问路径，定位是否卡在本地网关、核心网络或目标网段。
+- `ncpa.cpl`：打开 Windows 网络连接界面，检查网卡是否禁用、链路是否断开。
+- `netsh winsock reset`：重置 Winsock 网络组件，适用于浏览器或客户端网络栈异常；执行后需要重启电脑。
+
 ## 风险点
 
 - 不要随意更换 IP 或网关，避免造成 IP 冲突。
@@ -61,5 +72,3 @@ updated_at: 2026-04-17
 - [ ] 补充本公司认证客户端名称和入口。
 - [ ] 补充 MES / OA / 内部平台正确访问地址。
 - [ ] 明确设备绑定清理权限归属。
-
-

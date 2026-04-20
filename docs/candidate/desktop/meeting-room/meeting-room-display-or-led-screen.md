@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [meeting-room-device, display]
 systems: [meeting-room]
 issue_types: [hardware-fault]
-tags: [meeting-room, led-screen, display, maxhub, signal]
+tags: [meeting-room, led-screen, display, maxhub, signal, 会议室, 大屏, LED, 黑屏, 投屏]
 source: ticket-history
 ```
 
@@ -33,9 +33,16 @@ source: ticket-history
 - 投屏、会议画面或演示内容正常。
 - 设备重启后配置仍正常。
 
+## 常用指令
+
+- `desk.cpl`：打开显示设置，检查分辨率、多屏模式和主副屏配置。
+- `displayswitch.exe`：打开投影切换界面，确认当前是复制、扩展还是仅第二屏。
+- `dxdiag`：查看显卡、显示输出和 DirectX 信息，辅助判断电脑端显示能力。
+- `devmgmt.msc`：打开设备管理器，检查显卡、显示器和 USB 转接设备是否异常。
+- `ping <控制器或大屏设备地址>`：检查大屏控制器或会议终端网络连通性。
+
 ## 升级条件
 
 - LED 屏、背板、接收卡或控制器损坏。
 - 涉及拆屏、重新配置屏参。
 - 会议保障窗口紧急。
-

@@ -6,7 +6,7 @@ type: troubleshooting
 asset_types: [pc, hardware]
 systems: [windows]
 issue_types: [boot-failed, hardware-fault]
-tags: [boot, power, motherboard, memory, disk]
+tags: [boot, power, motherboard, memory, disk, 无法开机, 开不了机, 不通电, 主机不亮, 启动失败]
 source: ticket-history
 evidence_count: 361
 owner: ""
