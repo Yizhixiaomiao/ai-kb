@@ -36,7 +36,7 @@ async function loadAll() {
   ]);
   state.health = health;
   state.docs = index.documents || [];
-  $("healthText").textContent = `${health.documents} 篇 / ${health.vector_model}`;
+  $("healthText").textContent = `${health.documents} 篇 / ${health.chunks || 0} 块 / ${health.vector_model}`;
   renderCategories();
   applyFilters();
   renderStats();
@@ -224,6 +224,120 @@ function resultCard(doc, requestId) {
   </article>`;
 }
 
+async function runAnswer() {
+  const title = $("answerTitle").value.trim();
+  const description = $("answerDesc").value.trim();
+  if (!title && !description) {
+    $("answerResults").innerHTML = `<div class="result-card">请输入问题、告警规则名或工单描述。</div>`;
+    return;
+  }
+  $("answerResults").innerHTML = `<div class="result-card">检索知识块中...</div>`;
+  const result = await getJson("/api/kb/answer", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      ticket_id: "manual-ui",
+      title,
+      description,
+      mode: $("answerModeSelect").value,
+      top_k: 12,
+    }),
+  });
+  $("answerResults").innerHTML = answerCard(result);
+}
+
+function answerCard(result) {
+  const answer = result.answer || {};
+  const commands = answer.commands || [];
+  const chunks = answer.retrieved_chunks || [];
+  const sources = answer.sources || [];
+  return `<article class="result-card">
+    <div class="result-head">
+      <div>
+        <h3>处理建议</h3>
+        <p class="muted">${answer.summary || "未召回到足够相关的知识块。"}</p>
+      </div>
+      <div class="meta">
+        <span class="tag">${result.mode}</span>
+        <span class="tag">${chunks.length} 个知识块</span>
+      </div>
+    </div>
+    ${listSection("建议步骤", answer.suggested_steps || [], true)}
+    ${commands.length ? `<section class="section"><h3>相关指令</h3>${commands.map((cmd) => `<div class="command">
+      <pre>${cmd.command || ""}</pre>
+      <p>${cmd.purpose ? `用途：${cmd.purpose}` : ""}${cmd.purpose && cmd.risk ? " | " : ""}${cmd.risk ? `风险：${cmd.risk}` : ""}</p>
+    </div>`).join("")}</section>` : ""}
+    ${listSection("验证方式", answer.verification || [])}
+    ${listSection("注意事项", answer.cautions || [])}
+    ${sources.length ? `<section class="section"><h3>引用来源</h3>${sources.map((source) => `<div class="source">
+      <strong>${source.title}</strong>
+      <p class="muted">${source.doc_id} · ${source.path} · score ${source.score}</p>
+    </div>`).join("")}</section>` : ""}
+    ${chunks.length ? `<section class="section"><h3>召回知识块</h3>${chunks.slice(0, 8).map((chunk) => `<div class="chunk">
+      <div class="meta">
+        <span class="tag">${chunk.type}</span>
+        <span class="tag">综合 ${chunk.score}</span>
+        <span class="tag">规则 ${chunk.rule_score || 0}</span>
+        <span class="tag">向量 ${chunk.vector_score || 0}</span>
+      </div>
+      <p>${chunk.title}</p>
+      <pre>${chunk.content || ""}</pre>
+    </div>`).join("")}</section>` : ""}
+    <p class="muted">${result.request_id}</p>
+  </article>`;
+}
+
+async function submitExperience(event) {
+  event.preventDefault();
+  const form = new FormData(event.target);
+  const payload = Object.fromEntries(form.entries());
+  $("experienceResultText").textContent = "分析中...";
+  $("experienceResult").innerHTML = "";
+  try {
+    const result = await getJson("/api/kb/experience", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    $("experienceResultText").textContent = "已记录";
+    $("experienceResult").innerHTML = experienceCard(result);
+  } catch (error) {
+    $("experienceResultText").textContent = error.message;
+  }
+}
+
+function experienceCard(result) {
+  const matched = result.matched_doc;
+  const candidate = result.suggested_candidate;
+  return `<article class="result-card">
+    <div class="result-head">
+      <div>
+        <h3>沉淀结果</h3>
+        <div class="meta">
+          <span class="tag ${result.quality === "high" ? "ok" : result.quality === "medium" ? "medium" : "danger"}">${result.quality}</span>
+          <span class="tag">质量 ${result.quality_score}</span>
+          <span class="tag">${result.action}</span>
+        </div>
+      </div>
+      <p class="muted">${result.experience_id}</p>
+    </div>
+    ${listSection("有效信号", result.signals || [])}
+    ${listSection("缺失信息", result.missing_fields || [])}
+    ${listSection("建议追问", result.suggested_questions || [])}
+    ${matched ? `<section class="section"><h3>匹配已有知识</h3><div class="source">
+      <strong>${matched.title}</strong>
+      <p class="muted">${matched.doc_id} · score ${matched.score} · ${matched.path}</p>
+    </div></section>` : ""}
+    ${candidate ? `<section class="section"><h3>候选草稿</h3><div class="source">
+      <strong>${candidate.title}</strong>
+      <p class="muted">${candidate.candidate_id} · ${candidate.status}</p>
+      ${listSection("现象", candidate.symptoms || [])}
+      ${listSection("处理步骤", candidate.steps || [], true)}
+      ${listSection("待补充", candidate.missing_fields || [])}
+    </div></section>` : ""}
+  </article>`;
+}
+
 function renderStats() {
   const byStatus = state.docs.reduce((acc, doc) => {
     acc[doc.status] = (acc[doc.status] || 0) + 1;
@@ -246,6 +360,8 @@ function setView(name) {
   const titles = {
     browse: ["知识浏览", "按分类、关键词、状态筛选知识。"],
     recommend: ["工单推荐", "输入工单或告警内容，查看推荐知识、步骤和指令。"],
+    answer: ["智能答案", "按知识块检索步骤、指令和验证方式，生成可引用的处理建议。"],
+    experience: ["经验沉淀", "记录关单处理经验，判断质量并决定补充已有知识或生成候选草稿。"],
     create: ["新增候选知识", "创建 Markdown 候选知识，随后重建索引后进入推荐。"],
     reports: ["治理视图", "查看知识状态和后续治理建议。"],
   };
@@ -283,6 +399,8 @@ function bindEvents() {
     await loadAll();
   });
   $("recommendBtn").addEventListener("click", runRecommend);
+  $("answerBtn").addEventListener("click", runAnswer);
+  $("experienceForm").addEventListener("submit", submitExperience);
   $("createForm").addEventListener("submit", createDoc);
 }
 

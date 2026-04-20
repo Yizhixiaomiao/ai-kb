@@ -20,6 +20,8 @@
         <nav class="nav">
           <button class="nav-item active" data-view="browse">知识浏览</button>
           <button class="nav-item" data-view="recommend">工单推荐</button>
+          <button class="nav-item" data-view="answer">智能答案</button>
+          <button class="nav-item" data-view="experience">经验沉淀</button>
           <button class="nav-item" data-view="create">新增候选知识</button>
           <button class="nav-item" data-view="reports">治理视图</button>
         </nav>
@@ -80,6 +82,45 @@
             </div>
           </div>
           <div id="recommendResults" class="recommend-results"></div>
+        </section>
+
+        <section id="answerView" class="view">
+          <div class="recommend-box">
+            <label>问题或告警</label>
+            <input id="answerTitle" class="input" placeholder="例如：CPU使用率达到95% / 无法开机 / 打印不清楚" />
+            <label>补充上下文</label>
+            <textarea id="answerDesc" class="input textarea" placeholder="粘贴工单描述、告警规则名、报错信息或已确认现象"></textarea>
+            <div class="row">
+              <select id="answerModeSelect" class="input select">
+                <option value="hybrid">hybrid 混合检索</option>
+                <option value="rules">rules 规则检索</option>
+                <option value="vector">vector 向量检索</option>
+              </select>
+              <button id="answerBtn" class="button">生成处理建议</button>
+            </div>
+          </div>
+          <div id="answerResults" class="recommend-results"></div>
+        </section>
+
+        <section id="experienceView" class="view">
+          <form id="experienceForm" class="create-form">
+            <div class="grid two">
+              <label>工单号<input name="ticket_id" class="input" required placeholder="INC-20260420-001" /></label>
+              <label>工程师<input name="engineer_id" class="input" placeholder="ops001" /></label>
+            </div>
+            <label>工单标题<input name="title" class="input" required placeholder="打印机显示脱机无法打印" /></label>
+            <label>问题描述<textarea name="description" class="input textarea small" placeholder="用户描述、告警内容、报错信息"></textarea></label>
+            <label>处理记录<textarea name="resolution" class="input textarea" required placeholder="取消脱机，清理打印队列，重启 Print Spooler 服务后恢复"></textarea></label>
+            <div class="grid two">
+              <label>分类<input name="category" class="input" placeholder="printer / server / business-system" /></label>
+              <label>关闭时间<input name="closed_at" class="input" placeholder="2026-04-20 10:30:00" /></label>
+            </div>
+            <div class="row">
+              <button class="button" type="submit">记录经验</button>
+              <span id="experienceResultText" class="muted"></span>
+            </div>
+          </form>
+          <div id="experienceResult" class="recommend-results"></div>
         </section>
 
         <section id="createView" class="view">

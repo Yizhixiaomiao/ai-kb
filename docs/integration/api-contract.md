@@ -106,6 +106,103 @@ POST /api/kb/recommend
 }
 ```
 
+## 知识块检索接口
+
+文档级推荐用于回答“应该看哪篇知识”。知识块检索用于回答“当前问题最相关的步骤、指令、验证方式是哪几条”。
+
+```http
+POST /api/kb/search
+```
+
+### 请求示例
+
+```json
+{
+  "ticket_id": "INC-CPU-001",
+  "title": "CPU使用率达到95%",
+  "description": "WMS业务机器CPU使用率持续告警",
+  "mode": "hybrid",
+  "top_k": 8
+}
+```
+
+### 响应要点
+
+- `chunks`：召回的知识块列表。
+- `chunk_id`：知识块 ID，格式为 `doc_id#type-序号`。
+- `type`：`overview`、`step`、`command`、`verification`、`note`。
+- `score`：综合分。
+- `rule_score`：规则分。
+- `vector_score`：本地向量相似度。
+- `content`：可直接展示给工程师的步骤、指令或说明。
+- `command`、`purpose`、`risk`：当 `type=command` 时返回。
+
+## 智能答案接口
+
+当前版本不调用外部大模型，先基于知识块召回结果组装“处理建议”。后续接大模型时，应只允许模型基于 `retrieved_chunks` 和 `sources` 生成答案，不允许凭空补充生产操作。
+
+```http
+POST /api/kb/answer
+```
+
+### 请求示例
+
+```json
+{
+  "ticket_id": "INC-BOOT-001",
+  "title": "无法开机",
+  "description": "用户反馈工位电脑按电源键后无法正常启动",
+  "mode": "hybrid",
+  "top_k": 12
+}
+```
+
+### 响应结构
+
+```json
+{
+  "matched": true,
+  "answer": {
+    "summary": "优先参考《电脑无法开机或不通电处理指南》中的适用范围与现象。",
+    "suggested_steps": ["检查插座、电源线、插排和主机电源开关。"],
+    "commands": [
+      {
+        "command": "eventvwr.msc",
+        "purpose": "打开事件查看器，检查系统、应用和驱动错误。",
+        "risk": "低",
+        "source": "pc-boot-failed"
+      }
+    ],
+    "verification": ["电脑能正常进入 Windows 桌面。"],
+    "cautions": [],
+    "sources": [
+      {
+        "doc_id": "pc-boot-failed",
+        "title": "电脑无法开机或不通电处理指南",
+        "path": "docs/candidate/desktop/pc-boot-failed.md"
+      }
+    ],
+    "retrieved_chunks": []
+  }
+}
+```
+
+### 索引生成顺序
+
+```powershell
+python scripts\build_kb_index.py
+python scripts\build_kb_vector_index.py
+python scripts\build_kb_chunks.py
+python scripts\build_kb_chunk_vector_index.py
+```
+
+服务运行时会优先读取：
+
+- `data/kb-index.json`
+- `data/kb-vector-index.json`
+- `data/kb-chunks.json`
+- `data/kb-chunk-vector-index.json`
+
 ## 无命中响应
 
 当没有任何推荐结果时，服务不应返回空白页面，而应返回可操作提示。
@@ -126,6 +223,80 @@ POST /api/kb/recommend
   }
 }
 ```
+
+## 工单经验沉淀接口
+
+该接口用于工单系统在工程师关单后同步原始处理经验。同步内容不会直接进入正式知识库；系统会先做质量判断、匹配已有知识，并在必要时生成候选草稿。
+
+```http
+POST /api/kb/experience
+```
+
+### 请求示例
+
+```json
+{
+  "ticket_id": "INC-20260420-001",
+  "title": "打印机显示脱机无法打印",
+  "description": "用户反馈共享打印机显示脱机，无法提交打印任务",
+  "resolution": "取消脱机，清理打印队列，重启 Print Spooler 服务后恢复",
+  "category": "printer",
+  "engineer_id": "ops001",
+  "closed_at": "2026-04-20 10:30:00"
+}
+```
+
+### 响应动作
+
+- `need_more_detail`：记录过于简单，只进入经验池，不生成候选知识。
+- `attach_to_existing`：匹配到已有知识，作为该知识的案例素材和后续关键词来源。
+- `create_candidate`：质量达到要求但未匹配到已有知识，生成候选草稿，等待人工复核。
+
+### 响应示例
+
+```json
+{
+  "saved": true,
+  "quality": "medium",
+  "quality_score": 6,
+  "action": "attach_to_existing",
+  "matched_doc": {
+    "doc_id": "printer-offline-or-paused",
+    "title": "打印机脱机或暂停处理指南",
+    "score": 42
+  },
+  "missing_fields": [],
+  "suggested_questions": [],
+  "suggested_candidate": null
+}
+```
+
+低质量记录示例：
+
+```json
+{
+  "saved": true,
+  "quality": "low",
+  "action": "need_more_detail",
+  "missing_fields": ["具体处理动作", "验证结果"],
+  "suggested_questions": [
+    "实际执行了什么操作、命令、配置修改或替换动作？",
+    "如何确认问题已经恢复，是否有验证截图、日志或业务操作结果？"
+  ]
+}
+```
+
+查看最近经验和候选草稿：
+
+```http
+GET /api/kb/experiences
+GET /api/kb/candidates
+```
+
+数据落地位置：
+
+- `data/ticket-experiences.jsonl`
+- `data/kb-candidates.json`
 
 ## 反馈接口
 
@@ -191,4 +362,3 @@ POST /api/kb/admin/reload-index
 | 422 | `EMPTY_DESCRIPTION` | 问题描述为空，无法推荐 |
 | 500 | `INTERNAL_ERROR` | 服务内部错误 |
 | 503 | `INDEX_NOT_READY` | 知识索引未加载 |
-

@@ -9,25 +9,59 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
 
+from build_kb_chunk_vector_index import build_chunk_vector_records
+from build_kb_chunks import build_chunks
+from experience_intake import (
+    DEFAULT_CANDIDATES as DEFAULT_CANDIDATES_PATH,
+    DEFAULT_EXPERIENCE_LOG as DEFAULT_EXPERIENCE_LOG_PATH,
+    append_experience,
+    assess_experience,
+    build_candidate,
+    count_jsonl,
+    load_candidates,
+    recent_experiences,
+    save_candidates,
+)
+from kb_chunk_search import build_answer, search_chunks
 from recommend_from_ticket import DEFAULT_INDEX, recommend
 from vector_model import DEFAULT_DIMENSIONS, build_vector_records
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_FEEDBACK_LOG = ROOT / "data" / "kb-feedback.jsonl"
+DEFAULT_EXPERIENCE_LOG = DEFAULT_EXPERIENCE_LOG_PATH
+DEFAULT_CANDIDATES = DEFAULT_CANDIDATES_PATH
 DEFAULT_VECTOR_INDEX = ROOT / "data" / "kb-vector-index.json"
+DEFAULT_CHUNKS = ROOT / "data" / "kb-chunks.json"
+DEFAULT_CHUNK_VECTOR_INDEX = ROOT / "data" / "kb-chunk-vector-index.json"
 WEB_DIR = ROOT / "web"
 
 
 class KbService:
-    def __init__(self, index_path: Path, feedback_log: Path, vector_index_path: Path | None = None):
+    def __init__(
+        self,
+        index_path: Path,
+        feedback_log: Path,
+        vector_index_path: Path | None = None,
+        chunks_path: Path | None = None,
+        chunk_vector_index_path: Path | None = None,
+        experience_log: Path | None = None,
+        candidates_path: Path | None = None,
+    ):
         self.index_path = index_path
         self.feedback_log = feedback_log
         self.vector_index_path = vector_index_path
+        self.chunks_path = chunks_path
+        self.chunk_vector_index_path = chunk_vector_index_path
+        self.experience_log = experience_log or DEFAULT_EXPERIENCE_LOG
+        self.candidates_path = candidates_path or DEFAULT_CANDIDATES
         self.index = self.load_index()
         self.vector_model = "local-char-ngram-hash-v1"
         self.vector_dimensions = DEFAULT_DIMENSIONS
         self.vector_records = self.load_vector_records()
+        self.chunks = self.load_chunks()
+        self.chunk_vector_records = self.load_chunk_vector_records()
+        self.candidates = load_candidates(self.candidates_path)
 
     def load_index(self) -> list[dict]:
         return json.loads(self.index_path.read_text(encoding="utf-8"))
@@ -35,6 +69,9 @@ class KbService:
     def reload_index(self) -> int:
         self.index = self.load_index()
         self.vector_records = self.load_vector_records()
+        self.chunks = self.load_chunks()
+        self.chunk_vector_records = self.load_chunk_vector_records()
+        self.candidates = load_candidates(self.candidates_path)
         return len(self.index)
 
     def load_vector_records(self) -> list[dict]:
@@ -45,6 +82,19 @@ class KbService:
             return body.get("documents", [])
         self.vector_dimensions = DEFAULT_DIMENSIONS
         return build_vector_records(self.index, dimensions=self.vector_dimensions)
+
+    def load_chunks(self) -> list[dict]:
+        if self.chunks_path and self.chunks_path.exists():
+            return json.loads(self.chunks_path.read_text(encoding="utf-8"))
+        return build_chunks(self.index)
+
+    def load_chunk_vector_records(self) -> list[dict]:
+        if self.chunk_vector_index_path and self.chunk_vector_index_path.exists():
+            body = json.loads(self.chunk_vector_index_path.read_text(encoding="utf-8"))
+            self.vector_model = body.get("model", self.vector_model)
+            self.vector_dimensions = int(body.get("dimensions") or DEFAULT_DIMENSIONS)
+            return body.get("chunks", [])
+        return build_chunk_vector_records(self.chunks, dimensions=self.vector_dimensions)
 
     def recommend(self, payload: dict) -> dict:
         ticket_id = str(payload.get("ticket_id") or "")
@@ -111,6 +161,120 @@ class KbService:
                 if not recommendations
                 else [],
             },
+        }
+
+    def search(self, payload: dict) -> dict:
+        ticket_id = str(payload.get("ticket_id") or "")
+        title = str(payload.get("title") or "")
+        description = str(payload.get("description") or "")
+        query = str(payload.get("query") or "\n".join(part for part in [title, description] if part)).strip()
+        mode = str(payload.get("mode") or "hybrid")
+        top_k = int(payload.get("top_k") or 8)
+        if not query:
+            return {
+                "error": {
+                    "code": "EMPTY_QUERY",
+                    "message": "query, title or description is required",
+                }
+            }
+
+        chunks = search_chunks(
+            self.chunks,
+            query,
+            top_k=top_k,
+            mode=mode,
+            vector_records=self.chunk_vector_records,
+            dimensions=self.vector_dimensions,
+        )
+        return {
+            "request_id": f"srch-{int(time.time())}-{uuid.uuid4().hex[:8]}",
+            "ticket_id": ticket_id,
+            "mode": mode,
+            "query": query,
+            "vector_model": self.vector_model,
+            "matched": bool(chunks),
+            "chunks": chunks,
+        }
+
+    def answer(self, payload: dict) -> dict:
+        search_body = self.search(payload)
+        if "error" in search_body:
+            return search_body
+        answer = build_answer(search_body["query"], search_body["chunks"], self.index)
+        return {
+            "request_id": f"ans-{int(time.time())}-{uuid.uuid4().hex[:8]}",
+            "search_request_id": search_body["request_id"],
+            "ticket_id": search_body.get("ticket_id", ""),
+            "mode": search_body["mode"],
+            "query": search_body["query"],
+            "vector_model": self.vector_model,
+            "matched": search_body["matched"],
+            "answer": answer,
+        }
+
+    def save_experience(self, payload: dict) -> dict:
+        ticket_id = str(payload.get("ticket_id") or "").strip()
+        title = str(payload.get("title") or "").strip()
+        description = str(payload.get("description") or "").strip()
+        resolution = str(payload.get("resolution") or "").strip()
+        if not ticket_id:
+            return {"error": {"code": "INVALID_REQUEST", "message": "ticket_id is required"}}
+        if not title and not description:
+            return {"error": {"code": "INVALID_REQUEST", "message": "title or description is required"}}
+        if not resolution:
+            return {"error": {"code": "INVALID_REQUEST", "message": "resolution is required"}}
+
+        assessment = assess_experience(payload)
+        recs = recommend(
+            self.index,
+            "\n".join(part for part in [title, description] if part),
+            resolution,
+            top_k=3,
+            mode="hybrid",
+            vector_records=self.vector_records,
+        )
+        matched_doc = recs[0] if recs and recs[0].get("score", 0) >= 20 else None
+
+        if assessment["quality"] == "low":
+            action = "need_more_detail"
+            candidate = None
+        elif matched_doc:
+            action = "attach_to_existing"
+            candidate = None
+        else:
+            action = "create_candidate"
+            candidate = build_candidate(payload, assessment, matched_doc=None)
+            self.candidates.append(candidate)
+            save_candidates(self.candidates, self.candidates_path)
+
+        record = dict(payload)
+        record["experience_id"] = f"exp-{int(time.time())}-{uuid.uuid4().hex[:8]}"
+        record["created_at"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
+        record["quality"] = assessment["quality"]
+        record["quality_score"] = assessment["quality_score"]
+        record["action"] = action
+        record["matched_doc_id"] = matched_doc.get("doc_id") if matched_doc else ""
+        record["candidate_id"] = candidate.get("candidate_id") if candidate else ""
+        append_experience(record, self.experience_log)
+
+        return {
+            "saved": True,
+            "experience_id": record["experience_id"],
+            "quality": assessment["quality"],
+            "quality_score": assessment["quality_score"],
+            "signals": assessment["signals"],
+            "missing_fields": assessment["missing_fields"],
+            "suggested_questions": assessment["suggested_questions"],
+            "matched_doc": {
+                "doc_id": matched_doc.get("doc_id"),
+                "title": matched_doc.get("title"),
+                "score": matched_doc.get("score"),
+                "path": matched_doc.get("path"),
+            }
+            if matched_doc
+            else None,
+            "action": action,
+            "suggested_candidate": candidate,
         }
 
     def save_feedback(self, payload: dict) -> dict:
@@ -294,12 +458,26 @@ def make_handler(service: KbService):
                         "index_path": str(service.index_path),
                         "vector_model": service.vector_model,
                         "vector_documents": len(service.vector_records),
+                        "chunks": len(service.chunks),
+                        "vector_chunks": len(service.chunk_vector_records),
+                        "experiences": count_jsonl(service.experience_log),
+                        "candidates": len(service.candidates),
                         "vector_dimensions": service.vector_dimensions,
                     },
                 )
                 return
             if path == "/api/kb/index":
                 self._send_json(200, {"documents": service.index})
+                return
+            if path == "/api/kb/chunks":
+                self._send_json(200, {"chunks": service.chunks})
+                return
+            if path == "/api/kb/experiences":
+                self._send_json(200, {"experiences": recent_experiences(service.experience_log)})
+                return
+            if path == "/api/kb/candidates":
+                service.candidates = load_candidates(service.candidates_path)
+                self._send_json(200, {"candidates": service.candidates})
                 return
             if path in {"/", "/ui", "/ui/"}:
                 self._send_file(WEB_DIR / "index.html")
@@ -326,8 +504,23 @@ def make_handler(service: KbService):
                 status = 422 if "error" in body and body["error"]["code"] == "EMPTY_DESCRIPTION" else 200
                 self._send_json(status, body)
                 return
+            if path == "/api/kb/search":
+                body = service.search(payload)
+                status = 422 if "error" in body and body["error"]["code"] == "EMPTY_QUERY" else 200
+                self._send_json(status, body)
+                return
+            if path == "/api/kb/answer":
+                body = service.answer(payload)
+                status = 422 if "error" in body and body["error"]["code"] == "EMPTY_QUERY" else 200
+                self._send_json(status, body)
+                return
             if path == "/api/kb/feedback":
                 body = service.save_feedback(payload)
+                status = 400 if "error" in body else 200
+                self._send_json(status, body)
+                return
+            if path == "/api/kb/experience":
+                body = service.save_experience(payload)
                 status = 400 if "error" in body else 200
                 self._send_json(status, body)
                 return
@@ -354,13 +547,26 @@ def main() -> int:
     parser.add_argument("--port", type=int, default=9100)
     parser.add_argument("--index", type=Path, default=DEFAULT_INDEX)
     parser.add_argument("--vector-index", type=Path, default=DEFAULT_VECTOR_INDEX)
+    parser.add_argument("--chunks", type=Path, default=DEFAULT_CHUNKS)
+    parser.add_argument("--chunk-vector-index", type=Path, default=DEFAULT_CHUNK_VECTOR_INDEX)
     parser.add_argument("--feedback-log", type=Path, default=DEFAULT_FEEDBACK_LOG)
+    parser.add_argument("--experience-log", type=Path, default=DEFAULT_EXPERIENCE_LOG)
+    parser.add_argument("--candidates", type=Path, default=DEFAULT_CANDIDATES)
     args = parser.parse_args()
 
-    service = KbService(args.index, args.feedback_log, args.vector_index)
+    service = KbService(
+        args.index,
+        args.feedback_log,
+        args.vector_index,
+        args.chunks,
+        args.chunk_vector_index,
+        args.experience_log,
+        args.candidates,
+    )
     server = ThreadingHTTPServer((args.host, args.port), make_handler(service))
     print(f"Ops KB service listening on http://{args.host}:{args.port}")
     print(f"Loaded {len(service.index)} documents from {args.index}")
+    print(f"Loaded {len(service.chunks)} chunks from {args.chunks}")
     server.serve_forever()
     return 0
 
