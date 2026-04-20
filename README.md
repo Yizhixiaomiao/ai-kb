@@ -1,74 +1,171 @@
 # 运维知识库
 
-本仓库用于沉淀软硬件运维知识，并为工单系统提供可检索、可推荐、可反馈的知识来源。
+本仓库用于沉淀企业软硬件运维知识，并为工单系统提供可检索、可推荐、可反馈、可持续沉淀的知识来源。
 
-当前阶段的重点不是直接建设完整 AI 推荐系统，而是先把历史工单中的口语化处理记录整理成结构化知识，供工程师处理工单时快速参考。
+当前项目已经从“Markdown 知识整理”推进到“轻量 RAG 原型”：知识来源包括历史工单、工程师正式文档、服务器告警规则、软件目录和人工维护的 Markdown 文档。工单系统可以通过 HTTP 接口获取推荐知识，工程师也可以在处理工单后把经验沉淀为候选知识。
 
-## 当前数据来源
+## 当前能力
 
-- 原始文件：`工单报修历史记录.csv`
-- 字段：`工单号`、`问题描述`、`解决步骤`
-- 数据量：2491 条
-- 数据特点：有完整字段，但大量解决步骤较短，例如“已处理”“完成”“网络认证问题”，需要结合工程师经验持续补充。
-
-## 知识状态
-
-- `candidate`：由历史工单归纳生成，信息不足或暂不适合推荐。
-- `usable`：已整理成工程师可参考的知识，可进入工单系统推荐。
-- `verified`：系统负责人或专业工程师确认过，可高权重推荐。
-- `deprecated`：已过期或不再适用。
-
-工单系统联动时，默认可推荐 `usable` 和 `verified` 知识。`candidate` 只作为低权重参考或提示后续补全文档。
+- Markdown 知识库：桌面运维、打印机、网络、安全、安防、会议室、服务器和业务系统等知识。
+- 正式文档入库：可将工程师已有文档转换为可检索知识块，保留原文来源。
+- 告警规则入库：服务器类问题可用告警规则名称作为检索输入，例如 CPU、内存、磁盘、业务可用性和备份失败。
+- 软件目录入库：只把软件名称、路径和下载入口作为参考知识，不关心压缩包、镜像等具体文件格式。
+- 混合检索：规则关键词、同义词扩展、向量相似度和分块检索共同参与召回。
+- 工单系统联动：提供推荐、RAG 组装、反馈、经验沉淀和候选知识入口。
+- 评测脚本：支持模拟工单评测、真实工单评测和历史工单同义词覆盖分析。
 
 ## 目录结构
 
 ```text
-docs/
-  candidate/desktop/     从历史工单整理出的桌面运维参考知识
-  business/              业务系统和维护资料整理
-templates/               文档模板
-taxonomy/                标签、资产类型、问题类型规范
-reports/                 数据分析和整理报告
+data/                  构建后的知识索引、分块索引和向量索引
+docs/                  Markdown 知识库和集成文档
+docs/business/         业务维护清单和正式文档转换结果
+docs/candidate/        待确认或可参考的运维知识
+docs/integration/      与工单系统联动的接口、流程和部署说明
+reports/               推荐评测、模拟评测和同义词分析报告
+scripts/               构建、导入、检索、评测和 HTTP 服务脚本
+taxonomy/              分类、标签、同义词和知识库规范
+templates/             知识库文档模板
+web/                   本地知识库前端页面
 ```
 
-## 工单系统集成
+## 快速运行
 
-对接工单系统时，优先阅读：
+在仓库根目录执行：
+
+```powershell
+python scripts\kb_http_service.py --host 127.0.0.1 --port 9100
+```
+
+启动后访问：
+
+```text
+http://127.0.0.1:9100/ui/
+```
+
+常用接口：
+
+```text
+GET  /health
+POST /api/kb/recommend
+POST /api/kb/rag-answer
+POST /api/kb/feedback
+POST /api/kb/experience
+GET  /api/kb/candidates
+```
+
+工单系统本地联调说明见：
 
 - `docs/integration/api-contract.md`
 - `docs/integration/data-flow.md`
 - `docs/integration/feedback-loop.md`
-- `docs/integration/deployment-options.md`
+- `docs/integration/local-debugging.md`
 
-第一阶段建议把当前离线推荐逻辑包装成内网 HTTP 服务，由工单系统详情页调用 `/api/kb/recommend` 获取推荐知识，并通过 `/api/kb/feedback` 记录工程师反馈。
+## 构建索引
 
-## 推荐落地流程
-
-1. 每周导出已解决工单。
-2. 按问题描述和解决步骤聚类。
-3. 合并相似问题，生成工程师参考知识。
-4. 补充风险点、验证方式和升级条件。
-5. 标记为 `usable` 后接入工单系统推荐；关键系统可进一步确认为 `verified`。
-6. 工单关闭时记录知识是否有用，并持续调整排序。
-
-## 本地推荐原型
-
-当前仓库已包含一个离线推荐原型，不连接服务器、接口或外部服务。
-
-生成知识索引：
+修改 Markdown、导入文档、调整同义词或更新软件目录后，需要重建索引：
 
 ```powershell
 python scripts\build_kb_index.py
-```
-
-使用历史工单离线回测：
-
-```powershell
-python scripts\recommend_from_ticket.py
+python scripts\build_kb_chunks.py
+python scripts\build_kb_vector_index.py
+python scripts\build_kb_chunk_vector_index.py
 ```
 
 主要输出：
 
-- `data/kb-index.json`：从 Markdown 文档生成的结构化知识索引。
-- `reports/recommendation-dry-run.csv`：每条历史工单的 Top 3 推荐结果。
-- `reports/recommendation-summary.md`：命中率、Top 推荐知识和未命中高频词。
+```text
+data/kb-index.json
+data/kb-chunks.json
+data/kb-vector-index.json
+data/kb-chunk-vector-index.json
+```
+
+## 检索逻辑
+
+当前不是简单的 Markdown 字符串匹配，而是分层召回：
+
+1. 输入清洗：去除无关字段、设备编号、过长位置和低价值描述。
+2. 同义词扩展：使用 `taxonomy/query-synonyms.json` 补齐口语词、错别字、简称和标准表达。
+3. 规则检索：基于标题、适用范围、标签、症状、步骤和命令打分。
+4. 向量检索：使用本地向量模型计算语义相似度。
+5. 分块检索：把长文档和正式文档拆成知识块，避免整篇文档召回不准。
+6. RAG 组装：将命中的知识块、处理步骤、命令和注意事项组装成工程师可参考答案。
+
+软件目录有独立意图判断：只有用户明显询问下载、安装包、驱动、客户端、升级包或路径时，软件目录才会被加权，避免故障类工单被软件下载链接误召回。
+
+## 知识沉淀
+
+知识来源分为三类：
+
+- 人工维护 Markdown：适合稳定流程、标准操作、常见故障和高频问题。
+- 正式工程师文档：适合直接作为检索内容入库，必要时再整理成标准知识。
+- 工单处理经验：适合从工单关闭记录中提取候选知识，再由工程师确认是否转正。
+
+工单处理经验不要求工程师一开始就写得很完整。系统会先做质量判断：过短、只有“已处理”、没有故障现象或没有处理动作的记录进入低质量经验；信息足够的记录进入候选知识，后续再由工程师补充适用范围、步骤、验证方式和风险点。
+
+## 同义词补强
+
+同义词维护在：
+
+```text
+taxonomy/query-synonyms.json
+```
+
+该文件覆盖历史工单中的口语表达，例如“联不上网”“重做系统”“清灰”“打印机换电脑”“掉加密”“业务可用性<95”“networekr 备份失败”等。
+
+从历史工单分析同义词覆盖情况：
+
+```powershell
+python scripts\extract_ticket_synonym_candidates.py
+```
+
+输出报告：
+
+```text
+reports/ticket-synonym-candidates.md
+```
+
+## 评测
+
+模拟 1000 条桌面、服务器告警和软件类工单：
+
+```powershell
+python scripts\simulate_kb_eval.py
+```
+
+使用真实工单列表评测：
+
+```powershell
+python scripts\evaluate_real_tickets.py --mode rules
+```
+
+真实工单接口拉取脚本：
+
+```powershell
+python scripts\fetch_ticket_list.py --size 100 --max-pages 200
+```
+
+真实工单数据可能包含内部系统信息、联系人、位置和处理记录，默认通过 `.gitignore` 排除，不应提交到远程仓库。
+
+## 数据安全
+
+以下内容不应提交：
+
+- 原始工单 CSV
+- 从生产接口拉取的真实工单 JSON
+- 真实工单详细评测报告
+- token、cookie、账号、密码和内部接口凭据
+- 临时缓存、日志和 `__pycache__`
+
+正式文档和知识库 Markdown 入库前，应去除账号密码、内网敏感地址和不可公开的客户信息。
+
+## 分支
+
+主分支为：
+
+```text
+main
+```
+
+历史 `master` 分支不再使用。
