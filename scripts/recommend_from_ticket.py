@@ -60,6 +60,12 @@ def keyword_hit(keyword: str, text_norm: str, text_compact: str) -> bool:
         return False
     if len(key) <= 1:
         return False
+    if re.fullmatch(r"[a-z0-9+#.-]+", key):
+        variants = {re.escape(key)}
+        if "-" in key:
+            variants.add(re.escape(key).replace(r"\-", r"[\s-]+"))
+        pattern = r"(?<![a-z0-9])(?:" + "|".join(sorted(variants)) + r")(?![a-z0-9])"
+        return bool(re.search(pattern, text_norm))
     if key in text_norm:
         return True
     key_compact = compact(key)

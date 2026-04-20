@@ -148,6 +148,7 @@ def build_answer(query: str, hits: list[dict], doc_index: list[dict]) -> dict:
     commands = []
     verification = []
     cautions = []
+    references = []
     sources = []
 
     for doc_id, doc_hits in ordered_docs[:3]:
@@ -177,6 +178,11 @@ def build_answer(query: str, hits: list[dict], doc_index: list[dict]) -> dict:
                 verification.extend(hit.get("items", []))
             elif hit.get("type") == "note":
                 cautions.extend(hit.get("items", []))
+            if "software-catalog" in hit.get("tags", []) or "软件库路径" in str(hit.get("content", "")):
+                for line in str(hit.get("content", "")).splitlines():
+                    line = line.strip()
+                    if "软件库路径：" in line or "页面入口" in line:
+                        references.append(line.lstrip("- ").strip())
         if doc:
             if len(steps) < 3:
                 steps.extend(doc.get("steps", [])[:8])
@@ -224,12 +230,17 @@ def build_answer(query: str, hits: list[dict], doc_index: list[dict]) -> dict:
         top = hits[0]
         summary = f"优先参考《{top.get('doc_title', '')}》中的{top.get('title', '相关步骤')}。"
 
+    if hits and references:
+        top = hits[0]
+        summary = f"已召回软件库下载参考，优先查看《{top.get('doc_title', '')}》中的软件库路径。"
+
     return {
         "summary": summary,
-        "suggested_steps": unique(steps, 10),
+        "suggested_steps": unique(references + steps, 10),
         "commands": unique_commands,
         "verification": unique(verification, 6),
         "cautions": unique(cautions, 6),
+        "references": unique(references, 10),
         "sources": sources,
         "retrieved_chunks": hits,
     }
