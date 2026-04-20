@@ -550,6 +550,38 @@ def unique_keep_order(values: list[str]) -> list[str]:
     return result
 
 
+def markdown_sections(text: str, max_sections: int = 80, max_chars: int = 2500) -> list[dict]:
+    sections = []
+    current_title = ""
+    current_lines: list[str] = []
+
+    def flush():
+        nonlocal current_lines
+        content = "\n".join(current_lines).strip()
+        if current_title and content:
+            sections.append({"title": current_title, "content": content[:max_chars]})
+        current_lines = []
+
+    in_fence = False
+    for line in text.splitlines():
+        if line.strip().startswith("```"):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        match = re.match(r"^(#{2,4})\s+(.+?)\s*$", line)
+        if match:
+            flush()
+            current_title = match.group(2).strip()
+            if len(sections) >= max_sections:
+                break
+            continue
+        if current_title:
+            current_lines.append(line)
+    flush()
+    return sections[:max_sections]
+
+
 def build_index(docs_dir: Path) -> list[dict]:
     docs = []
     for path in sorted(docs_dir.rglob("*.md")):
@@ -599,6 +631,7 @@ def build_index(docs_dir: Path) -> list[dict]:
                 "commands": extract_commands(text, limit=12),
                 "verification": extract_section_lines(text, ["验证方式", "验证方法", "验证结果"], limit=5),
                 "notes": extract_section_lines(text, ["注意事项", "风险提示", "升级条件"], limit=5),
+                "sections": markdown_sections(text),
                 "search_text": visible_text(text)[:2000],
             }
         )

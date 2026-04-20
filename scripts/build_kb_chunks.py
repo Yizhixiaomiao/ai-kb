@@ -13,6 +13,7 @@ DEFAULT_OUTPUT = ROOT / "data" / "kb-chunks.json"
 
 SECTION_TITLES = {
     "overview": "适用范围与现象",
+    "section": "文档章节",
     "step": "处理步骤",
     "command": "常用指令",
     "verification": "验证方式",
@@ -177,6 +178,24 @@ def build_chunks_for_doc(doc: dict) -> list[dict]:
                 "content": content,
                 "items": [content],
                 "search_text": chunk_search_text(doc, chunk["title"], content),
+            }
+        )
+        chunks.append(chunk)
+
+    existing_contents = {clean_text(chunk.get("content")) for chunk in chunks}
+    for idx, section in enumerate(doc.get("sections", []), start=1):
+        title = clean_text(section.get("title"))
+        content = clean_text(section.get("content"))
+        if not title or not content or content in existing_contents:
+            continue
+        chunk = base_chunk(doc, "section", idx)
+        section_title = f"{doc.get('title', '')} - {title}"
+        chunk.update(
+            {
+                "title": section_title,
+                "content": content,
+                "items": [content],
+                "search_text": chunk_search_text(doc, section_title, content),
             }
         )
         chunks.append(chunk)

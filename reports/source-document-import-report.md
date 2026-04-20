@@ -1,0 +1,330 @@
+# 正式文档导入报告
+
+- 已导入：75
+- 已跳过：245
+
+## 已导入
+
+- 20260108-业务.xlsx -> `docs/source-documents/business-system/20260108-业务.md`（30746 字符）
+- AD\卫华AD系统手册.docx -> `docs/source-documents/ad/ad-卫华ad系统手册.md`（5355 字符）
+- DLP\卫华DLP系统手册.docx -> `docs/source-documents/dlp/dlp-卫华dlp系统手册.md`（1914 字符）
+- HANA\卫华 HANA  HA维护文档.docx -> `docs/source-documents/hana/hana-卫华-hana-ha维护文档.md`（4758 字符）
+- KMS\KMS部署手册.docx -> `docs/source-documents/kms/kms-kms部署手册.md`（1100 字符）
+- KMS\卫华KMS系统手册v1.docx -> `docs/source-documents/kms/kms-卫华kms系统手册v1.md`（1381 字符）
+- MES\MES故障处理.docx -> `docs/source-documents/mes/mes-mes故障处理.md`（71 字符）
+- MES\Mes部署手册.docx -> `docs/source-documents/mes/mes-mes部署手册.md`（1709 字符）
+- MES\卫华MES系统手册.docx -> `docs/source-documents/mes/mes-卫华mes系统手册.md`（8949 字符）
+- NC\卫华NC系统手册.docx -> `docs/source-documents/nc/nc-卫华nc系统手册.md`（3397 字符）
+- OA系统\OA更新记录.xlsx -> `docs/source-documents/oa系统/oa系统-oa更新记录.md`（698 字符）
+- OA系统\OA服务监控.xlsx -> `docs/source-documents/oa系统/oa系统-oa服务监控.md`（3807 字符）
+- OA系统\OA模块监控项.xlsx -> `docs/source-documents/oa系统/oa系统-oa模块监控项.md`（507 字符）
+- PLM\卫华PLM系统手册.docx -> `docs/source-documents/plm/plm-卫华plm系统手册.md`（3236 字符）
+- PO\卫华PO系统运维手册v1.docx -> `docs/source-documents/po/po-卫华po系统运维手册v1.md`（2987 字符）
+- PO\奇秦PI&PO教材-Adapter使用-实例10 rest2proxy V1.0.docx -> `docs/source-documents/po/po-奇秦pi-po教材-adapter使用-实例10-rest2proxy-v1-0.md`（4253 字符）
+- PO\奇秦PI&PO教材-Adapter使用-实例4 proxy2proxy.docx -> `docs/source-documents/po/po-奇秦pi-po教材-adapter使用-实例4-proxy2proxy.md`（983 字符）
+- RTX\卫华RTX系统手册.docx -> `docs/source-documents/rtx/rtx-卫华rtx系统手册.md`（2139 字符）
+- S4\S4故障处理.docx -> `docs/source-documents/s4/s4-s4故障处理.md`（214 字符）
+- S4\卫华S4系统实施手册v1.docx -> `docs/source-documents/s4/s4-卫华s4系统实施手册v1.md`（3460 字符）
+- S4\卫华S4系统运维手册v1.docx -> `docs/source-documents/s4/s4-卫华s4系统运维手册v1.md`（5951 字符）
+- SRM\3_SRM-部署文档.docx -> `docs/source-documents/srm/srm-3-srm-部署文档.md`（23617 字符）
+- U8\卫华U8系统手册.docx -> `docs/source-documents/u8/u8-卫华u8系统手册.md`（2349 字符）
+- vSphere\卫华vSphere系统手册.docx -> `docs/source-documents/vsphere/vsphere-卫华vsphere系统手册.md`（9763 字符）
+- 业务进度.xlsx -> `docs/source-documents/business-system/业务进度.md`（3792 字符）
+- 云盘\云盘故障处理文档.docx -> `docs/source-documents/云盘/云盘-云盘故障处理文档.md`（129 字符）
+- 云盘\卫华标书室云盘系统手册 .docx -> `docs/source-documents/云盘/云盘-卫华标书室云盘系统手册.md`（1471 字符）
+- 人力\卫华EduSoho系统手册.docx -> `docs/source-documents/人力/人力-卫华edusoho系统手册.md`（1619 字符）
+- 人力\卫华品聘系统手册.docx -> `docs/source-documents/人力/人力-卫华品聘系统手册.md`（2013 字符）
+- 分布式存储\分布式存储上线及迁移规划.xlsx -> `docs/source-documents/分布式存储/分布式存储-分布式存储上线及迁移规划.md`（174 字符）
+- 分布式存储\存储挂载表.xlsx -> `docs/source-documents/分布式存储/分布式存储-存储挂载表.md`（1863 字符）
+- 分布式存储\现有业务存储.xlsx -> `docs/source-documents/分布式存储/分布式存储-现有业务存储.md`（1760 字符）
+- 分布式存储\统一分布式存储项目背景.docx -> `docs/source-documents/分布式存储/分布式存储-统一分布式存储项目背景.md`（646 字符）
+- 分布式存储\统一存储架构实施计划_2026.xlsx -> `docs/source-documents/分布式存储/分布式存储-统一存储架构实施计划-2026.md`（1187 字符）
+- 卫华新业务上线规范流程.docx -> `docs/source-documents/business-system/卫华新业务上线规范流程.md`（2508 字符）
+- 告警策略汇总.xlsx -> `docs/source-documents/business-system/告警策略汇总.md`（3950 字符）
+- 备份系统\networker备份\networker实施手册.docx -> `docs/source-documents/备份系统/备份系统-networker备份-networker实施手册.md`（12766 字符）
+- 备份系统\networker备份\Oracle、DB2、vmware、sqlserver、mysql、ad等.docx -> `docs/source-documents/备份系统/备份系统-networker备份-oracle-db2-vmware-sqlserver-mysql-ad等.md`（33565 字符）
+- 备份系统\networker备份\卫华备份系统信息汇总.xlsx -> `docs/source-documents/备份系统/备份系统-networker备份-卫华备份系统信息汇总.md`（1460 字符）
+- 备份系统\networker备份\按卷清理 Data Domain 空间的完整流程.docx -> `docs/source-documents/备份系统/备份系统-networker备份-按卷清理-data-domain-空间的完整流程.md`（1572 字符）
+- 备份系统\科力锐备份\科力锐有代理整机备份教程.docx -> `docs/source-documents/备份系统/备份系统-科力锐备份-科力锐有代理整机备份教程.md`（165 字符）
+- 备份系统\科力锐备份\科力锐本地数据备份系统数据采集接口文档.md -> `docs/source-documents/备份系统/备份系统-科力锐备份-科力锐本地数据备份系统数据采集接口文档.md`（4232 字符）
+- 套料系统\卫华套料系统手册.docx -> `docs/source-documents/套料系统/套料系统-卫华套料系统手册.md`（2203 字符）
+- 套料系统\套料平台安装步骤.docx -> `docs/source-documents/套料系统/套料系统-套料平台安装步骤.md`（284 字符）
+- 存储系统\卫华存储系统手册.docx -> `docs/source-documents/存储系统/存储系统-卫华存储系统手册.md`（3508 字符）
+- 悦享印（云打印）\卫华悦享印系统手册.docx -> `docs/source-documents/悦享印-云打印/悦享印-云打印-卫华悦享印系统手册.md`（4347 字符）
+- 技术中心\卫华Git系统手册-技术中心.docx -> `docs/source-documents/技术中心/技术中心-卫华git系统手册-技术中心.md`（1837 字符）
+- 技术中心\卫华技术支持系统手册.docx -> `docs/source-documents/技术中心/技术中心-卫华技术支持系统手册.md`（4253 字符）
+- 技术中心\卫华数字孪生系统手册.docx -> `docs/source-documents/技术中心/技术中心-卫华数字孪生系统手册.md`（3946 字符）
+- 技术中心\卫华起重管家系统手册.docx -> `docs/source-documents/技术中心/技术中心-卫华起重管家系统手册.md`（3602 字符）
+- 按卷清理 Data Domain 空间的完整流程.docx -> `docs/source-documents/storage/按卷清理-data-domain-空间的完整流程.md`（1003 字符）
+- 故障处理记录.xlsx -> `docs/source-documents/business-system/故障处理记录.md`（8189 字符）
+- 智能门锁\卫华门锁系统手册.docx -> `docs/source-documents/智能门锁/智能门锁-卫华门锁系统手册.md`（2355 字符）
+- 智能门锁\常见问题处理.docx -> `docs/source-documents/智能门锁/智能门锁-常见问题处理.md`（586 字符）
+- 服务器日志收集\DB2 DiagLog接入方案.docx -> `docs/source-documents/服务器日志收集/服务器日志收集-db2-diaglog接入方案.md`（2361 字符）
+- 服务器日志收集\IBM webshpere_systemOutLog systemErrLog接入方案.docx -> `docs/source-documents/服务器日志收集/服务器日志收集-ibm-webshpere-systemoutlog-systemerrlog接入方案.md`（2702 字符）
+- 服务器日志收集\Linux下IBM HTTP SERVER访问日志接入方案.docx -> `docs/source-documents/服务器日志收集/服务器日志收集-linux下ibm-http-server访问日志接入方案.md`（664 字符）
+- 服务器日志收集\Linux下Jboss7 Access Log接入方案.docx -> `docs/source-documents/服务器日志收集/服务器日志收集-linux下jboss7-access-log接入方案.md`（1849 字符）
+- 服务器日志收集\NGINX访问日志接入方案.docx -> `docs/source-documents/服务器日志收集/服务器日志收集-nginx访问日志接入方案.md`（3526 字符）
+- 服务器日志收集\ORACLE Alert告警日志接入方案.docx -> `docs/source-documents/服务器日志收集/服务器日志收集-oracle-alert告警日志接入方案.md`（3489 字符）
+- 服务器日志收集\Weblogic AdminServerLog接入方案.docx -> `docs/source-documents/服务器日志收集/服务器日志收集-weblogic-adminserverlog接入方案.md`（3489 字符）
+- 服务器日志收集\日志采集使用手册.docx -> `docs/source-documents/服务器日志收集/服务器日志收集-日志采集使用手册.md`（513 字符）
+- 标准车间立库海康系统\卫华集团电气车间仓储项目技术协议-2025.1.2.docx -> `docs/source-documents/标准车间立库海康系统/标准车间立库海康系统-卫华集团电气车间仓储项目技术协议-2025-1-2.md`（16995 字符）
+- 标准车间立库海康系统\海康标标准车间立库开放端口.xlsx -> `docs/source-documents/标准车间立库海康系统/标准车间立库海康系统-海康标标准车间立库开放端口.md`（1442 字符）
+- 桌管\卫华IP-Guard系统手册.docx -> `docs/source-documents/桌管/桌管-卫华ip-guard系统手册.md`（2233 字符）
+- 深信服分布式存储\深信服_企业级分布式存储EDS文档\深信服企业级分布式存储EDS实施文档.docx -> `docs/source-documents/深信服分布式存储/深信服分布式存储-深信服-企业级分布式存储eds文档-深信服企业级分布式存储eds实施文档.md`（5262 字符）
+- 深信服分布式存储\物理网络示意.xlsx -> `docs/source-documents/深信服分布式存储/深信服分布式存储-物理网络示意.md`（438 字符）
+- 深信服超融合\卫华超融合实施文档.docx -> `docs/source-documents/深信服超融合/深信服超融合-卫华超融合实施文档.md`（3479 字符）
+- 监控工作进度.xlsx -> `docs/source-documents/business-system/监控工作进度.md`（1408 字符）
+- 税控系统\卫华税控系统手册.docx -> `docs/source-documents/税控系统/税控系统-卫华税控系统手册.md`（4239 字符）
+- 蒲瑞立库\蒲瑞立库系统手册.docx -> `docs/source-documents/蒲瑞立库/蒲瑞立库-蒲瑞立库系统手册.md`（2719 字符）
+- 虚拟化增强工具安装.xlsx -> `docs/source-documents/vsphere/虚拟化增强工具安装.md`（1153 字符）
+- 虚拟机信息模板.docx -> `docs/source-documents/business-system/虚拟机信息模板.md`（367 字符）
+- 邮件代理\卫华邮件代理系统手册.docx -> `docs/source-documents/邮件代理/邮件代理-卫华邮件代理系统手册.md`（1262 字符）
+- 集团官网\卫华官网系统手册.docx -> `docs/source-documents/集团官网/集团官网-卫华官网系统手册.md`（4807 字符）
+
+## 已跳过
+
+- AD\AD架构图.png：unsupported extension .png
+- AD\卫华AD系统手册.pdf：unsupported extension .pdf
+- DLP\DLP.png：unsupported extension .png
+- DLP\卫华DLP系统手册.pdf：unsupported extension .pdf
+- git与svn.zip：unsupported extension .zip
+- HANA\IMDB_SERVER20_048_0-80002031.SAR：unsupported extension .sar
+- ideaIU-2024.3.exe：unsupported extension .exe
+- JumperServer\centos7_mini_模板-cl1.vmdk：unsupported extension .vmdk
+- KMS\卫华KMS系统手册v1.pdf：unsupported extension .pdf
+- Maven\卫华Nexus系统手册v1.pdf：unsupported extension .pdf
+- MES\MES架构.png：unsupported extension .png
+- MES\卫华MES系统手册.pdf：unsupported extension .pdf
+- NC\NC架构图.png：unsupported extension .png
+- NC\卫华NC系统手册.pdf：unsupported extension .pdf
+- OA系统\OA服务器IP.xlsx：sensitive filename
+- OA系统\wup项目部署流程.doc：unsupported extension .doc
+- PLM\1_架构图.png：unsupported extension .png
+- PLM\安装包\client.rar：unsupported extension .rar
+- PLM\安装包\setup.rar：unsupported extension .rar
+- PO\po.tar.gz：unsupported extension .gz
+- repository.rar：unsupported extension .rar
+- RTX\RTX.png：unsupported extension .png
+- S4\IMDB_CLIENT20_005_101-80002082.SAR：unsupported extension .sar
+- S4\kernel\igsexe_11-80003187.sar：unsupported extension .sar
+- S4\kernel\igshelper_17-10010245.sar：unsupported extension .sar
+- S4\kernel\SAPEXE_200-80004393.SAR：unsupported extension .sar
+- S4\kernel\SAPEXEDB_200-80004392.SAR：unsupported extension .sar
+- S4\kernel\SAPHOSTAGENT47_47-20009394.SAR：unsupported extension .sar
+- S4\S4.tar.gz：unsupported extension .gz
+- S4\S4HANAOP104_ERP_LANG_DE.SAR：unsupported extension .sar
+- S4\S4HANAOP104_ERP_LANG_EN.SAR：unsupported extension .sar
+- S4\S4HANAOP104_ERP_LANG_ZH.SAR：unsupported extension .sar
+- S4\SAPCAR：unsupported extension <none>
+- S4\sp02.tar.gz：unsupported extension .gz
+- S4\SWPM20SP06_2-80003424.SAR：unsupported extension .sar
+- SRM\1_架构图.png：unsupported extension .png
+- SRM\srm-db.tar.gz：unsupported extension .gz
+- SRM\卫华SRM系统手册v1.pdf：unsupported extension .pdf
+- SRM\卫华环境部署信息.txt：sensitive filename
+- U8\U8.png：unsupported extension .png
+- U8\卫华U8系统手册.pdf：unsupported extension .pdf
+- vSphere\vsphere架构图.png：unsupported extension .png
+- vSphere\卫华验收报告-山东山联信息科技有限公司.pdf：unsupported extension .pdf
+- WMS\1_架构图.png：unsupported extension .png
+- WMS\卫华WMS系统手册v1.pdf：unsupported extension .pdf
+- 云盘\卫华云盘系统手册v1.pdf：unsupported extension .pdf
+- 人力\EduSoho.png：unsupported extension .png
+- 人力\卫华EduSoho系统手册.pdf：unsupported extension .pdf
+- 人力\卫华人力品聘系统手册.pdf：unsupported extension .pdf
+- 人力\品聘系统.png：unsupported extension .png
+- 卫华各种制度汇总\党委办公室.zip：unsupported extension .zip
+- 堡垒机\卫华堡垒机手册v1.pdf：unsupported extension .pdf
+- 备份系统\networker备份\NetWorker_19.2-管理指南.pdf：unsupported extension .pdf
+- 备份系统\networker备份\nre-win-8.0.18.msi：unsupported extension .msi
+- 备份系统\networker备份\nw19901软件包\NetWorker_19.9.0.29_Windows_BMR_Wizard_x64_WinPE_10.iso：unsupported extension .iso
+- 备份系统\networker备份\nw19901软件包\nmda19901_linux_x86_64.tar.gz：unsupported extension .gz
+- 备份系统\networker备份\nw19901软件包\nmm19901_win_x64\win_x64\LGTO_METAFILE.winx64_nmm.mf：unsupported extension .mf
+- 备份系统\networker备份\nw19901软件包\nmm19901_win_x64\win_x64\networkr\alternative_install\silent_msi\NMM.msi：unsupported extension .msi
+- 备份系统\networker备份\nw19901软件包\nmm19901_win_x64\win_x64\networkr\NWVSS Proxy Recovery Agent.exe：unsupported extension .exe
+- 备份系统\networker备份\nw19901软件包\nmm19901_win_x64\win_x64\networkr\NWVSS Proxy Recovery Agent.iso：unsupported extension .iso
+- 备份系统\networker备份\nw19901软件包\nmm19901_win_x64\win_x64\networkr\NWVSS.exe：unsupported extension .exe
+- 备份系统\networker备份\nw19901软件包\nmm19901_win_x64\win_x64\networkr\setupACTS.exe：unsupported extension .exe
+- 备份系统\networker备份\nw19901软件包\nmm19901_win_x64\win_x64\sd_products.res：unsupported extension .res
+- 备份系统\networker备份\nw19901软件包\nmm19901_win_x64.zip：unsupported extension .zip
+- 备份系统\networker备份\nw19901软件包\nmsap19901_linux_x86_64.tar.gz：unsupported extension .gz
+- 备份系统\networker备份\nw19901软件包\nre-win-8.0.13.msi：unsupported extension .msi
+- 备份系统\networker备份\nw19901软件包\nre-win-8.0.18.msi：unsupported extension .msi
+- 备份系统\networker备份\nw19901软件包\nw19901_linux_x86_64.tar.gz：unsupported extension .gz
+- 备份系统\networker备份\nw19901软件包\nw19901_win_x64\win_x64\gstdbunload.exe：unsupported extension .exe
+- 备份系统\networker备份\nw19901软件包\nw19901_win_x64\win_x64\LGTO_METAFILE.winx64：unsupported extension .winx64
+- 备份系统\networker备份\nw19901软件包\nw19901_win_x64\win_x64\networkr\lgtoclnt-19.9.0.1.exe：unsupported extension .exe
+- 备份系统\networker备份\nw19901软件包\nw19901_win_x64\win_x64\networkr\lgtoxtdclnt-19.9.0.1.exe：unsupported extension .exe
+- 备份系统\networker备份\nw19901软件包\nw19901_win_x64\win_x64\networkr\NetWorker-19.9.0.1.exe：unsupported extension .exe
+- 备份系统\networker备份\nw19901软件包\nw19901_win_x64\win_x64\NWUI-19.9.0.1-x64.exe：unsupported extension .exe
+- 备份系统\networker备份\nw19901软件包\nw19901_win_x64\win_x64\sd_products.res：unsupported extension .res
+- 备份系统\networker备份\nw19901软件包\nw19901_win_x64.zip：unsupported extension .zip
+- 备份系统\networker备份\账号密码.docx：sensitive filename
+- 备份系统\科力锐备份\深圳市科力锐产品操作培训.pptx：unsupported extension .pptx
+- 备份系统\科力锐备份\科力锐操作手册.pdf：unsupported extension .pdf
+- 备份系统\科力锐备份\科力锐数据备份与恢复系统用户手册V3.4.pdf：unsupported extension .pdf
+- 套料系统\卫华套料系统手册.pdf：unsupported extension .pdf
+- 套料系统\套料架构.png：unsupported extension .png
+- 存储系统\卫华存储系统手册.pdf：unsupported extension .pdf
+- 悦享印（云打印）\卫华悦享印系统手册.pdf：unsupported extension .pdf
+- 悦享印（云打印）\悦享印.png：unsupported extension .png
+- 技术中心\Git.png：unsupported extension .png
+- 技术中心\卫华Git系统手册-技术中心.pdf：unsupported extension .pdf
+- 技术中心\卫华技术支持系统手册.pdf：unsupported extension .pdf
+- 技术中心\卫华数字孪生系统手册.pdf：unsupported extension .pdf
+- 技术中心\卫华起重管家系统手册.pdf：unsupported extension .pdf
+- 技术中心\技术支持系统.png：unsupported extension .png
+- 技术中心\西门子数字孪生.png：unsupported extension .png
+- 技术中心\起重管家v3.png：unsupported extension .png
+- 智能门锁\卫华门锁系统手册.pdf：unsupported extension .pdf
+- 服务器日志收集\AiLog大数据日志管理与分析平台AILOG-V6.4R25C00用户手册-01_114219_122147.pdf：unsupported extension .pdf
+- 服务器清单.xlsx：sensitive filename
+- 机房设备说明书\31013977_PEX-AC风机风冷系列精密空调用户手册V2.6.doc：unsupported extension .doc
+- 机房设备说明书\31013977_PEX-AC风机风冷系列精密空调用户手册V2.6.pdf：unsupported extension .pdf
+- 机房设备说明书\空调密码.docx：sensitive filename
+- 机房设备说明书\维谛（艾默生）模块化产品+产品PPT.pptx：unsupported extension .pptx
+- 标准车间立库海康系统\clientview_hf_20241206170700_PN3110XO_V2.0.0_clientview_2.0.0_补丁.zip：unsupported extension .zip
+- 标准车间立库海康系统\dre-1.7.1+ops.2.2.0.20250319185001.faa0aea.tgz：unsupported extension .tgz
+- 标准车间立库海康系统\HikOS-eulor_V1.1.0_20241011_V4.X.iso：unsupported extension .iso
+- 标准车间立库海康系统\MD5：【bfec60ab925369db5f19e6391a0e0b9f】：unsupported extension <none>
+- 标准车间立库海康系统\ovf如何导入vc_rcms3..pdf：unsupported extension .pdf
+- 标准车间立库海康系统\Rcs-2000 v4.1 Linux安装部署手册最新.pdf：unsupported extension .pdf
+- 标准车间立库海康系统\RCS-2000_(DS)_V4.2.6.20250224154144.zip：unsupported extension .zip
+- 标准车间立库海康系统\RCS-2000_AGVSWA20250408042_新乡卫华电气库AGV项目_0f0b-3ba8_001.zip：unsupported extension .zip
+- 标准车间立库海康系统\unifybasic_2.2.2.20250325100616_Linux.zip：unsupported extension .zip
+- 标准车间立库海康系统\【0402069】RCS标准模式安装部署操作手册V1.3_20240711.pdf：unsupported extension .pdf
+- 标准车间立库海康系统\关于新建电气车间数字精益产线立项的请示.pdf：unsupported extension .pdf
+- 标准车间立库海康系统\杭州海康机器人_服务器配置要求规范_V4.1_1.pdf：unsupported extension .pdf
+- 标准车间立库海康系统\海康标标准车间立库密码.xlsx：sensitive filename
+- 标准车间立库海康系统\激活反馈文件.bin：unsupported extension .bin
+- 标准车间立库海康系统\激活请求文件.bin：unsupported extension .bin
+- 桌管\IP-Guard.png：unsupported extension .png
+- 桌管\卫华IP-Guard系统手册.pdf：unsupported extension .pdf
+- 深信服分布式存储\S3-SDK-demo.zip：unsupported extension .zip
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\ip\1vm：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\1024K_read_100_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\1024K_rw_50_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\1024K_write_0_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\256K_read_100_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\256K_rw_50_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\256K_write_0_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\4K_randread_100_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\4K_randread_100_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\4K_randrw_70_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\4K_randrw_70_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\4K_randwrite_0_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\4K_randwrite_0_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\8K_randread_100_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\8K_randread_100_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\8K_randrw_70_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\8K_randrw_70_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\8K_randwrite_0_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\test\1v1d\8K_randwrite_0_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\job\warm_up\1v1d：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_1024K_read_100_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_1024K_rw_50_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_1024K_write_0_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_256K_read_100_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_256K_rw_50_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_256K_write_0_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_4K_randread_100_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_4K_randread_100_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_4K_randrw_70_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_4K_randrw_70_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_4K_randwrite_0_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_4K_randwrite_0_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_8K_randread_100_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_8K_randread_100_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_8K_randrw_70_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_8K_randrw_70_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_8K_randwrite_0_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-10-03-12\result\1\result_1v1d_8K_randwrite_0_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\ip\1vm：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\1024K_read_100_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\1024K_rw_50_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\1024K_write_0_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\256K_read_100_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\256K_rw_50_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\256K_write_0_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\4K_randread_100_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\4K_randread_100_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\4K_randrw_70_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\4K_randrw_70_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\4K_randwrite_0_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\4K_randwrite_0_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\8K_randread_100_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\8K_randread_100_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\8K_randrw_70_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\8K_randrw_70_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\8K_randwrite_0_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\test\1v3d\8K_randwrite_0_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\job\warm_up\1v3d：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_1024K_read_100_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_1024K_rw_50_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_1024K_write_0_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_256K_read_100_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_256K_rw_50_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_256K_write_0_32_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_4K_randread_100_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_4K_randread_100_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_4K_randrw_70_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_4K_randrw_70_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_4K_randwrite_0_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_4K_randwrite_0_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_8K_randread_100_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_8K_randread_100_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_8K_randrw_70_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_8K_randrw_70_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_8K_randwrite_0_128_1：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS-iSCSI性能测试\2025-12-17-11-00-53\result\1\result_1v3d_8K_randwrite_0_32_2：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\1mIO，单文件大小200M写性能\1m_16write：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\1mIO，单文件大小200M写性能\性能数据.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\1mIO，单文件大小200M读性能\1m_16read：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\256kIO,单文件大小256k写性能\256k_16write：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\256kIO,单文件大小256k写性能\性能数据.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\256kIO,单文件大小256k读性能\256k_16read：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\256kIO,单文件大小256k读性能\性能测试.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\4kIO，单文件大小200M写性能\4k_16thcreate：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\4kIO，单文件大小200M写性能\性能数据.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\4kIO，单文件大小200M读性能\4k_16read：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\4kIO，单文件大小200M读性能\性能数据.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\4kIO，单文件大小4k写性能\4k_16write：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\4kIO，单文件大小4k写性能\性能数据.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\4kIO，单文件大小4k读性能\4k_16read：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端CIFS性能测试\4kIO，单文件大小4k读性能\性能数据.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\1m_read\1m_16read：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\1m_read\summary.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\1m_write\1m_16write：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\1m_write\summary.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\256k_read\256k_16read：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\256k_read\summary.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\256k_write\256k_16write：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\256k_write\summary.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\4k_read\4k_16read：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\4k_read\summary.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\4k_write\4k_16write：unsupported extension <none>
+- 深信服分布式存储\卫华性能测试\卫华EDS单客户端NFS性能测试\4k_write\summary.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华性能测试\EDS性能基线比对.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华性能测试\EDS性能测试详情.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华性能测试\HCI虚拟存储性能基线比对.html：unsupported extension .html
+- 深信服分布式存储\卫华性能测试\卫华性能测试\HCI虚拟存储性能测试详细.html：unsupported extension .html
+- 深信服分布式存储\服务器机柜实际图示.vsdx：unsupported extension .vsdx
+- 深信服分布式存储\深信服_企业级分布式存储EDS文档\深信服_企业级分布式存储EDS_EDS 3.0.9R1_3.0.9R2_产品手册.pdf：unsupported extension .pdf
+- 深信服分布式存储\深信服_企业级分布式存储EDS文档\深信服_企业级分布式存储EDS_EDS 5.2.0_接口文档.pdf：unsupported extension .pdf
+- 深信服分布式存储\深信服_企业级分布式存储EDS文档\深信服_企业级分布式存储EDS_EDS 5.3.0_产品手册.pdf：unsupported extension .pdf
+- 深信服分布式存储\深信服_企业级分布式存储EDS文档\深信服企业级分布式存储EDS产品手册_V520.docx：too large 43.2MB
+- 深信服分布式存储\深信服企业级分布式存储EDS运维培训PPT_V5.2.0-202412.pptx：unsupported extension .pptx
+- 深信服超融合\深信服_云管平台SCP_SCP 6.10.0（R1）_产品手册.pdf：unsupported extension .pdf
+- 深信服超融合\深信服_超融合HCI_HCI6.10.0（R1-R2）_产品手册.pdf：unsupported extension .pdf
+- 深信服超融合\深信服超融合客户培训PPT_20250217.pptx：unsupported extension .pptx
+- 百望云数电\1_架构图.png：unsupported extension .png
+- 百望云数电\卫华百望云数电系统手册 .pdf：unsupported extension .pdf
+- 百望云数电\部署信息.xlsx：sensitive filename
+- 税控系统\卫华税控系统手册.pdf：unsupported extension .pdf
+- 蒲瑞立库\蒲瑞立库系统手册.pdf：unsupported extension .pdf
+- 访问信息.xlsx：sensitive filename
+- 邮件代理\卫华邮件代理系统手册.pdf：unsupported extension .pdf
+- 邮件代理\邮件代理.png：unsupported extension .png
+- 防伪\卫华防伪系统手册v1.pdf：unsupported extension .pdf
+- 集团官网\cranewh.png：unsupported extension .png
+- 集团官网\卫华官网系统手册.pdf：unsupported extension .pdf

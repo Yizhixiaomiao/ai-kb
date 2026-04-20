@@ -298,6 +298,40 @@ GET /api/kb/candidates
 - `data/ticket-experiences.jsonl`
 - `data/kb-candidates.json`
 
+## 正式文档导入
+
+工程师已经整理好的正式文档不走经验池，也不要求先改成标准知识模板。导入流程会将 `.docx`、`.xlsx`、`.txt`、`.md` 转成 `docs/source-documents/` 下的 Markdown，并标记为：
+
+```yaml
+status: imported
+type: reference
+source: engineer-doc
+```
+
+导入命令：
+
+```powershell
+python scripts\import_source_documents.py --source "D:\新建文件夹\业务维护清单"
+python scripts\build_kb_index.py
+python scripts\build_kb_vector_index.py
+python scripts\build_kb_chunks.py
+python scripts\build_kb_chunk_vector_index.py
+```
+
+导入策略：
+
+- 导入 `.docx`、`.xlsx`、`.txt`、`.md`。
+- 跳过安装包、压缩包、镜像、图片、PDF 等二进制或重复资料。
+- 跳过文件名疑似账号密码、访问清单、服务器 IP 清单的资料。
+- 对正文中的 IP、手机号、密码、Token、Secret 做脱敏。
+- 正式文档作为 `imported/reference` 参与检索，但不等同于标准 SOP。
+
+导入报告：
+
+```text
+reports/source-document-import-report.md
+```
+
 ## 反馈接口
 
 ```http

@@ -8,6 +8,7 @@ from vector_model import DEFAULT_DIMENSIONS, cosine_similarity, vectorize_text
 
 TYPE_WEIGHTS = {
     "overview": 9,
+    "section": 7,
     "step": 10,
     "command": 6,
     "verification": 4,
