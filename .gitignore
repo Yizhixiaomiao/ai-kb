@@ -6,6 +6,7 @@ __pycache__/
 *.log
 
 data/real-ticket-list*.json
+data/ai-service-config.json
 reports/real-ticket-eval*.json
 reports/real-ticket-eval*.md
 

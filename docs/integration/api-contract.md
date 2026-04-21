@@ -203,6 +203,113 @@ python scripts\build_kb_chunk_vector_index.py
 - `data/kb-chunks.json`
 - `data/kb-chunk-vector-index.json`
 
+## OpenAI 兼容接口
+
+为了便于工单系统直接把知识库当作“AI 服务”调用，服务额外提供一组 OpenAI 风格兼容接口。当前版本仍然不直连外部大模型，底层实际执行的是 `/api/kb/answer` 的检索与答案组装逻辑。
+
+### 鉴权方式
+
+如果启动服务时配置了 `api_key`，则 `/v1/models` 和 `/v1/chat/completions` 必须携带以下任意一种请求头：
+
+```http
+Authorization: Bearer <api_key>
+```
+
+或：
+
+```http
+x-api-key: <api_key>
+```
+
+服务启动时可通过以下任一方式配置：
+
+```powershell
+python scripts\kb_http_service.py --api-key your-secret-key
+```
+
+或：
+
+```powershell
+$env:OPS_KB_API_KEY="your-secret-key"
+python scripts\kb_http_service.py
+```
+
+### 模型列表
+
+```http
+GET /v1/models
+```
+
+### 对话补全
+
+```http
+POST /v1/chat/completions
+```
+
+### 请求示例
+
+```json
+{
+  "model": "ops-kb-rag",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是企业运维助手。"
+    },
+    {
+      "role": "user",
+      "content": "工单标题：无法开机\n工单描述：用户反馈电脑无法开机，按电源键没有反应"
+    }
+  ],
+  "temperature": 0.2
+}
+```
+
+### 响应说明
+
+- `choices[0].message.content`：给工单系统直接展示的处理建议文本。
+- `kb_answer`：结构化答案，包含 `suggested_steps`、`commands`、`verification`、`cautions`、`sources`。
+- `sources`：本次回答引用的知识来源，便于审计和前端展示。
+- `matched`：是否召回到了有效知识。
+
+### 响应示例
+
+```json
+{
+  "id": "chatcmpl-opskb-001",
+  "object": "chat.completion",
+  "created": 1776711111,
+  "model": "ops-kb-rag",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "建议步骤：\n1. 检查插座、电源线、插排和主机电源开关。"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0
+  },
+  "kb_answer": {
+    "suggested_steps": [
+      "检查插座、电源线、插排和主机电源开关。"
+    ]
+  },
+  "matched": true,
+  "sources": [
+    {
+      "doc_id": "pc-boot-failed",
+      "title": "电脑无法开机或不通电处理指南"
+    }
+  ]
+}
+```
+
 ## 无命中响应
 
 当没有任何推荐结果时，服务不应返回空白页面，而应返回可操作提示。

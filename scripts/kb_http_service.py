@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
+import secrets
 import time
 import uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -34,6 +36,7 @@ DEFAULT_CANDIDATES = DEFAULT_CANDIDATES_PATH
 DEFAULT_VECTOR_INDEX = ROOT / "data" / "kb-vector-index.json"
 DEFAULT_CHUNKS = ROOT / "data" / "kb-chunks.json"
 DEFAULT_CHUNK_VECTOR_INDEX = ROOT / "data" / "kb-chunk-vector-index.json"
+DEFAULT_AI_CONFIG = ROOT / "data" / "ai-service-config.json"
 WEB_DIR = ROOT / "web"
 
 
@@ -47,6 +50,10 @@ class KbService:
         chunk_vector_index_path: Path | None = None,
         experience_log: Path | None = None,
         candidates_path: Path | None = None,
+        ai_config_path: Path | None = None,
+        runtime_host: str = "127.0.0.1",
+        runtime_port: int = 9100,
+        runtime_api_key: str = "",
     ):
         self.index_path = index_path
         self.feedback_log = feedback_log
@@ -55,6 +62,10 @@ class KbService:
         self.chunk_vector_index_path = chunk_vector_index_path
         self.experience_log = experience_log or DEFAULT_EXPERIENCE_LOG
         self.candidates_path = candidates_path or DEFAULT_CANDIDATES
+        self.ai_config_path = ai_config_path or DEFAULT_AI_CONFIG
+        self.runtime_host = runtime_host
+        self.runtime_port = runtime_port
+        self.runtime_api_key = runtime_api_key
         self.index = self.load_index()
         self.vector_model = "local-char-ngram-hash-v1"
         self.vector_dimensions = DEFAULT_DIMENSIONS
@@ -62,6 +73,7 @@ class KbService:
         self.chunks = self.load_chunks()
         self.chunk_vector_records = self.load_chunk_vector_records()
         self.candidates = load_candidates(self.candidates_path)
+        self.ai_config = self.load_ai_config()
 
     def load_index(self) -> list[dict]:
         return json.loads(self.index_path.read_text(encoding="utf-8"))
@@ -95,6 +107,84 @@ class KbService:
             self.vector_dimensions = int(body.get("dimensions") or DEFAULT_DIMENSIONS)
             return body.get("chunks", [])
         return build_chunk_vector_records(self.chunks, dimensions=self.vector_dimensions)
+
+    def default_ai_config(self) -> dict:
+        base_url = f"http://{self.runtime_host}:{self.runtime_port}"
+        return {
+            "service_name": "ops-kb-ai",
+            "host": self.runtime_host,
+            "port": self.runtime_port,
+            "base_url": base_url,
+            "api_key": self.runtime_api_key,
+            "model_name": "ops-kb-rag",
+            "models_path": "/v1/models",
+            "chat_completions_path": "/v1/chat/completions",
+            "health_path": "/health",
+            "notes": "port 修改后需要重启服务才会生效；api_key 保存后对 AI 兼容接口立即生效。",
+        }
+
+    def load_ai_config(self) -> dict:
+        config = self.default_ai_config()
+        if self.ai_config_path.exists():
+            try:
+                saved = json.loads(self.ai_config_path.read_text(encoding="utf-8"))
+                if isinstance(saved, dict):
+                    config.update({k: v for k, v in saved.items() if v not in (None, "")})
+            except json.JSONDecodeError:
+                pass
+        self.save_ai_config(config)
+        return config
+
+    def save_ai_config(self, config: dict) -> None:
+        self.ai_config_path.parent.mkdir(parents=True, exist_ok=True)
+        self.ai_config_path.write_text(json.dumps(config, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    def get_ai_config(self) -> dict:
+        config = dict(self.ai_config)
+        config["runtime_host"] = self.runtime_host
+        config["runtime_port"] = self.runtime_port
+        config["runtime_base_url"] = f"http://{self.runtime_host}:{self.runtime_port}"
+        config["api_key_configured"] = bool(config.get("api_key"))
+        config["port_restart_required"] = int(config.get("port") or self.runtime_port) != self.runtime_port
+        return config
+
+    def update_ai_config(self, payload: dict) -> dict:
+        config = dict(self.ai_config)
+        for key in [
+            "service_name",
+            "host",
+            "base_url",
+            "api_key",
+            "model_name",
+            "models_path",
+            "chat_completions_path",
+            "health_path",
+            "notes",
+        ]:
+            if key in payload:
+                config[key] = str(payload.get(key) or "").strip()
+        if "port" in payload:
+            try:
+                config["port"] = int(payload.get("port") or self.runtime_port)
+            except (TypeError, ValueError):
+                return {"error": {"code": "INVALID_REQUEST", "message": "port must be integer"}}
+        if not config.get("service_name"):
+            config["service_name"] = "ops-kb-ai"
+        if not config.get("host"):
+            config["host"] = self.runtime_host
+        if not config.get("base_url"):
+            config["base_url"] = f"http://{config['host']}:{config.get('port') or self.runtime_port}"
+        if not config.get("model_name"):
+            config["model_name"] = "ops-kb-rag"
+        if not config.get("models_path"):
+            config["models_path"] = "/v1/models"
+        if not config.get("chat_completions_path"):
+            config["chat_completions_path"] = "/v1/chat/completions"
+        if not config.get("health_path"):
+            config["health_path"] = "/health"
+        self.ai_config = config
+        self.save_ai_config(config)
+        return {"saved": True, "config": self.get_ai_config()}
 
     def recommend(self, payload: dict) -> dict:
         ticket_id = str(payload.get("ticket_id") or "")
@@ -211,6 +301,171 @@ class KbService:
             "matched": search_body["matched"],
             "answer": answer,
         }
+
+    def list_models(self) -> dict:
+        return {
+            "object": "list",
+            "data": [
+                {
+                    "id": "ops-kb-rag",
+                    "object": "model",
+                    "created": 0,
+                    "owned_by": "ops-kb",
+                },
+                {
+                    "id": "ops-kb-grounded",
+                    "object": "model",
+                    "created": 0,
+                    "owned_by": "ops-kb",
+                },
+            ],
+        }
+
+    def _chat_query_from_messages(self, payload: dict) -> str:
+        messages = payload.get("messages")
+        if not isinstance(messages, list):
+            return ""
+        user_parts = []
+        for item in messages:
+            if not isinstance(item, dict):
+                continue
+            if str(item.get("role") or "") != "user":
+                continue
+            content = item.get("content")
+            if isinstance(content, str) and content.strip():
+                user_parts.append(content.strip())
+                continue
+            if isinstance(content, list):
+                text_parts = []
+                for part in content:
+                    if isinstance(part, dict) and part.get("type") == "text":
+                        text = str(part.get("text") or "").strip()
+                        if text:
+                            text_parts.append(text)
+                if text_parts:
+                    user_parts.append("\n".join(text_parts))
+        return "\n\n".join(user_parts).strip()
+
+    def _answer_to_chat_content(self, answer: dict) -> str:
+        sections = []
+        steps = answer.get("suggested_steps") or []
+        commands = answer.get("commands") or []
+        verification = answer.get("verification") or []
+        cautions = answer.get("cautions") or []
+        sources = answer.get("sources") or []
+
+        if steps:
+            sections.append(
+                "建议步骤：\n" + "\n".join(f"{idx}. {item}" for idx, item in enumerate(steps, start=1))
+            )
+        if commands:
+            command_lines = []
+            for item in commands:
+                if isinstance(item, dict):
+                    command = str(item.get("command") or "").strip()
+                    purpose = str(item.get("purpose") or "").strip()
+                    risk = str(item.get("risk") or "").strip()
+                else:
+                    command = str(item).strip()
+                    purpose = ""
+                    risk = ""
+                if not command:
+                    continue
+                detail = []
+                if purpose:
+                    detail.append(f"用途：{purpose}")
+                if risk:
+                    detail.append(f"风险：{risk}")
+                suffix = f"（{'；'.join(detail)}）" if detail else ""
+                command_lines.append(f"- {command}{suffix}")
+            if command_lines:
+                sections.append("相关指令：\n" + "\n".join(command_lines))
+        if verification:
+            sections.append(
+                "验证方式：\n" + "\n".join(f"{idx}. {item}" for idx, item in enumerate(verification, start=1))
+            )
+        if cautions:
+            sections.append(
+                "注意事项：\n" + "\n".join(f"{idx}. {item}" for idx, item in enumerate(cautions, start=1))
+            )
+        if sources:
+            sections.append(
+                "参考来源：\n" + "\n".join(
+                    f"- {item.get('title', '')}（{item.get('doc_id', '')}）" for item in sources if isinstance(item, dict)
+                )
+            )
+        if not sections:
+            summary = str(answer.get("summary") or "").strip()
+            return summary or "未召回到足够相关的知识，请补充更具体的故障对象和现象。"
+        return "\n\n".join(sections)
+
+    def chat_completions(self, payload: dict) -> tuple[dict, int]:
+        query = self._chat_query_from_messages(payload)
+        if not query:
+            return (
+                {
+                    "error": {
+                        "message": "messages with user content is required",
+                        "type": "invalid_request_error",
+                        "param": "messages",
+                        "code": "invalid_messages",
+                    }
+                },
+                400,
+            )
+
+        mode = str(payload.get("mode") or "hybrid")
+        top_k = int(payload.get("top_k") or 12)
+        answer_body = self.answer(
+            {
+                "ticket_id": payload.get("ticket_id") or "",
+                "query": query,
+                "mode": mode,
+                "top_k": top_k,
+            }
+        )
+        if "error" in answer_body:
+            return (
+                {
+                    "error": {
+                        "message": answer_body["error"].get("message", "request failed"),
+                        "type": "invalid_request_error",
+                        "param": "messages",
+                        "code": answer_body["error"].get("code", "request_failed").lower(),
+                    }
+                },
+                400,
+            )
+
+        answer = answer_body.get("answer") or {}
+        content = self._answer_to_chat_content(answer)
+        now = int(time.time())
+        body = {
+            "id": f"chatcmpl-opskb-{uuid.uuid4().hex[:12]}",
+            "object": "chat.completion",
+            "created": now,
+            "model": str(payload.get("model") or "ops-kb-rag"),
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": content,
+                    },
+                    "finish_reason": "stop",
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+            },
+            "kb_answer": answer,
+            "kb_request_id": answer_body.get("request_id", ""),
+            "matched": answer_body.get("matched", False),
+            "sources": answer.get("sources", []),
+        }
+        return body, 200
 
     def save_experience(self, payload: dict) -> dict:
         ticket_id = str(payload.get("ticket_id") or "").strip()
@@ -408,6 +663,32 @@ def make_handler(service: KbService):
     class Handler(BaseHTTPRequestHandler):
         server_version = "OpsKbHttpService/0.1"
 
+        def _extract_api_key(self) -> str:
+            auth = str(self.headers.get("Authorization") or "").strip()
+            if auth.lower().startswith("bearer "):
+                return auth[7:].strip()
+            return str(self.headers.get("x-api-key") or "").strip()
+
+        def _require_api_key(self) -> bool:
+            api_key = str(service.ai_config.get("api_key") or "")
+            if not api_key:
+                return True
+            provided = self._extract_api_key()
+            if provided and secrets.compare_digest(provided, api_key):
+                return True
+            self._send_json(
+                401,
+                {
+                    "error": {
+                        "message": "invalid api key",
+                        "type": "invalid_request_error",
+                        "param": None,
+                        "code": "invalid_api_key",
+                    }
+                },
+            )
+            return False
+
         def _send_json(self, status: int, body: dict):
             data = json.dumps(body, ensure_ascii=False).encode("utf-8")
             self.send_response(status)
@@ -466,6 +747,11 @@ def make_handler(service: KbService):
                     },
                 )
                 return
+            if path == "/v1/models":
+                if not self._require_api_key():
+                    return
+                self._send_json(200, service.list_models())
+                return
             if path == "/api/kb/index":
                 self._send_json(200, {"documents": service.index})
                 return
@@ -478,6 +764,9 @@ def make_handler(service: KbService):
             if path == "/api/kb/candidates":
                 service.candidates = load_candidates(service.candidates_path)
                 self._send_json(200, {"candidates": service.candidates})
+                return
+            if path == "/api/kb/admin/ai-config":
+                self._send_json(200, service.get_ai_config())
                 return
             if path in {"/", "/ui", "/ui/"}:
                 self._send_file(WEB_DIR / "index.html")
@@ -514,6 +803,12 @@ def make_handler(service: KbService):
                 status = 422 if "error" in body and body["error"]["code"] == "EMPTY_QUERY" else 200
                 self._send_json(status, body)
                 return
+            if path == "/v1/chat/completions":
+                if not self._require_api_key():
+                    return
+                body, status = service.chat_completions(payload)
+                self._send_json(status, body)
+                return
             if path == "/api/kb/feedback":
                 body = service.save_feedback(payload)
                 status = 400 if "error" in body else 200
@@ -530,6 +825,11 @@ def make_handler(service: KbService):
                 return
             if path == "/api/kb/admin/create-doc":
                 body = service.create_candidate_doc(payload)
+                status = 400 if "error" in body else 200
+                self._send_json(status, body)
+                return
+            if path == "/api/kb/admin/ai-config":
+                body = service.update_ai_config(payload)
                 status = 400 if "error" in body else 200
                 self._send_json(status, body)
                 return
@@ -552,6 +852,8 @@ def main() -> int:
     parser.add_argument("--feedback-log", type=Path, default=DEFAULT_FEEDBACK_LOG)
     parser.add_argument("--experience-log", type=Path, default=DEFAULT_EXPERIENCE_LOG)
     parser.add_argument("--candidates", type=Path, default=DEFAULT_CANDIDATES)
+    parser.add_argument("--ai-config", type=Path, default=DEFAULT_AI_CONFIG)
+    parser.add_argument("--api-key", default=os.environ.get("OPS_KB_API_KEY", ""))
     args = parser.parse_args()
 
     service = KbService(
@@ -562,11 +864,17 @@ def main() -> int:
         args.chunk_vector_index,
         args.experience_log,
         args.candidates,
+        args.ai_config,
+        args.host,
+        args.port,
+        args.api_key,
     )
     server = ThreadingHTTPServer((args.host, args.port), make_handler(service))
     print(f"Ops KB service listening on http://{args.host}:{args.port}")
     print(f"Loaded {len(service.index)} documents from {args.index}")
     print(f"Loaded {len(service.chunks)} chunks from {args.chunks}")
+    if args.api_key:
+        print("API key auth enabled for /v1/models and /v1/chat/completions")
     server.serve_forever()
     return 0
 

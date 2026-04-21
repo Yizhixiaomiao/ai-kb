@@ -8,7 +8,7 @@
 - [data-flow.md](data-flow.md)：从 Markdown 知识到工单推荐结果的数据流。
 - [feedback-loop.md](feedback-loop.md)：工程师采纳、拒绝、解决等反馈闭环。
 - [deployment-options.md](deployment-options.md)：从本地脚本到 HTTP 服务、数据库、混合检索、RAG 的部署阶段。
-- [local-debugging.md](local-debugging.md)：本地 9000 工单后端与 9100 知识推荐服务的联调方式。
+- [local-debugging.md](local-debugging.md)：本地 9001 工单后端与 9100 知识推荐服务的联调方式。
 
 ## 第一阶段目标
 

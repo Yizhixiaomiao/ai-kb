@@ -23,6 +23,7 @@
           <button class="nav-item" data-view="answer">智能答案</button>
           <button class="nav-item" data-view="experience">经验沉淀</button>
           <button class="nav-item" data-view="create">新增候选知识</button>
+          <button class="nav-item" data-view="config">AI服务配置</button>
           <button class="nav-item" data-view="reports">治理视图</button>
         </nav>
 
@@ -150,6 +151,32 @@
             <div class="row">
               <button class="button" type="submit">创建候选知识</button>
               <span id="createResult" class="muted"></span>
+            </div>
+          </form>
+        </section>
+
+        <section id="configView" class="view">
+          <form id="configForm" class="create-form">
+            <div class="grid two">
+              <label>服务名称<input name="service_name" id="configServiceName" class="input" placeholder="ops-kb-ai" /></label>
+              <label>模型名称<input name="model_name" id="configModelName" class="input" placeholder="ops-kb-rag" /></label>
+              <label>监听主机<input name="host" id="configHost" class="input" placeholder="127.0.0.1" /></label>
+              <label>监听端口<input name="port" id="configPort" class="input" placeholder="9100" /></label>
+              <label>服务 URL<input name="base_url" id="configBaseUrl" class="input" placeholder="http://127.0.0.1:9100" /></label>
+              <label>API Key<input name="api_key" id="configApiKey" class="input" placeholder="opskb_xxx" /></label>
+              <label>模型列表接口<input name="models_path" id="configModelsPath" class="input" placeholder="/v1/models" /></label>
+              <label>对话补全接口<input name="chat_completions_path" id="configChatPath" class="input" placeholder="/v1/chat/completions" /></label>
+              <label>健康检查接口<input name="health_path" id="configHealthPath" class="input" placeholder="/health" /></label>
+            </div>
+            <label>说明<textarea name="notes" id="configNotes" class="input textarea small" placeholder="端口修改后需重启服务生效。"></textarea></label>
+            <div class="panel">
+              <h3>运行状态</h3>
+              <div id="configRuntime" class="plain muted">加载中...</div>
+            </div>
+            <div class="row">
+              <button class="button" type="submit">保存配置</button>
+              <button id="reloadConfigBtn" class="button secondary" type="button">重新加载</button>
+              <span id="configResult" class="muted"></span>
             </div>
           </form>
         </section>

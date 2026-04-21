@@ -4,6 +4,7 @@ const state = {
   selectedDocId: "",
   category: "",
   health: null,
+  aiConfig: null,
 };
 
 const $ = (id) => document.getElementById(id);
@@ -30,16 +31,19 @@ async function getJson(url, options) {
 }
 
 async function loadAll() {
-  const [health, index] = await Promise.all([
+  const [health, index, aiConfig] = await Promise.all([
     getJson("/health"),
     getJson("/api/kb/index"),
+    getJson("/api/kb/admin/ai-config"),
   ]);
   state.health = health;
   state.docs = index.documents || [];
+  state.aiConfig = aiConfig || null;
   $("healthText").textContent = `${health.documents} 篇 / ${health.chunks || 0} 块 / ${health.vector_model}`;
   renderCategories();
   applyFilters();
   renderStats();
+  renderAiConfig();
 }
 
 function categoryOf(doc) {
@@ -353,6 +357,33 @@ function renderStats() {
   ].map(([label, value]) => `<div class="stat"><strong>${value}</strong><span>${label}</span></div>`).join("");
 }
 
+function renderAiConfig() {
+  const config = state.aiConfig || {};
+  const mappings = {
+    configServiceName: config.service_name || "",
+    configModelName: config.model_name || "",
+    configHost: config.host || "",
+    configPort: config.port || "",
+    configBaseUrl: config.base_url || "",
+    configApiKey: config.api_key || "",
+    configModelsPath: config.models_path || "",
+    configChatPath: config.chat_completions_path || "",
+    configHealthPath: config.health_path || "",
+    configNotes: config.notes || "",
+  };
+  Object.entries(mappings).forEach(([id, value]) => {
+    if ($(id)) $(id).value = value;
+  });
+  if ($("configRuntime")) {
+    $("configRuntime").innerHTML = [
+      `当前运行地址：<strong>${config.runtime_base_url || "-"}</strong>`,
+      `当前监听：<strong>${config.runtime_host || "-"}:${config.runtime_port || "-"}</strong>`,
+      `API Key 已配置：<strong>${config.api_key_configured ? "是" : "否"}</strong>`,
+      `端口修改待重启：<strong>${config.port_restart_required ? "是" : "否"}</strong>`,
+    ].join("<br>");
+  }
+}
+
 function setView(name) {
   document.querySelectorAll(".nav-item").forEach((item) => item.classList.toggle("active", item.dataset.view === name));
   document.querySelectorAll(".view").forEach((view) => view.classList.remove("active"));
@@ -363,6 +394,7 @@ function setView(name) {
     answer: ["智能答案", "按知识块检索步骤、指令和验证方式，生成可引用的处理建议。"],
     experience: ["经验沉淀", "记录关单处理经验，判断质量并决定补充已有知识或生成候选草稿。"],
     create: ["新增候选知识", "创建 Markdown 候选知识，随后重建索引后进入推荐。"],
+    config: ["AI服务配置", "维护 AI 服务的默认配置。端口修改保存后需要重启服务才会生效。"],
     reports: ["治理视图", "查看知识状态和后续治理建议。"],
   };
   $("viewTitle").textContent = titles[name][0];
@@ -390,6 +422,32 @@ async function createDoc(event) {
   }
 }
 
+async function loadAiConfig() {
+  state.aiConfig = await getJson("/api/kb/admin/ai-config");
+  renderAiConfig();
+}
+
+async function saveAiConfig(event) {
+  event.preventDefault();
+  const form = new FormData(event.target);
+  const payload = Object.fromEntries(form.entries());
+  if (payload.port) payload.port = Number(payload.port);
+  try {
+    const result = await getJson("/api/kb/admin/ai-config", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    state.aiConfig = result.config || null;
+    renderAiConfig();
+    $("configResult").textContent = state.aiConfig?.port_restart_required
+      ? "已保存。端口变更需重启服务生效。"
+      : "已保存。";
+  } catch (error) {
+    $("configResult").textContent = error.message;
+  }
+}
+
 function bindEvents() {
   document.querySelectorAll(".nav-item").forEach((item) => item.addEventListener("click", () => setView(item.dataset.view)));
   ["searchInput", "statusFilter", "riskFilter"].forEach((id) => $(id).addEventListener("input", applyFilters));
@@ -402,6 +460,8 @@ function bindEvents() {
   $("answerBtn").addEventListener("click", runAnswer);
   $("experienceForm").addEventListener("submit", submitExperience);
   $("createForm").addEventListener("submit", createDoc);
+  $("configForm").addEventListener("submit", saveAiConfig);
+  $("reloadConfigBtn").addEventListener("click", loadAiConfig);
 }
 
 bindEvents();

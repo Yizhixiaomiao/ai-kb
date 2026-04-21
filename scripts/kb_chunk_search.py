@@ -172,6 +172,8 @@ def build_answer(query: str, hits: list[dict], doc_index: list[dict]) -> dict:
     references = []
     sources = []
 
+    primary_doc_id = ordered_docs[0][0] if ordered_docs else ""
+
     for doc_id, doc_hits in ordered_docs[:3]:
         doc = docs_by_id.get(doc_id, {})
         sources.append(
@@ -183,6 +185,13 @@ def build_answer(query: str, hits: list[dict], doc_index: list[dict]) -> dict:
                 "chunks": [hit["chunk_id"] for hit in doc_hits[:5]],
             }
         )
+
+        # The final answer should stay anchored on the strongest matched document.
+        # Secondary documents are kept as sources for traceability, but their
+        # steps/commands should not be mixed into the main procedure.
+        if doc_id != primary_doc_id:
+            continue
+
         for hit in doc_hits:
             if hit.get("type") == "step":
                 steps.extend(hit.get("items", []))
